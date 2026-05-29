@@ -1,0 +1,250 @@
+{
+  "total_neurons": 3000,
+  "changed_neurons": 1396,
+  "hot_neurons": 1829,
+  "collapse_states": {
+    "warming": 1171,
+    "promote": 320,
+    "critical": 1376,
+    "hot": 46,
+    "avoid": 67,
+    "ready_to_route": 20
+  },
+  "observables": {
+    "neuron.control": 545,
+    "project.memory": 547,
+    "external.spend": 35,
+    "host.hardware": 148,
+    "local_llm.provider": 1311,
+    "rosen.state_pair": 327,
+    "proof.benchmark": 87
+  },
+  "top_hot": [
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v1",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v10",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v11",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v12",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v13",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v14",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v15",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v16",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v17",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v18",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v19",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v2",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v20",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v21",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v22",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v23",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v24",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v25",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v26",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v27",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v28",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v29",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v3",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v30",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v31",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v32",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v33",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v4",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v5",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v6",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v7",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v8",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "correction_pulse",
+      "collapse_state": "critical"
+    }
+  ],
+  "created_at": "2026-05-28T01:08:19.338Z",
+  "elapsed_ms": 166
+}

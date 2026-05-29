@@ -1,0 +1,23 @@
+{
+  "schema": "mercury-rosen-bridge-v1",
+  "id": "3bb768a58d88c93f9413c833",
+  "created_at": "2026-05-28T01:08:10.100Z",
+  "updated_at": "2026-05-28T01:08:10.100Z",
+  "namespace": "bench-rosen-694f50db6d4fe8c1e849d17b",
+  "from": "entry:provider_spend",
+  "to": "memory:monster_doctor:9fb9df521206aaaf236693f5",
+  "type": "distilled_from",
+  "risk_family": "provider_spend",
+  "confidence": 0.482,
+  "latency_ms": 2,
+  "cost": "low",
+  "risk": "low",
+  "freshness": "fresh",
+  "evidence": "monster_doctor find hidden Anthropic billing loops spend_guard_first cost_scan_runtime_loop target_file_first cost:/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/bench/rosen-cortex/provider_spend_loop.js",
+  "tokens": {},
+  "source": "memory_graph",
+  "score": 1,
+  "hit_count": 1,
+  "miss_count": 0,
+  "activation_rule": "provider_spend+latency_hot_path+memory_route"
+}

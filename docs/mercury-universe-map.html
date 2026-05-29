@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mercury Universe Rosen Map</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07090d; --panel:#101721; --line:#26364a; --text:#f7f9fc; --muted:#9aadc2; --good:#4de092; --blue:#7bbdff; --warn:#ffd166; --red:#ff6f7f; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(circle at 50% 0%, rgba(123,189,255,.15), transparent 35%), #07090d; color:var(--text); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing:0; }
+    main { max-width:1260px; margin:0 auto; padding:40px 20px 74px; }
+    h1 { margin:0 0 10px; font-size:clamp(38px,6vw,78px); line-height:1; letter-spacing:0; }
+    h2 { margin:0 0 12px; font-size:24px; }
+    p { margin:0; color:var(--muted); line-height:1.62; }
+    .lead { max-width:920px; color:#d3dfeb; font-size:19px; }
+    .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin:24px 0; }
+    .metric, .panel, .node { border:1px solid var(--line); border-radius:8px; background:linear-gradient(180deg, rgba(16,23,33,.98), rgba(10,15,23,.98)); padding:16px; }
+    .metric span, .metric small, .node span, .node small { display:block; color:var(--muted); font-size:13px; }
+    .metric b { display:block; margin:7px 0 4px; color:var(--blue); font-size:30px; line-height:1; }
+    .map { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:18px 0; }
+    .node b { display:block; margin:7px 0; font-size:17px; }
+    .node.ready b, .node.guarded b { color:var(--good); }
+    .node.check b { color:var(--warn); }
+    .node.planned b { color:var(--blue); }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    th,td { border-bottom:1px solid var(--line); padding:9px 7px; text-align:left; vertical-align:top; color:#cbd8e5; }
+    th { color:#dce8f3; background:#0d141d; }
+    code { color:var(--blue); }
+    @media (max-width:860px) { .split { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mercury Universe Rosen Map</h1>
+    <p class="lead">Do not control 100M neurons at once; sense state changes and wake only the bridge, memory, lane, and neuron family that matters.</p>
+    <section class="metrics">
+      <div class="metric"><span>Product Ready</span><b>CHECK</b><small>project-72e25486d261af475d2a3cd8</small></div>
+      <div class="metric"><span>Rosen Bridges</span><b>344</b><small>8 selected latest</small></div>
+      <div class="metric"><span>State Pairs</span><b>73</b><small>76 pulse events</small></div>
+      <div class="metric"><span>UMA Pages</span><b>181</b><small>87 symbols</small></div>
+      <div class="metric"><span>Physical Neurons</span><b>1000</b><small>12 sparse lanes</small></div>
+      <div class="metric"><span>Virtual Target</span><b>100M</b><small>0 shards</small></div>
+    </section>
+    <section class="panel">
+      <h2>Universe Nodes</h2>
+      <div class="map">
+    <article class="node observed">
+      <span>root</span>
+      <b>Computer State</b>
+      <small>observed · 0 cpu cores, gpu=0</small>
+    </article>
+    <article class="node ready">
+      <span>hardware</span>
+      <b>Runtime Detector</b>
+      <small>ready · 0 providers</small>
+    </article>
+    <article class="node check">
+      <span>service</span>
+      <b>Resident Control Plane</b>
+      <small>check · reflex:off, slow-worker:off</small>
+    </article>
+    <article class="node guarded">
+      <span>model</span>
+      <b>Qwer / Local LLM Slow Path</b>
+      <small>guarded · reflex_queue_only</small>
+    </article>
+    <article class="node ready">
+      <span>memory</span>
+      <b>Reflex Cache</b>
+      <small>ready · 13035 files</small>
+    </article>
+    <article class="node ready">
+      <span>memory</span>
+      <b>UMA/RAG Project Memory</b>
+      <small>ready · 181 pages, 87 symbols</small>
+    </article>
+    <article class="node ready">
+      <span>memory</span>
+      <b>Code Cortex</b>
+      <small>ready · 6 file tables</small>
+    </article>
+    <article class="node ready">
+      <span>rosen</span>
+      <b>Rosen Bridge Field</b>
+      <small>ready · 344 bridges</small>
+    </article>
+    <article class="node ready">
+      <span>rosen</span>
+      <b>Rosen Pair State Field</b>
+      <small>ready · 73 pairs, 76 pulses</small>
+    </article>
+    <article class="node ready">
+      <span>neuron</span>
+      <b>Neuron Catalog</b>
+      <small>ready · 1000 physical neurons</small>
+    </article>
+    <article class="node ready">
+      <span>neuron</span>
+      <b>Sparse Activation Lanes</b>
+      <small>ready · 12 lanes</small>
+    </article>
+    <article class="node check">
+      <span>product</span>
+      <b>Product Gate</b>
+      <small>check · 11/14 checks</small>
+    </article>
+    <article class="node planned">
+      <span>future</span>
+      <b>100M Virtual Neuron Plan</b>
+      <small>planned · 24415 shards @ 4096</small>
+    </article></div>
+    </section>
+    <section class="split" style="margin-top:14px">
+      <div class="panel">
+        <h2>Rosen Bridge Edges</h2>
+        <table><thead><tr><th>From</th><th>Bridge</th><th>To</th></tr></thead><tbody>
+    <tr><td>computer</td><td>detects</td><td>runtime</td></tr>
+    <tr><td>runtime</td><td>routes slow path</td><td>qwer</td></tr>
+    <tr><td>computer</td><td>hosts</td><td>resident</td></tr>
+    <tr><td>resident</td><td>serves</td><td>reflex</td></tr>
+    <tr><td>resident</td><td>keeps warm</td><td>uma</td></tr>
+    <tr><td>uma</td><td>indexes symbols</td><td>code_cortex</td></tr>
+    <tr><td>uma</td><td>promotes bridges</td><td>rosen</td></tr>
+    <tr><td>rosen</td><td>tracks state</td><td>pairs</td></tr>
+    <tr><td>rosen</td><td>boosts selection</td><td>neurons</td></tr>
+    <tr><td>neurons</td><td>sparse activation</td><td>lanes</td></tr>
+    <tr><td>lanes</td><td>accelerates</td><td>product</td></tr>
+    <tr><td>pairs</td><td>pulses changes</td><td>product</td></tr>
+    <tr><td>scale</td><td>virtualizes</td><td>neurons</td></tr></tbody></table>
+      </div>
+      <div class="panel">
+        <h2>Neuron Families</h2>
+        <table><thead><tr><th>Family</th><th>Count</th></tr></thead><tbody>
+    <tr><td>intent</td><td>66</td></tr>
+    <tr><td>retrieval</td><td>66</td></tr>
+    <tr><td>tool</td><td>56</td></tr>
+    <tr><td>risk</td><td>74</td></tr>
+    <tr><td>decompose</td><td>68</td></tr>
+    <tr><td>explore</td><td>69</td></tr>
+    <tr><td>analyze</td><td>72</td></tr>
+    <tr><td>recompose</td><td>68</td></tr>
+    <tr><td>verify</td><td>68</td></tr>
+    <tr><td>accelerate</td><td>68</td></tr>
+    <tr><td>memory</td><td>68</td></tr>
+    <tr><td>critic</td><td>65</td></tr>
+    <tr><td>safety</td><td>64</td></tr>
+    <tr><td>compression</td><td>64</td></tr>
+    <tr><td>synthesis</td><td>64</td></tr></tbody></table>
+      </div>
+    </section>
+    <section class="panel" style="margin-top:14px">
+      <h2>Control Plane Meaning</h2>
+      <p>The future installer and speedometer should read this map: hardware state, provider state, memory state, Rosen state, sparse neuron lane state, and product readiness. The 100M-neuron version is not a giant queue. It is a state-field map where most neurons are dormant until a bridge/pair/lane changes.</p>
+    </section>
+  </main>
+</body>
+</html>

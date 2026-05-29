@@ -1,0 +1,26 @@
+[fullgrid] load tokenizer /home/ai/hf_models/Qwen3-8B
+[fullgrid] load model /home/ai/hf_models/Qwen3-8B device=cpu dtype=bfloat16
+`torch_dtype` is deprecated! Use `dtype` instead!
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.Op.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.OnnxFunction.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ai/fullgrid_observe.py", line 370, in <module>
+    main()
+  File "/home/ai/fullgrid_observe.py", line 144, in main
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/ai/qaic-env/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/ai/qaic-env/lib/python3.10/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/home/ai/qaic-env/lib/python3.10/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/home/ai/qaic-env/lib/python3.10/site-packages/transformers/modeling_utils.py", line 5468, in _load_pretrained_model
+    _error_msgs, disk_offload_index = load_shard_file(args)
+  File "/home/ai/qaic-env/lib/python3.10/site-packages/transformers/modeling_utils.py", line 831, in load_shard_file
+    state_dict = load_state_dict(
+  File "/home/ai/qaic-env/lib/python3.10/site-packages/transformers/modeling_utils.py", line 484, in load_state_dict
+    with safe_open(checkpoint_file, framework="pt") as f:
+FileNotFoundError: No such file or directory: "/home/ai/hf_models/Qwen3-8B/model-00001-of-00005.safetensors"

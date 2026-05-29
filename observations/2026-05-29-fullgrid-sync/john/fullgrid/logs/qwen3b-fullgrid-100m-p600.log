@@ -1,0 +1,91 @@
+[fullgrid] load tokenizer /Users/john/hf-qwen3b
+[fullgrid] load model /Users/john/hf-qwen3b device=mps dtype=float16
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights:   0%|          | 1/434 [00:01<12:13,  1.69s/it]Loading weights:  34%|███▍      | 147/434 [00:01<00:02, 105.57it/s]Loading weights:  44%|████▍     | 190/434 [00:02<00:02, 94.54it/s] Loading weights:  50%|█████     | 217/434 [00:02<00:02, 89.19it/s]Loading weights:  54%|█████▍    | 236/434 [00:03<00:02, 90.72it/s]Loading weights:  58%|█████▊    | 252/434 [00:03<00:01, 96.62it/s]Loading weights:  62%|██████▏   | 268/434 [00:03<00:02, 77.30it/s]Loading weights:  70%|██████▉   | 303/434 [00:03<00:01, 106.39it/s]Loading weights:  74%|███████▎  | 320/434 [00:03<00:01, 107.90it/s]Loading weights:  77%|███████▋  | 335/434 [00:03<00:00, 102.26it/s]Loading weights:  81%|████████  | 351/434 [00:04<00:00, 110.89it/s]Loading weights:  84%|████████▍ | 365/434 [00:04<00:00, 94.27it/s] Loading weights:  87%|████████▋ | 377/434 [00:04<00:00, 77.41it/s]Loading weights:  89%|████████▉ | 387/434 [00:04<00:00, 75.68it/s]Loading weights:  91%|█████████ | 396/434 [00:04<00:00, 75.68it/s]Loading weights:  93%|█████████▎| 405/434 [00:04<00:00, 71.19it/s]Loading weights:  95%|█████████▌| 413/434 [00:05<00:00, 59.49it/s]Loading weights:  97%|█████████▋| 423/434 [00:05<00:00, 66.39it/s]Loading weights: 100%|██████████| 434/434 [00:05<00:00, 81.49it/s]
+[fullgrid] modules=253 channels=1,184,128 Q=10 S=10 cells=118,412,800
+[fullgrid] pass1 calibration probes=600
+[fullgrid] calibration 5/600 elapsed=10s
+[fullgrid] calibration 10/600 elapsed=10s
+[fullgrid] calibration 15/600 elapsed=11s
+[fullgrid] calibration 20/600 elapsed=11s
+[fullgrid] calibration 25/600 elapsed=12s
+[fullgrid] calibration 30/600 elapsed=12s
+[fullgrid] calibration 35/600 elapsed=13s
+[fullgrid] calibration 40/600 elapsed=13s
+[fullgrid] calibration 45/600 elapsed=14s
+[fullgrid] calibration 50/600 elapsed=14s
+[fullgrid] calibration 55/600 elapsed=15s
+[fullgrid] calibration 60/600 elapsed=15s
+[fullgrid] calibration 65/600 elapsed=16s
+[fullgrid] calibration 70/600 elapsed=16s
+[fullgrid] calibration 75/600 elapsed=16s
+[fullgrid] calibration 80/600 elapsed=17s
+[fullgrid] calibration 85/600 elapsed=18s
+[fullgrid] calibration 90/600 elapsed=18s
+[fullgrid] calibration 95/600 elapsed=19s
+[fullgrid] calibration 100/600 elapsed=19s
+[fullgrid] calibration 105/600 elapsed=20s
+[fullgrid] calibration 110/600 elapsed=20s
+[fullgrid] calibration 115/600 elapsed=21s
+[fullgrid] calibration 120/600 elapsed=21s
+[fullgrid] calibration 125/600 elapsed=22s
+[fullgrid] calibration 130/600 elapsed=22s
+[fullgrid] calibration 135/600 elapsed=23s
+[fullgrid] calibration 140/600 elapsed=23s
+[fullgrid] calibration 145/600 elapsed=24s
+[fullgrid] calibration 150/600 elapsed=24s
+[fullgrid] calibration 155/600 elapsed=25s
+[fullgrid] calibration 160/600 elapsed=26s
+[fullgrid] calibration 165/600 elapsed=26s
+[fullgrid] calibration 170/600 elapsed=28s
+[fullgrid] calibration 175/600 elapsed=29s
+[fullgrid] calibration 180/600 elapsed=30s
+[fullgrid] calibration 185/600 elapsed=31s
+[fullgrid] calibration 190/600 elapsed=32s
+[fullgrid] calibration 195/600 elapsed=33s
+[fullgrid] calibration 200/600 elapsed=34s
+[fullgrid] calibration 205/600 elapsed=35s
+[fullgrid] calibration 210/600 elapsed=36s
+[fullgrid] calibration 215/600 elapsed=36s
+[fullgrid] calibration 220/600 elapsed=37s
+[fullgrid] calibration 225/600 elapsed=38s
+[fullgrid] calibration 230/600 elapsed=39s
+[fullgrid] calibration 235/600 elapsed=40s
+[fullgrid] calibration 240/600 elapsed=41s
+[fullgrid] calibration 245/600 elapsed=42s
+[fullgrid] calibration 250/600 elapsed=43s
+[fullgrid] calibration 255/600 elapsed=43s
+[fullgrid] calibration 260/600 elapsed=44s
+[fullgrid] calibration 265/600 elapsed=45s
+[fullgrid] calibration 270/600 elapsed=46s
+[fullgrid] calibration 275/600 elapsed=47s
+[fullgrid] calibration 280/600 elapsed=48s
+[fullgrid] calibration 285/600 elapsed=49s
+[fullgrid] calibration 290/600 elapsed=50s
+[fullgrid] calibration 295/600 elapsed=50s
+[fullgrid] calibration 300/600 elapsed=51s
+[fullgrid] calibration 305/600 elapsed=52s
+[fullgrid] calibration 310/600 elapsed=53s
+[fullgrid] calibration 315/600 elapsed=54s
+[fullgrid] calibration 320/600 elapsed=55s
+[fullgrid] calibration 325/600 elapsed=56s
+[fullgrid] calibration 330/600 elapsed=57s
+[fullgrid] calibration 335/600 elapsed=57s
+[fullgrid] calibration 340/600 elapsed=58s
+[fullgrid] calibration 345/600 elapsed=59s
+[fullgrid] calibration 350/600 elapsed=60s
+[fullgrid] calibration 355/600 elapsed=61s
+[fullgrid] calibration 360/600 elapsed=62s
+[fullgrid] calibration 365/600 elapsed=63s
+[fullgrid] calibration 370/600 elapsed=64s
+[fullgrid] calibration 375/600 elapsed=65s
+[fullgrid] calibration 380/600 elapsed=65s
+[fullgrid] calibration 385/600 elapsed=66s
+[fullgrid] calibration 390/600 elapsed=67s
+[fullgrid] calibration 395/600 elapsed=68s
+[fullgrid] calibration 400/600 elapsed=69s
+[fullgrid] calibration 405/600 elapsed=70s
+[fullgrid] calibration 410/600 elapsed=71s
+[fullgrid] calibration 415/600 elapsed=71s
+[fullgrid] calibration 420/600 elapsed=72s
+[fullgrid] calibration 425/600 elapsed=88s

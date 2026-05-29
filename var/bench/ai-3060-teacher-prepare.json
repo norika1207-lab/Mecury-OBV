@@ -1,0 +1,21 @@
+{
+  "schema": "mercury-ai-3060-teacher-prepare-v1",
+  "created_at": "2026-05-27T02:17:53.468Z",
+  "url": "http://127.0.0.1:11434",
+  "hot_model": "qwen2.5:7b",
+  "teacher_model": "qwen3:14b",
+  "installed": false,
+  "ollama": {
+    "ok": false,
+    "status": 0,
+    "models": [],
+    "error": "fetch failed"
+  },
+  "warm": {
+    "ok": false,
+    "skipped": true,
+    "reason": "teacher_model_not_installed"
+  },
+  "next": "install with: ollama pull qwen3:14b",
+  "elapsed_ms": 16
+}

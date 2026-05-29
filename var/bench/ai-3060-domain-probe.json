@@ -1,0 +1,34 @@
+{
+  "schema": "mercury-ai-domain-probe-v1",
+  "mode": "ai_domain_pack_hit",
+  "ok": true,
+  "elapsed_ms": 35,
+  "prompt": "龍蝦背景診斷：找出延遲、資料庫膨脹、付費 provider 洩漏和錯誤 log 的優先修正順序",
+  "score": 0.4,
+  "domain_pack_id": "lobster_db_bloat",
+  "domain_pack_label": "Lobster database bloat and storage control",
+  "candidates": [
+    {
+      "id": "lobster_db_bloat",
+      "label": "Lobster database bloat and storage control",
+      "score": 0.4
+    },
+    {
+      "id": "lobster_provider_spend",
+      "label": "Lobster paid-provider and cost leak guard",
+      "score": 0.347
+    },
+    {
+      "id": "lobster_error_log",
+      "label": "Lobster error-log and incident triage",
+      "score": 0.18
+    },
+    {
+      "id": "lobster_latency",
+      "label": "Lobster latency and hot-path diagnosis",
+      "score": 0.18
+    }
+  ],
+  "response": "這題先命中領域知識包：Lobster database bloat and storage control。\ndomain_match: 0.4\n快速框架：\n1. 先分清哪些資料要永久保存、哪些只保留摘要、哪些只保留指標與來源 pointer。\n2. 對模型輸出採用 final summary、diagnosis tags、risk score、source pointers、recipe id，不存 token 流水。\n3. 設定 retention：raw trace 短期、蒸餾結果長期、可重建資料只存引用。\n風險閘門：不要把每秒碎片輸出寫進主資料庫。；涉及使用者資料時要先做隱私與刪除策略。\n這不是硬背全文；Mercury 先用蒸餾索引給框架，再把需要事實、來源或細節的部分交給 teacher 慢路徑補完。",
+  "candidate_count": 4
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "lobster_error_log",
+  "label": "Lobster error-log and incident triage",
+  "created_at": "2026-05-27T07:56:33.748Z",
+  "updated_at": "2026-05-27T07:58:40.450Z",
+  "tokens": [
+    "lobster",
+    "error",
+    "exception",
+    "stack",
+    "trace",
+    "crash",
+    "incident",
+    "status",
+    "http 500",
+    "http",
+    "500",
+    "龍蝦",
+    "錯誤",
+    "例外",
+    "堆疊",
+    "崩潰",
+    "事故",
+    "狀態碼"
+  ],
+  "intents": [
+    "error log triage",
+    "incident summary",
+    "root-cause candidate ranking"
+  ],
+  "frames": [
+    "先抓 first error、last error、最高頻錯誤、最近部署或設定變更。",
+    "把事件分成使用者影響、觸發條件、最可能根因、立即止血、後續驗證。",
+    "輸出短 incident note；長報告交給 teacher 背景補完並回寫 recipe。"
+  ],
+  "risk_gates": [
+    "不要只看最後一行錯誤。",
+    "根因需區分已證實、強懷疑、待驗證。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

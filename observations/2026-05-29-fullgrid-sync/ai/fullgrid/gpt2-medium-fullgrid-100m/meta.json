@@ -1,0 +1,1774 @@
+{
+  "observer": "mercury_fullgrid_observe.py",
+  "model_name": "gpt2-medium-fullgrid-100m",
+  "model_path": "/home/ai/hf_models/gpt2-medium",
+  "target_cells": 100000000,
+  "actual_cells": 104203908,
+  "nonzero_cells": 73414128,
+  "coverage_pct": 70.452375,
+  "Q": 18,
+  "S": 18,
+  "max_length": 192,
+  "probe_count": 30,
+  "include_norms": true,
+  "total_channels": 321617,
+  "module_count": 146,
+  "modules": {
+    "transformer.h.0.ln_1": {
+      "key": "transformer.h.0.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.0.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.0.attn.c_attn": {
+      "key": "transformer.h.0.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.0.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.0.attn.c_proj": {
+      "key": "transformer.h.0.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.0.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.0.ln_2": {
+      "key": "transformer.h.0.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.0.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.0.mlp.c_fc": {
+      "key": "transformer.h.0.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.0.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.0.mlp.c_proj": {
+      "key": "transformer.h.0.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.0.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.1.ln_1": {
+      "key": "transformer.h.1.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.1.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.1.attn.c_attn": {
+      "key": "transformer.h.1.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.1.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.1.attn.c_proj": {
+      "key": "transformer.h.1.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.1.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.1.ln_2": {
+      "key": "transformer.h.1.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.1.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.1.mlp.c_fc": {
+      "key": "transformer.h.1.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.1.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.1.mlp.c_proj": {
+      "key": "transformer.h.1.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.1.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.2.ln_1": {
+      "key": "transformer.h.2.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.2.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.2.attn.c_attn": {
+      "key": "transformer.h.2.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.2.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.2.attn.c_proj": {
+      "key": "transformer.h.2.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.2.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.2.ln_2": {
+      "key": "transformer.h.2.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.2.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.2.mlp.c_fc": {
+      "key": "transformer.h.2.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.2.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.2.mlp.c_proj": {
+      "key": "transformer.h.2.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.2.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.3.ln_1": {
+      "key": "transformer.h.3.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.3.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.3.attn.c_attn": {
+      "key": "transformer.h.3.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.3.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.3.attn.c_proj": {
+      "key": "transformer.h.3.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.3.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.3.ln_2": {
+      "key": "transformer.h.3.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.3.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.3.mlp.c_fc": {
+      "key": "transformer.h.3.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.3.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.3.mlp.c_proj": {
+      "key": "transformer.h.3.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.3.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.4.ln_1": {
+      "key": "transformer.h.4.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.4.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.4.attn.c_attn": {
+      "key": "transformer.h.4.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.4.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.4.attn.c_proj": {
+      "key": "transformer.h.4.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.4.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.4.ln_2": {
+      "key": "transformer.h.4.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.4.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.4.mlp.c_fc": {
+      "key": "transformer.h.4.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.4.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.4.mlp.c_proj": {
+      "key": "transformer.h.4.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.4.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.5.ln_1": {
+      "key": "transformer.h.5.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.5.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.5.attn.c_attn": {
+      "key": "transformer.h.5.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.5.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.5.attn.c_proj": {
+      "key": "transformer.h.5.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.5.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.5.ln_2": {
+      "key": "transformer.h.5.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.5.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.5.mlp.c_fc": {
+      "key": "transformer.h.5.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.5.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.5.mlp.c_proj": {
+      "key": "transformer.h.5.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.5.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.6.ln_1": {
+      "key": "transformer.h.6.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.6.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.6.attn.c_attn": {
+      "key": "transformer.h.6.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.6.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.6.attn.c_proj": {
+      "key": "transformer.h.6.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.6.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.6.ln_2": {
+      "key": "transformer.h.6.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.6.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.6.mlp.c_fc": {
+      "key": "transformer.h.6.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.6.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.6.mlp.c_proj": {
+      "key": "transformer.h.6.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.6.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.7.ln_1": {
+      "key": "transformer.h.7.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.7.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.7.attn.c_attn": {
+      "key": "transformer.h.7.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.7.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.7.attn.c_proj": {
+      "key": "transformer.h.7.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.7.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.7.ln_2": {
+      "key": "transformer.h.7.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.7.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.7.mlp.c_fc": {
+      "key": "transformer.h.7.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.7.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.7.mlp.c_proj": {
+      "key": "transformer.h.7.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.7.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.8.ln_1": {
+      "key": "transformer.h.8.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.8.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.8.attn.c_attn": {
+      "key": "transformer.h.8.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.8.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.8.attn.c_proj": {
+      "key": "transformer.h.8.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.8.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.8.ln_2": {
+      "key": "transformer.h.8.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.8.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.8.mlp.c_fc": {
+      "key": "transformer.h.8.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.8.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.8.mlp.c_proj": {
+      "key": "transformer.h.8.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.8.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.9.ln_1": {
+      "key": "transformer.h.9.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.9.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.9.attn.c_attn": {
+      "key": "transformer.h.9.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.9.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.9.attn.c_proj": {
+      "key": "transformer.h.9.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.9.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.9.ln_2": {
+      "key": "transformer.h.9.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.9.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.9.mlp.c_fc": {
+      "key": "transformer.h.9.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.9.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.9.mlp.c_proj": {
+      "key": "transformer.h.9.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.9.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.10.ln_1": {
+      "key": "transformer.h.10.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.10.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.10.attn.c_attn": {
+      "key": "transformer.h.10.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.10.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.10.attn.c_proj": {
+      "key": "transformer.h.10.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.10.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.10.ln_2": {
+      "key": "transformer.h.10.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.10.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.10.mlp.c_fc": {
+      "key": "transformer.h.10.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.10.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.10.mlp.c_proj": {
+      "key": "transformer.h.10.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.10.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.11.ln_1": {
+      "key": "transformer.h.11.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.11.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.11.attn.c_attn": {
+      "key": "transformer.h.11.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.11.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.11.attn.c_proj": {
+      "key": "transformer.h.11.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.11.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.11.ln_2": {
+      "key": "transformer.h.11.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.11.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.11.mlp.c_fc": {
+      "key": "transformer.h.11.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.11.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.11.mlp.c_proj": {
+      "key": "transformer.h.11.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.11.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.12.ln_1": {
+      "key": "transformer.h.12.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.12.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.12.attn.c_attn": {
+      "key": "transformer.h.12.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.12.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.12.attn.c_proj": {
+      "key": "transformer.h.12.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.12.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.12.ln_2": {
+      "key": "transformer.h.12.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.12.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.12.mlp.c_fc": {
+      "key": "transformer.h.12.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.12.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.12.mlp.c_proj": {
+      "key": "transformer.h.12.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.12.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.13.ln_1": {
+      "key": "transformer.h.13.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.13.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.13.attn.c_attn": {
+      "key": "transformer.h.13.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.13.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.13.attn.c_proj": {
+      "key": "transformer.h.13.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.13.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.13.ln_2": {
+      "key": "transformer.h.13.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.13.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.13.mlp.c_fc": {
+      "key": "transformer.h.13.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.13.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.13.mlp.c_proj": {
+      "key": "transformer.h.13.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.13.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.14.ln_1": {
+      "key": "transformer.h.14.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.14.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.14.attn.c_attn": {
+      "key": "transformer.h.14.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.14.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.14.attn.c_proj": {
+      "key": "transformer.h.14.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.14.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.14.ln_2": {
+      "key": "transformer.h.14.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.14.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.14.mlp.c_fc": {
+      "key": "transformer.h.14.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.14.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.14.mlp.c_proj": {
+      "key": "transformer.h.14.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.14.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.15.ln_1": {
+      "key": "transformer.h.15.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.15.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.15.attn.c_attn": {
+      "key": "transformer.h.15.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.15.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.15.attn.c_proj": {
+      "key": "transformer.h.15.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.15.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.15.ln_2": {
+      "key": "transformer.h.15.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.15.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.15.mlp.c_fc": {
+      "key": "transformer.h.15.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.15.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.15.mlp.c_proj": {
+      "key": "transformer.h.15.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.15.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.16.ln_1": {
+      "key": "transformer.h.16.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.16.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.16.attn.c_attn": {
+      "key": "transformer.h.16.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.16.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.16.attn.c_proj": {
+      "key": "transformer.h.16.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.16.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.16.ln_2": {
+      "key": "transformer.h.16.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.16.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.16.mlp.c_fc": {
+      "key": "transformer.h.16.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.16.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.16.mlp.c_proj": {
+      "key": "transformer.h.16.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.16.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.17.ln_1": {
+      "key": "transformer.h.17.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.17.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.17.attn.c_attn": {
+      "key": "transformer.h.17.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.17.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.17.attn.c_proj": {
+      "key": "transformer.h.17.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.17.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.17.ln_2": {
+      "key": "transformer.h.17.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.17.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.17.mlp.c_fc": {
+      "key": "transformer.h.17.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.17.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.17.mlp.c_proj": {
+      "key": "transformer.h.17.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.17.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.18.ln_1": {
+      "key": "transformer.h.18.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.18.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.18.attn.c_attn": {
+      "key": "transformer.h.18.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.18.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.18.attn.c_proj": {
+      "key": "transformer.h.18.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.18.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.18.ln_2": {
+      "key": "transformer.h.18.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.18.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.18.mlp.c_fc": {
+      "key": "transformer.h.18.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.18.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.18.mlp.c_proj": {
+      "key": "transformer.h.18.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.18.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.19.ln_1": {
+      "key": "transformer.h.19.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.19.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.19.attn.c_attn": {
+      "key": "transformer.h.19.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.19.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.19.attn.c_proj": {
+      "key": "transformer.h.19.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.19.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.19.ln_2": {
+      "key": "transformer.h.19.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.19.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.19.mlp.c_fc": {
+      "key": "transformer.h.19.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.19.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.19.mlp.c_proj": {
+      "key": "transformer.h.19.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.19.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.20.ln_1": {
+      "key": "transformer.h.20.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.20.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.20.attn.c_attn": {
+      "key": "transformer.h.20.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.20.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.20.attn.c_proj": {
+      "key": "transformer.h.20.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.20.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.20.ln_2": {
+      "key": "transformer.h.20.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.20.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.20.mlp.c_fc": {
+      "key": "transformer.h.20.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.20.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.20.mlp.c_proj": {
+      "key": "transformer.h.20.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.20.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.21.ln_1": {
+      "key": "transformer.h.21.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.21.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.21.attn.c_attn": {
+      "key": "transformer.h.21.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.21.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.21.attn.c_proj": {
+      "key": "transformer.h.21.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.21.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.21.ln_2": {
+      "key": "transformer.h.21.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.21.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.21.mlp.c_fc": {
+      "key": "transformer.h.21.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.21.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.21.mlp.c_proj": {
+      "key": "transformer.h.21.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.21.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.22.ln_1": {
+      "key": "transformer.h.22.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.22.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.22.attn.c_attn": {
+      "key": "transformer.h.22.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.22.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.22.attn.c_proj": {
+      "key": "transformer.h.22.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.22.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.22.ln_2": {
+      "key": "transformer.h.22.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.22.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.22.mlp.c_fc": {
+      "key": "transformer.h.22.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.22.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.22.mlp.c_proj": {
+      "key": "transformer.h.22.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.22.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.23.ln_1": {
+      "key": "transformer.h.23.ln_1",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.23.ln_1.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.23.attn.c_attn": {
+      "key": "transformer.h.23.attn.c_attn",
+      "kind": "hf_conv1d",
+      "dim": 3072,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.23.attn.c_attn.npy",
+      "shape": [
+        3072,
+        18,
+        18
+      ]
+    },
+    "transformer.h.23.attn.c_proj": {
+      "key": "transformer.h.23.attn.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.23.attn.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.23.ln_2": {
+      "key": "transformer.h.23.ln_2",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.23.ln_2.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.h.23.mlp.c_fc": {
+      "key": "transformer.h.23.mlp.c_fc",
+      "kind": "hf_conv1d",
+      "dim": 4096,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.23.mlp.c_fc.npy",
+      "shape": [
+        4096,
+        18,
+        18
+      ]
+    },
+    "transformer.h.23.mlp.c_proj": {
+      "key": "transformer.h.23.mlp.c_proj",
+      "kind": "hf_conv1d",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.h.23.mlp.c_proj.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "transformer.ln_f": {
+      "key": "transformer.ln_f",
+      "kind": "norm",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/transformer.ln_f.npy",
+      "shape": [
+        1024,
+        18,
+        18
+      ]
+    },
+    "lm_head": {
+      "key": "lm_head",
+      "kind": "linear",
+      "dim": 50257,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m/heat/lm_head.npy",
+      "shape": [
+        50257,
+        18,
+        18
+      ]
+    }
+  },
+  "module_nonzero_cells": {
+    "transformer.h.0.ln_1": 233627,
+    "transformer.h.0.attn.c_attn": 448905,
+    "transformer.h.0.attn.c_proj": 249380,
+    "transformer.h.0.ln_2": 243860,
+    "transformer.h.0.mlp.c_fc": 908673,
+    "transformer.h.0.mlp.c_proj": 244930,
+    "transformer.h.1.ln_1": 247725,
+    "transformer.h.1.attn.c_attn": 540199,
+    "transformer.h.1.attn.c_proj": 235216,
+    "transformer.h.1.ln_2": 241782,
+    "transformer.h.1.mlp.c_fc": 670903,
+    "transformer.h.1.mlp.c_proj": 255148,
+    "transformer.h.2.ln_1": 246237,
+    "transformer.h.2.attn.c_attn": 502477,
+    "transformer.h.2.attn.c_proj": 253919,
+    "transformer.h.2.ln_2": 242870,
+    "transformer.h.2.mlp.c_fc": 729572,
+    "transformer.h.2.mlp.c_proj": 258699,
+    "transformer.h.3.ln_1": 245293,
+    "transformer.h.3.attn.c_attn": 483192,
+    "transformer.h.3.attn.c_proj": 257094,
+    "transformer.h.3.ln_2": 242173,
+    "transformer.h.3.mlp.c_fc": 853719,
+    "transformer.h.3.mlp.c_proj": 262858,
+    "transformer.h.4.ln_1": 241813,
+    "transformer.h.4.attn.c_attn": 541372,
+    "transformer.h.4.attn.c_proj": 243152,
+    "transformer.h.4.ln_2": 239289,
+    "transformer.h.4.mlp.c_fc": 888564,
+    "transformer.h.4.mlp.c_proj": 253192,
+    "transformer.h.5.ln_1": 242986,
+    "transformer.h.5.attn.c_attn": 589145,
+    "transformer.h.5.attn.c_proj": 246637,
+    "transformer.h.5.ln_2": 241509,
+    "transformer.h.5.mlp.c_fc": 878552,
+    "transformer.h.5.mlp.c_proj": 253397,
+    "transformer.h.6.ln_1": 242675,
+    "transformer.h.6.attn.c_attn": 638006,
+    "transformer.h.6.attn.c_proj": 246176,
+    "transformer.h.6.ln_2": 242159,
+    "transformer.h.6.mlp.c_fc": 888003,
+    "transformer.h.6.mlp.c_proj": 254021,
+    "transformer.h.7.ln_1": 243014,
+    "transformer.h.7.attn.c_attn": 647731,
+    "transformer.h.7.attn.c_proj": 244444,
+    "transformer.h.7.ln_2": 242772,
+    "transformer.h.7.mlp.c_fc": 882745,
+    "transformer.h.7.mlp.c_proj": 255074,
+    "transformer.h.8.ln_1": 244530,
+    "transformer.h.8.attn.c_attn": 632028,
+    "transformer.h.8.attn.c_proj": 244385,
+    "transformer.h.8.ln_2": 242339,
+    "transformer.h.8.mlp.c_fc": 886860,
+    "transformer.h.8.mlp.c_proj": 253108,
+    "transformer.h.9.ln_1": 243319,
+    "transformer.h.9.attn.c_attn": 649758,
+    "transformer.h.9.attn.c_proj": 240348,
+    "transformer.h.9.ln_2": 243982,
+    "transformer.h.9.mlp.c_fc": 897688,
+    "transformer.h.9.mlp.c_proj": 252461,
+    "transformer.h.10.ln_1": 244165,
+    "transformer.h.10.attn.c_attn": 641003,
+    "transformer.h.10.attn.c_proj": 241079,
+    "transformer.h.10.ln_2": 244133,
+    "transformer.h.10.mlp.c_fc": 896065,
+    "transformer.h.10.mlp.c_proj": 251052,
+    "transformer.h.11.ln_1": 244134,
+    "transformer.h.11.attn.c_attn": 636191,
+    "transformer.h.11.attn.c_proj": 245901,
+    "transformer.h.11.ln_2": 244069,
+    "transformer.h.11.mlp.c_fc": 906825,
+    "transformer.h.11.mlp.c_proj": 252227,
+    "transformer.h.12.ln_1": 243077,
+    "transformer.h.12.attn.c_attn": 649183,
+    "transformer.h.12.attn.c_proj": 239903,
+    "transformer.h.12.ln_2": 244235,
+    "transformer.h.12.mlp.c_fc": 918395,
+    "transformer.h.12.mlp.c_proj": 251041,
+    "transformer.h.13.ln_1": 244528,
+    "transformer.h.13.attn.c_attn": 606980,
+    "transformer.h.13.attn.c_proj": 240059,
+    "transformer.h.13.ln_2": 244599,
+    "transformer.h.13.mlp.c_fc": 926632,
+    "transformer.h.13.mlp.c_proj": 251333,
+    "transformer.h.14.ln_1": 243673,
+    "transformer.h.14.attn.c_attn": 636452,
+    "transformer.h.14.attn.c_proj": 240443,
+    "transformer.h.14.ln_2": 243766,
+    "transformer.h.14.mlp.c_fc": 930026,
+    "transformer.h.14.mlp.c_proj": 252207,
+    "transformer.h.15.ln_1": 243857,
+    "transformer.h.15.attn.c_attn": 632864,
+    "transformer.h.15.attn.c_proj": 242730,
+    "transformer.h.15.ln_2": 244044,
+    "transformer.h.15.mlp.c_fc": 934143,
+    "transformer.h.15.mlp.c_proj": 251500,
+    "transformer.h.16.ln_1": 243129,
+    "transformer.h.16.attn.c_attn": 649917,
+    "transformer.h.16.attn.c_proj": 243610,
+    "transformer.h.16.ln_2": 243866,
+    "transformer.h.16.mlp.c_fc": 944971,
+    "transformer.h.16.mlp.c_proj": 251829,
+    "transformer.h.17.ln_1": 242792,
+    "transformer.h.17.attn.c_attn": 652687,
+    "transformer.h.17.attn.c_proj": 245778,
+    "transformer.h.17.ln_2": 243732,
+    "transformer.h.17.mlp.c_fc": 947873,
+    "transformer.h.17.mlp.c_proj": 249997,
+    "transformer.h.18.ln_1": 243231,
+    "transformer.h.18.attn.c_attn": 660668,
+    "transformer.h.18.attn.c_proj": 241557,
+    "transformer.h.18.ln_2": 243438,
+    "transformer.h.18.mlp.c_fc": 957545,
+    "transformer.h.18.mlp.c_proj": 251198,
+    "transformer.h.19.ln_1": 242976,
+    "transformer.h.19.attn.c_attn": 677960,
+    "transformer.h.19.attn.c_proj": 240914,
+    "transformer.h.19.ln_2": 243163,
+    "transformer.h.19.mlp.c_fc": 963565,
+    "transformer.h.19.mlp.c_proj": 250491,
+    "transformer.h.20.ln_1": 243264,
+    "transformer.h.20.attn.c_attn": 680558,
+    "transformer.h.20.attn.c_proj": 244942,
+    "transformer.h.20.ln_2": 243327,
+    "transformer.h.20.mlp.c_fc": 964801,
+    "transformer.h.20.mlp.c_proj": 252044,
+    "transformer.h.21.ln_1": 243169,
+    "transformer.h.21.attn.c_attn": 679474,
+    "transformer.h.21.attn.c_proj": 241426,
+    "transformer.h.21.ln_2": 243333,
+    "transformer.h.21.mlp.c_fc": 961197,
+    "transformer.h.21.mlp.c_proj": 253010,
+    "transformer.h.22.ln_1": 244831,
+    "transformer.h.22.attn.c_attn": 677022,
+    "transformer.h.22.attn.c_proj": 239981,
+    "transformer.h.22.ln_2": 244342,
+    "transformer.h.22.mlp.c_fc": 947061,
+    "transformer.h.22.mlp.c_proj": 253303,
+    "transformer.h.23.ln_1": 248148,
+    "transformer.h.23.attn.c_attn": 656189,
+    "transformer.h.23.attn.c_proj": 246662,
+    "transformer.h.23.ln_2": 253596,
+    "transformer.h.23.mlp.c_fc": 953234,
+    "transformer.h.23.mlp.c_proj": 257533,
+    "transformer.ln_f": 253393,
+    "lm_head": 13093202
+  },
+  "wall_seconds": 34.0,
+  "timestamp": 1779935581
+}

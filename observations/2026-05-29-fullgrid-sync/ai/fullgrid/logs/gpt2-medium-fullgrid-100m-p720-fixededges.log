@@ -1,0 +1,32 @@
+[fullgrid] load tokenizer /home/ai/hf_models/gpt2-medium
+[fullgrid] load model /home/ai/hf_models/gpt2-medium device=cpu dtype=float32
+`torch_dtype` is deprecated! Use `dtype` instead!
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.Op.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.OnnxFunction.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+[fullgrid] modules=146 channels=321,617 Q=18 S=18 cells=104,203,908
+[fullgrid] reuse quantile edges from /home/ai/mercury_observations/fullgrid/gpt2-medium-fullgrid-100m-p180/quantile_edges.npz
+[fullgrid] pass2 heat fill
+[fullgrid] heat 5/1045 elapsed=29s
+[fullgrid] heat 10/1045 elapsed=50s
+[fullgrid] heat 15/1045 elapsed=70s
+[fullgrid] heat 20/1045 elapsed=92s
+[fullgrid] heat 25/1045 elapsed=113s
+[fullgrid] heat 30/1045 elapsed=134s
+[fullgrid] heat 35/1045 elapsed=153s
+[fullgrid] heat 40/1045 elapsed=175s
+[fullgrid] heat 45/1045 elapsed=193s
+[fullgrid] heat 50/1045 elapsed=215s
+[fullgrid] heat 55/1045 elapsed=236s
+[fullgrid] heat 60/1045 elapsed=257s
+[fullgrid] heat 65/1045 elapsed=280s
+[fullgrid] heat 70/1045 elapsed=299s
+[fullgrid] heat 75/1045 elapsed=321s
+[fullgrid] heat 80/1045 elapsed=343s
+[fullgrid] heat 85/1045 elapsed=364s
+[fullgrid] heat 90/1045 elapsed=385s
+[fullgrid] heat 95/1045 elapsed=407s
+[fullgrid] heat 100/1045 elapsed=428s
+[fullgrid] heat 105/1045 elapsed=451s
+[fullgrid] heat 110/1045 elapsed=472s

@@ -1,0 +1,23 @@
+{
+  "schema": "mercury-rosen-bridge-v1",
+  "id": "20bfd1b02e494a781b68c9c4",
+  "created_at": "2026-05-27T03:11:23.433Z",
+  "updated_at": "2026-05-27T03:11:23.433Z",
+  "namespace": "project-31d7dedd66d42831a3ae2290",
+  "from": "entry:latency_hot_path",
+  "to": "guard:hot-path-budget",
+  "type": "blocked_by",
+  "risk_family": "latency_hot_path",
+  "confidence": 0.58,
+  "latency_ms": 1,
+  "cost": "low",
+  "risk": "medium",
+  "freshness": "fresh",
+  "evidence": "Do not let broad UMA preload or model calls enter the hot path.",
+  "tokens": {},
+  "source": "static_family",
+  "score": 0.98,
+  "hit_count": 1,
+  "miss_count": 0,
+  "activation_rule": "latency_hot_path+local_llm_speed"
+}

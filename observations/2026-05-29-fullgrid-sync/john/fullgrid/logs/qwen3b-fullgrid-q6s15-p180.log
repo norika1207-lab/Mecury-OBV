@@ -1,0 +1,80 @@
+START=Thu May 28 12:22:20 CST 2026
+UPTIME=12:22  up  1:07, 1 user, load averages: 2.29 3.82 2.14
+OUT=/Users/john/mercury_observations/fullgrid/qwen3b-fullgrid-q6s15-p180
+CMD=/Users/john/fullgrid-venv/bin/python /Users/john/fullgrid_observe.py --model-path /Users/john/hf-qwen3b --model-name qwen3b-fullgrid-q6s15-p180 --out-root /Users/john/mercury_observations/fullgrid --q 6 --s 15 --device mps --dtype float16 --include-norms --trust-remote-code --probes-file /Users/john/probes_180.txt
+/Users/john/fullgrid-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[fullgrid] load tokenizer /Users/john/hf-qwen3b
+[fullgrid] load model /Users/john/hf-qwen3b device=mps dtype=float16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.21s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.59it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.40it/s]
+[fullgrid] modules=253 channels=1,184,128 Q=6 S=15 cells=106,571,520
+[fullgrid] pass1 calibration probes=166 heat_probes=166
+[fullgrid] calibration 5/166 elapsed=4s
+[fullgrid] calibration 10/166 elapsed=5s
+[fullgrid] calibration 15/166 elapsed=5s
+[fullgrid] calibration 20/166 elapsed=6s
+[fullgrid] calibration 25/166 elapsed=6s
+[fullgrid] calibration 30/166 elapsed=7s
+[fullgrid] calibration 35/166 elapsed=7s
+[fullgrid] calibration 40/166 elapsed=8s
+[fullgrid] calibration 45/166 elapsed=8s
+[fullgrid] calibration 50/166 elapsed=9s
+[fullgrid] calibration 55/166 elapsed=9s
+[fullgrid] calibration 60/166 elapsed=10s
+[fullgrid] calibration 65/166 elapsed=10s
+[fullgrid] calibration 70/166 elapsed=11s
+[fullgrid] calibration 75/166 elapsed=11s
+[fullgrid] calibration 80/166 elapsed=12s
+[fullgrid] calibration 85/166 elapsed=12s
+[fullgrid] calibration 90/166 elapsed=13s
+[fullgrid] calibration 95/166 elapsed=13s
+[fullgrid] calibration 100/166 elapsed=14s
+[fullgrid] calibration 105/166 elapsed=14s
+[fullgrid] calibration 110/166 elapsed=15s
+[fullgrid] calibration 115/166 elapsed=15s
+[fullgrid] calibration 120/166 elapsed=16s
+[fullgrid] calibration 125/166 elapsed=16s
+[fullgrid] calibration 130/166 elapsed=17s
+[fullgrid] calibration 135/166 elapsed=18s
+[fullgrid] calibration 140/166 elapsed=18s
+[fullgrid] calibration 145/166 elapsed=19s
+[fullgrid] calibration 150/166 elapsed=19s
+[fullgrid] calibration 155/166 elapsed=20s
+[fullgrid] calibration 160/166 elapsed=20s
+[fullgrid] calibration 165/166 elapsed=21s
+[fullgrid] pass2 heat fill
+[fullgrid] heat 5/166 elapsed=27s
+[fullgrid] heat 10/166 elapsed=33s
+[fullgrid] heat 15/166 elapsed=38s
+[fullgrid] heat 20/166 elapsed=44s
+[fullgrid] heat 25/166 elapsed=49s
+[fullgrid] heat 30/166 elapsed=55s
+[fullgrid] heat 35/166 elapsed=60s
+[fullgrid] heat 40/166 elapsed=65s
+[fullgrid] heat 45/166 elapsed=71s
+[fullgrid] heat 50/166 elapsed=77s
+[fullgrid] heat 55/166 elapsed=82s
+[fullgrid] heat 60/166 elapsed=87s
+[fullgrid] heat 65/166 elapsed=93s
+[fullgrid] heat 70/166 elapsed=98s
+[fullgrid] heat 75/166 elapsed=103s
+[fullgrid] heat 80/166 elapsed=109s
+[fullgrid] heat 85/166 elapsed=115s
+[fullgrid] heat 90/166 elapsed=121s
+[fullgrid] heat 95/166 elapsed=126s
+[fullgrid] heat 100/166 elapsed=132s
+[fullgrid] heat 105/166 elapsed=137s
+[fullgrid] heat 110/166 elapsed=143s
+[fullgrid] heat 115/166 elapsed=149s
+[fullgrid] heat 120/166 elapsed=154s
+[fullgrid] heat 125/166 elapsed=160s
+[fullgrid] heat 130/166 elapsed=166s
+[fullgrid] heat 135/166 elapsed=171s
+[fullgrid] heat 140/166 elapsed=177s
+[fullgrid] heat 145/166 elapsed=183s
+[fullgrid] heat 150/166 elapsed=188s
+[fullgrid] heat 155/166 elapsed=194s
+[fullgrid] heat 160/166 elapsed=200s
+[fullgrid] heat 165/166 elapsed=205s
+[fullgrid] DONE qwen3b-fullgrid-q6s15-p180 cells=106,571,520 nonzero=96,595,759 coverage=90.639374%

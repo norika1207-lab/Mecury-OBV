@@ -1,0 +1,42 @@
+{
+  "schema": "mercury-model-preheat-result-v1",
+  "created_at": "2026-05-28T01:08:19.407Z",
+  "ready": false,
+  "elapsed_ms": 42,
+  "model": "deepseek-r1:7b",
+  "namespace": "model-preheat-52767c552b7d252bc9b800b8",
+  "mode": "model_inside_unavailable",
+  "artifact": "var/model-preheat/deepseek-r1_7b.json",
+  "pages": 64,
+  "hits": 8,
+  "search_ms": 2,
+  "placed_internal_neurons": 500,
+  "role_count": 10,
+  "first_hits": [
+    {
+      "pointer": "var/model-preheat/deepseek-r1_7b.json#chunk-22",
+      "score": 0.151,
+      "text": "\"uncertainty probe\", \"internal\" ] }, { \"neuron_id\": \"verify.model_internal_compression_anchor_v5\", \"role\": \"compression_anchor\", \"surface\": \"compression_anchor\", \"inside_target\": \""
+    },
+    {
+      "pointer": "var/model-preheat/deepseek-r1_7b.json#chunk-31",
+      "score": 0.151,
+      "text": "\"ollama\", \"local llm\", \"token\", \"decode\", \"kv cache\", \"prompt\", \"inference\", \"uncertainty probe\", \"internal\" ] }, { \"neuron_id\": \"verify.model_internal_compression_anchor_v7\", \"rol"
+    },
+    {
+      "pointer": "var/model-preheat/deepseek-r1_7b.json#chunk-40",
+      "score": 0.151,
+      "text": "\"tensor_range\": null, \"activation_terms\": [ \"model field\", \"qwen\", \"qwer\", \"ollama\", \"local llm\", \"token\", \"decode\", \"kv cache\", \"prompt\", \"inference\", \"uncertainty probe\", \"intern"
+    },
+    {
+      "pointer": "var/model-preheat/deepseek-r1_7b.json#chunk-63",
+      "score": 0.151,
+      "text": "\"prompt\", \"inference\", \"uncertainty probe\", \"internal\" ] }, { \"neuron_id\": \"verify.model_internal_compression_anchor_v14\", \"role\": \"compression_anchor\", \"surface\": \"compression_anc"
+    },
+    {
+      "pointer": "var/model-preheat/deepseek-r1_7b.json#chunk-8",
+      "score": 0.148,
+      "text": "}, { \"neuron_id\": \"memory.model_internal_uncertainty_probe_v2\", \"role\": \"insufficiency_state_probe\", \"surface\": \"uncertainty_probe\", \"inside_target\": \"uncertainty_probe_state\", \"te"
+    }
+  ]
+}

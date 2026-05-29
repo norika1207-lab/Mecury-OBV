@@ -1,0 +1,698 @@
+{
+  "schema": "mercury-product-dashboard-v1",
+  "created_at": "2026-05-19T03:38:42.549Z",
+  "elapsed_ms": 1094,
+  "ready": false,
+  "product_name": "Neuron Mercury",
+  "product_claim": "A local computer nervous system that makes first useful work faster through state-field sensing, UMA/RAG memory, sparse neuron scheduling, and slow-model avoidance.",
+  "namespace": "project-72e25486d261af475d2a3cd8",
+  "links": {
+    "paper": "docs/paper-experiment-suite.html",
+    "launch": "docs/launch-experiment-report.html",
+    "rosen": "docs/rosen-proof-report.html",
+    "monster": "docs/monster-proof-report.html",
+    "state_field": "docs/state-field-architecture.html",
+    "visual_speed": "docs/visual-speed-report.html"
+  },
+  "metrics": {
+    "neurons": 1000,
+    "paper_lanes": "8/8",
+    "launch_lanes": "5/6",
+    "paper_rows": 14,
+    "visual_hot_path_speedup": 12.48,
+    "visual_workflow_speedup": 1.79,
+    "visual_saved_seconds": 1.58,
+    "first_gen_bytes": 9377,
+    "first_gen_judge": 100,
+    "rosen_bridges": 344,
+    "rosen_pairs": 73,
+    "uma_pages": 181,
+    "speed_state_ms": 934,
+    "monster_ms": 137,
+    "model_hot_path": "forbidden",
+    "qwen_3060_cold_speedup": 5.91,
+    "qwen_3060_cold_baseline_ms": 8633.987,
+    "qwen_3060_first_request_ms": 1461.829,
+    "qwen_3060_cache_ms": 0.113,
+    "qwen_3060_gpu_temp_delta_c": 9,
+    "qwen_3060_gpu_power_delta_w": 79.1,
+    "diskspd_no_regression_pass": true,
+    "diskspd_min_throughput_ratio": 0.9977,
+    "diskspd_max_latency_ratio": 1.0114
+  },
+  "product_ready_checks": [
+    {
+      "id": "paper_suite",
+      "label": "Paper experiment suite",
+      "pass": true,
+      "detail": "8/8 lanes"
+    },
+    {
+      "id": "launch_suite",
+      "label": "Launch experiment report",
+      "pass": false,
+      "detail": "5/6 lanes"
+    },
+    {
+      "id": "rosen_proof",
+      "label": "Rosen proof",
+      "pass": true,
+      "detail": "344 bridges"
+    },
+    {
+      "id": "monster_proof",
+      "label": "Monster proof",
+      "pass": true,
+      "detail": "137ms diagnosis"
+    },
+    {
+      "id": "neuron_catalog",
+      "label": "500-neuron catalog",
+      "pass": true,
+      "detail": "1000 neurons"
+    },
+    {
+      "id": "neuron_placement",
+      "label": "Neuron placement map",
+      "pass": true,
+      "detail": "1000 placed"
+    },
+    {
+      "id": "llm_hot_path",
+      "label": "LLM hot path forbidden",
+      "pass": true,
+      "detail": "forbidden"
+    },
+    {
+      "id": "qwen_3060_cold_start",
+      "label": "3060 first impression",
+      "pass": true,
+      "detail": "5.91x cold"
+    },
+    {
+      "id": "qwen_3060_hot_cache",
+      "label": "3060 hot cache",
+      "pass": true,
+      "detail": "16286.12x hot"
+    },
+    {
+      "id": "diskspd_no_regression",
+      "label": "3060 foreground no-regression",
+      "pass": true,
+      "detail": "min throughput 99.8%, max latency 101.1%"
+    },
+    {
+      "id": "runtime_low_impact",
+      "label": "Low-impact product mode",
+      "pass": true,
+      "detail": "low-impact / slow_worker=defer"
+    },
+    {
+      "id": "uma_namespace",
+      "label": "Project UMA namespace",
+      "pass": true,
+      "detail": "181 pages"
+    },
+    {
+      "id": "rosen_pairs",
+      "label": "State-field pairs",
+      "pass": true,
+      "detail": "73 pairs"
+    }
+  ],
+  "reports": {
+    "paper": {
+      "pass": true,
+      "lanes": [
+        {
+          "name": "500-neuron sparse activation",
+          "pass": true,
+          "trials": 2,
+          "baseline_kind": "candidate_count",
+          "unit": "neurons",
+          "mercury_p50": 12,
+          "mercury_p95": 12,
+          "speedup_p50": 83.33,
+          "speedup_p95": 83.33,
+          "claim": "28 selected lanes, 12 executable neurons"
+        },
+        {
+          "name": "Rosen Pair unchanged-state replay",
+          "pass": true,
+          "trials": 2,
+          "baseline_kind": "measured_seed_ms",
+          "unit": "ms",
+          "mercury_p50": 79,
+          "mercury_p95": 79,
+          "speedup_p50": 0.91,
+          "speedup_p95": 0.91,
+          "claim": "seed=pair_seed, replay=state_replay, correction=correction_pulse"
+        },
+        {
+          "name": "Rosen Pair changed-state correction",
+          "pass": true,
+          "trials": 2,
+          "baseline_kind": "measured_seed_ms",
+          "unit": "ms",
+          "mercury_p50": 70,
+          "mercury_p95": 70,
+          "speedup_p50": 1.04,
+          "speedup_p95": 1.04,
+          "claim": "digest_changed=yes"
+        },
+        {
+          "name": "Cold-start evidence packet",
+          "pass": true,
+          "trials": 2,
+          "baseline_kind": "reference_model_discovery_ms",
+          "unit": "ms",
+          "mercury_p50": 2,
+          "mercury_p95": 2,
+          "speedup_p50": 30000,
+          "speedup_p95": 30000,
+          "claim": "hits=8, slow_job=pending"
+        },
+        {
+          "name": "Workflow route materialization/replay",
+          "pass": true,
+          "trials": 2,
+          "baseline_kind": "measured_first_route_ms",
+          "unit": "ms",
+          "mercury_p50": 8,
+          "mercury_p95": 8,
+          "speedup_p50": 146.25,
+          "speedup_p95": 146.25,
+          "claim": "steps=rosen_route|spend_guard|cold_start_packet|monster_doctor|task_memory"
+        },
+        {
+          "name": "LLM hot-path avoidance",
+          "pass": true,
+          "trials": 2,
+          "baseline_kind": "reference_local_qwen_ms",
+          "unit": "ms",
+          "mercury_p50": 1,
+          "mercury_p95": 1,
+          "speedup_p50": 0.58,
+          "speedup_p95": 0.58,
+          "claim": "provider=reflex_queue_only, queue=2748"
+        },
+        {
+          "name": "Monster diagnosis",
+          "pass": true,
+          "trials": 1,
+          "baseline_kind": "reference_broad_scan_plus_model_ms",
+          "unit": "ms",
+          "mercury_p50": 126,
+          "mercury_p95": 126,
+          "speedup_p50": 952.38,
+          "speedup_p95": 952.38,
+          "claim": "pages=607, rosen=8, cost=32"
+        },
+        {
+          "name": "Resident speed-state snapshot",
+          "pass": true,
+          "trials": 1,
+          "baseline_kind": "budget_ms",
+          "unit": "ms",
+          "mercury_p50": 0.001,
+          "mercury_p95": 0.001,
+          "speedup_p50": 300000,
+          "speedup_p95": 300000,
+          "claim": "rosen_summary=ready, pairs=73"
+        }
+      ],
+      "rows": 14,
+      "honest_claim": "這份 suite 把 measured baseline、reference baseline、candidate-count reduction 分開標示。可對外主張的是：首次任務先產出 evidence packet / route / diagnosis，不把 cache replay 說成首次生成；cache replay 是第二段價值，不混在同一個冷啟動數字裡。"
+    },
+    "launch": {
+      "pass": false,
+      "lanes": [
+        {
+          "name": "500-neuron sparse scheduling",
+          "baseline_label": "1000 candidates",
+          "mercury_label": "12 executed",
+          "baseline_ms": 1000,
+          "mercury_ms": 12,
+          "speedup": 83.33,
+          "pass": false,
+          "proof": "selected=28, executed=12; map grows without full-catalog execution."
+        },
+        {
+          "name": "Rosen Pair state replay",
+          "baseline_label": "68ms seed",
+          "mercury_label": "72ms replay",
+          "baseline_ms": 68,
+          "mercury_ms": 72,
+          "speedup": 0.94,
+          "pass": true,
+          "proof": "unchanged digest returns state_replay; changed file returns correction_pulse."
+        },
+        {
+          "name": "Cold-start evidence packet",
+          "baseline_label": "model/tool discovery",
+          "mercury_label": "44ms packet",
+          "baseline_ms": 120000,
+          "mercury_ms": 44,
+          "speedup": 2727.27,
+          "pass": true,
+          "proof": "route=hot_page_first, hits=8, slow_job=pending."
+        },
+        {
+          "name": "Monster diagnosis route",
+          "baseline_label": "broad scan + model",
+          "mercury_label": "137ms diagnosis",
+          "baseline_ms": 120000,
+          "mercury_ms": 137,
+          "speedup": 875.91,
+          "pass": true,
+          "proof": "rosen=8, pages=607, replay=accelerate_task_fast_replay."
+        },
+        {
+          "name": "Workflow materialization/replay",
+          "baseline_label": "1102ms first route",
+          "mercury_label": "8ms replay",
+          "baseline_ms": 1102,
+          "mercury_ms": 8,
+          "speedup": 137.75,
+          "pass": true,
+          "proof": "mode=accelerate_task_fast_replay, steps=rosen_route,spend_guard,cold_start_packet,monster_doctor,task_memory."
+        },
+        {
+          "name": "Qwen / LLM hot-path avoidance",
+          "baseline_label": "local model call",
+          "mercury_label": "reflex_queue_only",
+          "baseline_ms": 152,
+          "mercury_ms": 265,
+          "speedup": 0.57,
+          "pass": true,
+          "proof": "policy=forbidden, pending=2748, qwen_cache=4096."
+        }
+      ]
+    },
+    "rosen": {
+      "pass": true,
+      "checks": [
+        {
+          "name": "Rosen route exists",
+          "pass": true,
+          "detail": "344 bridges, 8 latest selected"
+        },
+        {
+          "name": "Cold-start evidence",
+          "pass": true,
+          "detail": "5ms via hot_page_first"
+        },
+        {
+          "name": "First useful draft",
+          "pass": true,
+          "detail": "9342 bytes, judge 100"
+        },
+        {
+          "name": "Replay acceleration",
+          "pass": true,
+          "detail": "distilled_first_generation_replay 1ms"
+        },
+        {
+          "name": "Accelerate task bridge",
+          "pass": true,
+          "detail": "8 bridges, steps rosen_route,spend_guard,cold_start_packet,monster_doctor,task_memory"
+        },
+        {
+          "name": "Model hot path",
+          "pass": true,
+          "detail": "policy forbidden"
+        }
+      ]
+    },
+    "monster": {
+      "pass": true,
+      "checks": [
+        {
+          "name": "Rosen route selected bridges",
+          "pass": true,
+          "detail": "8/220"
+        },
+        {
+          "name": "Monster diagnosis uses UMA",
+          "pass": true,
+          "detail": "uma_pages_loaded/target_file_first"
+        },
+        {
+          "name": "Monster diagnosis is budgeted",
+          "pass": true,
+          "detail": "137ms"
+        },
+        {
+          "name": "Code Cortex has pages",
+          "pass": true,
+          "detail": "607 pages"
+        },
+        {
+          "name": "Workflow replay is accelerated",
+          "pass": true,
+          "detail": "accelerate_task_fast_replay 2ms"
+        },
+        {
+          "name": "Rosen step reaches accelerate task",
+          "pass": true,
+          "detail": "8 replay bridges"
+        }
+      ]
+    },
+    "visual": {
+      "pass": true,
+      "overall_speedup": 12.48,
+      "workflow_impact": {
+        "description": "A realistic work burst: 20 project diagnosis questions, 20 cold-start evidence packets, and 200 UMA/RAG lookups. Replay-only LLM cache lanes are excluded from this headline.",
+        "baseline_ms": 3580.72,
+        "mercury_ms": 2003.02,
+        "baseline_seconds": 3.58,
+        "mercury_seconds": 2,
+        "saved_seconds": 1.58,
+        "speedup": 1.79,
+        "baseline_feel": "visible waiting and context switching",
+        "mercury_feel": "short pause"
+      },
+      "first_generation": {
+        "mode": "parallel_first_generation_plan",
+        "sections": 8,
+        "workers": 4,
+        "waves": 2,
+        "immediate_draft_bytes": 9377,
+        "immediate_draft_kb": 9.2,
+        "judge_score": 100,
+        "pointer_coverage": 1,
+        "distilled_reflexes": 9,
+        "active_neurons": 8,
+        "serial_seconds": 120,
+        "parallel_seconds": 30,
+        "elapsed_ms": 414,
+        "description": "First-generation acceleration uses UMA evidence packets, section workers, judge scoring, and reflex distillation so the user gets a useful draft before slow model completion."
+      },
+      "scenarios": [
+        {
+          "category": "First-run generation benchmark",
+          "title": "5000-word first draft starts as parallel UMA section work",
+          "benchmark_type": "measured_hot_path_plus_slow_path_estimate",
+          "description": "This is the non-replay path: Mercury builds the evidence packet, divides the answer into section workers, creates an immediate evidence-bound draft, queues slow refinement, and distills the draft for later replay.",
+          "baseline_ms": 120000,
+          "mercury_ms": 414,
+          "speedup": 289.86,
+          "baseline_label": "120s serial",
+          "mercury_label": "414ms first draft",
+          "saved_label": "119.6s to first useful draft",
+          "proof": "Built 8 section drafts over 4 workers/2 waves, judge=100, pointer_coverage=1, immediate_draft_bytes=9377, distilled=9."
+        },
+        {
+          "category": "5000-word output benchmark",
+          "title": "Long-form replay: first run reference vs accelerated reuse",
+          "benchmark_type": "cache_hit_replay_not_cold_start",
+          "description": "This is intentionally labeled as replay. It shows how fast Mercury can return a previously generated/distilled 5000-word answer; it does not claim to speed up the first model generation.",
+          "baseline_ms": 120000,
+          "mercury_ms": 0.251,
+          "speedup": 478087.65,
+          "baseline_label": "120s",
+          "mercury_label": "0.251ms",
+          "saved_label": "120s",
+          "proof": "Retrieved 31932 characters from reflex memory with mode=cache_hit. Use --longform-ms=<ms> to attach a real Qwen/Claude/OpenAI first-generation measurement; this replay number is excluded from verified hot-path speedup."
+        }
+      ]
+    },
+    "qwen_3060": {
+      "cold_start": {
+        "schema": "mercury-qwen-3060-cold-start-v1",
+        "created_at": "2026-05-18T18:04:24.397Z",
+        "pass": true,
+        "cwd": "/home/norika/Neuron-Mercury",
+        "platform": "linux",
+        "model": "qwen2.5:7b",
+        "prompt": "用繁體中文用三句話說明第一次開啟本地 AI 時，Mercury 如何降低 RTX 3060 筆電的等待感。",
+        "num_predict": 80,
+        "gpu": [
+          {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total_mb": 6144,
+            "memory_used_mb": 0,
+            "utilization_percent": 0,
+            "temperature_c": 63,
+            "power_w": 31.63,
+            "power_limit_w": null
+          }
+        ],
+        "service": {
+          "ok": true,
+          "mode": "local_llm_start",
+          "platform": "linux",
+          "provider": "local_ollama_http",
+          "running": true,
+          "bin": "ollama",
+          "models": [
+            "deepseek-r1:7b",
+            "qwen2.5:7b",
+            "qwen2.5:3b"
+          ],
+          "best_model": "qwen2.5:7b",
+          "elapsed_ms": 6,
+          "output": "{\"models\":[{\"name\":\"deepseek-r1:7b\",\"model\":\"deepseek-r1:7b\",\"modified_at\":\"2026-05-17T15:11:44.717791615+08:00\",\"size\":4683075440,\"digest\":\"755ced02ce7befdb13b7ca74e1e4d08cddba4986afdb63a480f2c93d3140383f\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"7.6B\",\"quantization_level\":\"Q4_K_M\"}},{\"name\":\"qwen2.5:7b\",\"model\":\"qwen2.5:7b\",\"modified_at\":\"2026-05-17T15:09:47.615321562+08:00\",\"size\":4683087332,\"digest\":\"845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"7.6B\",\"quantization_level\":\"Q4_K_M\"}},{\"name\":\"qwen2.5:3b\",\"model\":\"qwen2.5:3b\",\"modified_at\":\"2026-05-02T00:45:07.257947792+08:00\",\"size\":1929912432,\"digest\":\"357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"3.1B\",\"quantization_level\":\"Q4_K_M\"}}]"
+        },
+        "path_kind": "wsl_ext4_hot_path",
+        "baseline_no_mercury": {
+          "unload": {
+            "label": "baseline_unload_model",
+            "ok": true,
+            "ms": 15.079,
+            "response": "",
+            "chars": 0,
+            "eval_count": null,
+            "eval_duration": null
+          },
+          "cold_request": {
+            "label": "uninstalled_raw_cold_request",
+            "ok": true,
+            "ms": 8633.987,
+            "response": "在首次啟動本地AI時，Mercury透過優化資源分配，減少無謂的計算負載，從而加快了RTX 3060筆電的響應速度。此外，它還利用先進的預取技術，提前加載常用數據，進一步縮短等待時間。這些措施共同作用，有效降低了用戶的等待感。",
+            "chars": 113,
+            "eval_count": 79,
+            "eval_duration": 1247368074
+          }
+        },
+        "mercury_installed": {
+          "unload_before_prewarm": {
+            "label": "mercury_unload_before_install_prewarm",
+            "ok": true,
+            "ms": 217.76,
+            "response": "",
+            "chars": 0,
+            "eval_count": null,
+            "eval_duration": null
+          },
+          "install_prewarm_background": {
+            "label": "mercury_install_prewarm_background",
+            "ok": true,
+            "ms": 1930.137,
+            "response": "\"Mercury-prewarm-RTX",
+            "chars": 20,
+            "eval_count": 8,
+            "eval_duration": 114685545
+          },
+          "first_user_request_after_prewarm": {
+            "label": "mercury_first_user_request_after_prewarm",
+            "ok": true,
+            "ms": 1461.829,
+            "response": "在首次啟動本地AI時，Mercury透過優化資源分配，減少無謂的計算負載，從而加快了RTX 3060筆電的響應速度。此外，它還利用先進的預取技術，提前加載常用數據，進一步縮短等待時間。這些措施共同作用，有效降低了用戶的等待感。",
+            "chars": 113,
+            "eval_count": 79,
+            "eval_duration": 1265410171
+          },
+          "replay_after_first_request": {
+            "label": "mercury_replay_after_first_request",
+            "ok": true,
+            "ms": 0.113,
+            "mode": "cache_hit",
+            "cache_path": "/home/norika/Neuron-Mercury/var/llm-cache/ollama_75ee4aaee128a92bfde9d8a6.json"
+          }
+        },
+        "resource_observation": {
+          "before": {
+            "gpu": {
+              "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+              "memory_total_mb": 6144,
+              "memory_used_mb": 0,
+              "utilization_percent": 0,
+              "temperature_c": 63,
+              "power_w": 31.63,
+              "power_limit_w": null
+            },
+            "memory_free_mb": 6483.203
+          },
+          "after": {
+            "gpu": {
+              "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+              "memory_total_mb": 6144,
+              "memory_used_mb": 4889,
+              "utilization_percent": 90,
+              "temperature_c": 72,
+              "power_w": 110.73,
+              "power_limit_w": null
+            },
+            "memory_free_mb": 6102.008
+          },
+          "delta": {
+            "gpu_temperature_delta_c": 9,
+            "gpu_power_delta_w": 79.1,
+            "gpu_memory_delta_mb": 4889,
+            "free_memory_delta_mb": -381.195
+          },
+          "budget": {
+            "gpu_temperature_delta_ok": true,
+            "gpu_power_delta_ok": true,
+            "memory_delta_ok": true,
+            "note": "Prewarm may spend GPU power in the background; Mercury must surface this cost instead of pretending boost is free."
+          },
+          "policy": "Acceleration must improve first-use latency without hiding the cost as unexplained heat or resource pressure."
+        },
+        "result": {
+          "baseline_cold_ms": 8633.987,
+          "mercury_first_request_ms": 1461.829,
+          "mercury_cache_ms": 0.113,
+          "first_request_speedup": 5.91,
+          "replay_speedup": 76406.96,
+          "gpu_temperature_delta_c": 9,
+          "gpu_power_delta_w": 79.1,
+          "claim": "Mercury shifts model-load cold start into install/background prewarm, so the first user request is already warm."
+        },
+        "elapsed_ms": 13906.421
+      },
+      "hot_cache": {
+        "schema": "mercury-qwen-3060-demo-v1",
+        "created_at": "2026-05-18T16:22:33.914Z",
+        "pass": true,
+        "cwd": "/home/norika/Neuron-Mercury",
+        "platform": "linux",
+        "model": "qwen2.5:7b",
+        "prompt": "用繁體中文用三句話說明 RTX 3060 筆電現在如何讓本地 AI 回覆更快。",
+        "repeat": 3,
+        "num_predict": 80,
+        "gpu": [
+          {
+            "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+            "memory_total_mb": 6144,
+            "memory_used_mb": 4889,
+            "utilization_percent": 0,
+            "temperature_c": 56,
+            "power_w": 10.56,
+            "power_limit_w": null
+          }
+        ],
+        "service": {
+          "ok": true,
+          "mode": "local_llm_start",
+          "platform": "linux",
+          "provider": "local_ollama_http",
+          "running": true,
+          "bin": "ollama",
+          "models": [
+            "deepseek-r1:7b",
+            "qwen2.5:7b",
+            "qwen2.5:3b"
+          ],
+          "best_model": "qwen2.5:7b",
+          "elapsed_ms": 6,
+          "output": "{\"models\":[{\"name\":\"deepseek-r1:7b\",\"model\":\"deepseek-r1:7b\",\"modified_at\":\"2026-05-17T15:11:44.717791615+08:00\",\"size\":4683075440,\"digest\":\"755ced02ce7befdb13b7ca74e1e4d08cddba4986afdb63a480f2c93d3140383f\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"7.6B\",\"quantization_level\":\"Q4_K_M\"}},{\"name\":\"qwen2.5:7b\",\"model\":\"qwen2.5:7b\",\"modified_at\":\"2026-05-17T15:09:47.615321562+08:00\",\"size\":4683087332,\"digest\":\"845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"7.6B\",\"quantization_level\":\"Q4_K_M\"}},{\"name\":\"qwen2.5:3b\",\"model\":\"qwen2.5:3b\",\"modified_at\":\"2026-05-02T00:45:07.257947792+08:00\",\"size\":1929912432,\"digest\":\"357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"3.1B\",\"quantization_level\":\"Q4_K_M\"}}]"
+        },
+        "windows_product_rule": {
+          "hot_runtime": "Windows launcher + WSL ext4 Mercury runtime/cache",
+          "forbid_hot_cache_on": [
+            "/mnt/c",
+            "NTFS-mounted WSL paths"
+          ],
+          "current_path_kind": "wsl_ext4_hot_path"
+        },
+        "baseline_raw_ollama": {
+          "rows": [
+            {
+              "trial": 1,
+              "ok": true,
+              "ms": 1259.4,
+              "chars": 91,
+              "eval_count": 55,
+              "eval_duration": 869235068
+            },
+            {
+              "trial": 2,
+              "ok": true,
+              "ms": 1027.639,
+              "chars": 90,
+              "eval_count": 55,
+              "eval_duration": 876161624
+            },
+            {
+              "trial": 3,
+              "ok": true,
+              "ms": 1042.312,
+              "chars": 90,
+              "eval_count": 55,
+              "eval_duration": 882447091
+            }
+          ],
+          "summary": {
+            "ok": true,
+            "count": 3,
+            "min_ms": 1027.639,
+            "p50_ms": 1042.312,
+            "max_ms": 1259.4
+          }
+        },
+        "mercury": {
+          "refresh": {
+            "ok": true,
+            "mode": "model_refresh",
+            "ms": 1022.99,
+            "chars": 90,
+            "cache_path": "/home/norika/Neuron-Mercury/var/llm-cache/ollama_c8c027b8fbce03ab9bc06da5.json"
+          },
+          "cache_rows": [
+            {
+              "trial": 1,
+              "ok": true,
+              "mode": "cache_hit",
+              "ms": 0.128,
+              "chars": 90,
+              "cache_path": "/home/norika/Neuron-Mercury/var/llm-cache/ollama_c8c027b8fbce03ab9bc06da5.json"
+            },
+            {
+              "trial": 2,
+              "ok": true,
+              "mode": "cache_hit",
+              "ms": 0.064,
+              "chars": 90,
+              "cache_path": "/home/norika/Neuron-Mercury/var/llm-cache/ollama_c8c027b8fbce03ab9bc06da5.json"
+            },
+            {
+              "trial": 3,
+              "ok": true,
+              "mode": "cache_hit",
+              "ms": 0.059,
+              "chars": 90,
+              "cache_path": "/home/norika/Neuron-Mercury/var/llm-cache/ollama_c8c027b8fbce03ab9bc06da5.json"
+            }
+          ],
+          "cache_summary": {
+            "ok": true,
+            "count": 3,
+            "min_ms": 0.059,
+            "p50_ms": 0.064,
+            "max_ms": 0.128
+          }
+        },
+        "result": {
+          "baseline_p50_ms": 1042.312,
+          "mercury_cache_p50_ms": 0.064,
+          "speedup": 16286.12,
+          "install_note": "WSL ext4 hot path"
+        },
+        "elapsed_ms": 4391.542
+      }
+    }
+  }
+}

@@ -1,0 +1,2355 @@
+{
+  "observer": "mercury_fullgrid_observe.py",
+  "model_name": "pythia-2.8b-fullgrid-100m-p1200-perchannel-john",
+  "model_path": "EleutherAI/pythia-2.8b",
+  "target_cells": 100000000,
+  "actual_cells": 104938240,
+  "nonzero_cells": 99044656,
+  "coverage_pct": 94.383759,
+  "Q": 10,
+  "S": 11,
+  "max_length": 192,
+  "probe_count": 1286,
+  "calibration_probe_count": 256,
+  "edges_from": null,
+  "calibration_values_per_module": 200000,
+  "calibration_rows_per_module": 512,
+  "per_channel_quantiles": true,
+  "include_norms": true,
+  "total_channels": 953984,
+  "module_count": 194,
+  "modules": {
+    "gpt_neox.layers.0.input_layernorm": {
+      "key": "gpt_neox.layers.0.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.0.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.0.attention.query_key_value": {
+      "key": "gpt_neox.layers.0.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.0.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.0.attention.dense": {
+      "key": "gpt_neox.layers.0.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.0.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.0.post_attention_layernorm": {
+      "key": "gpt_neox.layers.0.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.0.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.0.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.0.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.0.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.0.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.0.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.0.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.1.input_layernorm": {
+      "key": "gpt_neox.layers.1.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.1.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.1.attention.query_key_value": {
+      "key": "gpt_neox.layers.1.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.1.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.1.attention.dense": {
+      "key": "gpt_neox.layers.1.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.1.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.1.post_attention_layernorm": {
+      "key": "gpt_neox.layers.1.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.1.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.1.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.1.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.1.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.1.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.1.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.1.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.2.input_layernorm": {
+      "key": "gpt_neox.layers.2.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.2.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.2.attention.query_key_value": {
+      "key": "gpt_neox.layers.2.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.2.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.2.attention.dense": {
+      "key": "gpt_neox.layers.2.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.2.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.2.post_attention_layernorm": {
+      "key": "gpt_neox.layers.2.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.2.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.2.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.2.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.2.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.2.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.2.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.2.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.3.input_layernorm": {
+      "key": "gpt_neox.layers.3.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.3.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.3.attention.query_key_value": {
+      "key": "gpt_neox.layers.3.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.3.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.3.attention.dense": {
+      "key": "gpt_neox.layers.3.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.3.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.3.post_attention_layernorm": {
+      "key": "gpt_neox.layers.3.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.3.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.3.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.3.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.3.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.3.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.3.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.3.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.4.input_layernorm": {
+      "key": "gpt_neox.layers.4.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.4.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.4.attention.query_key_value": {
+      "key": "gpt_neox.layers.4.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.4.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.4.attention.dense": {
+      "key": "gpt_neox.layers.4.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.4.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.4.post_attention_layernorm": {
+      "key": "gpt_neox.layers.4.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.4.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.4.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.4.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.4.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.4.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.4.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.4.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.5.input_layernorm": {
+      "key": "gpt_neox.layers.5.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.5.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.5.attention.query_key_value": {
+      "key": "gpt_neox.layers.5.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.5.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.5.attention.dense": {
+      "key": "gpt_neox.layers.5.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.5.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.5.post_attention_layernorm": {
+      "key": "gpt_neox.layers.5.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.5.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.5.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.5.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.5.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.5.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.5.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.5.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.6.input_layernorm": {
+      "key": "gpt_neox.layers.6.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.6.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.6.attention.query_key_value": {
+      "key": "gpt_neox.layers.6.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.6.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.6.attention.dense": {
+      "key": "gpt_neox.layers.6.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.6.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.6.post_attention_layernorm": {
+      "key": "gpt_neox.layers.6.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.6.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.6.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.6.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.6.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.6.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.6.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.6.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.7.input_layernorm": {
+      "key": "gpt_neox.layers.7.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.7.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.7.attention.query_key_value": {
+      "key": "gpt_neox.layers.7.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.7.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.7.attention.dense": {
+      "key": "gpt_neox.layers.7.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.7.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.7.post_attention_layernorm": {
+      "key": "gpt_neox.layers.7.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.7.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.7.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.7.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.7.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.7.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.7.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.7.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.8.input_layernorm": {
+      "key": "gpt_neox.layers.8.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.8.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.8.attention.query_key_value": {
+      "key": "gpt_neox.layers.8.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.8.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.8.attention.dense": {
+      "key": "gpt_neox.layers.8.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.8.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.8.post_attention_layernorm": {
+      "key": "gpt_neox.layers.8.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.8.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.8.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.8.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.8.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.8.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.8.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.8.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.9.input_layernorm": {
+      "key": "gpt_neox.layers.9.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.9.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.9.attention.query_key_value": {
+      "key": "gpt_neox.layers.9.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.9.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.9.attention.dense": {
+      "key": "gpt_neox.layers.9.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.9.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.9.post_attention_layernorm": {
+      "key": "gpt_neox.layers.9.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.9.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.9.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.9.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.9.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.9.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.9.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.9.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.10.input_layernorm": {
+      "key": "gpt_neox.layers.10.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.10.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.10.attention.query_key_value": {
+      "key": "gpt_neox.layers.10.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.10.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.10.attention.dense": {
+      "key": "gpt_neox.layers.10.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.10.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.10.post_attention_layernorm": {
+      "key": "gpt_neox.layers.10.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.10.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.10.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.10.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.10.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.10.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.10.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.10.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.11.input_layernorm": {
+      "key": "gpt_neox.layers.11.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.11.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.11.attention.query_key_value": {
+      "key": "gpt_neox.layers.11.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.11.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.11.attention.dense": {
+      "key": "gpt_neox.layers.11.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.11.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.11.post_attention_layernorm": {
+      "key": "gpt_neox.layers.11.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.11.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.11.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.11.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.11.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.11.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.11.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.11.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.12.input_layernorm": {
+      "key": "gpt_neox.layers.12.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.12.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.12.attention.query_key_value": {
+      "key": "gpt_neox.layers.12.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.12.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.12.attention.dense": {
+      "key": "gpt_neox.layers.12.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.12.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.12.post_attention_layernorm": {
+      "key": "gpt_neox.layers.12.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.12.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.12.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.12.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.12.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.12.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.12.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.12.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.13.input_layernorm": {
+      "key": "gpt_neox.layers.13.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.13.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.13.attention.query_key_value": {
+      "key": "gpt_neox.layers.13.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.13.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.13.attention.dense": {
+      "key": "gpt_neox.layers.13.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.13.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.13.post_attention_layernorm": {
+      "key": "gpt_neox.layers.13.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.13.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.13.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.13.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.13.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.13.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.13.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.13.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.14.input_layernorm": {
+      "key": "gpt_neox.layers.14.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.14.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.14.attention.query_key_value": {
+      "key": "gpt_neox.layers.14.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.14.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.14.attention.dense": {
+      "key": "gpt_neox.layers.14.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.14.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.14.post_attention_layernorm": {
+      "key": "gpt_neox.layers.14.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.14.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.14.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.14.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.14.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.14.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.14.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.14.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.15.input_layernorm": {
+      "key": "gpt_neox.layers.15.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.15.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.15.attention.query_key_value": {
+      "key": "gpt_neox.layers.15.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.15.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.15.attention.dense": {
+      "key": "gpt_neox.layers.15.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.15.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.15.post_attention_layernorm": {
+      "key": "gpt_neox.layers.15.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.15.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.15.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.15.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.15.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.15.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.15.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.15.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.16.input_layernorm": {
+      "key": "gpt_neox.layers.16.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.16.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.16.attention.query_key_value": {
+      "key": "gpt_neox.layers.16.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.16.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.16.attention.dense": {
+      "key": "gpt_neox.layers.16.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.16.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.16.post_attention_layernorm": {
+      "key": "gpt_neox.layers.16.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.16.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.16.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.16.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.16.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.16.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.16.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.16.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.17.input_layernorm": {
+      "key": "gpt_neox.layers.17.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.17.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.17.attention.query_key_value": {
+      "key": "gpt_neox.layers.17.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.17.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.17.attention.dense": {
+      "key": "gpt_neox.layers.17.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.17.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.17.post_attention_layernorm": {
+      "key": "gpt_neox.layers.17.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.17.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.17.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.17.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.17.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.17.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.17.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.17.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.18.input_layernorm": {
+      "key": "gpt_neox.layers.18.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.18.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.18.attention.query_key_value": {
+      "key": "gpt_neox.layers.18.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.18.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.18.attention.dense": {
+      "key": "gpt_neox.layers.18.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.18.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.18.post_attention_layernorm": {
+      "key": "gpt_neox.layers.18.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.18.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.18.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.18.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.18.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.18.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.18.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.18.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.19.input_layernorm": {
+      "key": "gpt_neox.layers.19.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.19.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.19.attention.query_key_value": {
+      "key": "gpt_neox.layers.19.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.19.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.19.attention.dense": {
+      "key": "gpt_neox.layers.19.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.19.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.19.post_attention_layernorm": {
+      "key": "gpt_neox.layers.19.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.19.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.19.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.19.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.19.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.19.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.19.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.19.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.20.input_layernorm": {
+      "key": "gpt_neox.layers.20.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.20.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.20.attention.query_key_value": {
+      "key": "gpt_neox.layers.20.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.20.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.20.attention.dense": {
+      "key": "gpt_neox.layers.20.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.20.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.20.post_attention_layernorm": {
+      "key": "gpt_neox.layers.20.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.20.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.20.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.20.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.20.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.20.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.20.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.20.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.21.input_layernorm": {
+      "key": "gpt_neox.layers.21.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.21.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.21.attention.query_key_value": {
+      "key": "gpt_neox.layers.21.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.21.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.21.attention.dense": {
+      "key": "gpt_neox.layers.21.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.21.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.21.post_attention_layernorm": {
+      "key": "gpt_neox.layers.21.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.21.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.21.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.21.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.21.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.21.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.21.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.21.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.22.input_layernorm": {
+      "key": "gpt_neox.layers.22.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.22.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.22.attention.query_key_value": {
+      "key": "gpt_neox.layers.22.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.22.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.22.attention.dense": {
+      "key": "gpt_neox.layers.22.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.22.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.22.post_attention_layernorm": {
+      "key": "gpt_neox.layers.22.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.22.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.22.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.22.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.22.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.22.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.22.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.22.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.23.input_layernorm": {
+      "key": "gpt_neox.layers.23.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.23.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.23.attention.query_key_value": {
+      "key": "gpt_neox.layers.23.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.23.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.23.attention.dense": {
+      "key": "gpt_neox.layers.23.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.23.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.23.post_attention_layernorm": {
+      "key": "gpt_neox.layers.23.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.23.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.23.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.23.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.23.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.23.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.23.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.23.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.24.input_layernorm": {
+      "key": "gpt_neox.layers.24.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.24.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.24.attention.query_key_value": {
+      "key": "gpt_neox.layers.24.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.24.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.24.attention.dense": {
+      "key": "gpt_neox.layers.24.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.24.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.24.post_attention_layernorm": {
+      "key": "gpt_neox.layers.24.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.24.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.24.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.24.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.24.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.24.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.24.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.24.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.25.input_layernorm": {
+      "key": "gpt_neox.layers.25.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.25.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.25.attention.query_key_value": {
+      "key": "gpt_neox.layers.25.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.25.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.25.attention.dense": {
+      "key": "gpt_neox.layers.25.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.25.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.25.post_attention_layernorm": {
+      "key": "gpt_neox.layers.25.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.25.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.25.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.25.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.25.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.25.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.25.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.25.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.26.input_layernorm": {
+      "key": "gpt_neox.layers.26.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.26.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.26.attention.query_key_value": {
+      "key": "gpt_neox.layers.26.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.26.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.26.attention.dense": {
+      "key": "gpt_neox.layers.26.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.26.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.26.post_attention_layernorm": {
+      "key": "gpt_neox.layers.26.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.26.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.26.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.26.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.26.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.26.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.26.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.26.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.27.input_layernorm": {
+      "key": "gpt_neox.layers.27.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.27.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.27.attention.query_key_value": {
+      "key": "gpt_neox.layers.27.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.27.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.27.attention.dense": {
+      "key": "gpt_neox.layers.27.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.27.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.27.post_attention_layernorm": {
+      "key": "gpt_neox.layers.27.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.27.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.27.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.27.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.27.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.27.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.27.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.27.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.28.input_layernorm": {
+      "key": "gpt_neox.layers.28.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.28.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.28.attention.query_key_value": {
+      "key": "gpt_neox.layers.28.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.28.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.28.attention.dense": {
+      "key": "gpt_neox.layers.28.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.28.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.28.post_attention_layernorm": {
+      "key": "gpt_neox.layers.28.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.28.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.28.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.28.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.28.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.28.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.28.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.28.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.29.input_layernorm": {
+      "key": "gpt_neox.layers.29.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.29.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.29.attention.query_key_value": {
+      "key": "gpt_neox.layers.29.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.29.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.29.attention.dense": {
+      "key": "gpt_neox.layers.29.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.29.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.29.post_attention_layernorm": {
+      "key": "gpt_neox.layers.29.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.29.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.29.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.29.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.29.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.29.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.29.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.29.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.30.input_layernorm": {
+      "key": "gpt_neox.layers.30.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.30.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.30.attention.query_key_value": {
+      "key": "gpt_neox.layers.30.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.30.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.30.attention.dense": {
+      "key": "gpt_neox.layers.30.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.30.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.30.post_attention_layernorm": {
+      "key": "gpt_neox.layers.30.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.30.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.30.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.30.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.30.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.30.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.30.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.30.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.31.input_layernorm": {
+      "key": "gpt_neox.layers.31.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.31.input_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.31.attention.query_key_value": {
+      "key": "gpt_neox.layers.31.attention.query_key_value",
+      "kind": "linear",
+      "dim": 7680,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.31.attention.query_key_value.npy",
+      "shape": [
+        7680,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.31.attention.dense": {
+      "key": "gpt_neox.layers.31.attention.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.31.attention.dense.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.31.post_attention_layernorm": {
+      "key": "gpt_neox.layers.31.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.31.post_attention_layernorm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.31.mlp.dense_h_to_4h": {
+      "key": "gpt_neox.layers.31.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.31.mlp.dense_h_to_4h.npy",
+      "shape": [
+        10240,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.layers.31.mlp.dense_4h_to_h": {
+      "key": "gpt_neox.layers.31.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.layers.31.mlp.dense_4h_to_h.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "gpt_neox.final_layer_norm": {
+      "key": "gpt_neox.final_layer_norm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/gpt_neox.final_layer_norm.npy",
+      "shape": [
+        2560,
+        10,
+        11
+      ]
+    },
+    "embed_out": {
+      "key": "embed_out",
+      "kind": "linear",
+      "dim": 50304,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/heat/embed_out.npy",
+      "shape": [
+        50304,
+        10,
+        11
+      ]
+    }
+  },
+  "module_nonzero_cells": {
+    "gpt_neox.layers.0.input_layernorm": 281429,
+    "gpt_neox.layers.0.attention.query_key_value": 843982,
+    "gpt_neox.layers.0.attention.dense": 281265,
+    "gpt_neox.layers.0.post_attention_layernorm": 281433,
+    "gpt_neox.layers.0.mlp.dense_h_to_4h": 1111856,
+    "gpt_neox.layers.0.mlp.dense_4h_to_h": 281466,
+    "gpt_neox.layers.1.input_layernorm": 281532,
+    "gpt_neox.layers.1.attention.query_key_value": 843488,
+    "gpt_neox.layers.1.attention.dense": 281451,
+    "gpt_neox.layers.1.post_attention_layernorm": 281531,
+    "gpt_neox.layers.1.mlp.dense_h_to_4h": 1124990,
+    "gpt_neox.layers.1.mlp.dense_4h_to_h": 278596,
+    "gpt_neox.layers.2.input_layernorm": 280657,
+    "gpt_neox.layers.2.attention.query_key_value": 835684,
+    "gpt_neox.layers.2.attention.dense": 278724,
+    "gpt_neox.layers.2.post_attention_layernorm": 280659,
+    "gpt_neox.layers.2.mlp.dense_h_to_4h": 1114761,
+    "gpt_neox.layers.2.mlp.dense_4h_to_h": 272290,
+    "gpt_neox.layers.3.input_layernorm": 270487,
+    "gpt_neox.layers.3.attention.query_key_value": 804424,
+    "gpt_neox.layers.3.attention.dense": 277468,
+    "gpt_neox.layers.3.post_attention_layernorm": 270496,
+    "gpt_neox.layers.3.mlp.dense_h_to_4h": 1061501,
+    "gpt_neox.layers.3.mlp.dense_4h_to_h": 267378,
+    "gpt_neox.layers.4.input_layernorm": 268669,
+    "gpt_neox.layers.4.attention.query_key_value": 798485,
+    "gpt_neox.layers.4.attention.dense": 272066,
+    "gpt_neox.layers.4.post_attention_layernorm": 268658,
+    "gpt_neox.layers.4.mlp.dense_h_to_4h": 1055533,
+    "gpt_neox.layers.4.mlp.dense_4h_to_h": 265135,
+    "gpt_neox.layers.5.input_layernorm": 264409,
+    "gpt_neox.layers.5.attention.query_key_value": 789489,
+    "gpt_neox.layers.5.attention.dense": 268129,
+    "gpt_neox.layers.5.post_attention_layernorm": 264408,
+    "gpt_neox.layers.5.mlp.dense_h_to_4h": 1049436,
+    "gpt_neox.layers.5.mlp.dense_4h_to_h": 263250,
+    "gpt_neox.layers.6.input_layernorm": 263804,
+    "gpt_neox.layers.6.attention.query_key_value": 788055,
+    "gpt_neox.layers.6.attention.dense": 268019,
+    "gpt_neox.layers.6.post_attention_layernorm": 263803,
+    "gpt_neox.layers.6.mlp.dense_h_to_4h": 1048345,
+    "gpt_neox.layers.6.mlp.dense_4h_to_h": 263637,
+    "gpt_neox.layers.7.input_layernorm": 263627,
+    "gpt_neox.layers.7.attention.query_key_value": 787406,
+    "gpt_neox.layers.7.attention.dense": 268205,
+    "gpt_neox.layers.7.post_attention_layernorm": 263619,
+    "gpt_neox.layers.7.mlp.dense_h_to_4h": 1048282,
+    "gpt_neox.layers.7.mlp.dense_4h_to_h": 263903,
+    "gpt_neox.layers.8.input_layernorm": 263511,
+    "gpt_neox.layers.8.attention.query_key_value": 786649,
+    "gpt_neox.layers.8.attention.dense": 265832,
+    "gpt_neox.layers.8.post_attention_layernorm": 263510,
+    "gpt_neox.layers.8.mlp.dense_h_to_4h": 1048071,
+    "gpt_neox.layers.8.mlp.dense_4h_to_h": 263835,
+    "gpt_neox.layers.9.input_layernorm": 263415,
+    "gpt_neox.layers.9.attention.query_key_value": 786579,
+    "gpt_neox.layers.9.attention.dense": 267231,
+    "gpt_neox.layers.9.post_attention_layernorm": 263412,
+    "gpt_neox.layers.9.mlp.dense_h_to_4h": 1047732,
+    "gpt_neox.layers.9.mlp.dense_4h_to_h": 263855,
+    "gpt_neox.layers.10.input_layernorm": 263407,
+    "gpt_neox.layers.10.attention.query_key_value": 786278,
+    "gpt_neox.layers.10.attention.dense": 265496,
+    "gpt_neox.layers.10.post_attention_layernorm": 263407,
+    "gpt_neox.layers.10.mlp.dense_h_to_4h": 1047689,
+    "gpt_neox.layers.10.mlp.dense_4h_to_h": 263841,
+    "gpt_neox.layers.11.input_layernorm": 263389,
+    "gpt_neox.layers.11.attention.query_key_value": 786572,
+    "gpt_neox.layers.11.attention.dense": 268673,
+    "gpt_neox.layers.11.post_attention_layernorm": 263387,
+    "gpt_neox.layers.11.mlp.dense_h_to_4h": 1048168,
+    "gpt_neox.layers.11.mlp.dense_4h_to_h": 263750,
+    "gpt_neox.layers.12.input_layernorm": 263350,
+    "gpt_neox.layers.12.attention.query_key_value": 786913,
+    "gpt_neox.layers.12.attention.dense": 268423,
+    "gpt_neox.layers.12.post_attention_layernorm": 263348,
+    "gpt_neox.layers.12.mlp.dense_h_to_4h": 1047808,
+    "gpt_neox.layers.12.mlp.dense_4h_to_h": 263919,
+    "gpt_neox.layers.13.input_layernorm": 263382,
+    "gpt_neox.layers.13.attention.query_key_value": 787217,
+    "gpt_neox.layers.13.attention.dense": 270395,
+    "gpt_neox.layers.13.post_attention_layernorm": 263377,
+    "gpt_neox.layers.13.mlp.dense_h_to_4h": 1048418,
+    "gpt_neox.layers.13.mlp.dense_4h_to_h": 264121,
+    "gpt_neox.layers.14.input_layernorm": 263430,
+    "gpt_neox.layers.14.attention.query_key_value": 787254,
+    "gpt_neox.layers.14.attention.dense": 268350,
+    "gpt_neox.layers.14.post_attention_layernorm": 263436,
+    "gpt_neox.layers.14.mlp.dense_h_to_4h": 1048480,
+    "gpt_neox.layers.14.mlp.dense_4h_to_h": 264333,
+    "gpt_neox.layers.15.input_layernorm": 263425,
+    "gpt_neox.layers.15.attention.query_key_value": 788109,
+    "gpt_neox.layers.15.attention.dense": 271952,
+    "gpt_neox.layers.15.post_attention_layernorm": 263428,
+    "gpt_neox.layers.15.mlp.dense_h_to_4h": 1048399,
+    "gpt_neox.layers.15.mlp.dense_4h_to_h": 264239,
+    "gpt_neox.layers.16.input_layernorm": 263456,
+    "gpt_neox.layers.16.attention.query_key_value": 787833,
+    "gpt_neox.layers.16.attention.dense": 267965,
+    "gpt_neox.layers.16.post_attention_layernorm": 263453,
+    "gpt_neox.layers.16.mlp.dense_h_to_4h": 1048561,
+    "gpt_neox.layers.16.mlp.dense_4h_to_h": 264399,
+    "gpt_neox.layers.17.input_layernorm": 263433,
+    "gpt_neox.layers.17.attention.query_key_value": 788259,
+    "gpt_neox.layers.17.attention.dense": 273333,
+    "gpt_neox.layers.17.post_attention_layernorm": 263437,
+    "gpt_neox.layers.17.mlp.dense_h_to_4h": 1048895,
+    "gpt_neox.layers.17.mlp.dense_4h_to_h": 264213,
+    "gpt_neox.layers.18.input_layernorm": 263468,
+    "gpt_neox.layers.18.attention.query_key_value": 788132,
+    "gpt_neox.layers.18.attention.dense": 271603,
+    "gpt_neox.layers.18.post_attention_layernorm": 263466,
+    "gpt_neox.layers.18.mlp.dense_h_to_4h": 1049091,
+    "gpt_neox.layers.18.mlp.dense_4h_to_h": 264082,
+    "gpt_neox.layers.19.input_layernorm": 263597,
+    "gpt_neox.layers.19.attention.query_key_value": 788124,
+    "gpt_neox.layers.19.attention.dense": 274032,
+    "gpt_neox.layers.19.post_attention_layernorm": 263602,
+    "gpt_neox.layers.19.mlp.dense_h_to_4h": 1049332,
+    "gpt_neox.layers.19.mlp.dense_4h_to_h": 264393,
+    "gpt_neox.layers.20.input_layernorm": 263784,
+    "gpt_neox.layers.20.attention.query_key_value": 787214,
+    "gpt_neox.layers.20.attention.dense": 270827,
+    "gpt_neox.layers.20.post_attention_layernorm": 263781,
+    "gpt_neox.layers.20.mlp.dense_h_to_4h": 1050106,
+    "gpt_neox.layers.20.mlp.dense_4h_to_h": 264290,
+    "gpt_neox.layers.21.input_layernorm": 263980,
+    "gpt_neox.layers.21.attention.query_key_value": 785833,
+    "gpt_neox.layers.21.attention.dense": 270823,
+    "gpt_neox.layers.21.post_attention_layernorm": 263983,
+    "gpt_neox.layers.21.mlp.dense_h_to_4h": 1051149,
+    "gpt_neox.layers.21.mlp.dense_4h_to_h": 264221,
+    "gpt_neox.layers.22.input_layernorm": 264170,
+    "gpt_neox.layers.22.attention.query_key_value": 785502,
+    "gpt_neox.layers.22.attention.dense": 272251,
+    "gpt_neox.layers.22.post_attention_layernorm": 264172,
+    "gpt_neox.layers.22.mlp.dense_h_to_4h": 1051485,
+    "gpt_neox.layers.22.mlp.dense_4h_to_h": 264390,
+    "gpt_neox.layers.23.input_layernorm": 264399,
+    "gpt_neox.layers.23.attention.query_key_value": 774948,
+    "gpt_neox.layers.23.attention.dense": 270320,
+    "gpt_neox.layers.23.post_attention_layernorm": 264400,
+    "gpt_neox.layers.23.mlp.dense_h_to_4h": 1052289,
+    "gpt_neox.layers.23.mlp.dense_4h_to_h": 265077,
+    "gpt_neox.layers.24.input_layernorm": 264419,
+    "gpt_neox.layers.24.attention.query_key_value": 761440,
+    "gpt_neox.layers.24.attention.dense": 271991,
+    "gpt_neox.layers.24.post_attention_layernorm": 264426,
+    "gpt_neox.layers.24.mlp.dense_h_to_4h": 1052414,
+    "gpt_neox.layers.24.mlp.dense_4h_to_h": 265332,
+    "gpt_neox.layers.25.input_layernorm": 264444,
+    "gpt_neox.layers.25.attention.query_key_value": 758279,
+    "gpt_neox.layers.25.attention.dense": 272565,
+    "gpt_neox.layers.25.post_attention_layernorm": 264441,
+    "gpt_neox.layers.25.mlp.dense_h_to_4h": 1052883,
+    "gpt_neox.layers.25.mlp.dense_4h_to_h": 265316,
+    "gpt_neox.layers.26.input_layernorm": 264435,
+    "gpt_neox.layers.26.attention.query_key_value": 755911,
+    "gpt_neox.layers.26.attention.dense": 272516,
+    "gpt_neox.layers.26.post_attention_layernorm": 264429,
+    "gpt_neox.layers.26.mlp.dense_h_to_4h": 1052990,
+    "gpt_neox.layers.26.mlp.dense_4h_to_h": 265258,
+    "gpt_neox.layers.27.input_layernorm": 264339,
+    "gpt_neox.layers.27.attention.query_key_value": 754448,
+    "gpt_neox.layers.27.attention.dense": 269800,
+    "gpt_neox.layers.27.post_attention_layernorm": 264339,
+    "gpt_neox.layers.27.mlp.dense_h_to_4h": 1053153,
+    "gpt_neox.layers.27.mlp.dense_4h_to_h": 264966,
+    "gpt_neox.layers.28.input_layernorm": 264327,
+    "gpt_neox.layers.28.attention.query_key_value": 756910,
+    "gpt_neox.layers.28.attention.dense": 272548,
+    "gpt_neox.layers.28.post_attention_layernorm": 264332,
+    "gpt_neox.layers.28.mlp.dense_h_to_4h": 1053239,
+    "gpt_neox.layers.28.mlp.dense_4h_to_h": 264881,
+    "gpt_neox.layers.29.input_layernorm": 264390,
+    "gpt_neox.layers.29.attention.query_key_value": 756958,
+    "gpt_neox.layers.29.attention.dense": 271495,
+    "gpt_neox.layers.29.post_attention_layernorm": 264391,
+    "gpt_neox.layers.29.mlp.dense_h_to_4h": 1053020,
+    "gpt_neox.layers.29.mlp.dense_4h_to_h": 264105,
+    "gpt_neox.layers.30.input_layernorm": 264687,
+    "gpt_neox.layers.30.attention.query_key_value": 760669,
+    "gpt_neox.layers.30.attention.dense": 268229,
+    "gpt_neox.layers.30.post_attention_layernorm": 264685,
+    "gpt_neox.layers.30.mlp.dense_h_to_4h": 1052567,
+    "gpt_neox.layers.30.mlp.dense_4h_to_h": 263143,
+    "gpt_neox.layers.31.input_layernorm": 271933,
+    "gpt_neox.layers.31.attention.query_key_value": 797448,
+    "gpt_neox.layers.31.attention.dense": 279561,
+    "gpt_neox.layers.31.post_attention_layernorm": 271931,
+    "gpt_neox.layers.31.mlp.dense_h_to_4h": 1075993,
+    "gpt_neox.layers.31.mlp.dense_4h_to_h": 270733,
+    "gpt_neox.final_layer_norm": 281164,
+    "embed_out": 5514115
+  },
+  "wall_seconds": 3185.0,
+  "timestamp": 1779957965
+}

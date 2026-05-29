@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Product Dashboard</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07090d; --panel:#101721; --line:#26364a; --text:#f7f9fc; --muted:#9aadc2; --good:#4be092; --warn:#ffd166; --blue:#7bbdff; --red:#ff6f7f; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(circle at 12% 0%, rgba(123,189,255,.14), transparent 34%), linear-gradient(180deg, #07090d, #0a1018); color:var(--text); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing:0; }
+    main { max-width:1240px; margin:0 auto; padding:42px 20px 76px; }
+    h1 { margin:0 0 10px; font-size:clamp(38px,6vw,76px); line-height:.98; letter-spacing:0; }
+    h2 { margin:0 0 14px; font-size:22px; }
+    p { margin:0; color:var(--muted); line-height:1.58; }
+    .lead { max-width:940px; color:#d2deea; font-size:19px; }
+    .status { display:inline-flex; margin:18px 0 0; border:1px solid rgba(255,209,102,.55); color:var(--warn); border-radius:999px; padding:8px 12px; font-weight:700; }
+    .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; margin:24px 0; }
+    .metric, .panel { background:linear-gradient(180deg, rgba(16,23,33,.98), rgba(10,15,23,.98)); border:1px solid var(--line); border-radius:8px; padding:16px; }
+    .metric span, .metric small { display:block; color:var(--muted); font-size:13px; }
+    .metric b { display:block; margin:8px 0 4px; font-size:30px; line-height:1; }
+    .layout { display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:14px; align-items:start; }
+    ul { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+    li { display:flex; justify-content:space-between; gap:14px; border:1px solid var(--line); border-radius:8px; background:#0b111a; padding:12px; }
+    li.pass b { color:var(--good); }
+    li.fail b { color:var(--warn); }
+    li span { color:var(--muted); text-align:right; }
+    .links { display:grid; gap:8px; }
+    .links a { color:var(--text); text-decoration:none; border:1px solid var(--line); background:#0b111a; border-radius:8px; padding:12px; display:grid; gap:4px; }
+    .links b { color:var(--blue); text-transform:capitalize; }
+    .links span { color:var(--muted); font-size:12px; }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    th,td { border-bottom:1px solid var(--line); padding:9px 7px; text-align:left; }
+    th { background:#0d141d; color:#dce8f3; }
+    td { color:#cbd8e5; }
+    code { color:var(--blue); }
+    footer { margin-top:20px; color:var(--muted); font-size:13px; }
+    @media (max-width:900px) { .layout { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Neuron Mercury</h1>
+    <p class="lead">A local computer nervous system that makes first useful work faster through state-field sensing, UMA/RAG memory, sparse neuron scheduling, and slow-model avoidance.</p>
+    <div class="status">PRODUCT READY PROOF: CHECK</div>
+    <section class="metrics">
+      
+    <div class="metric"><span>Neurons</span><b>1000</b><small>sparse activation</small></div>
+      
+    <div class="metric"><span>Paper Suite</span><b>8/8</b><small>experiment lanes</small></div>
+      
+    <div class="metric"><span>Launch Suite</span><b>5/6</b><small>demo lanes</small></div>
+      
+    <div class="metric"><span>Workflow Speedup</span><b>1.79x</b><small>1.58s saved burst</small></div>
+      
+    <div class="metric"><span>Rosen Bridges</span><b>344</b><small>73 state pairs</small></div>
+      
+    <div class="metric"><span>UMA Pages</span><b>181</b><small>project-72e25486d261af475d2a3cd8</small></div>
+      
+    <div class="metric"><span>Monster Diagnosis</span><b>137ms</b><small>latest proof</small></div>
+      
+    <div class="metric"><span>Speed State</span><b>934ms</b><small>forbidden</small></div>
+    </section>
+    <section class="layout">
+      <div class="panel">
+        <h2>Paper Experiment Lanes</h2>
+        <table>
+          <thead><tr><th>Lane</th><th>Status</th><th>p50 Speedup</th><th>Mercury p50</th></tr></thead>
+          <tbody>
+    <tr><td>500-neuron sparse activation</td><td>PASS</td><td>83.33x</td><td>12neurons</td></tr>
+    <tr><td>Rosen Pair unchanged-state replay</td><td>PASS</td><td>0.91x</td><td>79ms</td></tr>
+    <tr><td>Rosen Pair changed-state correction</td><td>PASS</td><td>1.04x</td><td>70ms</td></tr>
+    <tr><td>Cold-start evidence packet</td><td>PASS</td><td>30000x</td><td>2ms</td></tr>
+    <tr><td>Workflow route materialization/replay</td><td>PASS</td><td>146.25x</td><td>8ms</td></tr>
+    <tr><td>LLM hot-path avoidance</td><td>PASS</td><td>0.58x</td><td>1ms</td></tr>
+    <tr><td>Monster diagnosis</td><td>PASS</td><td>952.38x</td><td>126ms</td></tr>
+    <tr><td>Resident speed-state snapshot</td><td>PASS</td><td>300000x</td><td>0.001ms</td></tr></tbody>
+        </table>
+      </div>
+      <aside class="panel">
+        <h2>Product Checks</h2>
+        <ul>
+    <li class="pass"><b>Paper experiment suite</b><span>8/8 lanes</span></li>
+    <li class="fail"><b>Launch experiment report</b><span>5/6 lanes</span></li>
+    <li class="pass"><b>Rosen proof</b><span>344 bridges</span></li>
+    <li class="pass"><b>Monster proof</b><span>137ms diagnosis</span></li>
+    <li class="pass"><b>500-neuron catalog</b><span>1000 neurons</span></li>
+    <li class="pass"><b>Neuron placement map</b><span>1000 placed</span></li>
+    <li class="pass"><b>LLM hot path forbidden</b><span>forbidden</span></li>
+    <li class="pass"><b>3060 first impression</b><span>5.91x cold</span></li>
+    <li class="pass"><b>3060 hot cache</b><span>16286.12x hot</span></li>
+    <li class="pass"><b>3060 foreground no-regression</b><span>min throughput 99.8%, max latency 101.1%</span></li>
+    <li class="pass"><b>Low-impact product mode</b><span>low-impact / slow_worker=defer</span></li>
+    <li class="pass"><b>Project UMA namespace</b><span>181 pages</span></li>
+    <li class="pass"><b>State-field pairs</b><span>73 pairs</span></li></ul>
+      </aside>
+    </section>
+    <section class="panel" style="margin-top:14px">
+      <h2>Proof Links</h2>
+      <div class="links">
+    <a href="../docs/paper-experiment-suite.html"><b>paper</b><span>docs/paper-experiment-suite.html</span></a>
+    <a href="../docs/launch-experiment-report.html"><b>launch</b><span>docs/launch-experiment-report.html</span></a>
+    <a href="../docs/rosen-proof-report.html"><b>rosen</b><span>docs/rosen-proof-report.html</span></a>
+    <a href="../docs/monster-proof-report.html"><b>monster</b><span>docs/monster-proof-report.html</span></a>
+    <a href="../docs/state-field-architecture.html"><b>state field</b><span>docs/state-field-architecture.html</span></a>
+    <a href="../docs/visual-speed-report.html"><b>visual speed</b><span>docs/visual-speed-report.html</span></a></div>
+    </section>
+    <footer>Generated at 2026-05-19T03:38:42.549Z. JSON: <code>product-dashboard.json</code>. Resident endpoint: <code>/product-dashboard</code>.</footer>
+  </main>
+</body>
+</html>

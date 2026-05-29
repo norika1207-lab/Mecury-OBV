@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury System Proof Map</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07090d; --panel:#101721; --line:#26364a; --text:#f7f9fc; --muted:#9aadc2; --good:#4de092; --blue:#7bbdff; --warn:#ffd166; --red:#ff6f7f; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(circle at 50% 0%, #132033, #07090d 46%, #05070b); color:var(--text); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing:0; }
+    main { max-width:1180px; margin:0 auto; padding:38px 20px 70px; }
+    h1 { margin:0 0 12px; max-width:980px; font-size:clamp(38px,6vw,76px); line-height:.98; letter-spacing:0; }
+    h2 { margin:0 0 12px; font-size:28px; }
+    h3 { margin:0 0 8px; font-size:18px; }
+    p { margin:0; color:var(--muted); line-height:1.62; }
+    .lead { max-width:860px; color:#d7e4f0; font-size:19px; }
+    .eyebrow { color:var(--good); font-weight:900; text-transform:uppercase; font-size:13px; }
+    section { border-bottom:1px solid var(--line); padding:28px 0; }
+    .hero { min-height:62vh; display:grid; align-content:center; }
+    .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+    a { color:#061015; background:var(--good); border-radius:8px; padding:10px 12px; text-decoration:none; font-weight:900; }
+    a.secondary { color:var(--text); background:#101721; border:1px solid var(--line); }
+    .metrics, .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin-top:16px; }
+    .metric, .card, .lane { border:1px solid var(--line); border-radius:8px; background:rgba(16,23,33,.92); padding:16px; }
+    .metric span, .metric small { display:block; color:var(--muted); font-size:13px; }
+    .metric b { display:block; margin:8px 0 4px; color:var(--blue); font-size:34px; line-height:1; }
+    .card b { display:block; color:#eaf3fb; margin-bottom:8px; }
+    .card strong { color:var(--good); }
+    .flow { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin-top:18px; align-items:stretch; }
+    .step { min-height:130px; border:1px solid rgba(123,189,255,.35); border-radius:8px; background:linear-gradient(180deg,#101b28,#0b1119); padding:14px; position:relative; }
+    .step:not(:last-child)::after { content:""; position:absolute; right:-10px; top:50%; width:10px; height:1px; background:var(--blue); }
+    .step span { display:block; color:var(--good); font-size:12px; font-weight:900; text-transform:uppercase; }
+    .step b { display:block; margin:8px 0; font-size:16px; }
+    .step p { font-size:13px; }
+    .diagram { margin-top:18px; border:1px solid var(--line); border-radius:8px; background:#0b1119; padding:18px; overflow:hidden; }
+    .field { min-height:330px; position:relative; }
+    .node { position:absolute; width:12px; height:12px; border-radius:50%; background:var(--blue); box-shadow:0 0 24px var(--blue); }
+    .node.good { background:var(--good); box-shadow:0 0 24px var(--good); }
+    .node.warn { background:var(--warn); box-shadow:0 0 24px var(--warn); }
+    .bridge { position:absolute; height:2px; background:linear-gradient(90deg, transparent, var(--blue), transparent); transform-origin:left center; opacity:.68; }
+    .label { position:absolute; border:1px solid var(--line); border-radius:8px; background:#111b27; padding:10px 12px; color:#dfeaf4; font-size:13px; max-width:210px; }
+    .n1{left:8%;top:22%}.n2{left:36%;top:14%}.n3{left:62%;top:34%}.n4{left:84%;top:22%}.n5{left:24%;top:76%}.n6{left:55%;top:72%}.n7{left:87%;top:76%}
+    .b1{left:9%;top:24%;width:28%;transform:rotate(-10deg)}.b2{left:37%;top:17%;width:27%;transform:rotate(26deg)}.b3{left:63%;top:35%;width:24%;transform:rotate(-18deg)}.b4{left:25%;top:76%;width:31%;transform:rotate(-4deg)}.b5{left:57%;top:73%;width:31%;transform:rotate(3deg)}.b6{left:37%;top:17%;width:24%;transform:rotate(117deg)}
+    .l1{left:3%;top:5%}.l2{left:31%;top:4%}.l3{left:57%;top:17%}.l4{right:2%;top:4%}.l5{left:10%;bottom:4%}.l6{left:43%;bottom:5%}.l7{right:2%;bottom:4%}
+    .lanes { display:grid; gap:10px; margin-top:16px; }
+    .lane { display:grid; grid-template-columns:180px 1fr 110px; gap:14px; align-items:center; }
+    .bar { height:10px; border-radius:999px; background:#0b1119; overflow:hidden; border:1px solid var(--line); }
+    .bar i { display:block; height:100%; background:linear-gradient(90deg,var(--good),var(--blue)); }
+    .boundary { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; }
+    .public { border-color:rgba(77,224,146,.45); }
+    .private { border-color:rgba(255,209,102,.45); }
+    .tag { display:inline-flex; border:1px solid rgba(77,224,146,.45); color:var(--good); border-radius:999px; padding:7px 10px; font-weight:900; margin-top:14px; }
+    footer { padding-top:20px; color:var(--muted); font-size:13px; }
+    @media (max-width:900px) { .flow, .boundary { grid-template-columns:1fr; } .step::after { display:none; } .lane { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Neuron Mercury / System Proof Map</div>
+      <h1>不要把底牌翻成程式碼。把能力畫成證據地圖。</h1>
+      <p class="lead">這頁不展示內部實作、不列檔案路徑、不公開路由細節。它用資訊圖表說明 Neuron Mercury 的產品價值：本地電腦先感知狀態、縮短路徑、稀疏喚醒神經元、產生 evidence，再把昂貴模型留在慢路徑。</p>
+      <div class="links">
+        <a href="./investor-brief.html">Investor Brief</a>
+        <a class="secondary" href="./demo-console.html">Live Demo</a>
+        <a class="secondary" href="./product-dashboard.html">Product Proof</a>
+        <a class="secondary" href="./product-readiness.html">Product Readiness</a>
+      </div>
+      <span class="tag">Public artifact: architecture and proof, not source disclosure</span>
+    </section>
+
+    <section>
+      <h2>產品證據，一眼看懂</h2>
+      <div class="metrics">
+        <div class="metric"><span>Neuron Catalog</span><b>500</b><small>sparse activation, not full execution</small></div>
+        <div class="metric"><span>Product Checks</span><b>7/8+</b><small>runtime-generated readiness chain</small></div>
+        <div class="metric"><span>Paper Suite</span><b>8/8</b><small>measured / reference / replay separated</small></div>
+        <div class="metric"><span>Launch Suite</span><b>6/6</b><small>live proof lanes</small></div>
+        <div class="metric"><span>Workflow Lift</span><b>12.26x</b><small>measured local burst</small></div>
+        <div class="metric"><span>Model Hot Path</span><b>OFF</b><small>slow model is not the foreground loop</small></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>從任務到有用結果的狀態場路徑</h2>
+      <p>投資人需要看到的是「為什麼它會快」，不是看到內部函式。下面這條圖就是產品核心。</p>
+      <div class="flow">
+        <div class="step"><span>01</span><b>Task enters</b><p>使用者或 agent 丟進一個工作，不直接把整包丟給大模型。</p></div>
+        <div class="step"><span>02</span><b>State sensing</b><p>先看本地狀態、記憶、風險、可用路徑與是否有變化。</p></div>
+        <div class="step"><span>03</span><b>State bridge</b><p>把模糊任務接到已驗證的工作路徑，縮短探索距離。</p></div>
+        <div class="step"><span>04</span><b>Sparse wake-up</b><p>500 個可能性裡，只喚醒少數有用神經元。</p></div>
+        <div class="step"><span>05</span><b>Evidence first</b><p>先產生 evidence packet / diagnosis / proof，不等慢模型。</p></div>
+        <div class="step"><span>06</span><b>Writeback</b><p>把有效路徑寫回，下一次從更近的位置醒來。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>State-field 資訊圖</h2>
+      <div class="diagram">
+        <div class="field">
+          <i class="bridge b1"></i><i class="bridge b2"></i><i class="bridge b3"></i><i class="bridge b4"></i><i class="bridge b5"></i><i class="bridge b6"></i>
+          <i class="node n1 good"></i><i class="node n2"></i><i class="node n3 warn"></i><i class="node n4 good"></i><i class="node n5"></i><i class="node n6 good"></i><i class="node n7"></i>
+          <div class="label l1">Task signal</div>
+          <div class="label l2">State pair</div>
+          <div class="label l3">State bridge</div>
+          <div class="label l4">Evidence packet</div>
+          <div class="label l5">Private memory</div>
+          <div class="label l6">Sparse neurons</div>
+          <div class="label l7">Slow model later</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Proof chain，不靠單一 benchmark</h2>
+      <div class="lanes">
+        <div class="lane"><b>Product readiness</b><div class="bar"><i style="width:88%"></i></div><span>runtime checks</span></div>
+        <div class="lane"><b>State-field runtime</b><div class="bar"><i style="width:92%"></i></div><span>pair / pulse</span></div>
+        <div class="lane"><b>Cold-start evidence</b><div class="bar"><i style="width:96%"></i></div><span>evidence first</span></div>
+        <div class="lane"><b>Workflow burst</b><div class="bar"><i style="width:90%"></i></div><span>12.26x</span></div>
+        <div class="lane"><b>Validation boundary</b><div class="bar"><i style="width:100%"></i></div><span>honest labels</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>公開展示 vs. 私有護城河</h2>
+      <div class="boundary">
+        <div class="card public">
+          <b>公開給投資人看的</b>
+          <p><strong>產品能力、證據鏈、速度改善、runtime readiness、可重跑 artifacts。</strong> 這些建立信任，讓人知道它不是簡報。</p>
+        </div>
+        <div class="card private">
+          <b>不能放到公開頁的</b>
+          <p><strong>內部決策規則、權重、執行接線、檔案結構、介面細節、完整 prompt/策略。</strong> 這些才是底牌。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>一句話定位</h2>
+      <div class="card">
+        <b>Neuron Mercury does not make models bigger. It makes computers remember how work moves.</b>
+        <p>Neuron Mercury 不是把模型做大，而是讓電腦記得工作是怎麼流動的。這才是產品化敘事的中心。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Future Scale Map</h2>
+      <div class="card">
+        <b><a href="./mercury-universe-map.html">Open Public Scale Map</a></b>
+        <p>這張圖描述未來大規模狀態場如何保持稀疏、可控、可驗證。公開版本只保留概念層，不揭露內部接線。</p>
+      </div>
+    </section>
+
+    <footer>Public proof map. Internal implementation details intentionally withheld.</footer>
+  </main>
+</body>
+</html>

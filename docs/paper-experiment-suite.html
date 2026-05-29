@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Paper Experiment Suite</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07090d; --panel:#101721; --line:#263547; --text:#f6f8fb; --muted:#9aaec3; --good:#4ddd90; --warn:#ffd166; --blue:#79bdff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(180deg, #07090d, #0b1119); color:var(--text); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing:0; }
+    main { max-width:1240px; margin:0 auto; padding:40px 20px 72px; }
+    h1 { margin:0 0 10px; font-size:clamp(34px,5vw,64px); line-height:1.02; letter-spacing:0; }
+    h2 { margin:0 0 14px; font-size:22px; }
+    p { margin:0; color:var(--muted); line-height:1.58; }
+    .lead { max-width:940px; color:#cdd8e4; font-size:18px; }
+    .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(175px,1fr)); gap:12px; margin:24px 0; }
+    .metric, .panel, .lane { background:linear-gradient(180deg, rgba(16,23,33,.98), rgba(10,15,23,.98)); border:1px solid var(--line); border-radius:8px; padding:16px; }
+    .metric span, .metric small { display:block; color:var(--muted); font-size:13px; }
+    .metric b { display:block; margin:8px 0 4px; font-size:30px; }
+    .lanes { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:12px; margin:18px 0 22px; }
+    .lane { display:grid; grid-template-columns:1fr auto; gap:16px; align-items:center; }
+    .lane h3 { margin:0 0 7px; font-size:18px; color:var(--good); }
+    .lane.fail h3 { color:var(--warn); }
+    .numbers { min-width:118px; text-align:right; }
+    .numbers b { display:block; color:var(--blue); font-size:30px; line-height:1; }
+    .numbers span, .numbers small { color:var(--muted); display:block; font-size:12px; margin-top:5px; }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    th, td { border-bottom:1px solid var(--line); padding:9px 7px; text-align:left; vertical-align:top; }
+    th { color:#dce8f3; background:#0d141d; position:sticky; top:0; }
+    td { color:#c9d6e3; }
+    code { color:var(--blue); }
+    .note { border-color:rgba(121,189,255,.35); background:rgba(121,189,255,.06); margin:18px 0; }
+    footer { margin-top:20px; color:var(--muted); font-size:13px; }
+    @media (max-width:640px) { .lane { grid-template-columns:1fr; } .numbers { text-align:left; } table { font-size:12px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>論文實驗矩陣</h1>
+    <p class="lead">這份報告把 Neuron Mercury 拆成可驗證實驗：500 神經元稀疏啟動、Rosen Pair 狀態場、冷啟動 evidence packet、RAG/UMA 查詢、怪物診斷、工作流 replay、LLM hot-path 避免。每一列都能重跑，並保留 baseline 類型，避免把 cache replay 偽裝成首次生成。</p>
+    <section class="metrics">
+      
+    <div class="metric"><span>Suite Status</span><b>CHECK</b><small>7/8 lanes</small></div>
+      
+    <div class="metric"><span>Trials</span><b>14</b><small>2 repeat setting</small></div>
+      
+    <div class="metric"><span>Measured Lanes</span><b>3</b><small>real measured baseline</small></div>
+      
+    <div class="metric"><span>Reference Lanes</span><b>5</b><small>clearly labeled reference</small></div>
+      
+    <div class="metric"><span>Elapsed</span><b>24629ms</b><small>full suite runtime</small></div>
+      
+    <div class="metric"><span>Artifacts</span><b>JSON/CSV/HTML</b><small>paper-ready output</small></div>
+    </section>
+    <section class="panel note">
+      <h2>論文主張邊界</h2>
+      <p>這份 suite 把 measured baseline、reference baseline、candidate-count reduction 分開標示。可對外主張的是：首次任務先產出 evidence packet / route / diagnosis，不把 cache replay 說成首次生成；cache replay 是第二段價值，不混在同一個冷啟動數字裡。</p>
+    </section>
+    <section class="lanes">
+    <article class="lane pass">
+      <div>
+        <h3>500-neuron sparse activation</h3>
+        <p>28 selected lanes, 12 executable neurons</p>
+      </div>
+      <div class="numbers">
+        <b>83.33x</b>
+        <span>p50 speedup</span>
+        <small>12neurons p50 · candidate_count</small>
+      </div>
+    </article>
+    <article class="lane pass">
+      <div>
+        <h3>Rosen Pair unchanged-state replay</h3>
+        <p>seed=pair_seed, replay=state_replay, correction=correction_pulse</p>
+      </div>
+      <div class="numbers">
+        <b>0.96x</b>
+        <span>p50 speedup</span>
+        <small>78ms p50 · measured_seed_ms</small>
+      </div>
+    </article>
+    <article class="lane pass">
+      <div>
+        <h3>Rosen Pair changed-state correction</h3>
+        <p>digest_changed=yes</p>
+      </div>
+      <div class="numbers">
+        <b>0.96x</b>
+        <span>p50 speedup</span>
+        <small>78ms p50 · measured_seed_ms</small>
+      </div>
+    </article>
+    <article class="lane pass">
+      <div>
+        <h3>Cold-start evidence packet</h3>
+        <p>hits=8, slow_job=pending</p>
+      </div>
+      <div class="numbers">
+        <b>20000x</b>
+        <span>p50 speedup</span>
+        <small>2ms p50 · reference_model_discovery_ms</small>
+      </div>
+    </article>
+    <article class="lane pass">
+      <div>
+        <h3>Workflow route materialization/replay</h3>
+        <p>steps=rosen_route|spend_guard|cold_start_packet|monster_doctor|task_memory</p>
+      </div>
+      <div class="numbers">
+        <b>198.5x</b>
+        <span>p50 speedup</span>
+        <small>10ms p50 · measured_first_route_ms</small>
+      </div>
+    </article>
+    <article class="lane pass">
+      <div>
+        <h3>LLM hot-path avoidance</h3>
+        <p>provider=reflex_queue_only, queue=175</p>
+      </div>
+      <div class="numbers">
+        <b>1.02x</b>
+        <span>p50 speedup</span>
+        <small>1ms p50 · reference_local_qwen_ms</small>
+      </div>
+    </article>
+    <article class="lane fail">
+      <div>
+        <h3>Monster diagnosis</h3>
+        <p>pages=800, rosen=8, cost=32</p>
+      </div>
+      <div class="numbers">
+        <b>185.47x</b>
+        <span>p50 speedup</span>
+        <small>647ms p50 · reference_broad_scan_plus_model_ms</small>
+      </div>
+    </article>
+    <article class="lane pass">
+      <div>
+        <h3>Resident speed-state snapshot</h3>
+        <p>rosen_summary=ready, pairs=1</p>
+      </div>
+      <div class="numbers">
+        <b>300000x</b>
+        <span>p50 speedup</span>
+        <small>0.001ms p50 · budget_ms</small>
+      </div>
+    </article></section>
+    <section class="panel">
+      <h2>Raw Trial Table</h2>
+      <table>
+        <thead><tr><th>Lane</th><th>Trial</th><th>Baseline</th><th>Base</th><th>Mercury</th><th>Unit</th><th>Speedup</th><th>Mode</th><th>Pass</th></tr></thead>
+        <tbody>
+    <tr>
+      <td>500-neuron sparse activation</td>
+      <td>1</td>
+      <td>candidate_count</td>
+      <td>1000</td>
+      <td>12</td>
+      <td>neurons</td>
+      <td>83.33</td>
+      <td>sparse_control_map</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>500-neuron sparse activation</td>
+      <td>2</td>
+      <td>candidate_count</td>
+      <td>1000</td>
+      <td>12</td>
+      <td>neurons</td>
+      <td>83.33</td>
+      <td>sparse_control_map</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Rosen Pair unchanged-state replay</td>
+      <td>1</td>
+      <td>measured_seed_ms</td>
+      <td>670</td>
+      <td>175</td>
+      <td>ms</td>
+      <td>3.83</td>
+      <td>state_replay</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Rosen Pair changed-state correction</td>
+      <td>1</td>
+      <td>measured_seed_ms</td>
+      <td>670</td>
+      <td>183</td>
+      <td>ms</td>
+      <td>3.66</td>
+      <td>correction_pulse</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Rosen Pair unchanged-state replay</td>
+      <td>2</td>
+      <td>measured_seed_ms</td>
+      <td>75</td>
+      <td>78</td>
+      <td>ms</td>
+      <td>0.96</td>
+      <td>state_replay</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Rosen Pair changed-state correction</td>
+      <td>2</td>
+      <td>measured_seed_ms</td>
+      <td>75</td>
+      <td>78</td>
+      <td>ms</td>
+      <td>0.96</td>
+      <td>correction_pulse</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Cold-start evidence packet</td>
+      <td>1</td>
+      <td>reference_model_discovery_ms</td>
+      <td>120000</td>
+      <td>6</td>
+      <td>ms</td>
+      <td>20000</td>
+      <td>target_file_first</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Cold-start evidence packet</td>
+      <td>2</td>
+      <td>reference_model_discovery_ms</td>
+      <td>120000</td>
+      <td>2</td>
+      <td>ms</td>
+      <td>60000</td>
+      <td>target_file_first</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Workflow route materialization/replay</td>
+      <td>1</td>
+      <td>measured_first_route_ms</td>
+      <td>2228</td>
+      <td>10</td>
+      <td>ms</td>
+      <td>222.8</td>
+      <td>accelerate_task_fast_replay</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Workflow route materialization/replay</td>
+      <td>2</td>
+      <td>measured_first_route_ms</td>
+      <td>1985</td>
+      <td>10</td>
+      <td>ms</td>
+      <td>198.5</td>
+      <td>accelerate_task_fast_replay</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>LLM hot-path avoidance</td>
+      <td>1</td>
+      <td>reference_local_qwen_ms</td>
+      <td>152</td>
+      <td>149</td>
+      <td>ms</td>
+      <td>1.02</td>
+      <td>forbidden</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>LLM hot-path avoidance</td>
+      <td>2</td>
+      <td>reference_local_qwen_ms</td>
+      <td>152</td>
+      <td>1</td>
+      <td>ms</td>
+      <td>152</td>
+      <td>forbidden</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>Monster diagnosis</td>
+      <td>1</td>
+      <td>reference_broad_scan_plus_model_ms</td>
+      <td>120000</td>
+      <td>647</td>
+      <td>ms</td>
+      <td>185.47</td>
+      <td>accelerate_task_fast_replay</td>
+      <td>CHECK</td>
+    </tr>
+    <tr>
+      <td>Resident speed-state snapshot</td>
+      <td>1</td>
+      <td>budget_ms</td>
+      <td>300</td>
+      <td>0.001</td>
+      <td>ms</td>
+      <td>300000</td>
+      <td>speed_state_summary_cache_hit</td>
+      <td>PASS</td>
+    </tr></tbody>
+      </table>
+    </section>
+    <footer>Generated at 2026-05-19T05:44:02.975Z. CSV: <code>paper-experiment-suite.csv</code>. JSON: <code>paper-experiment-suite.json</code>.</footer>
+  </main>
+</body>
+</html>

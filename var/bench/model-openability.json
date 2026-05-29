@@ -1,0 +1,50 @@
+{
+  "ok": false,
+  "schema": "mercury-model-openability-v1",
+  "created_at": "2026-05-28T01:07:18.593Z",
+  "model": "qwen2.5:7b",
+  "runtime": {
+    "ollama_http": false,
+    "ollama_models": [],
+    "ollama_blob_count": 0,
+    "ollama_manifest_roots": [],
+    "huggingface_model_dirs": [],
+    "local_model_files": []
+  },
+  "toolchain": {
+    "torch": {
+      "available": false,
+      "detail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'torch'"
+    },
+    "transformers": {
+      "available": false,
+      "detail": "spawnSync python3 ETIMEDOUT"
+    },
+    "llama_cpp": {
+      "available": false,
+      "detail": "not_on_path"
+    },
+    "vllm": {
+      "available": false,
+      "detail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'vllm'"
+    },
+    "sglang": {
+      "available": false,
+      "detail": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'sglang'"
+    }
+  },
+  "openness": {
+    "can_open_weight_file": false,
+    "can_hook_live_layers": false,
+    "can_hook_inference_boundary": false,
+    "recommended_path": "model_file_not_found_yet",
+    "caveat": "Ollama exposes model files and API behavior, but not live layer activations through its normal HTTP API. Live internal hooks need Transformers/vLLM/sglang/llama.cpp-style control."
+  },
+  "model_field_neurons": {
+    "total": 1000,
+    "external": 500,
+    "internal_boundary": 500,
+    "target": 1000
+  },
+  "elapsed_ms": 2751
+}

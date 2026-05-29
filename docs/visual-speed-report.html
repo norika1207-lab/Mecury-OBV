@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Visual Speed Benchmark</title>
+  <style>
+    :root { color-scheme: light; --ink:#182026; --muted:#62707a; --line:#d8e0e5; --panel:#ffffff; --page:#f4f7f8; --blue:#2563eb; --green:#0f9f6e; --amber:#b7791f; --red:#c2410c; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--page); color:var(--ink); font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    header { padding:28px clamp(18px,4vw,56px) 18px; border-bottom:1px solid var(--line); background:#fbfcfd; }
+    h1 { margin:0 0 8px; font-size:clamp(26px,4vw,44px); letter-spacing:0; }
+    header p { margin:0; color:var(--muted); max-width:880px; }
+    main { padding:22px clamp(18px,4vw,56px) 42px; }
+    .summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin-bottom:18px; }
+    .metric, .lane { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    .metric { padding:16px; }
+    .metric span { display:block; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+    .metric b { display:block; margin-top:6px; font-size:28px; }
+    .impact { background:#0f1720; color:#eef7f4; border-radius:8px; padding:22px; margin:0 0 18px; }
+    .impact p { margin:4px 0 0; color:#b9c8cf; max-width:880px; }
+    .impact h2 { margin:2px 0 4px; font-size:26px; }
+    .impact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin:18px 0; }
+    .impact-time { border:1px solid rgba(255,255,255,.16); border-radius:8px; padding:16px; background:rgba(255,255,255,.05); }
+    .impact-time span, .impact-time small { display:block; color:#b9c8cf; }
+    .impact-time b { display:block; margin:3px 0; font-size:36px; color:#fff; }
+    .impact-time.after b, .impact-time.saved b { color:#6ee7b7; }
+    .scenario { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:20px; margin:0 0 18px; display:grid; grid-template-columns:minmax(220px,1fr) 220px; gap:18px; align-items:center; }
+    .scenario h2 { margin:2px 0 6px; font-size:24px; }
+    .scenario p { margin:0; color:var(--muted); }
+    .speedometer { display:flex; justify-content:center; }
+    .dial { position:relative; width:190px; height:112px; overflow:hidden; text-align:center; }
+    .dial:before { content:""; position:absolute; inset:0 0 auto; height:190px; border-radius:190px 190px 0 0; background:conic-gradient(from 270deg at 50% 100%, #c2410c 0deg, #b7791f 55deg, #0f9f6e 145deg, #2563eb 180deg, transparent 180deg); }
+    .dial:after { content:""; position:absolute; left:22px; right:22px; bottom:-72px; height:146px; border-radius:146px 146px 0 0; background:var(--panel); }
+    .dial i { position:absolute; left:50%; bottom:10px; width:4px; height:84px; background:#172026; border-radius:999px; transform-origin:50% 100%; transform:translateX(-50%) rotate(var(--needle)); z-index:2; }
+    .dial b { position:absolute; left:0; right:0; bottom:28px; z-index:3; font-size:30px; }
+    .dial span { position:absolute; left:0; right:0; bottom:8px; z-index:3; color:var(--muted); }
+    .compare-grid { grid-column:1 / -1; display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; }
+    .compare-grid div { border:1px solid var(--line); border-radius:8px; padding:12px; }
+    .compare-grid span { display:block; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+    .compare-grid b { display:block; margin-top:4px; font-size:24px; }
+    .scenario .race, .scenario .proof { grid-column:1 / -1; }
+    .race { display:grid; gap:10px; }
+    .race-row { display:grid; grid-template-columns:78px 1fr; gap:10px; align-items:center; }
+    .race-row span { color:#d6e2e7; }
+    .big { height:28px; background:#263541; }
+    .trend-panel { background:#fff; border:1px solid var(--line); border-radius:8px; padding:20px; margin:0 0 18px; }
+    .trend-panel h2 { margin:2px 0 6px; font-size:24px; }
+    .trend-panel h3 { margin:18px 0 10px; font-size:15px; text-transform:uppercase; color:#42525c; letter-spacing:.04em; }
+    .trend-panel p { margin:0; color:var(--muted); max-width:920px; }
+    .trend-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:14px; }
+    .trend-card { border:1px solid var(--line); border-radius:8px; padding:12px; background:#f9fbfc; min-width:0; }
+    .trend-card span { display:block; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .trend-card b { display:block; margin:4px 0 1px; font-size:24px; overflow-wrap:anywhere; }
+    .trend-card small { color:#62707a; }
+    .firstgen-panel { background:#fff; border:1px solid var(--line); border-radius:8px; padding:20px; margin:0 0 18px; }
+    .firstgen-panel h2 { margin:2px 0 6px; font-size:24px; }
+    .firstgen-panel p { margin:0; color:var(--muted); max-width:920px; }
+    .firstgen-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+    .firstgen-card { border:1px solid var(--line); border-radius:8px; padding:12px; background:#f7fbf9; }
+    .firstgen-card span { display:block; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+    .firstgen-card b { display:block; margin-top:4px; font-size:26px; overflow-wrap:anywhere; }
+    .firstgen-flow { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .firstgen-flow i { display:inline-flex; align-items:center; min-height:30px; border-radius:999px; padding:5px 10px; font-style:normal; background:#e8f7ef; color:#075f41; border:1px solid #b8ead2; }
+    .lane { padding:18px; margin:12px 0; }
+    .lane-head { display:flex; justify-content:space-between; gap:14px; align-items:flex-start; }
+	    .lane-head h2 { margin:2px 0 12px; font-size:20px; }
+	    .eyebrow { margin:0; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+	    .method { display:inline-block; margin:0 0 8px; border:1px solid var(--line); border-radius:999px; padding:4px 8px; color:#42525c; background:#f7fafb; font-size:12px; }
+	    .method.replay { color:#7c4a03; background:#fff7df; border-color:#f4d58c; }
+	    .pass, .fail { border-radius:999px; padding:5px 9px; font-size:12px; }
+    .pass { color:#05603a; background:#dff7ea; }
+    .fail { color:#9a3412; background:#ffedd5; }
+    .bars { display:grid; gap:8px; }
+    .bar-row { display:grid; grid-template-columns:78px minmax(120px,1fr) 92px; gap:10px; align-items:center; }
+    .bar-row span { color:var(--muted); }
+    .track { height:18px; border-radius:4px; background:#edf2f5; overflow:hidden; }
+    .track i { display:block; height:100%; border-radius:4px; }
+    .baseline { background:var(--amber); }
+    .accelerated { background:linear-gradient(90deg,var(--green),var(--blue)); }
+    .bar-row b { text-align:right; font-variant-numeric:tabular-nums; }
+    .lane-foot { display:flex; gap:16px; align-items:flex-start; margin-top:14px; border-top:1px solid var(--line); padding-top:12px; }
+    .lane-foot span { flex:0 0 auto; font-weight:800; color:var(--green); font-size:22px; }
+    .lane-foot p { margin:2px 0 0; color:var(--muted); }
+    pre { white-space:pre-wrap; background:#101820; color:#e9f4f2; padding:14px; border-radius:8px; overflow:auto; }
+    @media (max-width:760px) { .scenario { grid-template-columns:1fr; } }
+    @media (max-width:640px) { .bar-row { grid-template-columns:1fr; gap:4px; } .bar-row b { text-align:left; } .lane-foot { display:block; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Neuron Mercury Visual Speed Benchmark</h1>
+	    <p>Formal acceleration proof separates measured hot-path acceleration from cache-hit replay. First-generation model writing is not counted as Mercury compute until a real cold-start measurement is supplied.</p>
+  </header>
+  <main>
+    <section class="summary">
+	      <div class="metric"><span>Verified hot-path speedup</span><b>12.48x</b></div>
+	      <div class="metric"><span>Fastest lane</span><b>302.88x</b></div>
+	      <div class="metric"><span>Verified lanes</span><b>4/4</b></div>
+	      <div class="metric"><span>Replay-only lanes</span><b>2</b></div>
+	      <div class="metric"><span>Generated</span><b>15:44:36</b></div>
+    </section>
+    
+    <section class="impact">
+      <div>
+        <p class="eyebrow">Human-visible difference</p>
+        <h2>Same work, with Mercury vs without Mercury</h2>
+        <p>A realistic work burst: 20 project diagnosis questions, 20 cold-start evidence packets, and 200 UMA/RAG lookups. Replay-only LLM cache lanes are excluded from this headline.</p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-time before">
+          <span>Without Mercury</span>
+          <b>3.58s</b>
+          <small>visible waiting and context switching</small>
+        </div>
+        <div class="impact-time after">
+          <span>With Mercury</span>
+          <b>2s</b>
+          <small>short pause</small>
+        </div>
+        <div class="impact-time saved">
+          <span>Time saved</span>
+          <b>1.58s</b>
+          <small>1.79x faster across the workflow</small>
+        </div>
+      </div>
+      <div class="race">
+        <div class="race-row"><span>Without</span><div class="track big"><i class="baseline" style="width:100%"></i></div></div>
+        <div class="race-row"><span>With</span><div class="track big"><i class="accelerated" style="width:56%"></i></div></div>
+      </div>
+    </section>
+    
+    <section class="firstgen-panel">
+      <p class="eyebrow">First-Generation Acceleration</p>
+      <h2>First run becomes evidence packet + section workers, not a blind single queue</h2>
+      <p>First-generation acceleration uses UMA evidence packets, section workers, judge scoring, and reflex distillation so the user gets a useful draft before slow model completion.</p>
+      <div class="firstgen-grid">
+        <div class="firstgen-card"><span>Sections</span><b>8</b></div>
+        <div class="firstgen-card"><span>Workers</span><b>4</b></div>
+        <div class="firstgen-card"><span>Waves</span><b>2</b></div>
+        <div class="firstgen-card"><span>Immediate Draft</span><b>9.2KB</b></div>
+        <div class="firstgen-card"><span>Judge Score</span><b>100</b></div>
+        <div class="firstgen-card"><span>Estimated Path</span><b>120s → 30s</b></div>
+      </div>
+      <div class="firstgen-flow">
+        <i>UMA packet</i><i>Code cortex</i><i>Neuron map</i><i>Section fanout</i><i>Judge</i><i>Reflex distill</i>
+      </div>
+    </section>
+    
+    <section class="trend-panel">
+      <div>
+        <p class="eyebrow">Live Acceleration Trend</p>
+        <h2>Runtime caches, UMA, and neuron lanes are tracked across runs</h2>
+        <p>Speed is no longer a single screenshot. Mercury records bench history, resident cache state, UMA hot memory, Qwer plan cache, and neuron lane health so the scheduler can promote the paths that actually make the computer faster.</p>
+      </div>
+      <div class="trend-grid">
+        <div class="trend-card"><span>History Window</span><b>22</b><small>3 suites tracked</small></div>
+        <div class="trend-card"><span>Resident Route Cache</span><b>0</b><small>task routing memory</small></div>
+        <div class="trend-card"><span>Resident Task Cache</span><b>0</b><small>workflow replay memory</small></div>
+        <div class="trend-card"><span>Qwer Plan Cache</span><b>qwer_speed_plan_cache_miss</b><small>1693 Qwen cache files</small></div>
+        <div class="trend-card"><span>UMA</span><b>547</b><small>32 hot pages</small></div>
+        <div class="trend-card"><span>UMA Batch</span><b>project</b><small>/uma/batch-search · keep-warm ready</small></div>
+        <div class="trend-card"><span>Batch Caches</span><b>13</b><small>source 11 · symbol 2</small></div>
+        <div class="trend-card"><span>Neuron Lanes</span><b>11</b><small>2 promote lanes</small></div>
+      </div>
+      <h3>Fastest Recent Suites</h3>
+      <div class="trend-grid">
+      <div class="trend-card">
+        <span>visual-speed-v0.1</span>
+        <b>16ms</b>
+        <small>best 4.396ms · budget pass</small>
+      </div></div>
+    </section>
+    
+      <section class="scenario">
+        <div>
+          <p class="eyebrow">First-run generation benchmark</p>
+          <h2>5000-word first draft starts as parallel UMA section work</h2>
+          <span class="method ">measured_hot_path_plus_slow_path_estimate</span>
+          <p>This is the non-replay path: Mercury builds the evidence packet, divides the answer into section workers, creates an immediate evidence-bound draft, queues slow refinement, and distills the draft for later replay.</p>
+        </div>
+        <div class="speedometer" style="--needle:76.9750630296131deg">
+          <div class="dial"><i></i><b>289.86x</b><span>speedup</span></div>
+        </div>
+        <div class="compare-grid">
+          <div><span>Without Mercury</span><b>120s serial</b></div>
+          <div><span>With Mercury</span><b>414ms first draft</b></div>
+          <div><span>Saved</span><b>119.6s to first useful draft</b></div>
+        </div>
+        <div class="race">
+          <div class="race-row"><span>Without</span><div class="track big"><i class="baseline" style="width:100%"></i></div></div>
+          <div class="race-row"><span>With</span><div class="track big"><i class="accelerated" style="width:2%"></i></div></div>
+        </div>
+        <p class="proof">Built 8 section drafts over 4 workers/2 waves, judge=100, pointer_coverage=1, immediate_draft_bytes=9377, distilled=9.</p>
+      </section>
+
+      <section class="scenario">
+        <div>
+          <p class="eyebrow">5000-word output benchmark</p>
+          <h2>Long-form replay: first run reference vs accelerated reuse</h2>
+          <span class="method replay">cache_hit_replay_not_cold_start</span>
+          <p>This is intentionally labeled as replay. It shows how fast Mercury can return a previously generated/distilled 5000-word answer; it does not claim to speed up the first model generation.</p>
+        </div>
+        <div class="speedometer" style="--needle:120deg">
+          <div class="dial"><i></i><b>478087.65x</b><span>speedup</span></div>
+        </div>
+        <div class="compare-grid">
+          <div><span>Without Mercury</span><b>120s</b></div>
+          <div><span>With Mercury</span><b>0.251ms</b></div>
+          <div><span>Saved</span><b>120s</b></div>
+        </div>
+        <div class="race">
+          <div class="race-row"><span>Without</span><div class="track big"><i class="baseline" style="width:100%"></i></div></div>
+          <div class="race-row"><span>With</span><div class="track big"><i class="accelerated" style="width:2%"></i></div></div>
+        </div>
+        <p class="proof">Retrieved 31932 characters from reflex memory with mode=cache_hit. Use --longform-ms=&lt;ms&gt; to attach a real Qwen/Claude/OpenAI first-generation measurement; this replay number is excluded from verified hot-path speedup.</p>
+      </section>
+    
+      <section class="lane">
+        <div class="lane-head">
+          <div>
+	            <p class="eyebrow">CPU / Reflex Cache</p>
+	            <h2>Math kernel cached instead of recomputed</h2>
+	            <span class="method ">measured_hot_path</span>
+	          </div>
+          <strong class="pass">PASS</strong>
+        </div>
+        <div class="bars" aria-label="Math kernel cached instead of recomputed speed comparison">
+          <div class="bar-row">
+            <span>Baseline</span>
+            <div class="track"><i class="baseline" style="width:2%"></i></div>
+            <b>2.423 ms</b>
+          </div>
+          <div class="bar-row">
+            <span>Mercury</span>
+            <div class="track"><i class="accelerated" style="width:2%"></i></div>
+            <b>0.008 ms</b>
+          </div>
+        </div>
+        <div class="lane-foot">
+          <span>302.88x faster</span>
+          <p>Prime kernel checksum 199091012; repeated deterministic work becomes a cache lookup.</p>
+        </div>
+      </section>
+
+      <section class="lane">
+        <div class="lane-head">
+          <div>
+	            <p class="eyebrow">UMA / RAG</p>
+	            <h2>Target-file-first RAG lookup</h2>
+	            <span class="method ">measured_hot_path</span>
+	          </div>
+          <strong class="pass">PASS</strong>
+        </div>
+        <div class="bars" aria-label="Target-file-first RAG lookup speed comparison">
+          <div class="bar-row">
+            <span>Baseline</span>
+            <div class="track"><i class="baseline" style="width:2%"></i></div>
+            <b>0.636 ms</b>
+          </div>
+          <div class="bar-row">
+            <span>Mercury</span>
+            <div class="track"><i class="accelerated" style="width:2%"></i></div>
+            <b>0.313 ms</b>
+          </div>
+        </div>
+        <div class="lane-foot">
+          <span>2.03x faster</span>
+          <p>Indexed 72 semantic pages; targeted route hit 1 pages with target_file_first=yes.</p>
+        </div>
+      </section>
+
+      <section class="lane">
+        <div class="lane-head">
+          <div>
+	            <p class="eyebrow">Nested Neurons</p>
+	            <h2>Project diagnosis with prewarmed UMA circuit</h2>
+	            <span class="method ">measured_hot_path</span>
+	          </div>
+          <strong class="pass">PASS</strong>
+        </div>
+        <div class="bars" aria-label="Project diagnosis with prewarmed UMA circuit speed comparison">
+          <div class="bar-row">
+            <span>Baseline</span>
+            <div class="track"><i class="baseline" style="width:57%"></i></div>
+            <b>86.02 ms</b>
+          </div>
+          <div class="bar-row">
+            <span>Mercury</span>
+            <div class="track"><i class="accelerated" style="width:63%"></i></div>
+            <b>95.021 ms</b>
+          </div>
+        </div>
+        <div class="lane-foot">
+          <span>0.91x faster</span>
+          <p>Warm pages=72, precompiled circuits=4, plan cache hit=no, precompiled=yes.</p>
+        </div>
+      </section>
+
+      <section class="lane">
+        <div class="lane-head">
+          <div>
+	            <p class="eyebrow">Cache-hit Replay</p>
+	            <h2>Local LLM answer replayed without model call</h2>
+	            <span class="method replay">cache_hit_replay_not_cold_start</span>
+	          </div>
+          <strong class="pass">PASS</strong>
+        </div>
+        <div class="bars" aria-label="Local LLM answer replayed without model call speed comparison">
+          <div class="bar-row">
+            <span>Baseline</span>
+            <div class="track"><i class="baseline" style="width:100%"></i></div>
+            <b>152 ms</b>
+          </div>
+          <div class="bar-row">
+            <span>Mercury</span>
+            <div class="track"><i class="accelerated" style="width:2%"></i></div>
+            <b>0.024 ms</b>
+          </div>
+        </div>
+        <div class="lane-foot">
+          <span>6333.33x faster</span>
+          <p>Replay lane only: baseline is an external Qwen refresh reference (152ms); Mercury returned an already-distilled answer with mode=cache_hit, layer=result_memory. This is call avoidance, not faster cold-start generation.</p>
+        </div>
+      </section>
+
+      <section class="lane">
+        <div class="lane-head">
+          <div>
+	            <p class="eyebrow">Cold-start Acceleration</p>
+	            <h2>First useful answer before model generation</h2>
+	            <span class="method ">measured_cold_start_scaffold</span>
+	          </div>
+          <strong class="pass">PASS</strong>
+        </div>
+        <div class="bars" aria-label="First useful answer before model generation speed comparison">
+          <div class="bar-row">
+            <span>Baseline</span>
+            <div class="track"><i class="baseline" style="width:57%"></i></div>
+            <b>86.65599999999999 ms</b>
+          </div>
+          <div class="bar-row">
+            <span>Mercury</span>
+            <div class="track"><i class="accelerated" style="width:2%"></i></div>
+            <b>2 ms</b>
+          </div>
+        </div>
+        <div class="lane-foot">
+          <span>43.33x faster</span>
+          <p>Built UMA evidence packet route=target_file_first hits=1, scaffold bytes=776, queued slow job=pending.</p>
+        </div>
+      </section>
+    <h2>Raw Report</h2>
+    <pre id="raw"></pre>
+  </main>
+  <script>
+    const report = {"schema":"mercury-visual-speed-report-v1","created_at":"2026-05-18T15:44:36.398Z","cwd":"/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury","namespace":"bench-visual-speed-92d44064efc7f2a74136c33e","repeat":3,"model_baseline_ms":152,"longform_baseline_ms":120000,"verified_lane_count":4,"replay_only_lanes":2,"overall_speedup":12.48,"fastest_lane_speedup":302.88,"passed_lanes":5,"verified_passed_lanes":4,"workflow_impact":{"description":"A realistic work burst: 20 project diagnosis questions, 20 cold-start evidence packets, and 200 UMA/RAG lookups. Replay-only LLM cache lanes are excluded from this headline.","baseline_ms":3580.72,"mercury_ms":2003.02,"baseline_seconds":3.58,"mercury_seconds":2,"saved_seconds":1.58,"speedup":1.79,"baseline_feel":"visible waiting and context switching","mercury_feel":"short pause"},"speed_trends":{"schema":"mercury-speed-trends-v1","created_at":"2026-05-18T15:44:36.398Z","cwd":"/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury","history_path":"/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/bench/history.jsonl","window_rows":22,"suite_trends":[{"suite":"afu-uma-v0.1","rows":3,"first_ms":11,"latest_ms":2,"best_ms":2,"speedup_since_first":5.5,"latest_budget_ok":false,"latest_high_evidence":0,"latest_precision":0},{"suite":"lobster-debug-v0.1","rows":4,"first_ms":15,"latest_ms":4,"best_ms":2,"speedup_since_first":3.75,"latest_budget_ok":false,"latest_high_evidence":0,"latest_precision":0},{"suite":"visual-speed-v0.1","rows":15,"first_ms":39.969,"latest_ms":16,"best_ms":4.396,"speedup_since_first":2.5,"latest_budget_ok":true,"latest_high_evidence":5,"latest_precision":1}],"fastest_suites":[{"suite":"visual-speed-v0.1","rows":15,"first_ms":39.969,"latest_ms":16,"best_ms":4.396,"speedup_since_first":2.5,"latest_budget_ok":true,"latest_high_evidence":5,"latest_precision":1}],"needs_attention":[{"suite":"afu-uma-v0.1","rows":3,"first_ms":11,"latest_ms":2,"best_ms":2,"speedup_since_first":5.5,"latest_budget_ok":false,"latest_high_evidence":0,"latest_precision":0},{"suite":"lobster-debug-v0.1","rows":4,"first_ms":15,"latest_ms":4,"best_ms":2,"speedup_since_first":3.75,"latest_budget_ok":false,"latest_high_evidence":0,"latest_precision":0}],"resident_caches":{"task_route":{"items":0,"limit":512},"accelerate_task":{"items":0,"limit":256},"qwer_speed_plan":{"active":true,"age_ms":146},"speed_state":{"active":true,"age_ms":21618}},"qwer_speed_plan":{"provider":"reflex_queue_only","route":"no_model_call_use_reflex_queue","cache_mode":"qwer_speed_plan_cache_miss","qwer_pending":1759,"qwen_cache":1693},"uma":{"namespace":"project-72e25486d261af475d2a3cd8","pages":547,"files":48,"symbols":97,"hot_pages":32,"hot_events":3792,"refresh_needed":false},"uma_batch":{"namespace_index_cache":2,"source_page_cache":11,"symbol_lookup_cache":2,"project_namespace_default":true,"keep_warm_active":false,"keep_warm_mode":null,"resident_endpoint":"/uma/batch-search"},"neuron_lanes":{"rows":826,"lanes":11,"promote":[{"lane":"risk_lane","runs":7,"executed":7,"selected":7,"utility":21.4,"elapsed":3,"high":6,"avg_utility":3.057,"avg_elapsed_ms":0.429,"execution_rate":1,"selected_rate":1},{"lane":"verification_lane","runs":6,"executed":6,"selected":6,"utility":5.4,"elapsed":0,"high":0,"avg_utility":0.9,"avg_elapsed_ms":0,"execution_rate":1,"selected_rate":1}],"throttle":[]},"memory_graph":{"rows":707,"recent_rows":48,"by_type":{"rosen_route":14,"rosen_pair_pulse":14,"task_workflow":14,"monster_doctor":1,"accelerate_task":1,"accelerate_task_fast_replay":1,"cold_start_accelerate":2,"first_gen_accelerate":1}},"reflex_cache":{"files":1965,"qwen_files":1693,"indexed_models":{"qwen2.5:7b":1693,"qwen2.5:3b":0}},"path":"/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/bench/speed-trends.json"},"first_generation":{"mode":"parallel_first_generation_plan","sections":8,"workers":4,"waves":2,"immediate_draft_bytes":9377,"immediate_draft_kb":9.2,"judge_score":100,"pointer_coverage":1,"distilled_reflexes":9,"active_neurons":8,"serial_seconds":120,"parallel_seconds":30,"elapsed_ms":414,"description":"First-generation acceleration uses UMA evidence packets, section workers, judge scoring, and reflex distillation so the user gets a useful draft before slow model completion."},"scenarios":[{"category":"First-run generation benchmark","title":"5000-word first draft starts as parallel UMA section work","benchmark_type":"measured_hot_path_plus_slow_path_estimate","description":"This is the non-replay path: Mercury builds the evidence packet, divides the answer into section workers, creates an immediate evidence-bound draft, queues slow refinement, and distills the draft for later replay.","baseline_ms":120000,"mercury_ms":414,"speedup":289.86,"baseline_label":"120s serial","mercury_label":"414ms first draft","saved_label":"119.6s to first useful draft","proof":"Built 8 section drafts over 4 workers/2 waves, judge=100, pointer_coverage=1, immediate_draft_bytes=9377, distilled=9."},{"category":"5000-word output benchmark","title":"Long-form replay: first run reference vs accelerated reuse","benchmark_type":"cache_hit_replay_not_cold_start","description":"This is intentionally labeled as replay. It shows how fast Mercury can return a previously generated/distilled 5000-word answer; it does not claim to speed up the first model generation.","baseline_ms":120000,"mercury_ms":0.251,"speedup":478087.65,"baseline_label":"120s","mercury_label":"0.251ms","saved_label":"120s","proof":"Retrieved 31932 characters from reflex memory with mode=cache_hit. Use --longform-ms=<ms> to attach a real Qwen/Claude/OpenAI first-generation measurement; this replay number is excluded from verified hot-path speedup."}],"lanes":[{"category":"CPU / Reflex Cache","title":"Math kernel cached instead of recomputed","benchmark_type":"measured_hot_path","include_in_verified_speedup":true,"baseline_ms":2.423,"accelerated_ms":0.008,"speedup":302.88,"proof":"Prime kernel checksum 199091012; repeated deterministic work becomes a cache lookup.","pass":true},{"category":"UMA / RAG","title":"Target-file-first RAG lookup","benchmark_type":"measured_hot_path","include_in_verified_speedup":true,"baseline_ms":0.636,"accelerated_ms":0.313,"speedup":2.03,"proof":"Indexed 72 semantic pages; targeted route hit 1 pages with target_file_first=yes.","pass":true},{"category":"Nested Neurons","title":"Project diagnosis with prewarmed UMA circuit","benchmark_type":"measured_hot_path","include_in_verified_speedup":true,"baseline_ms":86.02,"accelerated_ms":95.021,"speedup":0.91,"proof":"Warm pages=72, precompiled circuits=4, plan cache hit=no, precompiled=yes.","pass":true},{"category":"Cache-hit Replay","title":"Local LLM answer replayed without model call","benchmark_type":"cache_hit_replay_not_cold_start","include_in_verified_speedup":false,"baseline_ms":152,"accelerated_ms":0.024,"speedup":6333.33,"proof":"Replay lane only: baseline is an external Qwen refresh reference (152ms); Mercury returned an already-distilled answer with mode=cache_hit, layer=result_memory. This is call avoidance, not faster cold-start generation.","pass":true},{"category":"Cold-start Acceleration","title":"First useful answer before model generation","benchmark_type":"measured_cold_start_scaffold","include_in_verified_speedup":true,"baseline_ms":86.65599999999999,"accelerated_ms":2,"speedup":43.33,"proof":"Built UMA evidence packet route=target_file_first hits=1, scaffold bytes=776, queued slow job=pending.","pass":true}],"note":"Math is only one lane. The formal target is UMA/RAG/project/LLM hot-path acceleration."};
+    document.getElementById("raw").textContent = JSON.stringify(report, null, 2);
+  </script>
+</body>
+</html>

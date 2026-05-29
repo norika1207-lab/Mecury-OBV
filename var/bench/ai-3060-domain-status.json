@@ -1,0 +1,167 @@
+{
+  "schema": "mercury-ai-domain-prepare-v1",
+  "mode": "ai_accelerator_domain_prepare",
+  "created_at": "2026-05-27T07:58:40.451Z",
+  "elapsed_ms": 15,
+  "count": 14,
+  "packs": [
+    {
+      "id": "business",
+      "label": "Business and commercial reasoning",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_business.json",
+      "intents": [
+        "market diagnosis",
+        "pricing",
+        "sales script",
+        "contract review frame",
+        "business writing"
+      ],
+      "token_count": 18
+    },
+    {
+      "id": "legal",
+      "label": "Legal language and risk framing",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_legal.json",
+      "intents": [
+        "legal term explanation",
+        "contract issue spotting",
+        "compliance checklist"
+      ],
+      "token_count": 16
+    },
+    {
+      "id": "medical",
+      "label": "Medical and health triage language",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_medical.json",
+      "intents": [
+        "symptom framing",
+        "medical term explanation",
+        "doctor question list"
+      ],
+      "token_count": 16
+    },
+    {
+      "id": "education",
+      "label": "School and curriculum knowledge maps",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_education.json",
+      "intents": [
+        "curriculum map",
+        "study plan",
+        "concept explanation",
+        "research reading route"
+      ],
+      "token_count": 17
+    },
+    {
+      "id": "earth_science",
+      "label": "Earth science",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_earth_science.json",
+      "intents": [
+        "earth system explanation",
+        "geology mechanism",
+        "climate relation"
+      ],
+      "token_count": 16
+    },
+    {
+      "id": "physics",
+      "label": "Physics and quantitative reasoning",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_physics.json",
+      "intents": [
+        "formula mapping",
+        "mechanism explanation",
+        "problem solving scaffold"
+      ],
+      "token_count": 15
+    },
+    {
+      "id": "psychology_behavior",
+      "label": "Psychology, behavior, and social science",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_psychology_behavior.json",
+      "intents": [
+        "behavior explanation",
+        "communication frame",
+        "social pattern analysis"
+      ],
+      "token_count": 15
+    },
+    {
+      "id": "philosophy",
+      "label": "Philosophy and conceptual analysis",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_philosophy.json",
+      "intents": [
+        "concept clarification",
+        "argument map",
+        "ethical analysis"
+      ],
+      "token_count": 13
+    },
+    {
+      "id": "local_ai_acceleration",
+      "label": "Local AI acceleration and Mercury hot path",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_local_ai_acceleration.json",
+      "intents": [
+        "local model speed plan",
+        "hot path routing",
+        "teacher distillation"
+      ],
+      "token_count": 19
+    },
+    {
+      "id": "lobster_latency",
+      "label": "Lobster latency and hot-path diagnosis",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_lobster_latency.json",
+      "intents": [
+        "latency triage",
+        "hot path issue spotting",
+        "slow request diagnosis"
+      ],
+      "token_count": 21
+    },
+    {
+      "id": "lobster_db_bloat",
+      "label": "Lobster database bloat and storage control",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_lobster_db_bloat.json",
+      "intents": [
+        "database bloat check",
+        "conversation storage policy",
+        "retention design"
+      ],
+      "token_count": 18
+    },
+    {
+      "id": "lobster_provider_spend",
+      "label": "Lobster paid-provider and cost leak guard",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_lobster_provider_spend.json",
+      "intents": [
+        "provider leak scan",
+        "billing loop diagnosis",
+        "API cost guard"
+      ],
+      "token_count": 20
+    },
+    {
+      "id": "lobster_file_search",
+      "label": "Lobster file search and evidence packet",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_lobster_file_search.json",
+      "intents": [
+        "file-first diagnosis",
+        "evidence packet creation",
+        "RAG before LLM"
+      ],
+      "token_count": 17
+    },
+    {
+      "id": "lobster_error_log",
+      "label": "Lobster error-log and incident triage",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/ai-domain-packs/pack_lobster_error_log.json",
+      "intents": [
+        "error log triage",
+        "incident summary",
+        "root-cause candidate ranking"
+      ],
+      "token_count": 18
+    }
+  ],
+  "boundary": "domain packs are distilled maps and routing frames, not raw copyrighted textbooks or papers"
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "mercury-rosen-bridge-v1",
+  "id": "7eb3dd8dbb08eba92d67a9a0",
+  "created_at": "2026-05-27T03:11:23.432Z",
+  "updated_at": "2026-05-27T03:11:23.432Z",
+  "namespace": "project-31d7dedd66d42831a3ae2290",
+  "from": "entry:local_llm_speed",
+  "to": "tool:llm-fast+provider-cache+slow-worker",
+  "type": "accelerated_by",
+  "risk_family": "local_llm_speed",
+  "confidence": 0.58,
+  "latency_ms": 1,
+  "cost": "low",
+  "risk": "medium",
+  "freshness": "fresh",
+  "evidence": "Answer repeated intents from reflex/provider cache and queue Qwen for slow refresh.",
+  "tokens": {},
+  "source": "static_family",
+  "score": 1,
+  "hit_count": 1,
+  "miss_count": 0,
+  "activation_rule": "latency_hot_path+local_llm_speed"
+}

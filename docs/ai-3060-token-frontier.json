@@ -1,0 +1,205 @@
+{
+  "schema": "mercury-ai-token-frontier-v1",
+  "created_at": "2026-05-27T04:43:35.220Z",
+  "mode": "ai_token_frontier",
+  "product_boundary": "measure the model token aperture and concurrency edge; do not claim unlimited token generation",
+  "config": {
+    "url": "http://127.0.0.1:11434",
+    "model": "qwen2.5:7b",
+    "keep_alive": "30m",
+    "predicts": [
+      32,
+      64,
+      128
+    ],
+    "parallels": [
+      1,
+      2,
+      4
+    ],
+    "target_interactive_ms": 1500
+  },
+  "prewarm": {
+    "label": "frontier_prewarm",
+    "ok": false,
+    "ms": 10.885,
+    "num_predict": 8,
+    "chars": 0,
+    "chars_per_second": 0,
+    "tokens_per_second": 0,
+    "quality_score": 0,
+    "error": "TypeError: fetch failed"
+  },
+  "single": [
+    {
+      "label": "single_32",
+      "ok": false,
+      "ms": 1.42,
+      "num_predict": 32,
+      "chars": 0,
+      "chars_per_second": 0,
+      "tokens_per_second": 0,
+      "quality_score": 0,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "label": "single_64",
+      "ok": false,
+      "ms": 0.755,
+      "num_predict": 64,
+      "chars": 0,
+      "chars_per_second": 0,
+      "tokens_per_second": 0,
+      "quality_score": 0,
+      "error": "TypeError: fetch failed"
+    },
+    {
+      "label": "single_128",
+      "ok": false,
+      "ms": 1.135,
+      "num_predict": 128,
+      "chars": 0,
+      "chars_per_second": 0,
+      "tokens_per_second": 0,
+      "quality_score": 0,
+      "error": "TypeError: fetch failed"
+    }
+  ],
+  "concurrency": [
+    {
+      "label": "parallel_1",
+      "parallel": 1,
+      "ok": false,
+      "ms": 1.316,
+      "num_predict": 32,
+      "completed": 0,
+      "total_eval_tokens": null,
+      "aggregate_tokens_per_second": 0,
+      "max_latency_ms": 1.256,
+      "avg_latency_ms": 1.256,
+      "rows": [
+        {
+          "label": "parallel_1_1",
+          "ok": false,
+          "ms": 1.256,
+          "num_predict": 32,
+          "chars": 0,
+          "chars_per_second": 0,
+          "tokens_per_second": 0,
+          "quality_score": 0,
+          "error": "TypeError: fetch failed"
+        }
+      ]
+    },
+    {
+      "label": "parallel_2",
+      "parallel": 2,
+      "ok": false,
+      "ms": 1.069,
+      "num_predict": 32,
+      "completed": 0,
+      "total_eval_tokens": null,
+      "aggregate_tokens_per_second": 0,
+      "max_latency_ms": 0.939,
+      "avg_latency_ms": 0.835,
+      "rows": [
+        {
+          "label": "parallel_2_1",
+          "ok": false,
+          "ms": 0.939,
+          "num_predict": 32,
+          "chars": 0,
+          "chars_per_second": 0,
+          "tokens_per_second": 0,
+          "quality_score": 0,
+          "error": "TypeError: fetch failed"
+        },
+        {
+          "label": "parallel_2_2",
+          "ok": false,
+          "ms": 0.732,
+          "num_predict": 32,
+          "chars": 0,
+          "chars_per_second": 0,
+          "tokens_per_second": 0,
+          "quality_score": 0,
+          "error": "TypeError: fetch failed"
+        }
+      ]
+    },
+    {
+      "label": "parallel_4",
+      "parallel": 4,
+      "ok": false,
+      "ms": 1.969,
+      "num_predict": 32,
+      "completed": 0,
+      "total_eval_tokens": null,
+      "aggregate_tokens_per_second": 0,
+      "max_latency_ms": 1.58,
+      "avg_latency_ms": 1.317,
+      "rows": [
+        {
+          "label": "parallel_4_1",
+          "ok": false,
+          "ms": 1.58,
+          "num_predict": 32,
+          "chars": 0,
+          "chars_per_second": 0,
+          "tokens_per_second": 0,
+          "quality_score": 0,
+          "error": "TypeError: fetch failed"
+        },
+        {
+          "label": "parallel_4_2",
+          "ok": false,
+          "ms": 1.364,
+          "num_predict": 32,
+          "chars": 0,
+          "chars_per_second": 0,
+          "tokens_per_second": 0,
+          "quality_score": 0,
+          "error": "TypeError: fetch failed"
+        },
+        {
+          "label": "parallel_4_3",
+          "ok": false,
+          "ms": 1.24,
+          "num_predict": 32,
+          "chars": 0,
+          "chars_per_second": 0,
+          "tokens_per_second": 0,
+          "quality_score": 0,
+          "error": "TypeError: fetch failed"
+        },
+        {
+          "label": "parallel_4_4",
+          "ok": false,
+          "ms": 1.082,
+          "num_predict": 32,
+          "chars": 0,
+          "chars_per_second": 0,
+          "tokens_per_second": 0,
+          "quality_score": 0,
+          "error": "TypeError: fetch failed"
+        }
+      ]
+    }
+  ],
+  "frontier": {
+    "best_single_num_predict": null,
+    "best_single_tokens_per_second": 0,
+    "best_single_ms": null,
+    "best_parallel": null,
+    "best_parallel_aggregate_tokens_per_second": 0,
+    "best_parallel_max_latency_ms": null,
+    "recommendation": "keep direct generation mostly single-lane; use Mercury cache/domain/family routing before model generation"
+  },
+  "next_acceleration_moves": [
+    "use domain/family/cache to avoid token generation for common requests",
+    "short-task-first scheduler so long summaries do not block chat",
+    "separate file search and vision queues from text generation",
+    "test speculative decoding or multi-token draft/verify outside Ollama when runtime support is available"
+  ],
+  "elapsed_ms": 25.341
+}

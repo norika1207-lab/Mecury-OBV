@@ -1,0 +1,23 @@
+{
+  "schema": "mercury-rosen-bridge-v1",
+  "id": "afd91d90083d170201b25147",
+  "created_at": "2026-05-27T03:11:23.430Z",
+  "updated_at": "2026-05-27T03:11:23.431Z",
+  "namespace": "project-31d7dedd66d42831a3ae2290",
+  "from": "entry:latency_hot_path",
+  "to": "tool:code-cortex+uma-target-file-first",
+  "type": "accelerated_by",
+  "risk_family": "latency_hot_path",
+  "confidence": 0.58,
+  "latency_ms": 1,
+  "cost": "low",
+  "risk": "low",
+  "freshness": "fresh",
+  "evidence": "Route slow symptoms to hot files, symbols, queue/retry/cache patterns, and UMA evidence.",
+  "tokens": {},
+  "source": "static_family",
+  "score": 1,
+  "hit_count": 1,
+  "miss_count": 0,
+  "activation_rule": "latency_hot_path+local_llm_speed"
+}

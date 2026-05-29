@@ -1,0 +1,9 @@
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
+*.bin
+node_modules/
+.DS_Store
+

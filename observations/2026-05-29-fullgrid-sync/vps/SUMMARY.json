@@ -1,0 +1,467 @@
+{
+  "base": "/root/mercury_obv/fullgrid-sync/2026-05-29",
+  "file_count": 6081,
+  "meta_count": 38,
+  "qualified_count": 26,
+  "metas": [
+    {
+      "path": "john/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloom-1b1-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 102875136,
+      "coverage_pct": 96.750368,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 147,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloom-1b1-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 102875136,
+      "coverage_pct": 96.750368,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 147,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/bloom-3b-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloom-3b-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 110080000,
+      "coverage_pct": 95.462026,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 183,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/bloom-3b-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloom-3b-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 110080000,
+      "coverage_pct": 95.462026,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 183,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/bloom-560m-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloom-560m-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 102559744,
+      "coverage_pct": 95.911881,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 147,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/bloom-560m-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloom-560m-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 102559744,
+      "coverage_pct": 95.911881,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 147,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/bloomz-1b1-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloomz-1b1-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 102875136,
+      "coverage_pct": 95.84564,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 147,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/bloomz-1b1-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloomz-1b1-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 102875136,
+      "coverage_pct": 95.84564,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 147,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/bloomz-3b-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloomz-3b-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 110080000,
+      "coverage_pct": 94.180005,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 183,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/bloomz-3b-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloomz-3b-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 110080000,
+      "coverage_pct": 94.180005,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 183,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/bloomz-560m-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloomz-560m-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 102559744,
+      "coverage_pct": 94.31806,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 147,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/bloomz-560m-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "bloomz-560m-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 102559744,
+      "coverage_pct": 94.31806,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 147,
+      "qualified": true
+    },
+    {
+      "path": "ai/fullgrid/gemma-2-2b-it-fullgrid-100m/meta.json",
+      "model_name": "gemma-2-2b-it-fullgrid-100m",
+      "actual_cells": 105768960,
+      "coverage_pct": 76.864133,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 183,
+      "qualified": false
+    },
+    {
+      "path": "local-index/ai/fullgrid/gemma-2-2b-it-fullgrid-100m/meta.json",
+      "model_name": "gemma-2-2b-it-fullgrid-100m",
+      "actual_cells": 105768960,
+      "coverage_pct": 76.864133,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 183,
+      "qualified": false
+    },
+    {
+      "path": "ai/fullgrid/gpt2-fullgrid-100m/meta.json",
+      "model_name": "gpt2-fullgrid-100m",
+      "actual_cells": 103023076,
+      "coverage_pct": 58.751868,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 74,
+      "qualified": false
+    },
+    {
+      "path": "local-index/ai/fullgrid/gpt2-fullgrid-100m/meta.json",
+      "model_name": "gpt2-fullgrid-100m",
+      "actual_cells": 103023076,
+      "coverage_pct": 58.751868,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 74,
+      "qualified": false
+    },
+    {
+      "path": "ai/fullgrid/gpt2-fullgrid-100m-p180/meta.json",
+      "model_name": "gpt2-fullgrid-100m-p180",
+      "actual_cells": 103023076,
+      "coverage_pct": 85.686062,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 74,
+      "qualified": false
+    },
+    {
+      "path": "local-index/ai/fullgrid/gpt2-fullgrid-100m-p180/meta.json",
+      "model_name": "gpt2-fullgrid-100m-p180",
+      "actual_cells": 103023076,
+      "coverage_pct": 85.686062,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 74,
+      "qualified": false
+    },
+    {
+      "path": "ai/fullgrid/gpt2-medium-fullgrid-100m/meta.json",
+      "model_name": "gpt2-medium-fullgrid-100m",
+      "actual_cells": 104203908,
+      "coverage_pct": 70.452375,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 146,
+      "qualified": false
+    },
+    {
+      "path": "local-index/ai/fullgrid/gpt2-medium-fullgrid-100m/meta.json",
+      "model_name": "gpt2-medium-fullgrid-100m",
+      "actual_cells": 104203908,
+      "coverage_pct": 70.452375,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 146,
+      "qualified": false
+    },
+    {
+      "path": "ai/fullgrid/gpt2-medium-fullgrid-100m-p180/meta.json",
+      "model_name": "gpt2-medium-fullgrid-100m-p180",
+      "actual_cells": 104203908,
+      "coverage_pct": 89.767404,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 146,
+      "qualified": false
+    },
+    {
+      "path": "local-index/ai/fullgrid/gpt2-medium-fullgrid-100m-p180/meta.json",
+      "model_name": "gpt2-medium-fullgrid-100m-p180",
+      "actual_cells": 104203908,
+      "coverage_pct": 89.767404,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 146,
+      "qualified": false
+    },
+    {
+      "path": "john/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/meta.json",
+      "model_name": "internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096",
+      "actual_cells": 146880000,
+      "coverage_pct": 90.874519,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 161,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/meta.json",
+      "model_name": "internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096",
+      "actual_cells": 146880000,
+      "coverage_pct": 90.874519,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 161,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "phi-2-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 105628160,
+      "coverage_pct": 97.046036,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 226,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "phi-2-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 105628160,
+      "coverage_pct": 97.046036,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 226,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "pythia-2.8b-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 104938240,
+      "coverage_pct": 94.383759,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 194,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/pythia-2.8b-fullgrid-100m-p1200-perchannel-john/meta.json",
+      "model_name": "pythia-2.8b-fullgrid-100m-p1200-perchannel-john",
+      "actual_cells": 104938240,
+      "coverage_pct": 94.383759,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 194,
+      "qualified": true
+    },
+    {
+      "path": "gx10/fullgrid/qwen25-3b-fullgrid-100m-p1200-perchannel/meta.json",
+      "model_name": "qwen25-3b-fullgrid-100m-p1200-perchannel",
+      "actual_cells": 118412800,
+      "coverage_pct": 94.950451,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 253,
+      "qualified": true
+    },
+    {
+      "path": "local-index/gx10/fullgrid/qwen25-3b-fullgrid-100m-p1200-perchannel/meta.json",
+      "model_name": "qwen25-3b-fullgrid-100m-p1200-perchannel",
+      "actual_cells": 118412800,
+      "coverage_pct": 94.950451,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 253,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/qwen3b-fullgrid-100m-p1200-perchannel-fd4096/meta.json",
+      "model_name": "qwen3b-fullgrid-100m-p1200-perchannel-fd4096",
+      "actual_cells": 118412800,
+      "coverage_pct": 94.878462,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 253,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/qwen3b-fullgrid-100m-p1200-perchannel-fd4096/meta.json",
+      "model_name": "qwen3b-fullgrid-100m-p1200-perchannel-fd4096",
+      "actual_cells": 118412800,
+      "coverage_pct": 94.878462,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 253,
+      "qualified": true
+    },
+    {
+      "path": "john/fullgrid/qwen3b-fullgrid-100m-p180/meta.json",
+      "model_name": "qwen3b-fullgrid-100m-p180",
+      "actual_cells": 118412800,
+      "coverage_pct": 87.078412,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 253,
+      "qualified": false
+    },
+    {
+      "path": "local-index/john/fullgrid/qwen3b-fullgrid-100m-p180/meta.json",
+      "model_name": "qwen3b-fullgrid-100m-p180",
+      "actual_cells": 118412800,
+      "coverage_pct": 87.078412,
+      "target_cells": 100000000,
+      "per_channel_quantiles": null,
+      "module_count": 253,
+      "qualified": false
+    },
+    {
+      "path": "john/fullgrid/qwen3b-fullgrid-q6s15-p180/meta.json",
+      "model_name": "qwen3b-fullgrid-q6s15-p180",
+      "actual_cells": 106571520,
+      "coverage_pct": 90.639374,
+      "target_cells": 100000000,
+      "per_channel_quantiles": false,
+      "module_count": 253,
+      "qualified": true
+    },
+    {
+      "path": "local-index/john/fullgrid/qwen3b-fullgrid-q6s15-p180/meta.json",
+      "model_name": "qwen3b-fullgrid-q6s15-p180",
+      "actual_cells": 106571520,
+      "coverage_pct": 90.639374,
+      "target_cells": 100000000,
+      "per_channel_quantiles": false,
+      "module_count": 253,
+      "qualified": true
+    },
+    {
+      "path": "gx10/fullgrid/qwen7b-fullgrid-100m-p1200-perchannel/meta.json",
+      "model_name": "qwen7b-fullgrid-100m-p1200-perchannel",
+      "actual_cells": 154265600,
+      "coverage_pct": 94.150207,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 197,
+      "qualified": true
+    },
+    {
+      "path": "local-index/gx10/fullgrid/qwen7b-fullgrid-100m-p1200-perchannel/meta.json",
+      "model_name": "qwen7b-fullgrid-100m-p1200-perchannel",
+      "actual_cells": 154265600,
+      "coverage_pct": 94.150207,
+      "target_cells": 100000000,
+      "per_channel_quantiles": true,
+      "module_count": 197,
+      "qualified": true
+    }
+  ],
+  "continuity": [
+    {
+      "path": "local-index/ai/continuity_runs/qwen2.5-7b-base-rsc-20260528-142647/relation_state_continuity.json",
+      "model": "Qwen/Qwen2.5-7B",
+      "verdict": "attention_topology_path",
+      "scores": {
+        "residual_auc": 0.5499248631651802,
+        "attention_anchor_mass_auc": 0.08899048396519252,
+        "formation_peak": 0.9385148026049137,
+        "cross_layer_circuit_score": 0.3912383127781489
+      },
+      "top_formation_layers": [
+        [
+          1,
+          0.9385148026049137
+        ],
+        [
+          28,
+          0.8164533041417599
+        ],
+        [
+          4,
+          0.19347062706947327
+        ],
+        [
+          9,
+          0.15947126597166061
+        ],
+        [
+          8,
+          0.14185041934251785
+        ]
+      ],
+      "top_residual_layers": [
+        [
+          27,
+          0.8090786188840866
+        ],
+        [
+          26,
+          0.8053074702620506
+        ],
+        [
+          25,
+          0.7758351862430573
+        ],
+        [
+          24,
+          0.7182704359292984
+        ],
+        [
+          28,
+          0.6736856997013092
+        ]
+      ],
+      "top_attention_layers": [
+        [
+          19,
+          0.227783203125
+        ],
+        [
+          22,
+          0.21728515625
+        ],
+        [
+          20,
+          0.2159423828125
+        ],
+        [
+          27,
+          0.1976318359375
+        ],
+        [
+          18,
+          0.182373046875
+        ]
+      ]
+    }
+  ]
+}

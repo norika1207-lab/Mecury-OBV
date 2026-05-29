@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Launch Experiments</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07090d; --panel:#101722; --line:#26364a; --text:#f5f8fb; --muted:#9dafc4; --good:#48d48c; --warn:#ffd166; --blue:#71b7ff; --red:#ff6b7a; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(circle at 18% 0%, rgba(113,183,255,.13), transparent 34%), var(--bg); color:var(--text); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing:0; }
+    main { max-width:1180px; margin:0 auto; padding:38px 20px 70px; }
+    h1 { margin:0 0 10px; font-size:clamp(34px,5vw,62px); letter-spacing:0; line-height:1.04; }
+    h2 { margin:0 0 12px; font-size:22px; }
+    p { margin:0; color:var(--muted); line-height:1.62; }
+    .tagline { max-width:900px; font-size:18px; color:#c8d4e0; }
+    .grid { display:grid; gap:12px; }
+    .metrics { grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); margin:24px 0; }
+    .metric, .panel { background:linear-gradient(180deg, rgba(16,23,34,.96), rgba(10,15,23,.96)); border:1px solid var(--line); border-radius:8px; padding:16px; }
+    .metric span, .metric small { display:block; color:var(--muted); font-size:13px; }
+    .metric b { display:block; margin:8px 0 4px; font-size:30px; line-height:1; }
+    .lanes { list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+    .lanes li { border:1px solid var(--line); background:#0c121b; border-radius:8px; padding:14px; display:grid; gap:5px; }
+    .lanes li.pass b { color:var(--good); }
+    .lanes li.fail b { color:var(--warn); }
+    .lanes span { color:#dce7f0; }
+    .lanes small { color:var(--muted); line-height:1.45; }
+    .claim { border-color:rgba(72,212,140,.4); background:rgba(72,212,140,.08); }
+    code { color:var(--blue); }
+    footer { color:var(--muted); font-size:13px; margin-top:20px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>明日 Launch 實驗報告</h1>
+    <p class="tagline">這不是完整宇宙版，而是明天能展示的尖銳證據：500-neuron state field 不全量執行、Rosen Pair 只在狀態變更時 pulse、LLM 不進 hot path、診斷與 resident replay 可量測。</p>
+    <section class="grid metrics">
+      
+    <div class="metric"><span>Launch Status</span><b>CHECK</b><small>4/6 lanes</small></div>
+      
+    <div class="metric"><span>Neuron Catalog</span><b>1000</b><small>28 selected, 12 executed</small></div>
+      
+    <div class="metric"><span>Rosen Pair</span><b>state_replay</b><small>correction_pulse on change</small></div>
+      
+    <div class="metric"><span>Cold Packet</span><b>284ms</b><small>8 evidence hits</small></div>
+      
+    <div class="metric"><span>Monster Proof</span><b>137ms</b><small>accelerate_task_fast_replay</small></div>
+      
+    <div class="metric"><span>LLM Hot Path</span><b>forbidden</b><small>slow model queued only</small></div>
+    </section>
+    <section class="panel claim">
+      <h2>Launch Claim</h2>
+      <p>Neuron Mercury is a 500-neuron state-field acceleration runtime: it senses software state changes, avoids slow model hot paths, and wakes only the small neuron set needed for useful first evidence.</p>
+    </section>
+    <section class="panel">
+      <h2>Experiment Lanes</h2>
+      <ul class="lanes">
+    <li class="fail">
+      <b>500-neuron sparse scheduling</b>
+      <span>1000 candidates -> 12 executed · 83.33x</span>
+      <small>selected=28, executed=12; map grows without full-catalog execution.</small>
+    </li>
+    <li class="pass">
+      <b>Rosen Pair state replay</b>
+      <span>81ms seed -> 80ms replay · 1.01x</span>
+      <small>unchanged digest returns state_replay; changed file returns correction_pulse.</small>
+    </li>
+    <li class="fail">
+      <b>Cold-start evidence packet</b>
+      <span>model/tool discovery -> 284ms packet · 422.54x</span>
+      <small>route=hot_page_first, hits=8, slow_job=pending.</small>
+    </li>
+    <li class="pass">
+      <b>Monster diagnosis route</b>
+      <span>broad scan + model -> 137ms diagnosis · 875.91x</span>
+      <small>rosen=8, pages=800, replay=accelerate_task_fast_replay.</small>
+    </li>
+    <li class="pass">
+      <b>Workflow materialization/replay</b>
+      <span>4149ms first route -> 15ms replay · 276.6x</span>
+      <small>mode=accelerate_task_fast_replay, steps=rosen_route,spend_guard,cold_start_packet,monster_doctor,task_memory.</small>
+    </li>
+    <li class="pass">
+      <b>Qwen / LLM hot-path avoidance</b>
+      <span>local model call -> reflex_queue_only · 0.79x</span>
+      <small>policy=forbidden, pending=175, qwen_cache=4096.</small>
+    </li></ul>
+    </section>
+    <footer>Generated at 2026-05-19T05:44:22.148Z. JSON: <code>launch-experiment-report.json</code>.</footer>
+  </main>
+</body>
+</html>

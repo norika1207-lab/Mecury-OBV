@@ -1,0 +1,13 @@
+{
+  "schema": "mercury-ai-3060-model-route-v1",
+  "updated_at": "2026-05-27T02:17:53.463Z",
+  "selected_model": "qwen2.5:7b",
+  "teacher_model": "qwen3:14b",
+  "teacher_reason": "slow-path teacher distills hard answers into hot cache/reflex replay",
+  "teacher_installed": false,
+  "teacher_prepare": {
+    "ok": false,
+    "skipped": true,
+    "reason": "teacher_model_not_installed"
+  }
+}

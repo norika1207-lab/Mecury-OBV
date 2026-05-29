@@ -1,0 +1,14 @@
+[fullgrid] load tokenizer /home/ai/hf_models/gemma-2-2b-it
+[fullgrid] load model /home/ai/hf_models/gemma-2-2b-it device=cpu dtype=bfloat16
+`torch_dtype` is deprecated! Use `dtype` instead!
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.Op.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.OnnxFunction.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 30.06it/s]
+[fullgrid] modules=183 channels=961,536 Q=10 S=11 cells=105,768,960
+[fullgrid] pass1 calibration probes=1045
+[fullgrid] calibration 5/1045 elapsed=353s
+[fullgrid] calibration 10/1045 elapsed=649s
+[fullgrid] calibration 15/1045 elapsed=951s
+[fullgrid] calibration 20/1045 elapsed=1231s

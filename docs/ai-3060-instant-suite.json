@@ -1,0 +1,70 @@
+{
+  "schema": "mercury-ai-3060-instant-suite-v1",
+  "created_at": "2026-05-27T01:59:57.133Z",
+  "model": "qwen2.5:7b",
+  "target_instant_ms": 100,
+  "prompt_count": 5,
+  "pass": true,
+  "average": {
+    "elapsed_ms": 0.8,
+    "replay_ms": 1,
+    "response_chars": 140
+  },
+  "rows": [
+    {
+      "index": 1,
+      "mode": "cache",
+      "elapsed_ms": 1,
+      "replay_ms": 0,
+      "response_chars": 140,
+      "cache_ready": true,
+      "slow_job_id": null,
+      "rosen_families": [],
+      "prompt": "請用繁體中文回答：如何讓 RTX 3060 筆電上的本地 AI 工具明顯變快？\n請同時說明冷啟動、模型預熱、重複任務 replay、遊戲低干擾模式，以及怎麼證明不是假加速。"
+    },
+    {
+      "index": 2,
+      "mode": "cache",
+      "elapsed_ms": 0,
+      "replay_ms": 5,
+      "response_chars": 140,
+      "cache_ready": true,
+      "slow_job_id": null,
+      "rosen_families": [],
+      "prompt": "請用三點比較 Mercury AI accelerator 跟一般電腦加速軟體的不同。"
+    },
+    {
+      "index": 3,
+      "mode": "cache",
+      "elapsed_ms": 1,
+      "replay_ms": 0,
+      "response_chars": 140,
+      "cache_ready": true,
+      "slow_job_id": null,
+      "rosen_families": [],
+      "prompt": "Find the bug in this Python and explain the fix briefly:\n```python\ndef merge(a, b):\n    a.update(b)\n    return a\nx = {1:1}; y = {1:2}\nprint(merge(x, y))\nprint(x)\n```"
+    },
+    {
+      "index": 4,
+      "mode": "cache",
+      "elapsed_ms": 1,
+      "replay_ms": 0,
+      "response_chars": 140,
+      "cache_ready": true,
+      "slow_job_id": null,
+      "rosen_families": [],
+      "prompt": "請用神經元和羅森橋說明如何讓本地 AI 回覆接近毫秒級"
+    },
+    {
+      "index": 5,
+      "mode": "cache",
+      "elapsed_ms": 1,
+      "replay_ms": 0,
+      "response_chars": 140,
+      "cache_ready": true,
+      "slow_job_id": null,
+      "rosen_families": [],
+      "prompt": "我現在要在 RTX 3060 laptop 上加速本地模型，先給我可執行策略"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "mercury-rosen-bridge-v1",
+  "id": "72a6d13207460b9ece74f989",
+  "created_at": "2026-05-28T01:08:09.998Z",
+  "updated_at": "2026-05-28T01:08:09.998Z",
+  "namespace": "bench-rosen-694f50db6d4fe8c1e849d17b",
+  "from": "entry:memory_route",
+  "to": "tool:uma-batch-search+project-namespace",
+  "type": "accelerated_by",
+  "risk_family": "memory_route",
+  "confidence": 0.58,
+  "latency_ms": 1,
+  "cost": "low",
+  "risk": "low",
+  "freshness": "fresh",
+  "evidence": "Use project UMA namespace, batch search, hot pages, and coherence before broad scans.",
+  "tokens": {},
+  "source": "static_family",
+  "score": 1,
+  "hit_count": 1,
+  "miss_count": 0,
+  "activation_rule": "provider_spend+latency_hot_path+memory_route"
+}

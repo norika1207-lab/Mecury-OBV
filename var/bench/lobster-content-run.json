@@ -1,0 +1,35 @@
+{
+  "schema": "mercury-lobster-content-run-v1",
+  "mode": "lobster_content_run",
+  "elapsed_ms": 162,
+  "target_path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2",
+  "evidence_count": 360,
+  "requested_posts": 1,
+  "ready_count": 1,
+  "hold_count": 0,
+  "min_quality": 0.72,
+  "dialogue_model": "qwen3:14b",
+  "keep_alive": "2h",
+  "preheat": {
+    "schema": "mercury-lobster-dialogue-preheat-v1",
+    "created_at": "2026-05-28T17:22:20.289Z",
+    "model": "qwen3:14b",
+    "url": "http://127.0.0.1:11434",
+    "keep_alive": "2h",
+    "num_predict": 8,
+    "skipped": false,
+    "ok": false,
+    "elapsed_ms": 13,
+    "response": null,
+    "error": "TypeError: fetch failed"
+  },
+  "queue_path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/lobster-content/post-queue.json",
+  "sample": [
+    {
+      "persona": "norika_oda",
+      "status": "ready",
+      "quality_score": 1,
+      "text": "norika_oda：先不要急著增加發文量，我要先看哪一句會留下判斷價值。\n我看到的證據是 /Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/patch_lobster_anti_echo_root.py:24：模板/重複開頭已經被系統明確抓到。原始訊號像「 if betAct && Math.random < 0.40 \\n const skipSd = betAct.decision ||  reasoning: betAct.result 」，重點不是照抄它，而是判斷它會怎樣改變下一次輸出。\n所以我的結論是：我現在更在意第一個失真點，不是最後一句看起來像不像人。\n如果這個觀察成立，應該保存摘要、標籤、來源 pointer 與行為變化，不要保存"
+    }
+  ]
+}

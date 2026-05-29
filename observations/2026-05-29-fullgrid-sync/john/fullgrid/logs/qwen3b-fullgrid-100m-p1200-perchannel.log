@@ -1,0 +1,26 @@
+/Users/john/fullgrid-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[fullgrid] load tokenizer /Users/john/hf-qwen3b
+[fullgrid] load model /Users/john/hf-qwen3b device=cpu dtype=float32
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.27s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.63s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.58s/it]
+[fullgrid] modules=253 channels=1,184,128 Q=10 S=10 cells=118,412,800
+Traceback (most recent call last):
+  File "/Users/john/fullgrid_observe.py", line 397, in <module>
+    main()
+  File "/Users/john/fullgrid_observe.py", line 199, in main
+    heat[name] = np.lib.format.open_memmap(path, mode="w+", dtype=np.uint32, shape=shape)
+  File "/Users/john/fullgrid-venv/lib/python3.9/site-packages/numpy/lib/format.py", line 972, in open_memmap
+    marray = numpy.memmap(filename, dtype=dtype, shape=shape, order=order,
+  File "/Users/john/fullgrid-venv/lib/python3.9/site-packages/numpy/_core/memmap.py", line 279, in __new__
+    mm = mmap.mmap(fid.fileno(), bytes, access=acc, offset=start)
+OSError: [Errno 24] Too many open files
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 718, in rmtree
+    _rmtree_safe_fd(fd, path, onerror)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 631, in _rmtree_safe_fd
+    onerror(os.scandir, path, sys.exc_info())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 627, in _rmtree_safe_fd
+    with os.scandir(topfd) as scandir_it:
+OSError: [Errno 24] Too many open files: '/var/folders/4m/gvzvmkvj30g9mpf70sdjzsxc0000gn/T/tmpgfr57bye'

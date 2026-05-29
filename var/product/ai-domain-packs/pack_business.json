@@ -1,0 +1,45 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "business",
+  "label": "Business and commercial reasoning",
+  "created_at": "2026-05-27T03:53:46.657Z",
+  "updated_at": "2026-05-27T07:58:40.440Z",
+  "tokens": [
+    "business",
+    "company",
+    "market",
+    "sales",
+    "pricing",
+    "customer",
+    "strategy",
+    "contract",
+    "startup",
+    "商業",
+    "公司",
+    "市場",
+    "銷售",
+    "定價",
+    "客戶",
+    "策略",
+    "合約",
+    "創業"
+  ],
+  "intents": [
+    "market diagnosis",
+    "pricing",
+    "sales script",
+    "contract review frame",
+    "business writing"
+  ],
+  "frames": [
+    "先判斷角色、目標、交易對象與限制。",
+    "拆成市場、客戶、成本、風險、現金流與執行步驟。",
+    "輸出可驗證假設，再標記需要數據或 teacher 補完的部分。"
+  ],
+  "risk_gates": [
+    "不要假造市場數據。",
+    "重大財務或法律決策需要來源與專家審查。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "legal",
+  "label": "Legal language and risk framing",
+  "created_at": "2026-05-27T03:53:46.659Z",
+  "updated_at": "2026-05-27T07:58:40.442Z",
+  "tokens": [
+    "law",
+    "legal",
+    "contract",
+    "clause",
+    "liability",
+    "rights",
+    "compliance",
+    "regulation",
+    "法律",
+    "法規",
+    "合約",
+    "條款",
+    "責任",
+    "權利",
+    "遵循",
+    "訴訟"
+  ],
+  "intents": [
+    "legal term explanation",
+    "contract issue spotting",
+    "compliance checklist"
+  ],
+  "frames": [
+    "先確認法域、文件類型、當事人與時間點。",
+    "把問題拆成權利、義務、責任、期限、救濟與證據。",
+    "只給風險框架與待查清單；具體法律結論交給慢路徑與專業審查。"
+  ],
+  "risk_gates": [
+    "不得當作正式法律意見。",
+    "法規會變動，teacher 必須補來源與日期。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

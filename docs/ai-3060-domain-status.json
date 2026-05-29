@@ -1,0 +1,222 @@
+{
+  "schema": "mercury-ai-domain-status-v1",
+  "mode": "ai_accelerator_domain_status",
+  "elapsed_ms": 3,
+  "count": 14,
+  "packs": [
+    {
+      "id": "lobster_error_log",
+      "label": "Lobster error-log and incident triage",
+      "intents": [
+        "error log triage",
+        "incident summary",
+        "root-cause candidate ranking"
+      ],
+      "risk_gates": [
+        "不要只看最後一行錯誤。",
+        "根因需區分已證實、強懷疑、待驗證。"
+      ],
+      "token_count": 18,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_lobster_error_log.json"
+    },
+    {
+      "id": "lobster_file_search",
+      "label": "Lobster file search and evidence packet",
+      "intents": [
+        "file-first diagnosis",
+        "evidence packet creation",
+        "RAG before LLM"
+      ],
+      "risk_gates": [
+        "沒有檔案證據時不要給確定結論。",
+        "搜尋結果要保留 path/line pointer。"
+      ],
+      "token_count": 17,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_lobster_file_search.json"
+    },
+    {
+      "id": "lobster_provider_spend",
+      "label": "Lobster paid-provider and cost leak guard",
+      "intents": [
+        "provider leak scan",
+        "billing loop diagnosis",
+        "API cost guard"
+      ],
+      "risk_gates": [
+        "不得輸出或保存 API key。",
+        "疑似付費循環時先停用自動重試再做診斷。"
+      ],
+      "token_count": 20,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_lobster_provider_spend.json"
+    },
+    {
+      "id": "lobster_db_bloat",
+      "label": "Lobster database bloat and storage control",
+      "intents": [
+        "database bloat check",
+        "conversation storage policy",
+        "retention design"
+      ],
+      "risk_gates": [
+        "不要把每秒碎片輸出寫進主資料庫。",
+        "涉及使用者資料時要先做隱私與刪除策略。"
+      ],
+      "token_count": 18,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_lobster_db_bloat.json"
+    },
+    {
+      "id": "lobster_latency",
+      "label": "Lobster latency and hot-path diagnosis",
+      "intents": [
+        "latency triage",
+        "hot path issue spotting",
+        "slow request diagnosis"
+      ],
+      "risk_gates": [
+        "不要把所有慢都歸咎於模型。",
+        "未量到 timestamp 前不要宣稱根因。"
+      ],
+      "token_count": 21,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_lobster_latency.json"
+    },
+    {
+      "id": "local_ai_acceleration",
+      "label": "Local AI acceleration and Mercury hot path",
+      "intents": [
+        "local model speed plan",
+        "hot path routing",
+        "teacher distillation"
+      ],
+      "risk_gates": [
+        "不得宣稱 14B 全新生成能在 3060 上毫秒完成。",
+        "基準測試要分冷啟動、warm generation、family hit 與 exact replay。"
+      ],
+      "token_count": 19,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_local_ai_acceleration.json"
+    },
+    {
+      "id": "philosophy",
+      "label": "Philosophy and conceptual analysis",
+      "intents": [
+        "concept clarification",
+        "argument map",
+        "ethical analysis"
+      ],
+      "risk_gates": [
+        "不要把價值判斷偽裝成事實。",
+        "標記不同學派的分歧。"
+      ],
+      "token_count": 13,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_philosophy.json"
+    },
+    {
+      "id": "psychology_behavior",
+      "label": "Psychology, behavior, and social science",
+      "intents": [
+        "behavior explanation",
+        "communication frame",
+        "social pattern analysis"
+      ],
+      "risk_gates": [
+        "不做精神疾病診斷。",
+        "高風險心理危機需要真人支援。"
+      ],
+      "token_count": 15,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_psychology_behavior.json"
+    },
+    {
+      "id": "physics",
+      "label": "Physics and quantitative reasoning",
+      "intents": [
+        "formula mapping",
+        "mechanism explanation",
+        "problem solving scaffold"
+      ],
+      "risk_gates": [
+        "不要跳過單位與適用條件。",
+        "複雜計算需要驗算。"
+      ],
+      "token_count": 15,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_physics.json"
+    },
+    {
+      "id": "earth_science",
+      "label": "Earth science",
+      "intents": [
+        "earth system explanation",
+        "geology mechanism",
+        "climate relation"
+      ],
+      "risk_gates": [
+        "災害預測不能假裝精準。",
+        "即時天氣與地震資訊要查最新來源。"
+      ],
+      "token_count": 16,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_earth_science.json"
+    },
+    {
+      "id": "education",
+      "label": "School and curriculum knowledge maps",
+      "intents": [
+        "curriculum map",
+        "study plan",
+        "concept explanation",
+        "research reading route"
+      ],
+      "risk_gates": [
+        "不要複製受版權保護教材全文。",
+        "保存索引、摘要與授權來源指標。"
+      ],
+      "token_count": 17,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_education.json"
+    },
+    {
+      "id": "medical",
+      "label": "Medical and health triage language",
+      "intents": [
+        "symptom framing",
+        "medical term explanation",
+        "doctor question list"
+      ],
+      "risk_gates": [
+        "急症或高風險症狀應立即就醫。",
+        "不得替代醫師診斷。"
+      ],
+      "token_count": 16,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_medical.json"
+    },
+    {
+      "id": "legal",
+      "label": "Legal language and risk framing",
+      "intents": [
+        "legal term explanation",
+        "contract issue spotting",
+        "compliance checklist"
+      ],
+      "risk_gates": [
+        "不得當作正式法律意見。",
+        "法規會變動，teacher 必須補來源與日期。"
+      ],
+      "token_count": 16,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_legal.json"
+    },
+    {
+      "id": "business",
+      "label": "Business and commercial reasoning",
+      "intents": [
+        "market diagnosis",
+        "pricing",
+        "sales script",
+        "contract review frame",
+        "business writing"
+      ],
+      "risk_gates": [
+        "不要假造市場數據。",
+        "重大財務或法律決策需要來源與專家審查。"
+      ],
+      "token_count": 18,
+      "path": "/private/tmp/neuron-mercury-publish/var/product/ai-domain-packs/pack_business.json"
+    }
+  ],
+  "source_policy": "public-domain, open-access, licensed, or user-owned material only; commit distilled maps and citations, not raw book/paper text"
+}

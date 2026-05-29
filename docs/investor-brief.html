@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Investor Brief</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07090d; --panel:#101822; --ink:#f7f9fc; --muted:#9baec2; --line:#26364a; --good:#4de092; --blue:#7bbdff; --warn:#ffd166; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#07090d; color:var(--ink); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing:0; }
+    main { max-width:1160px; margin:0 auto; padding:38px 20px 70px; }
+    .hero { min-height:78vh; display:grid; align-content:center; border-bottom:1px solid var(--line); }
+    .eyebrow { color:var(--good); font-weight:800; text-transform:uppercase; letter-spacing:0; font-size:13px; }
+    h1 { margin:12px 0 14px; max-width:980px; font-size:clamp(42px,7vw,86px); line-height:.96; letter-spacing:0; }
+    .lead { max-width:860px; color:#d5e0eb; font-size:20px; line-height:1.55; }
+    .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:22px; align-items:center; margin-top:32px; }
+    .field { min-height:310px; border:1px solid var(--line); border-radius:8px; background:#0c131c; position:relative; overflow:hidden; }
+    .node { position:absolute; width:10px; height:10px; border-radius:50%; background:var(--blue); box-shadow:0 0 22px var(--blue); }
+    .node.good { background:var(--good); box-shadow:0 0 22px var(--good); }
+    .bridge { position:absolute; height:1px; background:linear-gradient(90deg, transparent, var(--blue), transparent); transform-origin:left center; opacity:.75; }
+    .n1 { left:13%; top:20%; } .n2 { left:72%; top:28%; } .n3 { left:28%; top:70%; } .n4 { left:83%; top:72%; } .n5 { left:50%; top:48%; }
+    .b1 { left:14%; top:22%; width:58%; transform:rotate(8deg); } .b2 { left:29%; top:70%; width:54%; transform:rotate(-1deg); } .b3 { left:51%; top:49%; width:29%; transform:rotate(38deg); } .b4 { left:29%; top:69%; width:27%; transform:rotate(-44deg); }
+    section { padding:26px 0; border-bottom:1px solid var(--line); }
+    h2 { margin:0 0 12px; font-size:28px; }
+    p { margin:0; color:var(--muted); line-height:1.62; }
+    .proofs, .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin-top:16px; }
+    .proof, .card, .panel { border:1px solid var(--line); border-radius:8px; background:var(--panel); padding:16px; }
+    .proof span, .proof small { display:block; color:var(--muted); font-size:13px; }
+    .proof b { display:block; margin:8px 0 4px; font-size:32px; line-height:1; color:var(--blue); }
+    .card b { display:block; margin-bottom:8px; color:#e8f1fa; }
+    ul { list-style:none; padding:0; margin:14px 0 0; display:grid; gap:8px; }
+    li { display:flex; justify-content:space-between; gap:16px; padding:11px 12px; border:1px solid var(--line); border-radius:8px; background:#0b1119; }
+    li.pass b { color:var(--good); }
+    li.fail b { color:var(--warn); }
+    li span { color:var(--muted); text-align:right; }
+    .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    a { color:#061015; background:var(--good); border-radius:8px; padding:10px 12px; text-decoration:none; font-weight:800; }
+    a.secondary { color:var(--ink); background:#111b27; border:1px solid var(--line); }
+    table { width:100%; border-collapse:collapse; margin-top:14px; font-size:13px; }
+    th, td { border-bottom:1px solid var(--line); padding:10px 8px; text-align:left; vertical-align:top; }
+    th { color:#dce8f3; background:#0c141d; }
+    td { color:#c9d6e3; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; }
+    .callout { border:1px solid rgba(77,224,146,.45); background:rgba(77,224,146,.08); border-radius:8px; padding:16px; margin-top:16px; }
+    .callout b { color:var(--good); }
+    footer { padding-top:20px; color:var(--muted); font-size:13px; }
+    @media (max-width:820px) { .hero-grid, .split { grid-template-columns:1fr; } .hero { min-height:auto; padding:30px 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Neuron Mercury / Computer Nervous System</div>
+      <h1>讓電腦長出神經系統，而不是只換更貴的顯卡。</h1>
+      <div class="hero-grid">
+        <div>
+          <p class="lead">Neuron Mercury 是本地端軟體加速層：它先感知電腦狀態、避開慢路徑、重用已驗證工作，讓使用者先拿到有用結果，再把昂貴運算放到背景補強。</p>
+          <div class="links">
+            <a href="./product-dashboard.html">Open Product Proof</a>
+            <a class="secondary" href="./demo-console.html">Live Demo Console</a>
+            <a class="secondary" href="./paper-experiment-suite.html">Paper Experiments</a>
+            <a class="secondary" href="./visual-speed-report.html">Speed Report</a>
+          </div>
+        </div>
+        <div class="field" aria-label="state-field visual">
+          <i class="bridge b1"></i><i class="bridge b2"></i><i class="bridge b3"></i><i class="bridge b4"></i>
+          <i class="node n1 good"></i><i class="node n2"></i><i class="node n3"></i><i class="node n4 good"></i><i class="node n5"></i>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>現在能證明什麼</h2>
+      <p>這不是單純 cache demo。投資人會看到可重跑的產品檢查、實驗矩陣與真實工作路徑，但完整內部地圖保留到會議中展示。</p>
+      <div class="proofs">
+        
+    <div class="proof"><span>Product Checks</span><b>12/13</b><small>needs review</small></div>
+        
+    <div class="proof"><span>Neuron Catalog</span><b>1000</b><small>sparse, not full execution</small></div>
+        
+    <div class="proof"><span>Paper Suite</span><b>8/8</b><small>experiment lanes</small></div>
+        
+    <div class="proof"><span>Raw Trials</span><b>14</b><small>CSV/JSON evidence rows</small></div>
+        
+    <div class="proof"><span>Launch Suite</span><b>5/6</b><small>demo lanes</small></div>
+        
+    <div class="proof"><span>Workflow Lift</span><b>1.79x</b><small>1.58s saved in local burst</small></div>
+        
+    <div class="proof"><span>Hot Path Lift</span><b>12.48x</b><small>cache/RAG/neuron lanes only</small></div>
+        
+    <div class="proof"><span>State Links</span><b>available</b><small>details disclosed in meeting</small></div>
+        
+    <div class="proof"><span>Project Memory</span><b>active</b><small>details disclosed in meeting</small></div>
+        
+    <div class="proof"><span>Large Diagnosis</span><b>111ms</b><small>latest local proof</small></div>
+      </div>
+      <div class="callout">
+        <b>Investor takeaway:</b>
+        <p>現在的證據不是單一 benchmark，而是多個可重跑 artifact 串起來的證據鏈。重點是首次任務先做有用縮短，不把 replay 偽裝成 cold-start。</p>
+      </div>
+    </section>
+    <section>
+      <h2>實戰場景證據</h2>
+      <p>投資人要看的不是抽象加速，而是「它在什麼工作上讓電腦變得比較快」。以下全部來自目前生成的本地 proof artifacts。</p>
+      <table>
+        <thead><tr><th>Scenario</th><th>Observed Output</th><th>Why It Matters</th></tr></thead>
+        <tbody><tr><td>Cold-start project diagnosis</td><td>111ms</td><td>Finds provider spend, stale memory, latency and hot-path risks before calling a model.</td></tr><tr><td>Research / paper proof pack</td><td>14 rows</td><td>Produces JSON, CSV, and HTML artifacts investors and reviewers can inspect.</td></tr><tr><td>First useful long-form draft</td><td>9377 bytes</td><td>Evidence-backed draft with judge score 100.</td></tr><tr><td>Workflow burst</td><td>1.79x</td><td>1.58s saved in a measured local burst.</td></tr></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>核心護城河</h2>
+      <div class="cards">
+        <div class="card"><b>State sensing</b><p>不用同時控制所有單元，只追蹤狀態改變，讓系統只在需要時啟動。</p></div>
+        <div class="card"><b>Cold-start shortcut</b><p>第一次任務先產生可用的本地證據包，減少慢模型盲目探索。</p></div>
+        <div class="card"><b>Sparse neuron scheduler</b><p>500 個神經元不全跑，路由只喚醒小部分，避免「越多越慢」。</p></div>
+        <div class="card"><b>Honest benchmark boundary</b><p>把 measured baseline、reference baseline、cache replay 分開，不把第二次 cache 命中偽裝成第一次生成。</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>實驗矩陣</h2>
+      <p>這裡刻意把 measured baseline、reference baseline、candidate-count reduction 分開，避免被質疑把 cache hit 包裝成第一次生成。</p>
+      <div class="split">
+        <div class="panel">
+          <h3>Experiment Suite</h3>
+          <table>
+            <thead><tr><th>Lane</th><th>Status</th><th>Observed</th><th>Meaning</th></tr></thead>
+            <tbody>
+    <tr><td>State-aware scheduling</td><td>MEASURED</td><td>8/8</td><td>Sparse runtime activation</td></tr>
+    <tr><td>First useful answer</td><td>MEASURED</td><td>100/100</td><td>Evidence-backed draft path</td></tr>
+    <tr><td>Large project diagnosis</td><td>MEASURED</td><td>111ms</td><td>Local diagnosis proof</td></tr>
+    <tr><td>Repeat workflow</td><td>MEASURED</td><td>1.79x</td><td>Measured replay lane</td></tr></tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <h3>Product Suite</h3>
+          <table>
+            <thead><tr><th>Lane</th><th>Status</th><th>Proof</th></tr></thead>
+            <tbody>
+    <tr><td>Install/start gate</td><td>CHECK</td><td>Operator-ready runtime check</td></tr>
+    <tr><td>One-click boost</td><td>12.48x</td><td>User-visible acceleration lane</td></tr>
+    <tr><td>Cost guard</td><td>PASS</td><td>Paid model calls kept out of hot path</td></tr>
+    <tr><td>Computer state</td><td>944ms</td><td>Local speed-state snapshot</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Product Readiness</h2>
+      <ul>
+    <li class="fail"><b>Core runtime</b><span>12/13 gates</span></li>
+    <li class="pass"><b>Local acceleration path</b><span>measured</span></li>
+    <li class="pass"><b>Slow model isolation</b><span>protected</span></li>
+    <li class="pass"><b>Repeat-work acceleration</b><span>1.79x measured lane</span></li></ul>
+      <div class="links">
+        <a class="secondary" href="./demo-console.html">Live Demo</a>
+        <a class="secondary" href="./launch-experiment-report.html">Launch Proof</a>
+        <a class="secondary" href="./paper-experiment-suite.csv">Download CSV</a>
+      </div>
+    </section>
+    <footer>Generated at 2026-05-19T03:39:13.337Z. Product dashboard JSON: <code>product-dashboard.json</code>.</footer>
+  </main>
+</body>
+</html>

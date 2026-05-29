@@ -1,0 +1,1791 @@
+{
+  "observer": "mercury_fullgrid_observe.py",
+  "model_name": "bloom-1b1-fullgrid-100m-p1200-perchannel-john",
+  "model_path": "bigscience/bloom-1b1",
+  "target_cells": 100000000,
+  "actual_cells": 102875136,
+  "nonzero_cells": 99532073,
+  "coverage_pct": 96.750368,
+  "Q": 12,
+  "S": 13,
+  "max_length": 192,
+  "probe_count": 1286,
+  "calibration_probe_count": 256,
+  "edges_from": null,
+  "calibration_values_per_module": 200000,
+  "calibration_rows_per_module": 512,
+  "per_channel_quantiles": true,
+  "include_norms": true,
+  "total_channels": 659456,
+  "module_count": 147,
+  "modules": {
+    "transformer.word_embeddings_layernorm": {
+      "key": "transformer.word_embeddings_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.word_embeddings_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.0.input_layernorm": {
+      "key": "transformer.h.0.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.0.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.0.self_attention.query_key_value": {
+      "key": "transformer.h.0.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.0.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.0.self_attention.dense": {
+      "key": "transformer.h.0.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.0.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.0.post_attention_layernorm": {
+      "key": "transformer.h.0.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.0.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.0.mlp.dense_h_to_4h": {
+      "key": "transformer.h.0.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.0.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.0.mlp.dense_4h_to_h": {
+      "key": "transformer.h.0.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.0.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.1.input_layernorm": {
+      "key": "transformer.h.1.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.1.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.1.self_attention.query_key_value": {
+      "key": "transformer.h.1.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.1.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.1.self_attention.dense": {
+      "key": "transformer.h.1.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.1.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.1.post_attention_layernorm": {
+      "key": "transformer.h.1.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.1.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.1.mlp.dense_h_to_4h": {
+      "key": "transformer.h.1.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.1.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.1.mlp.dense_4h_to_h": {
+      "key": "transformer.h.1.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.1.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.2.input_layernorm": {
+      "key": "transformer.h.2.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.2.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.2.self_attention.query_key_value": {
+      "key": "transformer.h.2.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.2.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.2.self_attention.dense": {
+      "key": "transformer.h.2.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.2.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.2.post_attention_layernorm": {
+      "key": "transformer.h.2.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.2.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.2.mlp.dense_h_to_4h": {
+      "key": "transformer.h.2.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.2.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.2.mlp.dense_4h_to_h": {
+      "key": "transformer.h.2.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.2.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.3.input_layernorm": {
+      "key": "transformer.h.3.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.3.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.3.self_attention.query_key_value": {
+      "key": "transformer.h.3.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.3.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.3.self_attention.dense": {
+      "key": "transformer.h.3.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.3.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.3.post_attention_layernorm": {
+      "key": "transformer.h.3.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.3.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.3.mlp.dense_h_to_4h": {
+      "key": "transformer.h.3.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.3.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.3.mlp.dense_4h_to_h": {
+      "key": "transformer.h.3.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.3.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.4.input_layernorm": {
+      "key": "transformer.h.4.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.4.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.4.self_attention.query_key_value": {
+      "key": "transformer.h.4.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.4.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.4.self_attention.dense": {
+      "key": "transformer.h.4.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.4.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.4.post_attention_layernorm": {
+      "key": "transformer.h.4.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.4.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.4.mlp.dense_h_to_4h": {
+      "key": "transformer.h.4.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.4.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.4.mlp.dense_4h_to_h": {
+      "key": "transformer.h.4.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.4.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.5.input_layernorm": {
+      "key": "transformer.h.5.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.5.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.5.self_attention.query_key_value": {
+      "key": "transformer.h.5.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.5.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.5.self_attention.dense": {
+      "key": "transformer.h.5.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.5.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.5.post_attention_layernorm": {
+      "key": "transformer.h.5.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.5.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.5.mlp.dense_h_to_4h": {
+      "key": "transformer.h.5.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.5.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.5.mlp.dense_4h_to_h": {
+      "key": "transformer.h.5.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.5.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.6.input_layernorm": {
+      "key": "transformer.h.6.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.6.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.6.self_attention.query_key_value": {
+      "key": "transformer.h.6.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.6.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.6.self_attention.dense": {
+      "key": "transformer.h.6.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.6.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.6.post_attention_layernorm": {
+      "key": "transformer.h.6.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.6.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.6.mlp.dense_h_to_4h": {
+      "key": "transformer.h.6.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.6.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.6.mlp.dense_4h_to_h": {
+      "key": "transformer.h.6.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.6.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.7.input_layernorm": {
+      "key": "transformer.h.7.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.7.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.7.self_attention.query_key_value": {
+      "key": "transformer.h.7.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.7.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.7.self_attention.dense": {
+      "key": "transformer.h.7.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.7.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.7.post_attention_layernorm": {
+      "key": "transformer.h.7.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.7.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.7.mlp.dense_h_to_4h": {
+      "key": "transformer.h.7.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.7.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.7.mlp.dense_4h_to_h": {
+      "key": "transformer.h.7.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.7.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.8.input_layernorm": {
+      "key": "transformer.h.8.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.8.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.8.self_attention.query_key_value": {
+      "key": "transformer.h.8.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.8.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.8.self_attention.dense": {
+      "key": "transformer.h.8.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.8.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.8.post_attention_layernorm": {
+      "key": "transformer.h.8.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.8.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.8.mlp.dense_h_to_4h": {
+      "key": "transformer.h.8.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.8.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.8.mlp.dense_4h_to_h": {
+      "key": "transformer.h.8.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.8.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.9.input_layernorm": {
+      "key": "transformer.h.9.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.9.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.9.self_attention.query_key_value": {
+      "key": "transformer.h.9.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.9.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.9.self_attention.dense": {
+      "key": "transformer.h.9.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.9.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.9.post_attention_layernorm": {
+      "key": "transformer.h.9.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.9.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.9.mlp.dense_h_to_4h": {
+      "key": "transformer.h.9.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.9.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.9.mlp.dense_4h_to_h": {
+      "key": "transformer.h.9.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.9.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.10.input_layernorm": {
+      "key": "transformer.h.10.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.10.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.10.self_attention.query_key_value": {
+      "key": "transformer.h.10.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.10.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.10.self_attention.dense": {
+      "key": "transformer.h.10.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.10.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.10.post_attention_layernorm": {
+      "key": "transformer.h.10.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.10.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.10.mlp.dense_h_to_4h": {
+      "key": "transformer.h.10.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.10.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.10.mlp.dense_4h_to_h": {
+      "key": "transformer.h.10.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.10.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.11.input_layernorm": {
+      "key": "transformer.h.11.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.11.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.11.self_attention.query_key_value": {
+      "key": "transformer.h.11.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.11.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.11.self_attention.dense": {
+      "key": "transformer.h.11.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.11.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.11.post_attention_layernorm": {
+      "key": "transformer.h.11.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.11.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.11.mlp.dense_h_to_4h": {
+      "key": "transformer.h.11.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.11.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.11.mlp.dense_4h_to_h": {
+      "key": "transformer.h.11.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.11.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.12.input_layernorm": {
+      "key": "transformer.h.12.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.12.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.12.self_attention.query_key_value": {
+      "key": "transformer.h.12.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.12.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.12.self_attention.dense": {
+      "key": "transformer.h.12.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.12.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.12.post_attention_layernorm": {
+      "key": "transformer.h.12.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.12.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.12.mlp.dense_h_to_4h": {
+      "key": "transformer.h.12.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.12.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.12.mlp.dense_4h_to_h": {
+      "key": "transformer.h.12.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.12.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.13.input_layernorm": {
+      "key": "transformer.h.13.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.13.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.13.self_attention.query_key_value": {
+      "key": "transformer.h.13.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.13.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.13.self_attention.dense": {
+      "key": "transformer.h.13.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.13.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.13.post_attention_layernorm": {
+      "key": "transformer.h.13.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.13.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.13.mlp.dense_h_to_4h": {
+      "key": "transformer.h.13.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.13.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.13.mlp.dense_4h_to_h": {
+      "key": "transformer.h.13.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.13.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.14.input_layernorm": {
+      "key": "transformer.h.14.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.14.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.14.self_attention.query_key_value": {
+      "key": "transformer.h.14.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.14.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.14.self_attention.dense": {
+      "key": "transformer.h.14.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.14.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.14.post_attention_layernorm": {
+      "key": "transformer.h.14.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.14.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.14.mlp.dense_h_to_4h": {
+      "key": "transformer.h.14.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.14.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.14.mlp.dense_4h_to_h": {
+      "key": "transformer.h.14.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.14.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.15.input_layernorm": {
+      "key": "transformer.h.15.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.15.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.15.self_attention.query_key_value": {
+      "key": "transformer.h.15.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.15.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.15.self_attention.dense": {
+      "key": "transformer.h.15.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.15.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.15.post_attention_layernorm": {
+      "key": "transformer.h.15.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.15.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.15.mlp.dense_h_to_4h": {
+      "key": "transformer.h.15.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.15.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.15.mlp.dense_4h_to_h": {
+      "key": "transformer.h.15.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.15.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.16.input_layernorm": {
+      "key": "transformer.h.16.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.16.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.16.self_attention.query_key_value": {
+      "key": "transformer.h.16.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.16.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.16.self_attention.dense": {
+      "key": "transformer.h.16.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.16.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.16.post_attention_layernorm": {
+      "key": "transformer.h.16.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.16.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.16.mlp.dense_h_to_4h": {
+      "key": "transformer.h.16.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.16.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.16.mlp.dense_4h_to_h": {
+      "key": "transformer.h.16.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.16.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.17.input_layernorm": {
+      "key": "transformer.h.17.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.17.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.17.self_attention.query_key_value": {
+      "key": "transformer.h.17.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.17.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.17.self_attention.dense": {
+      "key": "transformer.h.17.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.17.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.17.post_attention_layernorm": {
+      "key": "transformer.h.17.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.17.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.17.mlp.dense_h_to_4h": {
+      "key": "transformer.h.17.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.17.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.17.mlp.dense_4h_to_h": {
+      "key": "transformer.h.17.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.17.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.18.input_layernorm": {
+      "key": "transformer.h.18.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.18.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.18.self_attention.query_key_value": {
+      "key": "transformer.h.18.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.18.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.18.self_attention.dense": {
+      "key": "transformer.h.18.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.18.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.18.post_attention_layernorm": {
+      "key": "transformer.h.18.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.18.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.18.mlp.dense_h_to_4h": {
+      "key": "transformer.h.18.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.18.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.18.mlp.dense_4h_to_h": {
+      "key": "transformer.h.18.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.18.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.19.input_layernorm": {
+      "key": "transformer.h.19.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.19.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.19.self_attention.query_key_value": {
+      "key": "transformer.h.19.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.19.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.19.self_attention.dense": {
+      "key": "transformer.h.19.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.19.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.19.post_attention_layernorm": {
+      "key": "transformer.h.19.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.19.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.19.mlp.dense_h_to_4h": {
+      "key": "transformer.h.19.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.19.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.19.mlp.dense_4h_to_h": {
+      "key": "transformer.h.19.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.19.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.20.input_layernorm": {
+      "key": "transformer.h.20.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.20.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.20.self_attention.query_key_value": {
+      "key": "transformer.h.20.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.20.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.20.self_attention.dense": {
+      "key": "transformer.h.20.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.20.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.20.post_attention_layernorm": {
+      "key": "transformer.h.20.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.20.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.20.mlp.dense_h_to_4h": {
+      "key": "transformer.h.20.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.20.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.20.mlp.dense_4h_to_h": {
+      "key": "transformer.h.20.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.20.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.21.input_layernorm": {
+      "key": "transformer.h.21.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.21.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.21.self_attention.query_key_value": {
+      "key": "transformer.h.21.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.21.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.21.self_attention.dense": {
+      "key": "transformer.h.21.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.21.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.21.post_attention_layernorm": {
+      "key": "transformer.h.21.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.21.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.21.mlp.dense_h_to_4h": {
+      "key": "transformer.h.21.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.21.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.21.mlp.dense_4h_to_h": {
+      "key": "transformer.h.21.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.21.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.22.input_layernorm": {
+      "key": "transformer.h.22.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.22.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.22.self_attention.query_key_value": {
+      "key": "transformer.h.22.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.22.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.22.self_attention.dense": {
+      "key": "transformer.h.22.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.22.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.22.post_attention_layernorm": {
+      "key": "transformer.h.22.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.22.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.22.mlp.dense_h_to_4h": {
+      "key": "transformer.h.22.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.22.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.22.mlp.dense_4h_to_h": {
+      "key": "transformer.h.22.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.22.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.23.input_layernorm": {
+      "key": "transformer.h.23.input_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.23.input_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.23.self_attention.query_key_value": {
+      "key": "transformer.h.23.self_attention.query_key_value",
+      "kind": "linear",
+      "dim": 4608,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.23.self_attention.query_key_value.npy",
+      "shape": [
+        4608,
+        12,
+        13
+      ]
+    },
+    "transformer.h.23.self_attention.dense": {
+      "key": "transformer.h.23.self_attention.dense",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.23.self_attention.dense.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.23.post_attention_layernorm": {
+      "key": "transformer.h.23.post_attention_layernorm",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.23.post_attention_layernorm.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.h.23.mlp.dense_h_to_4h": {
+      "key": "transformer.h.23.mlp.dense_h_to_4h",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.23.mlp.dense_h_to_4h.npy",
+      "shape": [
+        6144,
+        12,
+        13
+      ]
+    },
+    "transformer.h.23.mlp.dense_4h_to_h": {
+      "key": "transformer.h.23.mlp.dense_4h_to_h",
+      "kind": "linear",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.h.23.mlp.dense_4h_to_h.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "transformer.ln_f": {
+      "key": "transformer.ln_f",
+      "kind": "norm",
+      "dim": 1536,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/transformer.ln_f.npy",
+      "shape": [
+        1536,
+        12,
+        13
+      ]
+    },
+    "lm_head": {
+      "key": "lm_head",
+      "kind": "linear",
+      "dim": 250880,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/bloom-1b1-fullgrid-100m-p1200-perchannel-john/heat/lm_head.npy",
+      "shape": [
+        250880,
+        12,
+        13
+      ]
+    }
+  },
+  "module_nonzero_cells": {
+    "transformer.word_embeddings_layernorm": 238416,
+    "transformer.h.0.input_layernorm": 238393,
+    "transformer.h.0.self_attention.query_key_value": 714382,
+    "transformer.h.0.self_attention.dense": 239229,
+    "transformer.h.0.post_attention_layernorm": 239388,
+    "transformer.h.0.mlp.dense_h_to_4h": 955978,
+    "transformer.h.0.mlp.dense_4h_to_h": 239178,
+    "transformer.h.1.input_layernorm": 239205,
+    "transformer.h.1.self_attention.query_key_value": 716098,
+    "transformer.h.1.self_attention.dense": 239206,
+    "transformer.h.1.post_attention_layernorm": 239278,
+    "transformer.h.1.mlp.dense_h_to_4h": 955385,
+    "transformer.h.1.mlp.dense_4h_to_h": 239079,
+    "transformer.h.2.input_layernorm": 238717,
+    "transformer.h.2.self_attention.query_key_value": 712854,
+    "transformer.h.2.self_attention.dense": 239070,
+    "transformer.h.2.post_attention_layernorm": 239011,
+    "transformer.h.2.mlp.dense_h_to_4h": 951355,
+    "transformer.h.2.mlp.dense_4h_to_h": 239180,
+    "transformer.h.3.input_layernorm": 238710,
+    "transformer.h.3.self_attention.query_key_value": 710950,
+    "transformer.h.3.self_attention.dense": 239251,
+    "transformer.h.3.post_attention_layernorm": 238952,
+    "transformer.h.3.mlp.dense_h_to_4h": 948567,
+    "transformer.h.3.mlp.dense_4h_to_h": 239140,
+    "transformer.h.4.input_layernorm": 238552,
+    "transformer.h.4.self_attention.query_key_value": 708012,
+    "transformer.h.4.self_attention.dense": 239217,
+    "transformer.h.4.post_attention_layernorm": 238386,
+    "transformer.h.4.mlp.dense_h_to_4h": 942201,
+    "transformer.h.4.mlp.dense_4h_to_h": 239028,
+    "transformer.h.5.input_layernorm": 230725,
+    "transformer.h.5.self_attention.query_key_value": 685629,
+    "transformer.h.5.self_attention.dense": 234493,
+    "transformer.h.5.post_attention_layernorm": 230537,
+    "transformer.h.5.mlp.dense_h_to_4h": 914437,
+    "transformer.h.5.mlp.dense_4h_to_h": 235632,
+    "transformer.h.6.input_layernorm": 224945,
+    "transformer.h.6.self_attention.query_key_value": 672593,
+    "transformer.h.6.self_attention.dense": 225505,
+    "transformer.h.6.post_attention_layernorm": 224959,
+    "transformer.h.6.mlp.dense_h_to_4h": 897636,
+    "transformer.h.6.mlp.dense_4h_to_h": 225926,
+    "transformer.h.7.input_layernorm": 224747,
+    "transformer.h.7.self_attention.query_key_value": 672205,
+    "transformer.h.7.self_attention.dense": 225589,
+    "transformer.h.7.post_attention_layernorm": 224708,
+    "transformer.h.7.mlp.dense_h_to_4h": 895187,
+    "transformer.h.7.mlp.dense_4h_to_h": 225838,
+    "transformer.h.8.input_layernorm": 224631,
+    "transformer.h.8.self_attention.query_key_value": 671917,
+    "transformer.h.8.self_attention.dense": 225416,
+    "transformer.h.8.post_attention_layernorm": 224596,
+    "transformer.h.8.mlp.dense_h_to_4h": 896539,
+    "transformer.h.8.mlp.dense_4h_to_h": 225386,
+    "transformer.h.9.input_layernorm": 224576,
+    "transformer.h.9.self_attention.query_key_value": 671787,
+    "transformer.h.9.self_attention.dense": 225906,
+    "transformer.h.9.post_attention_layernorm": 224603,
+    "transformer.h.9.mlp.dense_h_to_4h": 896133,
+    "transformer.h.9.mlp.dense_4h_to_h": 225550,
+    "transformer.h.10.input_layernorm": 224616,
+    "transformer.h.10.self_attention.query_key_value": 671400,
+    "transformer.h.10.self_attention.dense": 225863,
+    "transformer.h.10.post_attention_layernorm": 224592,
+    "transformer.h.10.mlp.dense_h_to_4h": 895889,
+    "transformer.h.10.mlp.dense_4h_to_h": 225441,
+    "transformer.h.11.input_layernorm": 224618,
+    "transformer.h.11.self_attention.query_key_value": 671850,
+    "transformer.h.11.self_attention.dense": 225522,
+    "transformer.h.11.post_attention_layernorm": 224577,
+    "transformer.h.11.mlp.dense_h_to_4h": 894802,
+    "transformer.h.11.mlp.dense_4h_to_h": 225471,
+    "transformer.h.12.input_layernorm": 224572,
+    "transformer.h.12.self_attention.query_key_value": 672307,
+    "transformer.h.12.self_attention.dense": 226122,
+    "transformer.h.12.post_attention_layernorm": 224560,
+    "transformer.h.12.mlp.dense_h_to_4h": 895533,
+    "transformer.h.12.mlp.dense_4h_to_h": 225425,
+    "transformer.h.13.input_layernorm": 224556,
+    "transformer.h.13.self_attention.query_key_value": 672367,
+    "transformer.h.13.self_attention.dense": 225349,
+    "transformer.h.13.post_attention_layernorm": 224570,
+    "transformer.h.13.mlp.dense_h_to_4h": 895448,
+    "transformer.h.13.mlp.dense_4h_to_h": 225376,
+    "transformer.h.14.input_layernorm": 224596,
+    "transformer.h.14.self_attention.query_key_value": 672302,
+    "transformer.h.14.self_attention.dense": 226029,
+    "transformer.h.14.post_attention_layernorm": 224567,
+    "transformer.h.14.mlp.dense_h_to_4h": 894770,
+    "transformer.h.14.mlp.dense_4h_to_h": 225324,
+    "transformer.h.15.input_layernorm": 224565,
+    "transformer.h.15.self_attention.query_key_value": 672289,
+    "transformer.h.15.self_attention.dense": 225600,
+    "transformer.h.15.post_attention_layernorm": 224570,
+    "transformer.h.15.mlp.dense_h_to_4h": 894659,
+    "transformer.h.15.mlp.dense_4h_to_h": 225302,
+    "transformer.h.16.input_layernorm": 224575,
+    "transformer.h.16.self_attention.query_key_value": 672302,
+    "transformer.h.16.self_attention.dense": 225993,
+    "transformer.h.16.post_attention_layernorm": 224592,
+    "transformer.h.16.mlp.dense_h_to_4h": 895017,
+    "transformer.h.16.mlp.dense_4h_to_h": 225323,
+    "transformer.h.17.input_layernorm": 224616,
+    "transformer.h.17.self_attention.query_key_value": 672483,
+    "transformer.h.17.self_attention.dense": 227274,
+    "transformer.h.17.post_attention_layernorm": 224583,
+    "transformer.h.17.mlp.dense_h_to_4h": 895757,
+    "transformer.h.17.mlp.dense_4h_to_h": 225291,
+    "transformer.h.18.input_layernorm": 224584,
+    "transformer.h.18.self_attention.query_key_value": 672607,
+    "transformer.h.18.self_attention.dense": 227266,
+    "transformer.h.18.post_attention_layernorm": 224589,
+    "transformer.h.18.mlp.dense_h_to_4h": 896255,
+    "transformer.h.18.mlp.dense_4h_to_h": 225264,
+    "transformer.h.19.input_layernorm": 224619,
+    "transformer.h.19.self_attention.query_key_value": 672793,
+    "transformer.h.19.self_attention.dense": 228266,
+    "transformer.h.19.post_attention_layernorm": 224658,
+    "transformer.h.19.mlp.dense_h_to_4h": 896425,
+    "transformer.h.19.mlp.dense_4h_to_h": 225347,
+    "transformer.h.20.input_layernorm": 224646,
+    "transformer.h.20.self_attention.query_key_value": 672538,
+    "transformer.h.20.self_attention.dense": 227783,
+    "transformer.h.20.post_attention_layernorm": 224659,
+    "transformer.h.20.mlp.dense_h_to_4h": 896635,
+    "transformer.h.20.mlp.dense_4h_to_h": 225413,
+    "transformer.h.21.input_layernorm": 224902,
+    "transformer.h.21.self_attention.query_key_value": 672527,
+    "transformer.h.21.self_attention.dense": 227017,
+    "transformer.h.21.post_attention_layernorm": 225780,
+    "transformer.h.21.mlp.dense_h_to_4h": 898568,
+    "transformer.h.21.mlp.dense_4h_to_h": 228770,
+    "transformer.h.22.input_layernorm": 227171,
+    "transformer.h.22.self_attention.query_key_value": 678072,
+    "transformer.h.22.self_attention.dense": 229799,
+    "transformer.h.22.post_attention_layernorm": 233602,
+    "transformer.h.22.mlp.dense_h_to_4h": 925758,
+    "transformer.h.22.mlp.dense_4h_to_h": 238598,
+    "transformer.h.23.input_layernorm": 236104,
+    "transformer.h.23.self_attention.query_key_value": 708593,
+    "transformer.h.23.self_attention.dense": 238827,
+    "transformer.h.23.post_attention_layernorm": 236951,
+    "transformer.h.23.mlp.dense_h_to_4h": 939431,
+    "transformer.h.23.mlp.dense_4h_to_h": 239064,
+    "transformer.ln_f": 238230,
+    "lm_head": 38784058
+  },
+  "wall_seconds": 1406.7,
+  "timestamp": 1779960765
+}

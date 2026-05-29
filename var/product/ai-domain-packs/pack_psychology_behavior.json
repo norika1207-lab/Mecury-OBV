@@ -1,0 +1,40 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "psychology_behavior",
+  "label": "Psychology, behavior, and social science",
+  "created_at": "2026-05-27T03:53:46.659Z",
+  "updated_at": "2026-05-27T07:58:40.447Z",
+  "tokens": [
+    "psychology",
+    "behavior",
+    "social",
+    "emotion",
+    "motivation",
+    "cognition",
+    "bias",
+    "心理",
+    "行為",
+    "社會",
+    "情緒",
+    "動機",
+    "認知",
+    "偏誤",
+    "人際"
+  ],
+  "intents": [
+    "behavior explanation",
+    "communication frame",
+    "social pattern analysis"
+  ],
+  "frames": [
+    "先分清個人心理、互動情境、制度環境與文化因素。",
+    "用動機、認知偏誤、獎懲、身份與社會壓力建立多假設框架。",
+    "避免單一原因定論，輸出可觀察驗證點。"
+  ],
+  "risk_gates": [
+    "不做精神疾病診斷。",
+    "高風險心理危機需要真人支援。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

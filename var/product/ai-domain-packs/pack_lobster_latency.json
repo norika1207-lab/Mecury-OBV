@@ -1,0 +1,46 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "lobster_latency",
+  "label": "Lobster latency and hot-path diagnosis",
+  "created_at": "2026-05-27T07:56:33.747Z",
+  "updated_at": "2026-05-27T07:58:40.449Z",
+  "tokens": [
+    "lobster",
+    "latency",
+    "hot path",
+    "hot",
+    "path",
+    "slow",
+    "timeout",
+    "queue",
+    "retry",
+    "worker",
+    "event loop",
+    "event",
+    "loop",
+    "龍蝦",
+    "延遲",
+    "卡住",
+    "很慢",
+    "熱路徑",
+    "佇列",
+    "重試",
+    "背景工作"
+  ],
+  "intents": [
+    "latency triage",
+    "hot path issue spotting",
+    "slow request diagnosis"
+  ],
+  "frames": [
+    "先切開前台互動、背景 worker、資料庫 I/O、provider 呼叫與檔案掃描。",
+    "用時間線找最早阻塞點：request start、queue wait、DB query、LLM/provider、response write。",
+    "先回可執行診斷清單，不在 hot path 產生長篇推理；細節交給 qwen3:14b teacher。"
+  ],
+  "risk_gates": [
+    "不要把所有慢都歸咎於模型。",
+    "未量到 timestamp 前不要宣稱根因。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

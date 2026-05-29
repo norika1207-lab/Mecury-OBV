@@ -1,0 +1,44 @@
+[fullgrid] load tokenizer /home/ai/hf_models/gpt2
+[fullgrid] load model /home/ai/hf_models/gpt2 device=cpu dtype=float32
+`torch_dtype` is deprecated! Use `dtype` instead!
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.Op.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.OnnxFunction.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+[fullgrid] modules=74 channels=152,401 Q=26 S=26 cells=103,023,076
+[fullgrid] reuse quantile edges from /home/ai/mercury_observations/fullgrid/gpt2-fullgrid-100m-p180/quantile_edges.npz
+[fullgrid] pass2 heat fill
+[fullgrid] heat 5/1045 elapsed=18s
+[fullgrid] heat 10/1045 elapsed=32s
+[fullgrid] heat 15/1045 elapsed=46s
+[fullgrid] heat 20/1045 elapsed=58s
+[fullgrid] heat 25/1045 elapsed=72s
+[fullgrid] heat 30/1045 elapsed=87s
+[fullgrid] heat 35/1045 elapsed=99s
+[fullgrid] heat 40/1045 elapsed=112s
+[fullgrid] heat 45/1045 elapsed=126s
+[fullgrid] heat 50/1045 elapsed=140s
+[fullgrid] heat 55/1045 elapsed=153s
+[fullgrid] heat 60/1045 elapsed=167s
+[fullgrid] heat 65/1045 elapsed=180s
+[fullgrid] heat 70/1045 elapsed=193s
+[fullgrid] heat 75/1045 elapsed=207s
+[fullgrid] heat 80/1045 elapsed=220s
+[fullgrid] heat 85/1045 elapsed=234s
+[fullgrid] heat 90/1045 elapsed=247s
+[fullgrid] heat 95/1045 elapsed=262s
+[fullgrid] heat 100/1045 elapsed=276s
+[fullgrid] heat 105/1045 elapsed=289s
+[fullgrid] heat 110/1045 elapsed=302s
+[fullgrid] heat 115/1045 elapsed=317s
+[fullgrid] heat 120/1045 elapsed=331s
+[fullgrid] heat 125/1045 elapsed=345s
+[fullgrid] heat 130/1045 elapsed=359s
+[fullgrid] heat 135/1045 elapsed=372s
+[fullgrid] heat 140/1045 elapsed=386s
+[fullgrid] heat 145/1045 elapsed=400s
+[fullgrid] heat 150/1045 elapsed=413s
+[fullgrid] heat 155/1045 elapsed=427s
+[fullgrid] heat 160/1045 elapsed=441s
+[fullgrid] heat 165/1045 elapsed=455s
+[fullgrid] heat 170/1045 elapsed=467s

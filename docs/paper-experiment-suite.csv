@@ -1,0 +1,15 @@
+lane,trial,baseline_kind,baseline_value,mercury_value,unit,speedup,mode,pass,proof
+500-neuron sparse activation,1,candidate_count,1000,12,neurons,83.33,sparse_control_map,true,"28 selected lanes, 12 executable neurons"
+500-neuron sparse activation,2,candidate_count,1000,12,neurons,83.33,sparse_control_map,true,"28 selected lanes, 12 executable neurons"
+Rosen Pair unchanged-state replay,1,measured_seed_ms,670,175,ms,3.83,state_replay,true,"seed=pair_seed, replay=state_replay, correction=correction_pulse"
+Rosen Pair changed-state correction,1,measured_seed_ms,670,183,ms,3.66,correction_pulse,true,digest_changed=yes
+Rosen Pair unchanged-state replay,2,measured_seed_ms,75,78,ms,0.96,state_replay,true,"seed=pair_seed, replay=state_replay, correction=correction_pulse"
+Rosen Pair changed-state correction,2,measured_seed_ms,75,78,ms,0.96,correction_pulse,true,digest_changed=yes
+Cold-start evidence packet,1,reference_model_discovery_ms,120000,6,ms,20000,target_file_first,true,"hits=8, slow_job=pending"
+Cold-start evidence packet,2,reference_model_discovery_ms,120000,2,ms,60000,target_file_first,true,"hits=8, slow_job=pending"
+Workflow route materialization/replay,1,measured_first_route_ms,2228,10,ms,222.8,accelerate_task_fast_replay,true,steps=rosen_route|spend_guard|cold_start_packet|monster_doctor|task_memory
+Workflow route materialization/replay,2,measured_first_route_ms,1985,10,ms,198.5,accelerate_task_fast_replay,true,steps=rosen_route|spend_guard|cold_start_packet|monster_doctor|task_memory
+LLM hot-path avoidance,1,reference_local_qwen_ms,152,149,ms,1.02,forbidden,true,"provider=reflex_queue_only, queue=175"
+LLM hot-path avoidance,2,reference_local_qwen_ms,152,1,ms,152,forbidden,true,"provider=reflex_queue_only, queue=175"
+Monster diagnosis,1,reference_broad_scan_plus_model_ms,120000,647,ms,185.47,accelerate_task_fast_replay,false,"pages=800, rosen=8, cost=32"
+Resident speed-state snapshot,1,budget_ms,300,0.001,ms,300000,speed_state_summary_cache_hit,true,"rosen_summary=ready, pairs=1"

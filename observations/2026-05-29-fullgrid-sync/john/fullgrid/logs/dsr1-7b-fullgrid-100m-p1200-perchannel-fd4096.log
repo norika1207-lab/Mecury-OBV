@@ -1,0 +1,24 @@
+/Users/john/fullgrid-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[fullgrid] load tokenizer /Users/john/hf-tierC-dsr1-7b
+[fullgrid] load model /Users/john/hf-tierC-dsr1-7b device=cpu dtype=bfloat16
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/john/fullgrid_observe.py", line 397, in <module>
+    main()
+  File "/Users/john/fullgrid_observe.py", line 145, in main
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/Users/john/fullgrid-venv/lib/python3.9/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "/Users/john/fullgrid-venv/lib/python3.9/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "/Users/john/fullgrid-venv/lib/python3.9/site-packages/transformers/modeling_utils.py", line 5048, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/Users/john/fullgrid-venv/lib/python3.9/site-packages/transformers/modeling_utils.py", line 5468, in _load_pretrained_model
+    _error_msgs, disk_offload_index = load_shard_file(args)
+  File "/Users/john/fullgrid-venv/lib/python3.9/site-packages/transformers/modeling_utils.py", line 831, in load_shard_file
+    state_dict = load_state_dict(
+  File "/Users/john/fullgrid-venv/lib/python3.9/site-packages/transformers/modeling_utils.py", line 484, in load_state_dict
+    with safe_open(checkpoint_file, framework="pt") as f:
+FileNotFoundError: No such file or directory: /Users/john/hf-tierC-dsr1-7b/model-00001-of-000002.safetensors

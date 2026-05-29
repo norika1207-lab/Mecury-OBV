@@ -1,0 +1,23 @@
+{
+  "schema": "mercury-rosen-bridge-v1",
+  "id": "ac7c1e025d7fa8f880ba0d3d",
+  "created_at": "2026-05-28T01:08:09.997Z",
+  "updated_at": "2026-05-28T01:08:09.997Z",
+  "namespace": "bench-rosen-694f50db6d4fe8c1e849d17b",
+  "from": "entry:provider_spend",
+  "to": "neuron:risk.cost+judge",
+  "type": "verified_by",
+  "risk_family": "provider_spend",
+  "confidence": 0.58,
+  "latency_ms": 1,
+  "cost": "low",
+  "risk": "medium",
+  "freshness": "fresh",
+  "evidence": "Use cost/risk neurons and judge before accusing a live process.",
+  "tokens": {},
+  "source": "static_family",
+  "score": 1,
+  "hit_count": 1,
+  "miss_count": 0,
+  "activation_rule": "provider_spend+latency_hot_path+memory_route"
+}

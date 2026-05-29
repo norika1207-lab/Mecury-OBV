@@ -1,0 +1,2739 @@
+{
+  "observer": "mercury_fullgrid_observe.py",
+  "model_name": "phi-2-fullgrid-100m-p1200-perchannel-john",
+  "model_path": "microsoft/phi-2",
+  "target_cells": 100000000,
+  "actual_cells": 105628160,
+  "nonzero_cells": 102507942,
+  "coverage_pct": 97.046036,
+  "Q": 11,
+  "S": 11,
+  "max_length": 192,
+  "probe_count": 1286,
+  "calibration_probe_count": 256,
+  "edges_from": null,
+  "calibration_values_per_module": 200000,
+  "calibration_rows_per_module": 512,
+  "per_channel_quantiles": true,
+  "include_norms": true,
+  "total_channels": 872960,
+  "module_count": 226,
+  "modules": {
+    "model.layers.0.input_layernorm": {
+      "key": "model.layers.0.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.0.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.0.self_attn.q_proj": {
+      "key": "model.layers.0.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.0.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.0.self_attn.k_proj": {
+      "key": "model.layers.0.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.0.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.0.self_attn.v_proj": {
+      "key": "model.layers.0.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.0.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.0.self_attn.dense": {
+      "key": "model.layers.0.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.0.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.0.mlp.fc1": {
+      "key": "model.layers.0.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.0.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.0.mlp.fc2": {
+      "key": "model.layers.0.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.0.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.1.input_layernorm": {
+      "key": "model.layers.1.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.1.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.1.self_attn.q_proj": {
+      "key": "model.layers.1.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.1.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.1.self_attn.k_proj": {
+      "key": "model.layers.1.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.1.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.1.self_attn.v_proj": {
+      "key": "model.layers.1.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.1.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.1.self_attn.dense": {
+      "key": "model.layers.1.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.1.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.1.mlp.fc1": {
+      "key": "model.layers.1.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.1.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.1.mlp.fc2": {
+      "key": "model.layers.1.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.1.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.2.input_layernorm": {
+      "key": "model.layers.2.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.2.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.2.self_attn.q_proj": {
+      "key": "model.layers.2.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.2.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.2.self_attn.k_proj": {
+      "key": "model.layers.2.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.2.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.2.self_attn.v_proj": {
+      "key": "model.layers.2.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.2.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.2.self_attn.dense": {
+      "key": "model.layers.2.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.2.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.2.mlp.fc1": {
+      "key": "model.layers.2.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.2.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.2.mlp.fc2": {
+      "key": "model.layers.2.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.2.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.3.input_layernorm": {
+      "key": "model.layers.3.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.3.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.3.self_attn.q_proj": {
+      "key": "model.layers.3.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.3.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.3.self_attn.k_proj": {
+      "key": "model.layers.3.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.3.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.3.self_attn.v_proj": {
+      "key": "model.layers.3.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.3.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.3.self_attn.dense": {
+      "key": "model.layers.3.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.3.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.3.mlp.fc1": {
+      "key": "model.layers.3.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.3.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.3.mlp.fc2": {
+      "key": "model.layers.3.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.3.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.4.input_layernorm": {
+      "key": "model.layers.4.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.4.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.4.self_attn.q_proj": {
+      "key": "model.layers.4.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.4.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.4.self_attn.k_proj": {
+      "key": "model.layers.4.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.4.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.4.self_attn.v_proj": {
+      "key": "model.layers.4.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.4.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.4.self_attn.dense": {
+      "key": "model.layers.4.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.4.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.4.mlp.fc1": {
+      "key": "model.layers.4.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.4.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.4.mlp.fc2": {
+      "key": "model.layers.4.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.4.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.5.input_layernorm": {
+      "key": "model.layers.5.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.5.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.5.self_attn.q_proj": {
+      "key": "model.layers.5.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.5.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.5.self_attn.k_proj": {
+      "key": "model.layers.5.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.5.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.5.self_attn.v_proj": {
+      "key": "model.layers.5.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.5.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.5.self_attn.dense": {
+      "key": "model.layers.5.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.5.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.5.mlp.fc1": {
+      "key": "model.layers.5.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.5.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.5.mlp.fc2": {
+      "key": "model.layers.5.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.5.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.6.input_layernorm": {
+      "key": "model.layers.6.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.6.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.6.self_attn.q_proj": {
+      "key": "model.layers.6.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.6.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.6.self_attn.k_proj": {
+      "key": "model.layers.6.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.6.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.6.self_attn.v_proj": {
+      "key": "model.layers.6.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.6.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.6.self_attn.dense": {
+      "key": "model.layers.6.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.6.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.6.mlp.fc1": {
+      "key": "model.layers.6.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.6.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.6.mlp.fc2": {
+      "key": "model.layers.6.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.6.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.7.input_layernorm": {
+      "key": "model.layers.7.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.7.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.7.self_attn.q_proj": {
+      "key": "model.layers.7.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.7.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.7.self_attn.k_proj": {
+      "key": "model.layers.7.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.7.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.7.self_attn.v_proj": {
+      "key": "model.layers.7.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.7.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.7.self_attn.dense": {
+      "key": "model.layers.7.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.7.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.7.mlp.fc1": {
+      "key": "model.layers.7.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.7.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.7.mlp.fc2": {
+      "key": "model.layers.7.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.7.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.8.input_layernorm": {
+      "key": "model.layers.8.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.8.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.8.self_attn.q_proj": {
+      "key": "model.layers.8.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.8.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.8.self_attn.k_proj": {
+      "key": "model.layers.8.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.8.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.8.self_attn.v_proj": {
+      "key": "model.layers.8.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.8.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.8.self_attn.dense": {
+      "key": "model.layers.8.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.8.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.8.mlp.fc1": {
+      "key": "model.layers.8.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.8.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.8.mlp.fc2": {
+      "key": "model.layers.8.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.8.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.9.input_layernorm": {
+      "key": "model.layers.9.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.9.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.9.self_attn.q_proj": {
+      "key": "model.layers.9.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.9.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.9.self_attn.k_proj": {
+      "key": "model.layers.9.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.9.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.9.self_attn.v_proj": {
+      "key": "model.layers.9.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.9.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.9.self_attn.dense": {
+      "key": "model.layers.9.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.9.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.9.mlp.fc1": {
+      "key": "model.layers.9.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.9.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.9.mlp.fc2": {
+      "key": "model.layers.9.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.9.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.10.input_layernorm": {
+      "key": "model.layers.10.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.10.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.10.self_attn.q_proj": {
+      "key": "model.layers.10.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.10.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.10.self_attn.k_proj": {
+      "key": "model.layers.10.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.10.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.10.self_attn.v_proj": {
+      "key": "model.layers.10.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.10.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.10.self_attn.dense": {
+      "key": "model.layers.10.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.10.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.10.mlp.fc1": {
+      "key": "model.layers.10.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.10.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.10.mlp.fc2": {
+      "key": "model.layers.10.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.10.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.11.input_layernorm": {
+      "key": "model.layers.11.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.11.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.11.self_attn.q_proj": {
+      "key": "model.layers.11.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.11.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.11.self_attn.k_proj": {
+      "key": "model.layers.11.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.11.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.11.self_attn.v_proj": {
+      "key": "model.layers.11.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.11.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.11.self_attn.dense": {
+      "key": "model.layers.11.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.11.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.11.mlp.fc1": {
+      "key": "model.layers.11.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.11.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.11.mlp.fc2": {
+      "key": "model.layers.11.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.11.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.12.input_layernorm": {
+      "key": "model.layers.12.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.12.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.12.self_attn.q_proj": {
+      "key": "model.layers.12.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.12.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.12.self_attn.k_proj": {
+      "key": "model.layers.12.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.12.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.12.self_attn.v_proj": {
+      "key": "model.layers.12.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.12.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.12.self_attn.dense": {
+      "key": "model.layers.12.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.12.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.12.mlp.fc1": {
+      "key": "model.layers.12.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.12.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.12.mlp.fc2": {
+      "key": "model.layers.12.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.12.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.13.input_layernorm": {
+      "key": "model.layers.13.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.13.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.13.self_attn.q_proj": {
+      "key": "model.layers.13.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.13.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.13.self_attn.k_proj": {
+      "key": "model.layers.13.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.13.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.13.self_attn.v_proj": {
+      "key": "model.layers.13.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.13.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.13.self_attn.dense": {
+      "key": "model.layers.13.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.13.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.13.mlp.fc1": {
+      "key": "model.layers.13.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.13.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.13.mlp.fc2": {
+      "key": "model.layers.13.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.13.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.14.input_layernorm": {
+      "key": "model.layers.14.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.14.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.14.self_attn.q_proj": {
+      "key": "model.layers.14.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.14.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.14.self_attn.k_proj": {
+      "key": "model.layers.14.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.14.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.14.self_attn.v_proj": {
+      "key": "model.layers.14.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.14.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.14.self_attn.dense": {
+      "key": "model.layers.14.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.14.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.14.mlp.fc1": {
+      "key": "model.layers.14.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.14.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.14.mlp.fc2": {
+      "key": "model.layers.14.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.14.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.15.input_layernorm": {
+      "key": "model.layers.15.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.15.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.15.self_attn.q_proj": {
+      "key": "model.layers.15.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.15.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.15.self_attn.k_proj": {
+      "key": "model.layers.15.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.15.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.15.self_attn.v_proj": {
+      "key": "model.layers.15.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.15.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.15.self_attn.dense": {
+      "key": "model.layers.15.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.15.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.15.mlp.fc1": {
+      "key": "model.layers.15.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.15.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.15.mlp.fc2": {
+      "key": "model.layers.15.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.15.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.16.input_layernorm": {
+      "key": "model.layers.16.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.16.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.16.self_attn.q_proj": {
+      "key": "model.layers.16.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.16.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.16.self_attn.k_proj": {
+      "key": "model.layers.16.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.16.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.16.self_attn.v_proj": {
+      "key": "model.layers.16.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.16.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.16.self_attn.dense": {
+      "key": "model.layers.16.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.16.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.16.mlp.fc1": {
+      "key": "model.layers.16.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.16.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.16.mlp.fc2": {
+      "key": "model.layers.16.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.16.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.17.input_layernorm": {
+      "key": "model.layers.17.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.17.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.17.self_attn.q_proj": {
+      "key": "model.layers.17.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.17.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.17.self_attn.k_proj": {
+      "key": "model.layers.17.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.17.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.17.self_attn.v_proj": {
+      "key": "model.layers.17.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.17.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.17.self_attn.dense": {
+      "key": "model.layers.17.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.17.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.17.mlp.fc1": {
+      "key": "model.layers.17.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.17.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.17.mlp.fc2": {
+      "key": "model.layers.17.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.17.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.18.input_layernorm": {
+      "key": "model.layers.18.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.18.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.18.self_attn.q_proj": {
+      "key": "model.layers.18.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.18.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.18.self_attn.k_proj": {
+      "key": "model.layers.18.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.18.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.18.self_attn.v_proj": {
+      "key": "model.layers.18.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.18.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.18.self_attn.dense": {
+      "key": "model.layers.18.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.18.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.18.mlp.fc1": {
+      "key": "model.layers.18.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.18.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.18.mlp.fc2": {
+      "key": "model.layers.18.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.18.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.19.input_layernorm": {
+      "key": "model.layers.19.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.19.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.19.self_attn.q_proj": {
+      "key": "model.layers.19.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.19.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.19.self_attn.k_proj": {
+      "key": "model.layers.19.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.19.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.19.self_attn.v_proj": {
+      "key": "model.layers.19.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.19.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.19.self_attn.dense": {
+      "key": "model.layers.19.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.19.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.19.mlp.fc1": {
+      "key": "model.layers.19.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.19.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.19.mlp.fc2": {
+      "key": "model.layers.19.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.19.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.20.input_layernorm": {
+      "key": "model.layers.20.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.20.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.20.self_attn.q_proj": {
+      "key": "model.layers.20.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.20.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.20.self_attn.k_proj": {
+      "key": "model.layers.20.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.20.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.20.self_attn.v_proj": {
+      "key": "model.layers.20.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.20.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.20.self_attn.dense": {
+      "key": "model.layers.20.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.20.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.20.mlp.fc1": {
+      "key": "model.layers.20.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.20.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.20.mlp.fc2": {
+      "key": "model.layers.20.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.20.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.21.input_layernorm": {
+      "key": "model.layers.21.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.21.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.21.self_attn.q_proj": {
+      "key": "model.layers.21.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.21.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.21.self_attn.k_proj": {
+      "key": "model.layers.21.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.21.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.21.self_attn.v_proj": {
+      "key": "model.layers.21.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.21.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.21.self_attn.dense": {
+      "key": "model.layers.21.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.21.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.21.mlp.fc1": {
+      "key": "model.layers.21.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.21.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.21.mlp.fc2": {
+      "key": "model.layers.21.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.21.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.22.input_layernorm": {
+      "key": "model.layers.22.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.22.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.22.self_attn.q_proj": {
+      "key": "model.layers.22.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.22.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.22.self_attn.k_proj": {
+      "key": "model.layers.22.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.22.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.22.self_attn.v_proj": {
+      "key": "model.layers.22.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.22.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.22.self_attn.dense": {
+      "key": "model.layers.22.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.22.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.22.mlp.fc1": {
+      "key": "model.layers.22.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.22.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.22.mlp.fc2": {
+      "key": "model.layers.22.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.22.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.23.input_layernorm": {
+      "key": "model.layers.23.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.23.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.23.self_attn.q_proj": {
+      "key": "model.layers.23.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.23.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.23.self_attn.k_proj": {
+      "key": "model.layers.23.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.23.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.23.self_attn.v_proj": {
+      "key": "model.layers.23.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.23.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.23.self_attn.dense": {
+      "key": "model.layers.23.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.23.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.23.mlp.fc1": {
+      "key": "model.layers.23.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.23.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.23.mlp.fc2": {
+      "key": "model.layers.23.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.23.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.24.input_layernorm": {
+      "key": "model.layers.24.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.24.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.24.self_attn.q_proj": {
+      "key": "model.layers.24.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.24.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.24.self_attn.k_proj": {
+      "key": "model.layers.24.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.24.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.24.self_attn.v_proj": {
+      "key": "model.layers.24.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.24.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.24.self_attn.dense": {
+      "key": "model.layers.24.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.24.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.24.mlp.fc1": {
+      "key": "model.layers.24.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.24.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.24.mlp.fc2": {
+      "key": "model.layers.24.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.24.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.25.input_layernorm": {
+      "key": "model.layers.25.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.25.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.25.self_attn.q_proj": {
+      "key": "model.layers.25.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.25.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.25.self_attn.k_proj": {
+      "key": "model.layers.25.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.25.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.25.self_attn.v_proj": {
+      "key": "model.layers.25.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.25.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.25.self_attn.dense": {
+      "key": "model.layers.25.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.25.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.25.mlp.fc1": {
+      "key": "model.layers.25.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.25.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.25.mlp.fc2": {
+      "key": "model.layers.25.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.25.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.26.input_layernorm": {
+      "key": "model.layers.26.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.26.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.26.self_attn.q_proj": {
+      "key": "model.layers.26.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.26.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.26.self_attn.k_proj": {
+      "key": "model.layers.26.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.26.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.26.self_attn.v_proj": {
+      "key": "model.layers.26.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.26.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.26.self_attn.dense": {
+      "key": "model.layers.26.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.26.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.26.mlp.fc1": {
+      "key": "model.layers.26.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.26.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.26.mlp.fc2": {
+      "key": "model.layers.26.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.26.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.27.input_layernorm": {
+      "key": "model.layers.27.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.27.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.27.self_attn.q_proj": {
+      "key": "model.layers.27.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.27.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.27.self_attn.k_proj": {
+      "key": "model.layers.27.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.27.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.27.self_attn.v_proj": {
+      "key": "model.layers.27.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.27.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.27.self_attn.dense": {
+      "key": "model.layers.27.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.27.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.27.mlp.fc1": {
+      "key": "model.layers.27.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.27.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.27.mlp.fc2": {
+      "key": "model.layers.27.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.27.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.28.input_layernorm": {
+      "key": "model.layers.28.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.28.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.28.self_attn.q_proj": {
+      "key": "model.layers.28.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.28.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.28.self_attn.k_proj": {
+      "key": "model.layers.28.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.28.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.28.self_attn.v_proj": {
+      "key": "model.layers.28.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.28.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.28.self_attn.dense": {
+      "key": "model.layers.28.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.28.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.28.mlp.fc1": {
+      "key": "model.layers.28.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.28.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.28.mlp.fc2": {
+      "key": "model.layers.28.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.28.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.29.input_layernorm": {
+      "key": "model.layers.29.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.29.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.29.self_attn.q_proj": {
+      "key": "model.layers.29.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.29.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.29.self_attn.k_proj": {
+      "key": "model.layers.29.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.29.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.29.self_attn.v_proj": {
+      "key": "model.layers.29.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.29.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.29.self_attn.dense": {
+      "key": "model.layers.29.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.29.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.29.mlp.fc1": {
+      "key": "model.layers.29.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.29.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.29.mlp.fc2": {
+      "key": "model.layers.29.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.29.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.30.input_layernorm": {
+      "key": "model.layers.30.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.30.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.30.self_attn.q_proj": {
+      "key": "model.layers.30.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.30.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.30.self_attn.k_proj": {
+      "key": "model.layers.30.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.30.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.30.self_attn.v_proj": {
+      "key": "model.layers.30.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.30.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.30.self_attn.dense": {
+      "key": "model.layers.30.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.30.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.30.mlp.fc1": {
+      "key": "model.layers.30.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.30.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.30.mlp.fc2": {
+      "key": "model.layers.30.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.30.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.31.input_layernorm": {
+      "key": "model.layers.31.input_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.31.input_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.31.self_attn.q_proj": {
+      "key": "model.layers.31.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.31.self_attn.q_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.31.self_attn.k_proj": {
+      "key": "model.layers.31.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.31.self_attn.k_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.31.self_attn.v_proj": {
+      "key": "model.layers.31.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.31.self_attn.v_proj.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.31.self_attn.dense": {
+      "key": "model.layers.31.self_attn.dense",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.31.self_attn.dense.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.layers.31.mlp.fc1": {
+      "key": "model.layers.31.mlp.fc1",
+      "kind": "linear",
+      "dim": 10240,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.31.mlp.fc1.npy",
+      "shape": [
+        10240,
+        11,
+        11
+      ]
+    },
+    "model.layers.31.mlp.fc2": {
+      "key": "model.layers.31.mlp.fc2",
+      "kind": "linear",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.layers.31.mlp.fc2.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "model.final_layernorm": {
+      "key": "model.final_layernorm",
+      "kind": "norm",
+      "dim": 2560,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/model.final_layernorm.npy",
+      "shape": [
+        2560,
+        11,
+        11
+      ]
+    },
+    "lm_head": {
+      "key": "lm_head",
+      "kind": "linear",
+      "dim": 51200,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/phi-2-fullgrid-100m-p1200-perchannel-john/heat/lm_head.npy",
+      "shape": [
+        51200,
+        11,
+        11
+      ]
+    }
+  },
+  "module_nonzero_cells": {
+    "model.layers.0.input_layernorm": 308748,
+    "model.layers.0.self_attn.q_proj": 307614,
+    "model.layers.0.self_attn.k_proj": 307774,
+    "model.layers.0.self_attn.v_proj": 308824,
+    "model.layers.0.self_attn.dense": 309073,
+    "model.layers.0.mlp.fc1": 1220172,
+    "model.layers.0.mlp.fc2": 308423,
+    "model.layers.1.input_layernorm": 309288,
+    "model.layers.1.self_attn.q_proj": 307469,
+    "model.layers.1.self_attn.k_proj": 307389,
+    "model.layers.1.self_attn.v_proj": 308916,
+    "model.layers.1.self_attn.dense": 309586,
+    "model.layers.1.mlp.fc1": 1230214,
+    "model.layers.1.mlp.fc2": 308706,
+    "model.layers.2.input_layernorm": 308342,
+    "model.layers.2.self_attn.q_proj": 305492,
+    "model.layers.2.self_attn.k_proj": 305432,
+    "model.layers.2.self_attn.v_proj": 307703,
+    "model.layers.2.self_attn.dense": 309222,
+    "model.layers.2.mlp.fc1": 1222767,
+    "model.layers.2.mlp.fc2": 308082,
+    "model.layers.3.input_layernorm": 303018,
+    "model.layers.3.self_attn.q_proj": 300199,
+    "model.layers.3.self_attn.k_proj": 301048,
+    "model.layers.3.self_attn.v_proj": 302037,
+    "model.layers.3.self_attn.dense": 309204,
+    "model.layers.3.mlp.fc1": 1186940,
+    "model.layers.3.mlp.fc2": 305220,
+    "model.layers.4.input_layernorm": 300828,
+    "model.layers.4.self_attn.q_proj": 298515,
+    "model.layers.4.self_attn.k_proj": 299032,
+    "model.layers.4.self_attn.v_proj": 299372,
+    "model.layers.4.self_attn.dense": 309187,
+    "model.layers.4.mlp.fc1": 1180142,
+    "model.layers.4.mlp.fc2": 304937,
+    "model.layers.5.input_layernorm": 299887,
+    "model.layers.5.self_attn.q_proj": 298232,
+    "model.layers.5.self_attn.k_proj": 298538,
+    "model.layers.5.self_attn.v_proj": 299229,
+    "model.layers.5.self_attn.dense": 308662,
+    "model.layers.5.mlp.fc1": 1182757,
+    "model.layers.5.mlp.fc2": 303659,
+    "model.layers.6.input_layernorm": 298522,
+    "model.layers.6.self_attn.q_proj": 297298,
+    "model.layers.6.self_attn.k_proj": 298138,
+    "model.layers.6.self_attn.v_proj": 297937,
+    "model.layers.6.self_attn.dense": 309091,
+    "model.layers.6.mlp.fc1": 1178347,
+    "model.layers.6.mlp.fc2": 302484,
+    "model.layers.7.input_layernorm": 297673,
+    "model.layers.7.self_attn.q_proj": 295932,
+    "model.layers.7.self_attn.k_proj": 296634,
+    "model.layers.7.self_attn.v_proj": 296793,
+    "model.layers.7.self_attn.dense": 308553,
+    "model.layers.7.mlp.fc1": 1175697,
+    "model.layers.7.mlp.fc2": 301494,
+    "model.layers.8.input_layernorm": 296784,
+    "model.layers.8.self_attn.q_proj": 295591,
+    "model.layers.8.self_attn.k_proj": 295999,
+    "model.layers.8.self_attn.v_proj": 295834,
+    "model.layers.8.self_attn.dense": 309007,
+    "model.layers.8.mlp.fc1": 1172403,
+    "model.layers.8.mlp.fc2": 301015,
+    "model.layers.9.input_layernorm": 296860,
+    "model.layers.9.self_attn.q_proj": 295573,
+    "model.layers.9.self_attn.k_proj": 296228,
+    "model.layers.9.self_attn.v_proj": 295969,
+    "model.layers.9.self_attn.dense": 309180,
+    "model.layers.9.mlp.fc1": 1174208,
+    "model.layers.9.mlp.fc2": 300158,
+    "model.layers.10.input_layernorm": 296751,
+    "model.layers.10.self_attn.q_proj": 295156,
+    "model.layers.10.self_attn.k_proj": 295792,
+    "model.layers.10.self_attn.v_proj": 295579,
+    "model.layers.10.self_attn.dense": 308579,
+    "model.layers.10.mlp.fc1": 1174084,
+    "model.layers.10.mlp.fc2": 300523,
+    "model.layers.11.input_layernorm": 296874,
+    "model.layers.11.self_attn.q_proj": 295890,
+    "model.layers.11.self_attn.k_proj": 296402,
+    "model.layers.11.self_attn.v_proj": 296119,
+    "model.layers.11.self_attn.dense": 308594,
+    "model.layers.11.mlp.fc1": 1176513,
+    "model.layers.11.mlp.fc2": 300946,
+    "model.layers.12.input_layernorm": 297117,
+    "model.layers.12.self_attn.q_proj": 296032,
+    "model.layers.12.self_attn.k_proj": 296555,
+    "model.layers.12.self_attn.v_proj": 296296,
+    "model.layers.12.self_attn.dense": 308847,
+    "model.layers.12.mlp.fc1": 1177809,
+    "model.layers.12.mlp.fc2": 301401,
+    "model.layers.13.input_layernorm": 297381,
+    "model.layers.13.self_attn.q_proj": 296212,
+    "model.layers.13.self_attn.k_proj": 296873,
+    "model.layers.13.self_attn.v_proj": 296774,
+    "model.layers.13.self_attn.dense": 308709,
+    "model.layers.13.mlp.fc1": 1178538,
+    "model.layers.13.mlp.fc2": 301410,
+    "model.layers.14.input_layernorm": 297572,
+    "model.layers.14.self_attn.q_proj": 296212,
+    "model.layers.14.self_attn.k_proj": 296977,
+    "model.layers.14.self_attn.v_proj": 296844,
+    "model.layers.14.self_attn.dense": 308649,
+    "model.layers.14.mlp.fc1": 1179043,
+    "model.layers.14.mlp.fc2": 302044,
+    "model.layers.15.input_layernorm": 297788,
+    "model.layers.15.self_attn.q_proj": 296541,
+    "model.layers.15.self_attn.k_proj": 297045,
+    "model.layers.15.self_attn.v_proj": 297411,
+    "model.layers.15.self_attn.dense": 308606,
+    "model.layers.15.mlp.fc1": 1181443,
+    "model.layers.15.mlp.fc2": 302549,
+    "model.layers.16.input_layernorm": 298138,
+    "model.layers.16.self_attn.q_proj": 296821,
+    "model.layers.16.self_attn.k_proj": 297191,
+    "model.layers.16.self_attn.v_proj": 297416,
+    "model.layers.16.self_attn.dense": 308478,
+    "model.layers.16.mlp.fc1": 1182750,
+    "model.layers.16.mlp.fc2": 302786,
+    "model.layers.17.input_layernorm": 298409,
+    "model.layers.17.self_attn.q_proj": 297231,
+    "model.layers.17.self_attn.k_proj": 297812,
+    "model.layers.17.self_attn.v_proj": 298481,
+    "model.layers.17.self_attn.dense": 308525,
+    "model.layers.17.mlp.fc1": 1184628,
+    "model.layers.17.mlp.fc2": 303160,
+    "model.layers.18.input_layernorm": 298789,
+    "model.layers.18.self_attn.q_proj": 297747,
+    "model.layers.18.self_attn.k_proj": 298466,
+    "model.layers.18.self_attn.v_proj": 299346,
+    "model.layers.18.self_attn.dense": 308986,
+    "model.layers.18.mlp.fc1": 1185498,
+    "model.layers.18.mlp.fc2": 303963,
+    "model.layers.19.input_layernorm": 299151,
+    "model.layers.19.self_attn.q_proj": 298053,
+    "model.layers.19.self_attn.k_proj": 298611,
+    "model.layers.19.self_attn.v_proj": 299906,
+    "model.layers.19.self_attn.dense": 309217,
+    "model.layers.19.mlp.fc1": 1186323,
+    "model.layers.19.mlp.fc2": 303982,
+    "model.layers.20.input_layernorm": 299491,
+    "model.layers.20.self_attn.q_proj": 297709,
+    "model.layers.20.self_attn.k_proj": 298613,
+    "model.layers.20.self_attn.v_proj": 300252,
+    "model.layers.20.self_attn.dense": 309166,
+    "model.layers.20.mlp.fc1": 1188474,
+    "model.layers.20.mlp.fc2": 304107,
+    "model.layers.21.input_layernorm": 299698,
+    "model.layers.21.self_attn.q_proj": 298378,
+    "model.layers.21.self_attn.k_proj": 299183,
+    "model.layers.21.self_attn.v_proj": 300068,
+    "model.layers.21.self_attn.dense": 309422,
+    "model.layers.21.mlp.fc1": 1188126,
+    "model.layers.21.mlp.fc2": 304321,
+    "model.layers.22.input_layernorm": 299952,
+    "model.layers.22.self_attn.q_proj": 298317,
+    "model.layers.22.self_attn.k_proj": 298808,
+    "model.layers.22.self_attn.v_proj": 300632,
+    "model.layers.22.self_attn.dense": 309435,
+    "model.layers.22.mlp.fc1": 1189634,
+    "model.layers.22.mlp.fc2": 304656,
+    "model.layers.23.input_layernorm": 300135,
+    "model.layers.23.self_attn.q_proj": 298357,
+    "model.layers.23.self_attn.k_proj": 299691,
+    "model.layers.23.self_attn.v_proj": 300691,
+    "model.layers.23.self_attn.dense": 309406,
+    "model.layers.23.mlp.fc1": 1189398,
+    "model.layers.23.mlp.fc2": 305194,
+    "model.layers.24.input_layernorm": 300594,
+    "model.layers.24.self_attn.q_proj": 299467,
+    "model.layers.24.self_attn.k_proj": 300028,
+    "model.layers.24.self_attn.v_proj": 300752,
+    "model.layers.24.self_attn.dense": 309512,
+    "model.layers.24.mlp.fc1": 1190833,
+    "model.layers.24.mlp.fc2": 305478,
+    "model.layers.25.input_layernorm": 301093,
+    "model.layers.25.self_attn.q_proj": 299287,
+    "model.layers.25.self_attn.k_proj": 300270,
+    "model.layers.25.self_attn.v_proj": 301240,
+    "model.layers.25.self_attn.dense": 309471,
+    "model.layers.25.mlp.fc1": 1192167,
+    "model.layers.25.mlp.fc2": 306076,
+    "model.layers.26.input_layernorm": 301437,
+    "model.layers.26.self_attn.q_proj": 299751,
+    "model.layers.26.self_attn.k_proj": 301054,
+    "model.layers.26.self_attn.v_proj": 301521,
+    "model.layers.26.self_attn.dense": 309556,
+    "model.layers.26.mlp.fc1": 1197655,
+    "model.layers.26.mlp.fc2": 305540,
+    "model.layers.27.input_layernorm": 302215,
+    "model.layers.27.self_attn.q_proj": 300230,
+    "model.layers.27.self_attn.k_proj": 301557,
+    "model.layers.27.self_attn.v_proj": 302955,
+    "model.layers.27.self_attn.dense": 309619,
+    "model.layers.27.mlp.fc1": 1198361,
+    "model.layers.27.mlp.fc2": 306586,
+    "model.layers.28.input_layernorm": 303627,
+    "model.layers.28.self_attn.q_proj": 301558,
+    "model.layers.28.self_attn.k_proj": 302512,
+    "model.layers.28.self_attn.v_proj": 303830,
+    "model.layers.28.self_attn.dense": 309594,
+    "model.layers.28.mlp.fc1": 1204209,
+    "model.layers.28.mlp.fc2": 307587,
+    "model.layers.29.input_layernorm": 305901,
+    "model.layers.29.self_attn.q_proj": 299605,
+    "model.layers.29.self_attn.k_proj": 246589,
+    "model.layers.29.self_attn.v_proj": 306085,
+    "model.layers.29.self_attn.dense": 308923,
+    "model.layers.29.mlp.fc1": 1218680,
+    "model.layers.29.mlp.fc2": 308382,
+    "model.layers.30.input_layernorm": 307127,
+    "model.layers.30.self_attn.q_proj": 302933,
+    "model.layers.30.self_attn.k_proj": 233101,
+    "model.layers.30.self_attn.v_proj": 307504,
+    "model.layers.30.self_attn.dense": 308786,
+    "model.layers.30.mlp.fc1": 1226216,
+    "model.layers.30.mlp.fc2": 309200,
+    "model.layers.31.input_layernorm": 308322,
+    "model.layers.31.self_attn.q_proj": 303155,
+    "model.layers.31.self_attn.k_proj": 275014,
+    "model.layers.31.self_attn.v_proj": 307346,
+    "model.layers.31.self_attn.dense": 309144,
+    "model.layers.31.mlp.fc1": 1229978,
+    "model.layers.31.mlp.fc2": 309360,
+    "model.final_layernorm": 308762,
+    "lm_head": 6173668
+  },
+  "wall_seconds": 3258.4,
+  "timestamp": 1779954689
+}

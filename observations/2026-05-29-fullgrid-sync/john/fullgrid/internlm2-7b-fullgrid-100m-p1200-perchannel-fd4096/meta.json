@@ -1,0 +1,1959 @@
+{
+  "observer": "mercury_fullgrid_observe.py",
+  "model_name": "internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096",
+  "model_path": "/Users/john/hf-internlm2-7b",
+  "target_cells": 100000000,
+  "actual_cells": 146880000,
+  "nonzero_cells": 133476494,
+  "coverage_pct": 90.874519,
+  "Q": 10,
+  "S": 10,
+  "max_length": 192,
+  "probe_count": 1286,
+  "calibration_probe_count": 256,
+  "edges_from": null,
+  "calibration_values_per_module": 200000,
+  "calibration_rows_per_module": 512,
+  "per_channel_quantiles": true,
+  "include_norms": true,
+  "total_channels": 1468800,
+  "module_count": 161,
+  "modules": {
+    "model.layers.0.attention.wqkv": {
+      "key": "model.layers.0.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.0.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.0.attention.wo": {
+      "key": "model.layers.0.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.0.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.0.feed_forward.w1": {
+      "key": "model.layers.0.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.0.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.0.feed_forward.w3": {
+      "key": "model.layers.0.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.0.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.0.feed_forward.w2": {
+      "key": "model.layers.0.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.0.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.1.attention.wqkv": {
+      "key": "model.layers.1.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.1.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.1.attention.wo": {
+      "key": "model.layers.1.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.1.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.1.feed_forward.w1": {
+      "key": "model.layers.1.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.1.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.1.feed_forward.w3": {
+      "key": "model.layers.1.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.1.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.1.feed_forward.w2": {
+      "key": "model.layers.1.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.1.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.2.attention.wqkv": {
+      "key": "model.layers.2.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.2.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.2.attention.wo": {
+      "key": "model.layers.2.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.2.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.2.feed_forward.w1": {
+      "key": "model.layers.2.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.2.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.2.feed_forward.w3": {
+      "key": "model.layers.2.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.2.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.2.feed_forward.w2": {
+      "key": "model.layers.2.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.2.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.3.attention.wqkv": {
+      "key": "model.layers.3.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.3.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.3.attention.wo": {
+      "key": "model.layers.3.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.3.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.3.feed_forward.w1": {
+      "key": "model.layers.3.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.3.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.3.feed_forward.w3": {
+      "key": "model.layers.3.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.3.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.3.feed_forward.w2": {
+      "key": "model.layers.3.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.3.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.4.attention.wqkv": {
+      "key": "model.layers.4.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.4.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.4.attention.wo": {
+      "key": "model.layers.4.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.4.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.4.feed_forward.w1": {
+      "key": "model.layers.4.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.4.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.4.feed_forward.w3": {
+      "key": "model.layers.4.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.4.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.4.feed_forward.w2": {
+      "key": "model.layers.4.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.4.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.5.attention.wqkv": {
+      "key": "model.layers.5.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.5.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.5.attention.wo": {
+      "key": "model.layers.5.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.5.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.5.feed_forward.w1": {
+      "key": "model.layers.5.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.5.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.5.feed_forward.w3": {
+      "key": "model.layers.5.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.5.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.5.feed_forward.w2": {
+      "key": "model.layers.5.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.5.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.6.attention.wqkv": {
+      "key": "model.layers.6.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.6.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.6.attention.wo": {
+      "key": "model.layers.6.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.6.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.6.feed_forward.w1": {
+      "key": "model.layers.6.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.6.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.6.feed_forward.w3": {
+      "key": "model.layers.6.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.6.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.6.feed_forward.w2": {
+      "key": "model.layers.6.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.6.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.7.attention.wqkv": {
+      "key": "model.layers.7.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.7.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.7.attention.wo": {
+      "key": "model.layers.7.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.7.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.7.feed_forward.w1": {
+      "key": "model.layers.7.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.7.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.7.feed_forward.w3": {
+      "key": "model.layers.7.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.7.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.7.feed_forward.w2": {
+      "key": "model.layers.7.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.7.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.8.attention.wqkv": {
+      "key": "model.layers.8.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.8.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.8.attention.wo": {
+      "key": "model.layers.8.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.8.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.8.feed_forward.w1": {
+      "key": "model.layers.8.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.8.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.8.feed_forward.w3": {
+      "key": "model.layers.8.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.8.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.8.feed_forward.w2": {
+      "key": "model.layers.8.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.8.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.9.attention.wqkv": {
+      "key": "model.layers.9.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.9.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.9.attention.wo": {
+      "key": "model.layers.9.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.9.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.9.feed_forward.w1": {
+      "key": "model.layers.9.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.9.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.9.feed_forward.w3": {
+      "key": "model.layers.9.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.9.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.9.feed_forward.w2": {
+      "key": "model.layers.9.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.9.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.10.attention.wqkv": {
+      "key": "model.layers.10.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.10.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.10.attention.wo": {
+      "key": "model.layers.10.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.10.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.10.feed_forward.w1": {
+      "key": "model.layers.10.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.10.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.10.feed_forward.w3": {
+      "key": "model.layers.10.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.10.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.10.feed_forward.w2": {
+      "key": "model.layers.10.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.10.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.11.attention.wqkv": {
+      "key": "model.layers.11.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.11.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.11.attention.wo": {
+      "key": "model.layers.11.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.11.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.11.feed_forward.w1": {
+      "key": "model.layers.11.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.11.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.11.feed_forward.w3": {
+      "key": "model.layers.11.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.11.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.11.feed_forward.w2": {
+      "key": "model.layers.11.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.11.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.12.attention.wqkv": {
+      "key": "model.layers.12.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.12.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.12.attention.wo": {
+      "key": "model.layers.12.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.12.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.12.feed_forward.w1": {
+      "key": "model.layers.12.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.12.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.12.feed_forward.w3": {
+      "key": "model.layers.12.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.12.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.12.feed_forward.w2": {
+      "key": "model.layers.12.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.12.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.13.attention.wqkv": {
+      "key": "model.layers.13.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.13.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.13.attention.wo": {
+      "key": "model.layers.13.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.13.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.13.feed_forward.w1": {
+      "key": "model.layers.13.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.13.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.13.feed_forward.w3": {
+      "key": "model.layers.13.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.13.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.13.feed_forward.w2": {
+      "key": "model.layers.13.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.13.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.14.attention.wqkv": {
+      "key": "model.layers.14.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.14.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.14.attention.wo": {
+      "key": "model.layers.14.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.14.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.14.feed_forward.w1": {
+      "key": "model.layers.14.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.14.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.14.feed_forward.w3": {
+      "key": "model.layers.14.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.14.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.14.feed_forward.w2": {
+      "key": "model.layers.14.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.14.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.15.attention.wqkv": {
+      "key": "model.layers.15.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.15.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.15.attention.wo": {
+      "key": "model.layers.15.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.15.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.15.feed_forward.w1": {
+      "key": "model.layers.15.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.15.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.15.feed_forward.w3": {
+      "key": "model.layers.15.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.15.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.15.feed_forward.w2": {
+      "key": "model.layers.15.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.15.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.16.attention.wqkv": {
+      "key": "model.layers.16.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.16.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.16.attention.wo": {
+      "key": "model.layers.16.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.16.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.16.feed_forward.w1": {
+      "key": "model.layers.16.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.16.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.16.feed_forward.w3": {
+      "key": "model.layers.16.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.16.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.16.feed_forward.w2": {
+      "key": "model.layers.16.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.16.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.17.attention.wqkv": {
+      "key": "model.layers.17.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.17.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.17.attention.wo": {
+      "key": "model.layers.17.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.17.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.17.feed_forward.w1": {
+      "key": "model.layers.17.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.17.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.17.feed_forward.w3": {
+      "key": "model.layers.17.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.17.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.17.feed_forward.w2": {
+      "key": "model.layers.17.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.17.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.18.attention.wqkv": {
+      "key": "model.layers.18.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.18.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.18.attention.wo": {
+      "key": "model.layers.18.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.18.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.18.feed_forward.w1": {
+      "key": "model.layers.18.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.18.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.18.feed_forward.w3": {
+      "key": "model.layers.18.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.18.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.18.feed_forward.w2": {
+      "key": "model.layers.18.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.18.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.19.attention.wqkv": {
+      "key": "model.layers.19.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.19.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.19.attention.wo": {
+      "key": "model.layers.19.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.19.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.19.feed_forward.w1": {
+      "key": "model.layers.19.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.19.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.19.feed_forward.w3": {
+      "key": "model.layers.19.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.19.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.19.feed_forward.w2": {
+      "key": "model.layers.19.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.19.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.20.attention.wqkv": {
+      "key": "model.layers.20.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.20.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.20.attention.wo": {
+      "key": "model.layers.20.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.20.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.20.feed_forward.w1": {
+      "key": "model.layers.20.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.20.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.20.feed_forward.w3": {
+      "key": "model.layers.20.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.20.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.20.feed_forward.w2": {
+      "key": "model.layers.20.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.20.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.21.attention.wqkv": {
+      "key": "model.layers.21.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.21.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.21.attention.wo": {
+      "key": "model.layers.21.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.21.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.21.feed_forward.w1": {
+      "key": "model.layers.21.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.21.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.21.feed_forward.w3": {
+      "key": "model.layers.21.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.21.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.21.feed_forward.w2": {
+      "key": "model.layers.21.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.21.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.22.attention.wqkv": {
+      "key": "model.layers.22.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.22.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.22.attention.wo": {
+      "key": "model.layers.22.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.22.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.22.feed_forward.w1": {
+      "key": "model.layers.22.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.22.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.22.feed_forward.w3": {
+      "key": "model.layers.22.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.22.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.22.feed_forward.w2": {
+      "key": "model.layers.22.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.22.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.23.attention.wqkv": {
+      "key": "model.layers.23.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.23.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.23.attention.wo": {
+      "key": "model.layers.23.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.23.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.23.feed_forward.w1": {
+      "key": "model.layers.23.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.23.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.23.feed_forward.w3": {
+      "key": "model.layers.23.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.23.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.23.feed_forward.w2": {
+      "key": "model.layers.23.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.23.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.24.attention.wqkv": {
+      "key": "model.layers.24.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.24.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.24.attention.wo": {
+      "key": "model.layers.24.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.24.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.24.feed_forward.w1": {
+      "key": "model.layers.24.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.24.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.24.feed_forward.w3": {
+      "key": "model.layers.24.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.24.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.24.feed_forward.w2": {
+      "key": "model.layers.24.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.24.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.25.attention.wqkv": {
+      "key": "model.layers.25.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.25.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.25.attention.wo": {
+      "key": "model.layers.25.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.25.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.25.feed_forward.w1": {
+      "key": "model.layers.25.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.25.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.25.feed_forward.w3": {
+      "key": "model.layers.25.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.25.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.25.feed_forward.w2": {
+      "key": "model.layers.25.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.25.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.26.attention.wqkv": {
+      "key": "model.layers.26.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.26.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.26.attention.wo": {
+      "key": "model.layers.26.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.26.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.26.feed_forward.w1": {
+      "key": "model.layers.26.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.26.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.26.feed_forward.w3": {
+      "key": "model.layers.26.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.26.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.26.feed_forward.w2": {
+      "key": "model.layers.26.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.26.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.27.attention.wqkv": {
+      "key": "model.layers.27.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.27.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.27.attention.wo": {
+      "key": "model.layers.27.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.27.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.27.feed_forward.w1": {
+      "key": "model.layers.27.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.27.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.27.feed_forward.w3": {
+      "key": "model.layers.27.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.27.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.27.feed_forward.w2": {
+      "key": "model.layers.27.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.27.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.28.attention.wqkv": {
+      "key": "model.layers.28.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.28.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.28.attention.wo": {
+      "key": "model.layers.28.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.28.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.28.feed_forward.w1": {
+      "key": "model.layers.28.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.28.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.28.feed_forward.w3": {
+      "key": "model.layers.28.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.28.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.28.feed_forward.w2": {
+      "key": "model.layers.28.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.28.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.29.attention.wqkv": {
+      "key": "model.layers.29.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.29.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.29.attention.wo": {
+      "key": "model.layers.29.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.29.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.29.feed_forward.w1": {
+      "key": "model.layers.29.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.29.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.29.feed_forward.w3": {
+      "key": "model.layers.29.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.29.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.29.feed_forward.w2": {
+      "key": "model.layers.29.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.29.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.30.attention.wqkv": {
+      "key": "model.layers.30.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.30.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.30.attention.wo": {
+      "key": "model.layers.30.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.30.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.30.feed_forward.w1": {
+      "key": "model.layers.30.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.30.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.30.feed_forward.w3": {
+      "key": "model.layers.30.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.30.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.30.feed_forward.w2": {
+      "key": "model.layers.30.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.30.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.31.attention.wqkv": {
+      "key": "model.layers.31.attention.wqkv",
+      "kind": "linear",
+      "dim": 6144,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.31.attention.wqkv.npy",
+      "shape": [
+        6144,
+        10,
+        10
+      ]
+    },
+    "model.layers.31.attention.wo": {
+      "key": "model.layers.31.attention.wo",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.31.attention.wo.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "model.layers.31.feed_forward.w1": {
+      "key": "model.layers.31.feed_forward.w1",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.31.feed_forward.w1.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.31.feed_forward.w3": {
+      "key": "model.layers.31.feed_forward.w3",
+      "kind": "linear",
+      "dim": 14336,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.31.feed_forward.w3.npy",
+      "shape": [
+        14336,
+        10,
+        10
+      ]
+    },
+    "model.layers.31.feed_forward.w2": {
+      "key": "model.layers.31.feed_forward.w2",
+      "kind": "linear",
+      "dim": 4096,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/model.layers.31.feed_forward.w2.npy",
+      "shape": [
+        4096,
+        10,
+        10
+      ]
+    },
+    "output": {
+      "key": "output",
+      "kind": "linear",
+      "dim": 92544,
+      "heat_file": "/Users/john/mercury_observations/fullgrid/internlm2-7b-fullgrid-100m-p1200-perchannel-fd4096/heat/output.npy",
+      "shape": [
+        92544,
+        10,
+        10
+      ]
+    }
+  },
+  "module_nonzero_cells": {
+    "model.layers.0.attention.wqkv": 551469,
+    "model.layers.0.attention.wo": 371566,
+    "model.layers.0.feed_forward.w1": 1303811,
+    "model.layers.0.feed_forward.w3": 1303925,
+    "model.layers.0.feed_forward.w2": 371669,
+    "model.layers.1.attention.wqkv": 555576,
+    "model.layers.1.attention.wo": 371527,
+    "model.layers.1.feed_forward.w1": 1303842,
+    "model.layers.1.feed_forward.w3": 1303928,
+    "model.layers.1.feed_forward.w2": 371780,
+    "model.layers.2.attention.wqkv": 557624,
+    "model.layers.2.attention.wo": 371420,
+    "model.layers.2.feed_forward.w1": 1304083,
+    "model.layers.2.feed_forward.w3": 1304256,
+    "model.layers.2.feed_forward.w2": 372673,
+    "model.layers.3.attention.wqkv": 557306,
+    "model.layers.3.attention.wo": 370097,
+    "model.layers.3.feed_forward.w1": 1303940,
+    "model.layers.3.feed_forward.w3": 1304114,
+    "model.layers.3.feed_forward.w2": 372678,
+    "model.layers.4.attention.wqkv": 556904,
+    "model.layers.4.attention.wo": 371697,
+    "model.layers.4.feed_forward.w1": 1303788,
+    "model.layers.4.feed_forward.w3": 1304084,
+    "model.layers.4.feed_forward.w2": 372707,
+    "model.layers.5.attention.wqkv": 557610,
+    "model.layers.5.attention.wo": 370954,
+    "model.layers.5.feed_forward.w1": 1303798,
+    "model.layers.5.feed_forward.w3": 1304116,
+    "model.layers.5.feed_forward.w2": 372678,
+    "model.layers.6.attention.wqkv": 557054,
+    "model.layers.6.attention.wo": 371525,
+    "model.layers.6.feed_forward.w1": 1303341,
+    "model.layers.6.feed_forward.w3": 1303998,
+    "model.layers.6.feed_forward.w2": 372596,
+    "model.layers.7.attention.wqkv": 557156,
+    "model.layers.7.attention.wo": 371372,
+    "model.layers.7.feed_forward.w1": 1302931,
+    "model.layers.7.feed_forward.w3": 1303692,
+    "model.layers.7.feed_forward.w2": 372617,
+    "model.layers.8.attention.wqkv": 557104,
+    "model.layers.8.attention.wo": 371192,
+    "model.layers.8.feed_forward.w1": 1302914,
+    "model.layers.8.feed_forward.w3": 1303702,
+    "model.layers.8.feed_forward.w2": 372597,
+    "model.layers.9.attention.wqkv": 557464,
+    "model.layers.9.attention.wo": 371290,
+    "model.layers.9.feed_forward.w1": 1302219,
+    "model.layers.9.feed_forward.w3": 1303249,
+    "model.layers.9.feed_forward.w2": 372474,
+    "model.layers.10.attention.wqkv": 556869,
+    "model.layers.10.attention.wo": 369752,
+    "model.layers.10.feed_forward.w1": 1301801,
+    "model.layers.10.feed_forward.w3": 1302679,
+    "model.layers.10.feed_forward.w2": 372383,
+    "model.layers.11.attention.wqkv": 556844,
+    "model.layers.11.attention.wo": 369737,
+    "model.layers.11.feed_forward.w1": 1301345,
+    "model.layers.11.feed_forward.w3": 1302318,
+    "model.layers.11.feed_forward.w2": 372341,
+    "model.layers.12.attention.wqkv": 556907,
+    "model.layers.12.attention.wo": 369996,
+    "model.layers.12.feed_forward.w1": 1301362,
+    "model.layers.12.feed_forward.w3": 1302374,
+    "model.layers.12.feed_forward.w2": 372257,
+    "model.layers.13.attention.wqkv": 556823,
+    "model.layers.13.attention.wo": 369744,
+    "model.layers.13.feed_forward.w1": 1301106,
+    "model.layers.13.feed_forward.w3": 1301943,
+    "model.layers.13.feed_forward.w2": 372167,
+    "model.layers.14.attention.wqkv": 556667,
+    "model.layers.14.attention.wo": 370997,
+    "model.layers.14.feed_forward.w1": 1300901,
+    "model.layers.14.feed_forward.w3": 1301863,
+    "model.layers.14.feed_forward.w2": 372427,
+    "model.layers.15.attention.wqkv": 557074,
+    "model.layers.15.attention.wo": 370849,
+    "model.layers.15.feed_forward.w1": 1301489,
+    "model.layers.15.feed_forward.w3": 1302562,
+    "model.layers.15.feed_forward.w2": 372522,
+    "model.layers.16.attention.wqkv": 557483,
+    "model.layers.16.attention.wo": 370544,
+    "model.layers.16.feed_forward.w1": 1301793,
+    "model.layers.16.feed_forward.w3": 1302660,
+    "model.layers.16.feed_forward.w2": 372586,
+    "model.layers.17.attention.wqkv": 557335,
+    "model.layers.17.attention.wo": 369784,
+    "model.layers.17.feed_forward.w1": 1302218,
+    "model.layers.17.feed_forward.w3": 1302983,
+    "model.layers.17.feed_forward.w2": 372664,
+    "model.layers.18.attention.wqkv": 557683,
+    "model.layers.18.attention.wo": 371777,
+    "model.layers.18.feed_forward.w1": 1302721,
+    "model.layers.18.feed_forward.w3": 1303296,
+    "model.layers.18.feed_forward.w2": 372687,
+    "model.layers.19.attention.wqkv": 558012,
+    "model.layers.19.attention.wo": 371223,
+    "model.layers.19.feed_forward.w1": 1303325,
+    "model.layers.19.feed_forward.w3": 1303782,
+    "model.layers.19.feed_forward.w2": 372650,
+    "model.layers.20.attention.wqkv": 558325,
+    "model.layers.20.attention.wo": 372129,
+    "model.layers.20.feed_forward.w1": 1303708,
+    "model.layers.20.feed_forward.w3": 1304151,
+    "model.layers.20.feed_forward.w2": 372657,
+    "model.layers.21.attention.wqkv": 558306,
+    "model.layers.21.attention.wo": 371891,
+    "model.layers.21.feed_forward.w1": 1303820,
+    "model.layers.21.feed_forward.w3": 1304202,
+    "model.layers.21.feed_forward.w2": 372678,
+    "model.layers.22.attention.wqkv": 558444,
+    "model.layers.22.attention.wo": 372181,
+    "model.layers.22.feed_forward.w1": 1303997,
+    "model.layers.22.feed_forward.w3": 1304294,
+    "model.layers.22.feed_forward.w2": 372672,
+    "model.layers.23.attention.wqkv": 558427,
+    "model.layers.23.attention.wo": 372074,
+    "model.layers.23.feed_forward.w1": 1304098,
+    "model.layers.23.feed_forward.w3": 1304294,
+    "model.layers.23.feed_forward.w2": 372693,
+    "model.layers.24.attention.wqkv": 558572,
+    "model.layers.24.attention.wo": 372407,
+    "model.layers.24.feed_forward.w1": 1304110,
+    "model.layers.24.feed_forward.w3": 1304316,
+    "model.layers.24.feed_forward.w2": 372703,
+    "model.layers.25.attention.wqkv": 558675,
+    "model.layers.25.attention.wo": 372326,
+    "model.layers.25.feed_forward.w1": 1304067,
+    "model.layers.25.feed_forward.w3": 1304320,
+    "model.layers.25.feed_forward.w2": 372689,
+    "model.layers.26.attention.wqkv": 558628,
+    "model.layers.26.attention.wo": 372324,
+    "model.layers.26.feed_forward.w1": 1304113,
+    "model.layers.26.feed_forward.w3": 1304299,
+    "model.layers.26.feed_forward.w2": 372694,
+    "model.layers.27.attention.wqkv": 558607,
+    "model.layers.27.attention.wo": 372396,
+    "model.layers.27.feed_forward.w1": 1304080,
+    "model.layers.27.feed_forward.w3": 1304260,
+    "model.layers.27.feed_forward.w2": 372692,
+    "model.layers.28.attention.wqkv": 558447,
+    "model.layers.28.attention.wo": 372299,
+    "model.layers.28.feed_forward.w1": 1304009,
+    "model.layers.28.feed_forward.w3": 1304223,
+    "model.layers.28.feed_forward.w2": 372689,
+    "model.layers.29.attention.wqkv": 558608,
+    "model.layers.29.attention.wo": 372304,
+    "model.layers.29.feed_forward.w1": 1304022,
+    "model.layers.29.feed_forward.w3": 1304164,
+    "model.layers.29.feed_forward.w2": 372686,
+    "model.layers.30.attention.wqkv": 558493,
+    "model.layers.30.attention.wo": 372365,
+    "model.layers.30.feed_forward.w1": 1304073,
+    "model.layers.30.feed_forward.w3": 1304026,
+    "model.layers.30.feed_forward.w2": 372672,
+    "model.layers.31.attention.wqkv": 558494,
+    "model.layers.31.attention.wo": 371790,
+    "model.layers.31.feed_forward.w1": 1304007,
+    "model.layers.31.feed_forward.w3": 1304072,
+    "model.layers.31.feed_forward.w2": 372519,
+    "output": 8415801
+  },
+  "wall_seconds": 7100.8,
+  "timestamp": 1779951317
+}

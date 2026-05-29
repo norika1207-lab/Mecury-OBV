@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Live Demo Console</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07090d; --panel:#101721; --line:#26364a; --text:#f7f9fc; --muted:#9aadc2; --good:#4de092; --blue:#7bbdff; --warn:#ffd166; --red:#ff6f7f; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(180deg, #07090d, #0a1018); color:var(--text); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing:0; }
+    main { max-width:1180px; margin:0 auto; padding:38px 20px 70px; }
+    h1 { margin:0 0 10px; font-size:clamp(36px,6vw,72px); line-height:1; letter-spacing:0; }
+    h2 { margin:0 0 12px; font-size:22px; }
+    p { margin:0; color:var(--muted); line-height:1.6; }
+    .lead { max-width:900px; color:#d3dfeb; font-size:18px; }
+    .status { margin:20px 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+    .metric, .panel, .card { border:1px solid var(--line); border-radius:8px; background:var(--panel); padding:16px; }
+    .metric span, .metric small { display:block; color:var(--muted); font-size:13px; }
+    .metric b { display:block; margin:8px 0 4px; font-size:30px; line-height:1; color:var(--blue); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px; margin:18px 0; }
+    button.card { color:var(--text); text-align:left; cursor:pointer; transition:transform .12s ease, border-color .12s ease; }
+    button.card:hover { transform:translateY(-1px); border-color:var(--blue); }
+    button.card span, button.card small { display:block; color:var(--muted); }
+    button.card b { display:block; margin:8px 0; color:var(--good); font-size:16px; }
+    .output { min-height:330px; white-space:pre-wrap; overflow:auto; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:12px; line-height:1.45; color:#d7e5f2; }
+    .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin:16px 0; align-items:center; }
+    input { flex:1; min-width:260px; background:#0b111a; border:1px solid var(--line); color:var(--text); border-radius:8px; padding:10px 12px; }
+    .pill { border:1px solid rgba(77,224,146,.45); color:var(--good); border-radius:999px; padding:8px 12px; font-weight:800; }
+    a { color:var(--blue); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Live Demo Console</h1>
+    <p class="lead">這一頁不是靜態簡報。它會直接呼叫本機 Neuron Mercury resident，讓投資人看到 Product Proof、Rosen Pair、Cold-start Evidence、Monster Proof 都是可即時執行的 API。</p>
+    <section class="status">
+      <div class="metric"><span>Product Ready</span><b>CHECK</b><small>12/13 checks</small></div>
+      <div class="metric"><span>Neuron Catalog</span><b>1000</b><small>sparse activation</small></div>
+      <div class="metric"><span>Paper Suite</span><b>8/8</b><small>14 raw rows</small></div>
+      <div class="metric"><span>Workflow Lift</span><b>1.79x</b><small>1.58s saved burst</small></div>
+      <div class="metric"><span>Rosen Field</span><b>344</b><small>73 state pairs</small></div>
+    </section>
+    <div class="toolbar">
+      <span class="pill">Resident URL</span>
+      <input id="base" value="http://127.0.0.1:17345">
+      <a href="./investor-brief.html">Investor Brief</a>
+      <a href="./product-dashboard.html">Product Dashboard</a>
+    </div>
+    <section class="grid">
+    <button class="card" data-method="GET" data-path="/product-dashboard" data-payload='{}'>
+      <span>Product Proof</span>
+      <b>GET /product-dashboard</b>
+      <small>Run live resident proof</small>
+    </button>
+    <button class="card" data-method="GET" data-path="/speed-state" data-payload='{}'>
+      <span>Speed State</span>
+      <b>GET /speed-state</b>
+      <small>Run live resident proof</small>
+    </button>
+    <button class="card" data-method="GET" data-path="/rosen-pairs?task=demo%20provider%20latency%20state%20change" data-payload='{}'>
+      <span>Rosen Pair Pulse</span>
+      <b>GET /rosen-pairs</b>
+      <small>Run live resident proof</small>
+    </button>
+    <button class="card" data-method="POST" data-path="/cold-start" data-payload='{&quot;task&quot;:&quot;demo: find provider spend latency and cache bypass before model call&quot;,&quot;path&quot;:&quot;.&quot;,&quot;limit&quot;:240,&quot;budget_ms&quot;:12}'>
+      <span>Cold-start Evidence</span>
+      <b>POST /cold-start</b>
+      <small>Run live resident proof</small>
+    </button>
+    <button class="card" data-method="POST" data-path="/accelerate-task" data-payload='{&quot;task&quot;:&quot;demo: diagnose hidden paid provider loops and hot path latency&quot;,&quot;path&quot;:&quot;.&quot;}'>
+      <span>Accelerate Task</span>
+      <b>POST /accelerate-task</b>
+      <small>Run live resident proof</small>
+    </button>
+    <button class="card" data-method="GET" data-path="/monster-proof?limit=300&amp;warm=4" data-payload='{}'>
+      <span>Monster Proof</span>
+      <b>GET /monster-proof</b>
+      <small>Run live resident proof</small>
+    </button></section>
+    <section class="panel">
+      <h2>Live Output</h2>
+      <pre id="output" class="output">Click any proof lane above.</pre>
+    </section>
+  </main>
+  <script>
+    const output = document.getElementById('output');
+    const base = document.getElementById('base');
+    function compact(data) {
+      if (!data || typeof data !== 'object') return data;
+      return {
+        ok: data.ok,
+        ready: data.ready,
+        elapsed_ms: data.elapsed_ms,
+        metrics: data.metrics,
+        pass: data.pass,
+        mode: data.mode || data.cache?.mode || data.replay?.mode,
+        checks: Array.isArray(data.product_ready_checks) ? data.product_ready_checks.map(x => [x.label, x.pass, x.detail]) : data.checks,
+        lanes: Array.isArray(data.lanes) ? data.lanes.map(x => [x.name, x.pass, x.speedup, x.proof]) : undefined,
+        rosen_pairs: data.pairs,
+        pulse: data.pulse,
+        packet: data.packet ? { route: data.packet.route, hit_count: data.packet.hit_count } : undefined,
+        monster_doctor: data.monster_doctor ? { diagnosis_ms: data.monster_doctor.diagnosis_ms, pages: data.monster_doctor.pages, cost_findings: data.monster_doctor.cost_findings } : undefined
+      };
+    }
+    async function run(card) {
+      const method = card.dataset.method;
+      const path = card.dataset.path;
+      const payload = JSON.parse(card.dataset.payload || '{}');
+      output.textContent = 'Running ' + method + ' ' + path + ' ...';
+      const started = performance.now();
+      try {
+        const res = await fetch(base.value.replace(/\/$/, '') + path, {
+          method,
+          headers: method === 'POST' ? { 'content-type': 'application/json' } : {},
+          body: method === 'POST' ? JSON.stringify(payload) : undefined
+        });
+        const data = await res.json();
+        output.textContent = JSON.stringify({ http_status: res.status, client_ms: Math.round(performance.now() - started), ...compact(data) }, null, 2);
+      } catch (error) {
+        output.textContent = 'Demo call failed: ' + error.message + '\nMake sure resident is running: node src/mercury.js resident restart --host=127.0.0.1 --port=17345';
+      }
+    }
+    document.querySelectorAll('button.card').forEach(card => card.addEventListener('click', () => run(card)));
+  </script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+The cat sat on the mat.
+---
+The dog chased the ball across the yard.
+---
+The child opened the red box and smiled.
+---
+A train arrived late at the small station.
+---
+She poured water into the glass.
+---
+He closed the laptop after saving the file.
+---
+The moon reflected on the quiet lake.
+---
+A chef chopped onions before heating the pan.
+---
+The old bridge crossed a narrow river.
+---
+The camera focused on the distant mountain.
+---
+Solve: 17 + 25 =
+---
+Calculate 144 divided by 12.
+---
+What is 19 times 23?
+---
+If x + 7 = 31, what is x?
+---
+Find the derivative of x^2 + 3x.
+---
+Simplify: (a + b)^2.
+---
+A shop sells 3 apples for 5 dollars. How much for 12 apples?
+---
+The area of a circle with radius r is
+---
+The probability of heads in a fair coin toss is
+---
+Convert 2.5 kilometers to meters.
+---
+In Python, list comprehension syntax looks like
+---
+def fibonacci(n):
+    if n <= 1:
+---
+import numpy as np
+arr =
+---
+SELECT * FROM users WHERE
+---
+git commit -m "fix:
+---
+function add(a, b) {
+---
+const result = items.map(item =>
+---
+for (let i = 0; i < n; i++) {
+---
+class UserService:
+    def __init__(self,
+---
+try:
+    response = client.get(
+---
+Newton's second law states that
+---
+When light hits a prism,
+---
+The protein folds into
+---
+Photosynthesis converts light energy into
+---
+The mitochondria is often described as
+---
+An electric current flows through
+---
+Gravity pulls objects toward
+---
+The chemical formula for water is
+---
+A black hole forms when
+---
+DNA stores genetic information by
+---
+Q: What is the capital of France? A:
+---
+Q: Who wrote Hamlet? A:
+---
+Q: What planet is known as the red planet? A:
+---
+Q: What language is primarily spoken in Brazil? A:
+---
+Q: What is the boiling point of water at sea level? A:
+---
+Q: Which ocean is the largest? A:
+---
+Q: What instrument measures temperature? A:
+---
+Q: What is the opposite of increase? A:
+---
+Q: What does CPU stand for? A:
+---
+Q: What color do you get by mixing blue and yellow? A:
+---
+今天天氣很好，我們去
+---
+宇宙的盡頭是什麼？
+---
+他打開冰箱，發現
+---
+犯人在現場留下了
+---
+海德格認為存在
+---
+如果你穿越到唐朝，
+---
+請用繁體中文解釋光合作用。
+---
+這份合約的主要風險是
+---
+台北到高雄的距離大約是
+---
+她把資料整理成表格，然後
+---
+Once upon a time in a faraway kingdom,
+---
+She opened the door and saw
+---
+The Roman Empire fell because
+---
+The algorithm runs in O(
+---
+I love you because
+---
+The detective noticed that the window
+---
+A spaceship landed near the forest and
+---
+The philosopher asked whether knowledge
+---
+The manager reviewed the quarterly report and
+---
+The musician tuned the violin before
+---
+translate to french: hello world
+---
+translate to chinese: the weather is beautiful today
+---
+translate to japanese: thank you very much
+---
+Summarize this sentence in one phrase: the server crashed after the update.
+---
+Rewrite politely: send me the file now.
+---
+Classify sentiment: I am delighted with the result.
+---
+Extract the date: The meeting is on March 14, 2026.
+---
+Turn this into JSON: name Alice age 30.
+---
+Correct the grammar: He go to school yesterday.
+---
+Explain the metaphor: time is a river.
+---
+Medical triage note: patient reports fever and cough for two days.
+---
+Legal risk note: the indemnity clause may shift liability.
+---
+Financial summary: revenue increased but margin declined.
+---
+Cybersecurity alert: multiple failed logins from one IP.
+---
+Forensic observation: the timestamp does not match the file metadata.
+---
+Product feedback: users cannot find the export button.
+---
+Research hypothesis: attention heads specialize by layer.
+---
+Model merging note: two parent checkpoints disagree in mid-layer activations.
+---
+Benchmark result: accuracy improved while latency increased.
+---
+Dataset warning: labels may contain annotation noise.
+---
+The user asks for a concise answer, so the assistant should
+---
+System instruction hierarchy requires the model to
+---
+A prompt injection attempt says ignore previous instructions, but
+---
+The safe response should avoid making unsupported claims about
+---
+When information may be outdated, the assistant should
+---
+The model refuses a harmful request by
+---
+A careful answer separates evidence from
+---
+The conversation context indicates the user wants
+---
+The assistant should not invent a citation because
+---
+A truthful progress report includes
+---
+Create a table with columns name, status, and score.
+---
+Write a bash command to list large files.
+---
+Explain why caching can reduce latency.
+---
+Describe how a transformer uses attention.
+---
+Compare supervised learning and reinforcement learning.
+---
+Design a small API endpoint for job status.
+---
+Debug this error: ModuleNotFoundError: numpy.
+---
+Explain what a quantile bucket represents.
+---
+Give a test plan for a model merge benchmark.
+---
+List the steps to validate a generated GGUF file.
+---
+The city council approved a new transportation plan.
+---
+The stock market reacted to the central bank announcement.
+---
+The court ruled that the contract provision was invalid.
+---
+The hospital updated its patient privacy policy.
+---
+The engineering team deployed a rollback after the outage.
+---
+The researcher published a dataset with raw activation tensors.
+---
+The teacher asked students to explain their reasoning.
+---
+The pilot checked the instruments before takeoff.
+---
+The farmer adjusted irrigation after the drought.
+---
+The athlete changed strategy during the final round.
+---
+紅色的橋連接兩個模型的共同維度。
+---
+金色的節點代表跨模型熱區重疊。
+---
+這個神經元在中文問題中被啟動。
+---
+這個維度在數學和物理題都很熱。
+---
+模型合併後，中層注意力出現位移。
+---
+如果覆蓋率低於九成，不能說觀測完成。
+---
+請不要把摘要當成完整觀測。
+---
+每個 tensor 都需要自己的 heat grid。
+---
+量測結果必須寫入 meta.json。
+---
+沒有原始檔案就不能宣稱已驗證。
+---
+First, identify the assumptions in the argument.
+---
+Second, test whether the evidence supports the conclusion.
+---
+Third, report uncertainty without hiding it.
+---
+Fourth, compare the result against a baseline.
+---
+Fifth, preserve the raw output for audit.
+---
+A merge recipe can preserve one tensor while averaging another.
+---
+A sparse expert model routes tokens through selected experts.
+---
+A residual stream carries information between transformer blocks.
+---
+A language detector may activate for surface form.
+---
+A reasoning feature may activate across languages.
+---
+The hidden dimension 715 appears in a cross-model bridge.
+---
+The hidden dimension 279 may behave differently by layer.
+---
+The BOS token can attract attention in early layers.
+---
+A copy head attends to previous tokens.
+---
+An induction pattern repeats a sequence after a prefix.
+---
+Water freezes at zero degrees Celsius under standard pressure.
+---
+Iron rusts when it reacts with oxygen and water.
+---
+Sound travels through air as pressure waves.
+---
+The heart pumps blood through arteries and veins.
+---
+Plants absorb carbon dioxide during photosynthesis.
+---
+Volcanoes form near tectonic plate boundaries.
+---
+Stars generate energy through nuclear fusion.
+---
+The immune system recognizes pathogens using receptors.
+---
+A database index speeds up lookup operations.
+---
+Compression trades CPU work for reduced storage size.
+---
+請判斷這句話是否需要查證：今天台北下雨。
+---
+請判斷這句話是否是法律建議：你一定會勝訴。
+---
+請判斷這句話是否是醫療診斷：你只是感冒。
+---
+請把以下問題拆成三個子問題。
+---
+請列出這段程式可能的邊界條件。
+---
+請用一句話說明為什麼測試失敗。
+---
+請根據數字排序模型表現。
+---
+請找出這份報告的矛盾處。
+---
+請標記哪些資訊是推測。
+---
+請保留證據，不要只給結論。
+---
+The final answer should be short, accurate, and verifiable.

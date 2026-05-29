@@ -1,0 +1,219 @@
+{
+  "schema": "mercury-installer-manifest-v1",
+  "created_at": "2026-05-19T03:35:04.067Z",
+  "product": {
+    "name": "Neuron Mercury",
+    "version": "0.1.0",
+    "claim": "Local computer nervous system for measurable first-useful acceleration.",
+    "public_hook": "100,000,000 virtual neurons, sparse activation, one-click boost."
+  },
+  "scale": {
+    "target_neurons": 100000000,
+    "physical_seed_neurons": 1000,
+    "virtual_shard_size": 4096,
+    "virtual_shard_count": 24415,
+    "catalog_to_target_ratio": "1:100000",
+    "execution_rule": "virtual shards are metadata until routing proves they should wake; hot path stays sparse"
+  },
+  "runtime_gate": {
+    "ready": false,
+    "checks": [
+      {
+        "id": "node",
+        "pass": true,
+        "detail": "v25.9.0"
+      },
+      {
+        "id": "resident_reflex",
+        "pass": false,
+        "detail": 86910
+      },
+      {
+        "id": "resident_slow_worker",
+        "pass": true,
+        "detail": "deferred by low-impact mode"
+      },
+      {
+        "id": "runtime_low_impact",
+        "pass": true,
+        "detail": "low-impact / disk=strict"
+      },
+      {
+        "id": "product_dashboard",
+        "pass": false,
+        "detail": "12/13"
+      },
+      {
+        "id": "qwer_plan",
+        "pass": true,
+        "detail": "reflex_queue_only"
+      },
+      {
+        "id": "uma_pages",
+        "pass": true,
+        "detail": "181 pages"
+      },
+      {
+        "id": "rosen_pairs",
+        "pass": true,
+        "detail": "71 pairs"
+      },
+      {
+        "id": "neuron_placement",
+        "pass": true,
+        "detail": "1000 placed"
+      },
+      {
+        "id": "qwen_3060_cold_start",
+        "pass": true,
+        "detail": "5.91x cold"
+      },
+      {
+        "id": "qwen_3060_hot_cache",
+        "pass": true,
+        "detail": "0.113ms"
+      },
+      {
+        "id": "windows_3060_product_proof",
+        "pass": true,
+        "detail": "5.91x cold, disk 99.8%+"
+      },
+      {
+        "id": "paper_suite",
+        "pass": true,
+        "detail": "8/8"
+      },
+      {
+        "id": "launch_suite",
+        "pass": false,
+        "detail": "5/6"
+      }
+    ],
+    "services": [
+      {
+        "name": "reflex",
+        "pid": 86910,
+        "running": false,
+        "log": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/resident/reflex.log"
+      },
+      {
+        "name": "slow-worker",
+        "pid": null,
+        "running": false,
+        "log": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/resident/slow-worker.log"
+      }
+    ],
+    "model_hot_path": "forbidden"
+  },
+  "speedometer_source": {
+    "latest_boost_ready": false,
+    "reference_type": "first_materialization_measurement",
+    "reference_ms": 1817,
+    "mercury_ms": 1817,
+    "speedup": 1,
+    "rule": "display measured same-workflow replay or measured first-materialization only; no hardcoded investor speedups"
+  },
+  "installer_targets": {
+    "mac": {
+      "artifact": "Neuron Mercury.dmg",
+      "entrypoint": "npm run product:start",
+      "background_service": "resident control plane",
+      "status_command": "npm run product:status"
+    },
+    "windows": {
+      "artifact": "Neuron Mercury Setup.exe",
+      "entrypoint": "npm run product:start",
+      "background_service": "resident control plane + Qwer/WSL policy",
+      "status_command": "npm run product:status"
+    }
+  },
+  "hardware_policy": {
+    "cpu": {
+      "model": "Apple M1 Pro",
+      "logical": 8,
+      "loadavg": [
+        11.478515625,
+        11.21923828125,
+        12.32958984375
+      ]
+    },
+    "gpu_state": "unknown",
+    "provider_priority": [],
+    "rule": "CPU/reflex/UMA first; GPU and local LLM are slow-path substrates unless benchmarks prove otherwise"
+  },
+  "disclosure_policy": {
+    "public_pages": [
+      "docs/investor-brief.html",
+      "docs/product-dashboard.html",
+      "docs/product-boost-latest.html"
+    ],
+    "private_proof": [
+      "docs/mercury-universe-map.json",
+      "docs/rosen-proof-report.json",
+      "var/shards/registry.json",
+      "var/memory-graph/events.jsonl"
+    ],
+    "rule": "public pages show outcomes and hooks; internal maps stay private for investor Q&A"
+  },
+  "shard_registry_preview": [
+    {
+      "family": "goal-shards",
+      "physical_neurons": 134,
+      "virtual_shards": 3488,
+      "primary_substrates": [
+        "cpu.l1_hot_path"
+      ]
+    },
+    {
+      "family": "surface-shards",
+      "physical_neurons": 191,
+      "virtual_shards": 3488,
+      "primary_substrates": [
+        "memory.cache",
+        "cpu.process_pool"
+      ]
+    },
+    {
+      "family": "risk-shards",
+      "physical_neurons": 211,
+      "virtual_shards": 3488,
+      "primary_substrates": [
+        "cpu.l1_hot_path"
+      ]
+    },
+    {
+      "family": "patch-shards",
+      "physical_neurons": 196,
+      "virtual_shards": 3488,
+      "primary_substrates": [
+        "memory.cache",
+        "cpu.l1_hot_path"
+      ]
+    },
+    {
+      "family": "verify-shards",
+      "physical_neurons": 132,
+      "virtual_shards": 3488,
+      "primary_substrates": [
+        "cpu.process_pool",
+        "cpu.l1_hot_path"
+      ]
+    },
+    {
+      "family": "speed-shards",
+      "physical_neurons": 68,
+      "virtual_shards": 3488,
+      "primary_substrates": [
+        "memory.cache"
+      ]
+    },
+    {
+      "family": "memory-shards",
+      "physical_neurons": 68,
+      "virtual_shards": 3487,
+      "primary_substrates": [
+        "disk.append_log"
+      ]
+    }
+  ]
+}

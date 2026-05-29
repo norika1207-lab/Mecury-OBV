@@ -1,0 +1,166 @@
+{
+  "schema": "mercury-rosen-pair-v1",
+  "id": "292ad36e9b5be82cd0315993",
+  "created_at": "2026-05-28T01:08:10.102Z",
+  "updated_at": "2026-05-28T01:08:10.102Z",
+  "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+  "kind": "state_field_pair",
+  "task": "watch var/bench/rosen-pair/sentinel_state.js for provider spend latency state changes through rosen pair",
+  "local_neuron": {
+    "id": "local:292ad36e9b5be82cd0315993",
+    "role": "mirror_state_and_route",
+    "activation": "correction_pulse",
+    "cost": "constant_time_digest_read"
+  },
+  "remote_neuron": {
+    "id": "remote:292ad36e9b5be82cd0315993",
+    "role": "resident_project_sentinel",
+    "location": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury",
+    "activation": "pulse_on_delta"
+  },
+  "state": {
+    "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+    "task_signature": "b955020f8987e4f110d53a63",
+    "target_files": [
+      "var/bench/rosen-pair/sentinel_state.js"
+    ],
+    "risk_families": [
+      "provider_spend",
+      "latency_hot_path",
+      "memory_route"
+    ],
+    "source_digest": "99219269385b6beb350c03c8",
+    "sources": [
+      {
+        "file": "var/bench/rosen-pair/sentinel_state.js",
+        "size": 131,
+        "mtimeMs": 1779930490095,
+        "contentHash": "04ff1077dbb9c960e1f6c22b"
+      }
+    ],
+    "rosen_selected": 8,
+    "top_bridges": [
+      {
+        "to": "tool:spend-guard+cost-scan",
+        "type": "accelerated_by",
+        "source": "static_family",
+        "score": 1,
+        "risk": "medium"
+      },
+      {
+        "to": "memory:monster_doctor:9fb9df521206aaaf236693f5",
+        "type": "distilled_from",
+        "source": "memory_graph",
+        "score": 1,
+        "risk": "low"
+      },
+      {
+        "to": "guard:hot-path-budget",
+        "type": "blocked_by",
+        "source": "static_family",
+        "score": 1,
+        "risk": "medium"
+      },
+      {
+        "to": "memory:rosen_pair_pulse:47f080ff005d2a7352145b73",
+        "type": "similar_to",
+        "source": "memory_graph",
+        "score": 1,
+        "risk": "low"
+      },
+      {
+        "to": "memory:rosen_route:c5d0c85a66886240215faebe",
+        "type": "similar_to",
+        "source": "memory_graph",
+        "score": 1,
+        "risk": "low"
+      },
+      {
+        "to": "memory:rosen_route:fa9cda11ee96a3a3a631a232",
+        "type": "similar_to",
+        "source": "memory_graph",
+        "score": 1,
+        "risk": "low"
+      },
+      {
+        "to": "neuron:risk.cost+judge",
+        "type": "verified_by",
+        "source": "static_family",
+        "score": 1,
+        "risk": "medium"
+      },
+      {
+        "to": "tool:code-cortex+uma-target-file-first",
+        "type": "accelerated_by",
+        "source": "static_family",
+        "score": 1,
+        "risk": "low"
+      }
+    ],
+    "route_state_digest": "450b22c1c467883632ad224f",
+    "shared_state_digest": "736fcac0b74afc92a54af864"
+  },
+  "shared_state_digest": "736fcac0b74afc92a54af864",
+  "prior_digest": "33bd3bb8f5cd880927205dc5",
+  "changed": true,
+  "pulse": {
+    "mode": "correction_pulse",
+    "zero_wait_claim": "software_pre_synchronization_not_physics_signaling",
+    "reason": "state_delta_detected",
+    "budget_ms": 8,
+    "route_selected": 8
+  },
+  "mirror": {
+    "confidence": 0.88,
+    "risk_families": [
+      "provider_spend",
+      "latency_hot_path",
+      "memory_route"
+    ],
+    "target_files": [
+      "var/bench/rosen-pair/sentinel_state.js"
+    ],
+    "top_bridges": [
+      {
+        "to": "tool:spend-guard+cost-scan",
+        "type": "accelerated_by",
+        "source": "static_family",
+        "score": 1,
+        "risk": "medium"
+      },
+      {
+        "to": "memory:monster_doctor:9fb9df521206aaaf236693f5",
+        "type": "distilled_from",
+        "source": "memory_graph",
+        "score": 1,
+        "risk": "low"
+      },
+      {
+        "to": "guard:hot-path-budget",
+        "type": "blocked_by",
+        "source": "static_family",
+        "score": 1,
+        "risk": "medium"
+      },
+      {
+        "to": "memory:rosen_pair_pulse:47f080ff005d2a7352145b73",
+        "type": "similar_to",
+        "source": "memory_graph",
+        "score": 1,
+        "risk": "low"
+      },
+      {
+        "to": "memory:rosen_route:c5d0c85a66886240215faebe",
+        "type": "similar_to",
+        "source": "memory_graph",
+        "score": 1,
+        "risk": "low"
+      }
+    ]
+  },
+  "route_summary": {
+    "selected_count": 8,
+    "candidates": 13,
+    "elapsed_ms": 5
+  }
+}

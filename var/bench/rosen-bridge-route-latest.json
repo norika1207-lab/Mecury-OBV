@@ -1,0 +1,15 @@
+{
+  "schema": "mercury-bench-rosen-bridge-route-v1",
+  "created_at": "2026-05-28T01:08:10.001Z",
+  "namespace": "bench-rosen-694f50db6d4fe8c1e849d17b",
+  "target": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/bench/rosen-cortex/provider_spend_loop.js",
+  "elapsed_ms": 29,
+  "selected_count": 8,
+  "has_spend_family": true,
+  "has_spend_tool_bridge": true,
+  "has_uma_bridge": true,
+  "has_probe_plan": true,
+  "within_budget": true,
+  "pass": true,
+  "latest_route": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/rosen-cortex/latest-route.json"
+}

@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Progress</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1110;
+      --panel: #151a18;
+      --panel-2: #1b221f;
+      --line: #32413a;
+      --text: #eef4ef;
+      --muted: #9fb1a7;
+      --green: #5ee08d;
+      --cyan: #70d6d1;
+      --gold: #f2c56b;
+      --red: #ff7c74;
+      --ink: #09100c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(94, 224, 141, 0.14), transparent 30rem),
+        radial-gradient(circle at 80% 10%, rgba(112, 214, 209, 0.12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: var(--cyan); }
+    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      min-height: 86vh;
+      display: grid;
+      align-items: center;
+      padding: 56px 0 28px;
+    }
+    .eyebrow {
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 {
+      max-width: 980px;
+      margin: 0;
+      font-size: clamp(40px, 7vw, 86px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 860px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2.2vw, 24px);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 28px;
+      align-items: end;
+    }
+    .status-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 34px;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      background: rgba(21, 26, 24, 0.82);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 96px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--green);
+    }
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .neural-panel {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(27, 34, 31, 0.92), rgba(12, 17, 15, 0.92));
+      border-radius: 8px;
+      padding: 18px;
+      min-height: 360px;
+      position: relative;
+      overflow: hidden;
+    }
+    .neural-panel svg { width: 100%; height: 320px; display: block; }
+    .node { fill: var(--panel-2); stroke: var(--green); stroke-width: 2; }
+    .node.alt { stroke: var(--cyan); }
+    .node.warn { stroke: var(--gold); }
+    .edge { stroke: rgba(159, 177, 167, 0.48); stroke-width: 2; }
+    .node-text { fill: var(--text); font-size: 12px; font-weight: 800; text-anchor: middle; }
+    section { padding: 42px 0; }
+    h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      letter-spacing: 0;
+    }
+    .section-note {
+      color: var(--muted);
+      max-width: 880px;
+      margin: 0 0 24px;
+      font-size: 17px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(21, 26, 24, 0.9);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    .card p, .card li { color: var(--muted); }
+    .card p { margin: 0; }
+    ul { margin: 10px 0 0; padding-left: 18px; }
+    li { margin: 6px 0; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 10px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+      font-size: 13px;
+    }
+    .badge.good { color: var(--ink); background: var(--green); border-color: var(--green); font-weight: 800; }
+    .badge.warn { color: var(--ink); background: var(--gold); border-color: var(--gold); font-weight: 800; }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .step {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 132px;
+    }
+    .step b { display: block; margin-bottom: 6px; }
+    .step small { color: var(--muted); }
+    .progress-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 180px 1fr 120px;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid var(--line);
+      background: rgba(21, 26, 24, 0.82);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .row .name { font-weight: 800; }
+    .row .desc { color: var(--muted); }
+    .row .state { text-align: right; color: var(--green); font-weight: 800; }
+    pre {
+      margin: 0;
+      overflow: auto;
+      white-space: pre-wrap;
+      border: 1px solid var(--line);
+      background: #080c0a;
+      color: #d9f4df;
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 13px;
+    }
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .phase {
+      border-top: 4px solid var(--green);
+      background: rgba(21, 26, 24, 0.9);
+      border-radius: 8px;
+      padding: 16px;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .phase:nth-child(2) { border-top-color: var(--cyan); }
+    .phase:nth-child(3) { border-top-color: var(--gold); }
+    .phase:nth-child(4) { border-top-color: var(--red); }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 28px 0 48px;
+      margin-top: 36px;
+    }
+    @media (max-width: 900px) {
+      .hero-grid, .grid.two, .grid, .roadmap { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .status-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .row { grid-template-columns: 1fr; }
+      .row .state { text-align: left; }
+    }
+    @media (max-width: 520px) {
+      .flow, .status-strip { grid-template-columns: 1fr; }
+      header { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Neuron Mercury / acceleration control plane</div>
+        <h1>讓電腦長出神經系統，而不是只做一張快取報表。</h1>
+        <p class="lead">目前版本把「加速」定義成 time-to-first-useful-signal：先用反射、UMA/RAG、Code Cortex、工具肌肉與慢腦蒸餾把答案推到使用者面前，再把慢路徑學成下一次的快速反射。</p>
+        <div class="status-strip">
+          <div class="stat"><strong>100</strong><span>VPS nervous-system readiness score</span></div>
+          <div class="stat"><strong>200</strong><span>physical neuron catalog</span></div>
+          <div class="stat"><strong>24,415</strong><span>virtual shards for 100M-neuron target</span></div>
+          <div class="stat"><strong>pass</strong><span>night runner round 1 on commit c670615</span></div>
+        </div>
+      </div>
+      <div class="neural-panel" aria-label="Neuron Mercury architecture diagram">
+        <svg viewBox="0 0 420 330" role="img">
+          <line class="edge" x1="210" y1="42" x2="82" y2="126"></line>
+          <line class="edge" x1="210" y1="42" x2="210" y2="126"></line>
+          <line class="edge" x1="210" y1="42" x2="338" y2="126"></line>
+          <line class="edge" x1="82" y1="126" x2="142" y2="224"></line>
+          <line class="edge" x1="210" y1="126" x2="210" y2="224"></line>
+          <line class="edge" x1="338" y1="126" x2="278" y2="224"></line>
+          <line class="edge" x1="142" y1="224" x2="210" y2="288"></line>
+          <line class="edge" x1="210" y1="224" x2="210" y2="288"></line>
+          <line class="edge" x1="278" y1="224" x2="210" y2="288"></line>
+          <circle class="node" cx="210" cy="42" r="38"></circle>
+          <text class="node-text" x="210" y="38">Task</text><text class="node-text" x="210" y="54">Router</text>
+          <circle class="node alt" cx="82" cy="126" r="42"></circle>
+          <text class="node-text" x="82" y="122">Reflex</text><text class="node-text" x="82" y="138">Arc</text>
+          <circle class="node" cx="210" cy="126" r="42"></circle>
+          <text class="node-text" x="210" y="122">UMA</text><text class="node-text" x="210" y="138">RAG</text>
+          <circle class="node alt" cx="338" cy="126" r="42"></circle>
+          <text class="node-text" x="338" y="122">Code</text><text class="node-text" x="338" y="138">Cortex</text>
+          <circle class="node" cx="142" cy="224" r="42"></circle>
+          <text class="node-text" x="142" y="220">200</text><text class="node-text" x="142" y="236">Neurons</text>
+          <circle class="node warn" cx="210" cy="224" r="42"></circle>
+          <text class="node-text" x="210" y="220">Slow</text><text class="node-text" x="210" y="236">Brain</text>
+          <circle class="node" cx="278" cy="224" r="42"></circle>
+          <text class="node-text" x="278" y="220">Tool</text><text class="node-text" x="278" y="236">Muscle</text>
+          <circle class="node alt" cx="210" cy="288" r="34"></circle>
+          <text class="node-text" x="210" y="286">First</text><text class="node-text" x="210" y="302">Signal</text>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>核心設計</h2>
+        <p class="section-note">Mercury 不是把所有問題都丟給 LLM。它先像神經反射一樣判斷：能不能用快取、確定性工具、專案記憶、symbol table、已驗證 workflow 直接得到第一個有用訊號。</p>
+        <div class="flow">
+          <div class="step"><b>1. Sensory Layer</b><small>讀 host、CPU、記憶體、GPU、provider、spend guard、repo 狀態。</small></div>
+          <div class="step"><b>2. Reflex Arc</b><small>exact cache、semantic cache、已蒸餾答案與低風險快速回覆。</small></div>
+          <div class="step"><b>3. Synapse Memory</b><small>project UMA namespace、RAG pages、hot pages、task memory、provider cache。</small></div>
+          <div class="step"><b>4. Neuron Map</b><small>200 個實體神經元，分到 goal、surface、risk、verify、memory、synthesis 等 lanes。</small></div>
+          <div class="step"><b>5. Muscle Layer</b><small>CLI、resident HTTP、doctor、monster-doctor、accelerate-task、bench runner。</small></div>
+          <div class="step"><b>6. Slow Brain</b><small>Qwen/Ollama/frontier model 只做慢路徑與蒸餾，不准卡住 hot path。</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>目前程式架構</h2>
+        <p class="section-note">目前仍是單 repo、單 Node CLI 為核心，但已經拆出清楚 runtime surface。下一步才適合把高風險模組抽成 package 或 workers。</p>
+        <div class="grid">
+          <div class="card">
+            <h3>src/mercury.js</h3>
+            <p>主執行體。包含 CLI、resident server、UMA/RAG、Code Cortex、runtime detector、reflex cache、slow worker、benchmark、doctor 與 control plane。</p>
+            <div class="badge-row"><span class="badge good">active</span><span class="badge">hot path guarded</span></div>
+          </div>
+          <div class="card">
+            <h3>src/neurons.json</h3>
+            <p>200 個 neuron catalog。包含 intent、retrieval、risk、decompose、explore、analyze、verify、accelerate、memory、critic、safety、compression、synthesis。</p>
+            <div class="badge-row"><span class="badge good">500 neurons</span><span class="badge">scored lanes</span></div>
+          </div>
+          <div class="card">
+            <h3>scripts/night-runner.sh</h3>
+            <p>12 小時長跑驗證。涵蓋 RAG、UMA、project isolation、resident、Qwer plan、spend guard、AFU/Lobster practical bench、nervous-system bench。</p>
+            <div class="badge-row"><span class="badge good">round 1 pass</span><span class="badge">auto guard</span></div>
+          </div>
+          <div class="card">
+            <h3>var/uma</h3>
+            <p>專案級 UMA namespace、semantic pages、source table、hot page cache、coherence guard。避免 self memory 污染 AFU/Lobster。</p>
+            <div class="badge-row"><span class="badge good">168 VPS pages</span><span class="badge">85 symbols</span></div>
+          </div>
+          <div class="card">
+            <h3>var/llm-cache + slow-jobs</h3>
+            <p>local Qwen/Ollama 與慢模型的避讓層。第一次慢回答可蒸餾成 cache/reflex；沒有 provider 時不硬跑。</p>
+            <div class="badge-row"><span class="badge good">142 qwen cache</span><span class="badge">670 seeded jobs</span></div>
+          </div>
+          <div class="card">
+            <h3>resident HTTP</h3>
+            <p>常駐控制面：/speed-state、/nervous-system、/qwer-speed-plan、/cold-start、/accelerate-task、/uma/search、/reflex。</p>
+            <div class="badge-row"><span class="badge good">7 endpoints</span><span class="badge">bench pass</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>已完成進度</h2>
+        <div class="progress-list">
+          <div class="row"><div class="name">Reflex Cache</div><div class="desc">重複意圖、低風險固定回答、resident lookup 走毫秒級回覆。</div><div class="state">done</div></div>
+          <div class="row"><div class="name">Project UMA/RAG</div><div class="desc">依專案建立 namespace、pages、file table、hot pages，並做 isolation bench。</div><div class="state">done</div></div>
+          <div class="row"><div class="name">Code Cortex</div><div class="desc">建立 function/class/route/CLI metadata，讓診斷先找 symbol，不整包塞給模型。</div><div class="state">done</div></div>
+          <div class="row"><div class="name">200 Neurons</div><div class="desc">從 60 擴到 200，並建立 control map、lane dispatch、score routing。</div><div class="state">done</div></div>
+          <div class="row"><div class="name">100M Scale Plan</div><div class="desc">100,000,000 目標不採用一 neuron 一 process，而是 24,415 virtual shards。</div><div class="state">done</div></div>
+          <div class="row"><div class="name">Cold Start Acceleration</div><div class="desc">第一代不是假快取 replay，而是先產生 UMA evidence packet、section split、slow job distillation。</div><div class="state">v1</div></div>
+          <div class="row"><div class="name">Spend Guard</div><div class="desc">掃描 paid provider、loop paid runtime、Anthropic/OpenAI 類成本風險，避免隱形扣款。</div><div class="state">done</div></div>
+          <div class="row"><div class="name">AFU/Lobster Practical Bench</div><div class="desc">AFU 與 Lobster 各自 refresh namespace，monster-doctor 與 spend guard 進夜跑。</div><div class="state">done</div></div>
+          <div class="row"><div class="name">Bionic Control Plane</div><div class="desc">新增 nervous-system CLI/API，把「電腦神經與肌肉」變成可查詢狀態。</div><div class="state">done</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>目前真實狀態</h2>
+        <p class="section-note">這裡刻意不把 cache replay 包裝成 cold-start generation。已經快的是「找訊號、路由、檢索、診斷、重複意圖、工具調度」。還在做的是「第一次長文/第一次大型生成」的真正加速。</p>
+        <div class="grid two">
+          <div class="card">
+            <h3>VPS nervous-system snapshot</h3>
+            <ul>
+              <li>readiness_score: 100</li>
+              <li>reflex cache entries: 1087</li>
+              <li>UMA pages: 168</li>
+              <li>symbols: 85</li>
+              <li>hot pages: 4</li>
+              <li>qwen provider cache: 142</li>
+              <li>model hot path: forbidden</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Verified resident bench</h3>
+            <ul>
+              <li>seed_http: 66ms</li>
+              <li>warmup_http: 6ms</li>
+              <li>qwer_plan_http: 40ms</li>
+              <li>cold_start_http: 20ms</li>
+              <li>lookup avg: 0.813ms</li>
+              <li>cached lookup avg: 0.188ms</li>
+              <li>speed budget: pass</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Code Surface</h2>
+        <p class="section-note">目前最重要的 public commands 與 HTTP surfaces。它們是之後把 Mercury 接進 Windows/Qwer laptop、AFU、Lobster、其他 agent 的肌肉接口。</p>
+        <pre>node src/mercury.js nervous-system --json
+node src/mercury.js speed-state --json
+node src/mercury.js accelerate-task --task="find hidden provider spend loops"
+node src/mercury.js cold-start-accelerate --task="first useful diagnosis before model"
+node src/mercury.js first-gen-accelerate --task="generate first report with UMA evidence packets"
+node src/mercury.js monster-doctor --path=/root
+node src/mercury.js spend-guard --path=/root
+node src/mercury.js code-cortex --path=.
+node src/mercury.js scale-plan --target=100000000
+node src/mercury.js shards --target=100000000
+
+GET  /speed-state
+GET  /nervous-system
+GET  /qwer-speed-plan
+GET  /cold-start
+POST /accelerate-task
+GET  /uma/search
+GET  /reflex</pre>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>後續開發進度</h2>
+        <div class="roadmap">
+          <div class="phase">
+            <h3>Phase 2A: 真冷啟動加速</h3>
+            <ul>
+              <li>first-gen 不是只切 sections，要能把 evidence packet 直接轉為可交付草稿。</li>
+              <li>建立 draft quality judge，不讓快速草稿變成低品質輸出。</li>
+              <li>把 slow model 結果自動蒸餾成 reusable route、reflex、UMA lesson。</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <h3>Phase 2B: Windows/Qwer Laptop</h3>
+            <ul>
+              <li>在 NVIDIA 筆電建立 resident control plane。</li>
+              <li>Qwer/Ollama 走 slow refresh，前台只用 reflex/UMA/tool kernels。</li>
+              <li>game/low-power mode：玩遊戲時禁止 broad scan 與模型 hot path。</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <h3>Phase 2C: Distributed Neurons</h3>
+            <ul>
+              <li>把 lane dispatch 接成 worker pool，不是排隊假並行。</li>
+              <li>remote VPS/LAN shards 做 non-blocking exploration。</li>
+              <li>score ledger 直接影響下一輪 neuron activation。</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <h3>Phase 2D: Security Muscle</h3>
+            <ul>
+              <li>把 monster-doctor 擴到安全診斷：secret、auth、XSS、billing、permission、supply chain。</li>
+              <li>只做防禦與 owner-approved scope，不碰未授權攻擊。</li>
+              <li>安全發現寫回 UMA，變成下次的快速防禦反射。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>判斷標準</h2>
+        <div class="grid two">
+          <div class="card">
+            <h3>算真正加速</h3>
+            <ul>
+              <li>更快找到第一個有用問題定位。</li>
+              <li>少呼叫模型、少重掃檔案、少重複上下文。</li>
+              <li>第一次任務也能靠 UMA/RAG/工具並行縮短等待。</li>
+              <li>使用後的結果會寫回，下一次更快。</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>不算真正加速</h3>
+            <ul>
+              <li>只把已生成內容從 cache 拿出來，卻宣稱冷啟動快百萬倍。</li>
+              <li>啟動更多神經元但讓 hot path 變慢。</li>
+              <li>跨專案污染 UMA 記憶。</li>
+              <li>用模型呼叫遮掩 deterministic tool 可以解的問題。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Last updated: 2026-05-18 10:35 Asia/Taipei. Commit baseline: c670615. Public page is a static deployment snapshot; live control data remains inside the Mercury resident service.
+    </div>
+  </footer>
+</body>
+</html>

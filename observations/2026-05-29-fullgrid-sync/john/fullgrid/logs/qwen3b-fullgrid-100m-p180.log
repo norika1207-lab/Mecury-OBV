@@ -1,0 +1,74 @@
+[fullgrid] load tokenizer /Users/john/hf-qwen3b
+[fullgrid] load model /Users/john/hf-qwen3b device=mps dtype=float16
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights:  27%|██▋       | 119/434 [00:00<00:00, 1188.90it/s]Loading weights:  60%|██████    | 262/434 [00:00<00:00, 1330.55it/s]Loading weights:  92%|█████████▏| 401/434 [00:00<00:00, 1341.72it/s]Loading weights: 100%|██████████| 434/434 [00:00<00:00, 1367.15it/s]
+[fullgrid] modules=253 channels=1,184,128 Q=10 S=10 cells=118,412,800
+[fullgrid] pass1 calibration probes=166
+[fullgrid] calibration 5/166 elapsed=4s
+[fullgrid] calibration 10/166 elapsed=5s
+[fullgrid] calibration 15/166 elapsed=6s
+[fullgrid] calibration 20/166 elapsed=7s
+[fullgrid] calibration 25/166 elapsed=8s
+[fullgrid] calibration 30/166 elapsed=9s
+[fullgrid] calibration 35/166 elapsed=10s
+[fullgrid] calibration 40/166 elapsed=11s
+[fullgrid] calibration 45/166 elapsed=12s
+[fullgrid] calibration 50/166 elapsed=12s
+[fullgrid] calibration 55/166 elapsed=12s
+[fullgrid] calibration 60/166 elapsed=13s
+[fullgrid] calibration 65/166 elapsed=13s
+[fullgrid] calibration 70/166 elapsed=14s
+[fullgrid] calibration 75/166 elapsed=14s
+[fullgrid] calibration 80/166 elapsed=15s
+[fullgrid] calibration 85/166 elapsed=15s
+[fullgrid] calibration 90/166 elapsed=16s
+[fullgrid] calibration 95/166 elapsed=16s
+[fullgrid] calibration 100/166 elapsed=17s
+[fullgrid] calibration 105/166 elapsed=17s
+[fullgrid] calibration 110/166 elapsed=18s
+[fullgrid] calibration 115/166 elapsed=18s
+[fullgrid] calibration 120/166 elapsed=19s
+[fullgrid] calibration 125/166 elapsed=19s
+[fullgrid] calibration 130/166 elapsed=20s
+[fullgrid] calibration 135/166 elapsed=20s
+[fullgrid] calibration 140/166 elapsed=20s
+[fullgrid] calibration 145/166 elapsed=21s
+[fullgrid] calibration 150/166 elapsed=21s
+[fullgrid] calibration 155/166 elapsed=22s
+[fullgrid] calibration 160/166 elapsed=22s
+[fullgrid] calibration 165/166 elapsed=23s
+[fullgrid] pass2 heat fill
+[fullgrid] heat 5/166 elapsed=80s
+[fullgrid] heat 10/166 elapsed=84s
+[fullgrid] heat 15/166 elapsed=89s
+[fullgrid] heat 20/166 elapsed=93s
+[fullgrid] heat 25/166 elapsed=98s
+[fullgrid] heat 30/166 elapsed=102s
+[fullgrid] heat 35/166 elapsed=106s
+[fullgrid] heat 40/166 elapsed=110s
+[fullgrid] heat 45/166 elapsed=115s
+[fullgrid] heat 50/166 elapsed=120s
+[fullgrid] heat 55/166 elapsed=124s
+[fullgrid] heat 60/166 elapsed=128s
+[fullgrid] heat 65/166 elapsed=132s
+[fullgrid] heat 70/166 elapsed=137s
+[fullgrid] heat 75/166 elapsed=141s
+[fullgrid] heat 80/166 elapsed=146s
+[fullgrid] heat 85/166 elapsed=150s
+[fullgrid] heat 90/166 elapsed=155s
+[fullgrid] heat 95/166 elapsed=159s
+[fullgrid] heat 100/166 elapsed=164s
+[fullgrid] heat 105/166 elapsed=168s
+[fullgrid] heat 110/166 elapsed=173s
+[fullgrid] heat 115/166 elapsed=177s
+[fullgrid] heat 120/166 elapsed=182s
+[fullgrid] heat 125/166 elapsed=186s
+[fullgrid] heat 130/166 elapsed=191s
+[fullgrid] heat 135/166 elapsed=195s
+[fullgrid] heat 140/166 elapsed=200s
+[fullgrid] heat 145/166 elapsed=205s
+[fullgrid] heat 150/166 elapsed=209s
+[fullgrid] heat 155/166 elapsed=214s
+[fullgrid] heat 160/166 elapsed=218s
+[fullgrid] heat 165/166 elapsed=223s
+[fullgrid] DONE qwen3b-fullgrid-100m-p180 cells=118,412,800 nonzero=103,111,986 coverage=87.078412%

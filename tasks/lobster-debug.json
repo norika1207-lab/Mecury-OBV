@@ -1,0 +1,31 @@
+{
+  "name": "lobster-debug-v0.1",
+  "description": "First fixed benchmark suite for Neuron Mercury against the Lobster repo.",
+  "tasks": [
+    {
+      "id": "lobster-agent-runtime-risk",
+      "task": "analyze lobster-agent.js for sqlite busy timeout risk, blocking calls, retry loops, and slow API paths",
+      "expected_targets": ["lobster-agent.js"]
+    },
+    {
+      "id": "lobster-stock-api-risk",
+      "task": "analyze lobster-stock-agent.js for network timeout risk, retry loops, token exposure, and slow API paths",
+      "expected_targets": ["lobster-stock-agent.js"]
+    },
+    {
+      "id": "lobster-commenter-queue-risk",
+      "task": "analyze lobster-brain-commenter.js for queue pressure, blocking calls, retry loops, and posting risk",
+      "expected_targets": ["lobster-brain-commenter.js"]
+    },
+    {
+      "id": "lobster-zeus-safety-risk",
+      "task": "analyze lobster-zeus.js for external action safety gate risk, blocking calls, and token exposure",
+      "expected_targets": ["lobster-zeus.js"]
+    },
+    {
+      "id": "lobster-readme-report-boost",
+      "task": "analyze LOBSTER_README.md for report boost architecture extraction, evidence packet quality, and missing verification paths",
+      "expected_targets": ["LOBSTER_README.md"]
+    }
+  ]
+}

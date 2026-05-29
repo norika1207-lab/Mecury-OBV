@@ -1,0 +1,219 @@
+{
+  "schema": "mercury-rosen-route-v1",
+  "created_at": "2026-05-28T01:08:10.100Z",
+  "mode": "rosen_route",
+  "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+  "cwd": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury",
+  "task": "watch var/bench/rosen-pair/sentinel_state.js for provider spend latency state changes through rosen pair",
+  "entry": {
+    "task": "watch var/bench/rosen-pair/sentinel_state.js for provider spend latency state changes through rosen pair",
+    "tokens": [
+      "watch",
+      "var",
+      "bench",
+      "rosen-pair",
+      "sentinel",
+      "state",
+      "js",
+      "for",
+      "provider",
+      "spend",
+      "latency",
+      "changes",
+      "through",
+      "rosen",
+      "pair"
+    ],
+    "target_files": [
+      "var/bench/rosen-pair/sentinel_state.js"
+    ],
+    "risk_families": [
+      {
+        "id": "provider_spend",
+        "reason": "paid provider or hidden billing risk"
+      },
+      {
+        "id": "latency_hot_path",
+        "reason": "slow path or repeated work risk"
+      },
+      {
+        "id": "memory_route",
+        "reason": "memory and bridge route required"
+      }
+    ],
+    "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+    "cwd": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury"
+  },
+  "candidates": 13,
+  "selected_count": 8,
+  "selected": [
+    {
+      "id": "bc85ae1f077d7b4fbaf3db04",
+      "from": "entry:provider_spend",
+      "to": "tool:spend-guard+cost-scan",
+      "type": "accelerated_by",
+      "source": "static_family",
+      "score": 1,
+      "confidence": 0.58,
+      "latency_ms": 1,
+      "cost": "low",
+      "risk": "medium",
+      "freshness": "fresh",
+      "evidence": "Scan paid provider env, call sites, loops, fanout, and cache bypasses before any model call."
+    },
+    {
+      "id": "27eb347cc60e691903d4a491",
+      "from": "entry:provider_spend",
+      "to": "memory:monster_doctor:9fb9df521206aaaf236693f5",
+      "type": "distilled_from",
+      "source": "memory_graph",
+      "score": 1,
+      "confidence": 0.482,
+      "latency_ms": 2,
+      "cost": "low",
+      "risk": "low",
+      "freshness": "fresh",
+      "evidence": "monster_doctor find hidden Anthropic billing loops spend_guard_first cost_scan_runtime_loop target_file_first cost:/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/bench/rosen-cortex/provider_spend_loop.js"
+    },
+    {
+      "id": "3d0d33b34af912c3d06ede2a",
+      "from": "entry:latency_hot_path",
+      "to": "guard:hot-path-budget",
+      "type": "blocked_by",
+      "source": "static_family",
+      "score": 1,
+      "confidence": 0.58,
+      "latency_ms": 1,
+      "cost": "low",
+      "risk": "medium",
+      "freshness": "fresh",
+      "evidence": "Do not let broad UMA preload or model calls enter the hot path."
+    },
+    {
+      "id": "bf84d6a9886a7cd8b3810867",
+      "from": "entry:provider_spend",
+      "to": "memory:rosen_pair_pulse:47f080ff005d2a7352145b73",
+      "type": "similar_to",
+      "source": "memory_graph",
+      "score": 1,
+      "confidence": 0.72,
+      "latency_ms": 2,
+      "cost": "low",
+      "risk": "low",
+      "freshness": "fresh",
+      "evidence": "rosen_pair_pulse watch var/bench/rosen-pair/sentinel_state.js for provider spend latency state changes through rosen pair"
+    },
+    {
+      "id": "5c09b38481163b4a033a5eac",
+      "from": "entry:provider_spend",
+      "to": "memory:rosen_route:c5d0c85a66886240215faebe",
+      "type": "similar_to",
+      "source": "memory_graph",
+      "score": 1,
+      "confidence": 0.532,
+      "latency_ms": 2,
+      "cost": "low",
+      "risk": "low",
+      "freshness": "fresh",
+      "evidence": "rosen_route quickly find hidden Anthropic billing loop and slow provider spend in /Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/bench/rosen-cortex/provider_spend_loop.js"
+    },
+    {
+      "id": "6ad351f454d4e288735c7673",
+      "from": "entry:provider_spend",
+      "to": "memory:rosen_route:fa9cda11ee96a3a3a631a232",
+      "type": "similar_to",
+      "source": "memory_graph",
+      "score": 1,
+      "confidence": 0.72,
+      "latency_ms": 2,
+      "cost": "low",
+      "risk": "low",
+      "freshness": "fresh",
+      "evidence": "rosen_route watch var/bench/rosen-pair/sentinel_state.js for provider spend latency state changes through rosen pair"
+    },
+    {
+      "id": "6fee360ff5d949cc1e8a532f",
+      "from": "entry:provider_spend",
+      "to": "neuron:risk.cost+judge",
+      "type": "verified_by",
+      "source": "static_family",
+      "score": 1,
+      "confidence": 0.58,
+      "latency_ms": 1,
+      "cost": "low",
+      "risk": "medium",
+      "freshness": "fresh",
+      "evidence": "Use cost/risk neurons and judge before accusing a live process."
+    },
+    {
+      "id": "30c2db6d21e99c4b5e804132",
+      "from": "entry:latency_hot_path",
+      "to": "tool:code-cortex+uma-target-file-first",
+      "type": "accelerated_by",
+      "source": "static_family",
+      "score": 1,
+      "confidence": 0.58,
+      "latency_ms": 1,
+      "cost": "low",
+      "risk": "low",
+      "freshness": "fresh",
+      "evidence": "Route slow symptoms to hot files, symbols, queue/retry/cache patterns, and UMA evidence."
+    }
+  ],
+  "probe_plan": [
+    {
+      "probe_id": "rosen_probe_1",
+      "bridge_to": "tool:spend-guard+cost-scan",
+      "neuron_family": "provider_spend",
+      "action": "tool_probe",
+      "budget_ms": 1
+    },
+    {
+      "probe_id": "rosen_probe_2",
+      "bridge_to": "memory:monster_doctor:9fb9df521206aaaf236693f5",
+      "neuron_family": "provider_spend",
+      "action": "evidence_probe",
+      "budget_ms": 1
+    },
+    {
+      "probe_id": "rosen_probe_3",
+      "bridge_to": "guard:hot-path-budget",
+      "neuron_family": "latency_hot_path",
+      "action": "guard",
+      "budget_ms": 1
+    },
+    {
+      "probe_id": "rosen_probe_4",
+      "bridge_to": "memory:rosen_pair_pulse:47f080ff005d2a7352145b73",
+      "neuron_family": "provider_spend",
+      "action": "evidence_probe",
+      "budget_ms": 1
+    },
+    {
+      "probe_id": "rosen_probe_5",
+      "bridge_to": "memory:rosen_route:c5d0c85a66886240215faebe",
+      "neuron_family": "provider_spend",
+      "action": "evidence_probe",
+      "budget_ms": 1
+    },
+    {
+      "probe_id": "rosen_probe_6",
+      "bridge_to": "memory:rosen_route:fa9cda11ee96a3a3a631a232",
+      "neuron_family": "provider_spend",
+      "action": "evidence_probe",
+      "budget_ms": 1
+    }
+  ],
+  "guard": {
+    "namespace_isolated": true,
+    "model_hot_path": "forbidden",
+    "budget_ms": 8,
+    "coherence_required": false,
+    "high_risk_requires_judge": false
+  },
+  "persisted": [
+    "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/rosen-cortex/bridges/bridge_bc85ae1f077d7b4fbaf3db04.json",
+    "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/rosen-cortex/bridges/bridge_3bb768a58d88c93f9413c833.json"
+  ],
+  "elapsed_ms": 5
+}

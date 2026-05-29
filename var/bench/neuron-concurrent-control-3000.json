@@ -1,0 +1,206 @@
+{
+  "schema": "mercury-neuron-concurrent-control-3000-v1",
+  "created_at": "2026-05-28T01:07:35.111Z",
+  "pass": true,
+  "elapsed_ms": 500,
+  "catalog_neurons": 3000,
+  "task_lanes": 12,
+  "unique_controlled_neurons": 151,
+  "unique_model_field_neurons": 28,
+  "unique_concurrent_control_neurons": 32,
+  "max_selected_per_task": 28,
+  "min_selected_per_task": 22,
+  "policy": "control many neurons across simultaneous task lanes while keeping each hot path sparsely activated",
+  "per_task": [
+    {
+      "task": "qwen first useful packet big model local llm kv prefix attention decode",
+      "classified": 2427,
+      "selected": 23,
+      "model_field": 10,
+      "concurrent_control": 0,
+      "sources": {
+        "topology_exploration": 11,
+        "classified": 11,
+        "state_field": 1
+      },
+      "collapse_states": {
+        "cold": 21,
+        "critical": 2
+      }
+    },
+    {
+      "task": "deepseek first useful packet ollama large model speculative probe",
+      "classified": 2121,
+      "selected": 23,
+      "model_field": 9,
+      "concurrent_control": 1,
+      "sources": {
+        "topology_exploration": 11,
+        "classified": 11,
+        "state_field": 1
+      },
+      "collapse_states": {
+        "cold": 21,
+        "critical": 2
+      }
+    },
+    {
+      "task": "uma rag evidence context reduction before model call",
+      "classified": 459,
+      "selected": 28,
+      "model_field": 0,
+      "concurrent_control": 4,
+      "sources": {
+        "topology_exploration": 14,
+        "classified": 12,
+        "state_field": 2
+      },
+      "collapse_states": {
+        "cold": 24,
+        "critical": 4
+      }
+    },
+    {
+      "task": "gpu pressure 3060 low impact foreground safe model preheat",
+      "classified": 1105,
+      "selected": 23,
+      "model_field": 0,
+      "concurrent_control": 3,
+      "sources": {
+        "topology_exploration": 15,
+        "classified": 6,
+        "state_field": 2
+      },
+      "collapse_states": {
+        "cold": 21,
+        "critical": 2
+      }
+    },
+    {
+      "task": "memory bandwidth hot pages cache coherence first answer",
+      "classified": 219,
+      "selected": 22,
+      "model_field": 0,
+      "concurrent_control": 2,
+      "sources": {
+        "topology_exploration": 14,
+        "classified": 7,
+        "state_field": 1
+      },
+      "collapse_states": {
+        "cold": 20,
+        "critical": 2
+      }
+    },
+    {
+      "task": "provider avoidance spend guard slow path distill",
+      "classified": 1637,
+      "selected": 22,
+      "model_field": 0,
+      "concurrent_control": 1,
+      "sources": {
+        "topology_exploration": 6,
+        "classified": 16
+      },
+      "collapse_states": {
+        "cold": 22
+      }
+    },
+    {
+      "task": "background completion merge first packet with full model",
+      "classified": 1588,
+      "selected": 23,
+      "model_field": 2,
+      "concurrent_control": 3,
+      "sources": {
+        "topology_exploration": 13,
+        "classified": 8,
+        "state_field": 2
+      },
+      "collapse_states": {
+        "cold": 21,
+        "critical": 2
+      }
+    },
+    {
+      "task": "judge packet quality truthfulness uncertainty probe",
+      "classified": 338,
+      "selected": 23,
+      "model_field": 0,
+      "concurrent_control": 6,
+      "sources": {
+        "topology_exploration": 16,
+        "classified": 5,
+        "state_field": 2
+      },
+      "collapse_states": {
+        "cold": 21,
+        "critical": 2
+      }
+    },
+    {
+      "task": "multi model matrix qwen deepseek compare first packet",
+      "classified": 2421,
+      "selected": 23,
+      "model_field": 7,
+      "concurrent_control": 3,
+      "sources": {
+        "topology_exploration": 11,
+        "classified": 11,
+        "state_field": 1
+      },
+      "collapse_states": {
+        "cold": 21,
+        "critical": 2
+      }
+    },
+    {
+      "task": "windows hotpath wsl ext4 disk io no regression",
+      "classified": 52,
+      "selected": 22,
+      "model_field": 0,
+      "concurrent_control": 3,
+      "sources": {
+        "topology_exploration": 18,
+        "classified": 2,
+        "state_field": 2
+      },
+      "collapse_states": {
+        "cold": 20,
+        "critical": 2
+      }
+    },
+    {
+      "task": "anti overactivation concurrent lane budget",
+      "classified": 1042,
+      "selected": 23,
+      "model_field": 0,
+      "concurrent_control": 5,
+      "sources": {
+        "topology_exploration": 13,
+        "classified": 8,
+        "state_field": 2
+      },
+      "collapse_states": {
+        "cold": 21,
+        "critical": 2
+      }
+    },
+    {
+      "task": "resident preheat speed state cache warm",
+      "classified": 614,
+      "selected": 23,
+      "model_field": 0,
+      "concurrent_control": 3,
+      "sources": {
+        "topology_exploration": 14,
+        "classified": 8,
+        "state_field": 1
+      },
+      "collapse_states": {
+        "cold": 21,
+        "critical": 2
+      }
+    }
+  ]
+}

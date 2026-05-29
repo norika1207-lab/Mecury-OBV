@@ -1,0 +1,36 @@
+{
+  "name": "afu-uma-v0.1",
+  "description": "Monster-sized AFU benchmark suite for UMA acceleration diagnostics.",
+  "tasks": [
+    {
+      "id": "afu-dynamic-rag-atomic-sqlite",
+      "task": "analyze scripts/refresh_dynamic_rag_from_lobster_db.py for sqlite aggregate pressure, atomic latest writes, manifest partial writes, silent JSONL data loss, and pipeline corruption risk",
+      "expected_targets": ["scripts/refresh_dynamic_rag_from_lobster_db.py"]
+    },
+    {
+      "id": "afu-public-export-atomic",
+      "task": "analyze scripts/export_public_rag_from_sqlite.py for sqlite count pressure, atomic output writes, timeout behavior, and data-loss risk",
+      "expected_targets": ["scripts/export_public_rag_from_sqlite.py"]
+    },
+    {
+      "id": "afu-evolution-pipeline-loss",
+      "task": "analyze packages/afu_brain/evolution.py for atomic latest writes, silent JSONL data loss, self-evolution pipeline corruption, and promotion safety gaps",
+      "expected_targets": ["packages/afu_brain/evolution.py"]
+    },
+    {
+      "id": "afu-distillation-pipeline-loss",
+      "task": "analyze packages/afu_brain/llm_distillation.py for atomic dataset writes, silent JSONL data loss, row-count drops, and eval gate acceleration risk",
+      "expected_targets": ["packages/afu_brain/llm_distillation.py"]
+    },
+    {
+      "id": "afu-eval-row-count-gate",
+      "task": "analyze packages/afu_brain/llm_eval.py for silent JSONL data loss, row-count gate weakness, atomic report writes, and promotion safety gaps",
+      "expected_targets": ["packages/afu_brain/llm_eval.py"]
+    },
+    {
+      "id": "afu-pyproject-entrypoints",
+      "task": "analyze pyproject.toml for broken project scripts, missing modules, packaging entrypoint failures, and install-time usability problems",
+      "expected_targets": ["pyproject.toml"]
+    }
+  ]
+}

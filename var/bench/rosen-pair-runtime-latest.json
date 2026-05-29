@@ -1,0 +1,94 @@
+{
+  "schema": "mercury-bench-rosen-pair-runtime-v1",
+  "created_at": "2026-05-28T01:08:10.104Z",
+  "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+  "target": "var/bench/rosen-pair/sentinel_state.js",
+  "seed": {
+    "schema": "mercury-rosen-pair-pulse-v1",
+    "created_at": "2026-05-28T01:08:10.084Z",
+    "pair_id": "292ad36e9b5be82cd0315993",
+    "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+    "mode": "pair_seed",
+    "changed": true,
+    "shared_state_digest": "33bd3bb8f5cd880927205dc5",
+    "prior_digest": null,
+    "confidence": 0.88,
+    "route_selected": 8,
+    "route_elapsed_ms": 21,
+    "target_files": [
+      "var/bench/rosen-pair/sentinel_state.js"
+    ],
+    "risk_families": [
+      "provider_spend",
+      "latency_hot_path",
+      "memory_route"
+    ],
+    "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/rosen-cortex/pairs/pair_292ad36e9b5be82cd0315993.json",
+    "elapsed_ms": 71
+  },
+  "replay": {
+    "schema": "mercury-rosen-pair-pulse-v1",
+    "created_at": "2026-05-28T01:08:10.092Z",
+    "pair_id": "292ad36e9b5be82cd0315993",
+    "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+    "mode": "state_replay",
+    "changed": false,
+    "shared_state_digest": "33bd3bb8f5cd880927205dc5",
+    "prior_digest": "33bd3bb8f5cd880927205dc5",
+    "confidence": 0.88,
+    "route_selected": 8,
+    "route_elapsed_ms": 5,
+    "target_files": [
+      "var/bench/rosen-pair/sentinel_state.js"
+    ],
+    "risk_families": [
+      "provider_spend",
+      "latency_hot_path",
+      "memory_route"
+    ],
+    "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/rosen-cortex/pairs/pair_292ad36e9b5be82cd0315993.json",
+    "elapsed_ms": 8
+  },
+  "correction": {
+    "schema": "mercury-rosen-pair-pulse-v1",
+    "created_at": "2026-05-28T01:08:10.103Z",
+    "pair_id": "292ad36e9b5be82cd0315993",
+    "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+    "mode": "correction_pulse",
+    "changed": true,
+    "shared_state_digest": "736fcac0b74afc92a54af864",
+    "prior_digest": "33bd3bb8f5cd880927205dc5",
+    "confidence": 0.88,
+    "route_selected": 8,
+    "route_elapsed_ms": 5,
+    "target_files": [
+      "var/bench/rosen-pair/sentinel_state.js"
+    ],
+    "risk_families": [
+      "provider_spend",
+      "latency_hot_path",
+      "memory_route"
+    ],
+    "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/rosen-cortex/pairs/pair_292ad36e9b5be82cd0315993.json",
+    "elapsed_ms": 9
+  },
+  "summary": {
+    "schema": "mercury-rosen-pairs-summary-v1",
+    "namespace": "bench-rosen-pair-14e9360c13e924d43d3bd02d",
+    "ready": true,
+    "pairs": 1,
+    "pair_seed": 0,
+    "correction_pulse": 1,
+    "state_replay": 0,
+    "pulse_events": 3,
+    "pulse_events_skipped": false,
+    "event_pair_seed": 1,
+    "event_correction_pulse": 1,
+    "event_state_replay": 1,
+    "latest_pair_id": "292ad36e9b5be82cd0315993",
+    "latest_mode": "correction_pulse",
+    "latest_changed": true,
+    "latest_elapsed_ms": 9
+  },
+  "pass": true
+}

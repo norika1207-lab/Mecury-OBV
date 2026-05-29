@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Monster Proof Report</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07090d; --panel:#10161f; --line:#263244; --text:#f5f7fb; --muted:#98a7ba; --good:#47d18c; --warn:#ffd166; --cyan:#75d6ff; --pink:#ff7aa8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--text); }
+    main { max-width:1180px; margin:0 auto; padding:42px 20px 64px; }
+    h1 { margin:0 0 8px; font-size:clamp(32px,5vw,60px); letter-spacing:0; }
+    p { color:var(--muted); line-height:1.6; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin:24px 0; }
+    .metric, .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px; }
+    .metric span, small { display:block; color:var(--muted); font-size:13px; }
+    .metric b { display:block; margin:8px 0 4px; font-size:28px; }
+    .panel { margin-top:14px; }
+    .panel h2 { margin:0 0 12px; font-size:20px; }
+    ul { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+    li { display:flex; justify-content:space-between; gap:16px; border:1px solid var(--line); border-radius:8px; padding:12px; background:#0b1018; }
+    li.pass b { color:var(--good); }
+    li.fail b { color:var(--warn); }
+    li.cmd { display:block; overflow:auto; }
+    code { color:var(--cyan); display:inline-block; margin:3px 8px 3px 0; }
+    .status { color:var(--good); }
+    .footer { margin-top:26px; font-size:13px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Monster Acceleration Proof</h1>
+    <p>Large-repo acceleration proof for Neuron Mercury. This page requires Rosen bridge routing, Code Cortex pages, UMA-backed diagnosis, and a verified workflow replay before it can pass.</p>
+    <div class="grid">
+      
+    <div class="metric">
+      <span>Proof</span>
+      <b>PASS</b>
+      <small>mercury-monster-proof-v1</small>
+    </div>
+      
+    <div class="metric">
+      <span>Rosen Route</span>
+      <b>6/14</b>
+      <small>33ms route</small>
+    </div>
+      
+    <div class="metric">
+      <span>Monster Diagnosis</span>
+      <b>333ms</b>
+      <small>uma_pages_loaded/target_file_first</small>
+    </div>
+      
+    <div class="metric">
+      <span>Code Cortex</span>
+      <b>555 pages</b>
+      <small>21 hot files</small>
+    </div>
+      
+    <div class="metric">
+      <span>Cost Findings</span>
+      <b>31</b>
+      <small>provider/spend risk scan</small>
+    </div>
+      
+    <div class="metric">
+      <span>Workflow Replay</span>
+      <b>2ms</b>
+      <small>accelerate_task_fast_replay</small>
+    </div>
+    </div>
+    <section class="panel">
+      <h2>Proof Checks</h2>
+      <ul>
+    <li class="pass"><b>Rosen route selected bridges</b><span>6/14</span></li>
+    <li class="pass"><b>Monster diagnosis uses UMA</b><span>uma_pages_loaded/target_file_first</span></li>
+    <li class="pass"><b>Monster diagnosis is budgeted</b><span>333ms</span></li>
+    <li class="pass"><b>Code Cortex has pages</b><span>555 pages</span></li>
+    <li class="pass"><b>Workflow replay is accelerated</b><span>accelerate_task_fast_replay 2ms</span></li>
+    <li class="pass"><b>Rosen step reaches accelerate task</b><span>6 replay bridges</span></li></ul>
+    </section>
+    <section class="panel">
+      <h2>Target Files</h2>
+      <p><code>src/mercury.js</code><code>scripts/night-runner.sh</code><code>README.md</code><code>docs/visual-speed-report.html</code><code>docs/ARCHITECTURE.md</code></p>
+    </section>
+    <section class="panel">
+      <h2>Route Commands</h2>
+      <ul><li class="cmd"><code>node src/mercury.js rosen-route &quot;find provider spend leaks and hot path latency&quot; --limit=8 --budget-ms=8</code></li><li class="cmd"><code>node src/mercury.js spend-guard --path=. --limit=1000</code></li><li class="cmd"><code>node src/mercury.js doctor &quot;find provider spend leaks and hot path latency&quot;</code></li><li class="cmd"><code>node src/mercury.js task-memory --limit=5000</code></li></ul>
+    </section>
+    <p class="footer">Generated at 2026-05-19T10:42:06.407Z. JSON sibling: <code>monster-proof-report.json</code>.</p>
+  </main>
+</body>
+</html>

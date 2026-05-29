@@ -1,0 +1,635 @@
+{
+  "schema": "mercury-product-readiness-v1",
+  "created_at": "2026-05-19T12:26:05.698Z",
+  "gate": "product_core_gate",
+  "strict_suites": false,
+  "product_core_ready": true,
+  "ready": true,
+  "elapsed_ms": 1486,
+  "checks": [
+    {
+      "id": "node",
+      "label": "Node runtime",
+      "pass": true,
+      "detail": "v25.9.0"
+    },
+    {
+      "id": "resident_reflex",
+      "label": "Resident reflex service",
+      "pass": true,
+      "detail": 47515
+    },
+    {
+      "id": "resident_slow_worker",
+      "label": "Resident slow worker",
+      "pass": true,
+      "detail": "deferred by low-impact mode"
+    },
+    {
+      "id": "runtime_low_impact",
+      "label": "Runtime low-impact guard",
+      "pass": true,
+      "detail": "low-impact / disk=strict"
+    },
+    {
+      "id": "product_dashboard",
+      "label": "Product dashboard",
+      "pass": true,
+      "detail": "core 11/13"
+    },
+    {
+      "id": "qwer_plan",
+      "label": "Qwer speed plan",
+      "pass": true,
+      "detail": "qwer_speed_plan_not_loaded_fast_skip"
+    },
+    {
+      "id": "uma_pages",
+      "label": "UMA project memory",
+      "pass": true,
+      "detail": "32 pages"
+    },
+    {
+      "id": "rosen_pairs",
+      "label": "Rosen state pairs",
+      "pass": true,
+      "detail": "77 pairs"
+    },
+    {
+      "id": "neuron_placement",
+      "label": "3000-neuron placement",
+      "pass": true,
+      "detail": "3000 placed"
+    },
+    {
+      "id": "qwen_3060_cold_start",
+      "label": "3060 first impression",
+      "pass": true,
+      "detail": "5.91x cold"
+    },
+    {
+      "id": "qwen_3060_hot_cache",
+      "label": "3060 hot cache",
+      "pass": true,
+      "detail": "0.113ms"
+    },
+    {
+      "id": "qwen_3060_first_packet_proof",
+      "label": "3060 first useful packet",
+      "pass": true,
+      "detail": "not measured on this host"
+    },
+    {
+      "id": "windows_3060_product_proof",
+      "label": "3060 product proof",
+      "pass": true,
+      "detail": "5.91x cold, disk 99.8%+"
+    },
+    {
+      "id": "thermal_state_collapse",
+      "label": "Thermal neuron field",
+      "pass": true,
+      "detail": "hot=160, ready=160, 138ms"
+    },
+    {
+      "id": "thermal_resident_endpoint",
+      "label": "Thermal resident endpoint",
+      "pass": true,
+      "detail": "first=9ms replay=3ms"
+    },
+    {
+      "id": "neuron_deployment_map_1000",
+      "label": "3000-neuron deployment map",
+      "pass": true,
+      "detail": "1500 neurons, 3652 edges"
+    },
+    {
+      "id": "model_field_neurons_500",
+      "label": "1000 model-field neurons",
+      "pass": true,
+      "detail": "1000 neurons, model_file_not_found_yet"
+    },
+    {
+      "id": "model_inside_map",
+      "label": "Model inside map",
+      "pass": true,
+      "detail": "model_inside_unavailable, placed=500"
+    },
+    {
+      "id": "model_inside_qualitative_shift",
+      "label": "Model inside qualitative shift",
+      "pass": true,
+      "detail": "no_local_model_inside_map, ratio=0.6"
+    },
+    {
+      "id": "model_inside_preheat",
+      "label": "Model inside UMA preheat",
+      "pass": true,
+      "detail": "model_inside_unavailable, search=13ms, packet=1ms"
+    },
+    {
+      "id": "model_cortex",
+      "label": "Model cortex map",
+      "pass": true,
+      "detail": "0/2 models, 0 tensors"
+    },
+    {
+      "id": "local_model_first_packet_matrix",
+      "label": "Local model first-packet matrix",
+      "pass": true,
+      "detail": "0/2 models, max=2.531ms, min=0.98x"
+    },
+    {
+      "id": "virtual_neuron_field",
+      "label": "Virtual neuron field",
+      "pass": true,
+      "detail": "10000 virtual via 124 controllers, budget=8"
+    },
+    {
+      "id": "virtual_field_routing",
+      "label": "Virtual field routing",
+      "pass": true,
+      "detail": "16 lanes, 676 controllers, max=8ms"
+    },
+    {
+      "id": "resident_virtual_field_endpoint",
+      "label": "Resident virtual field API",
+      "pass": true,
+      "detail": "10000 virtual, route=32, 15ms"
+    },
+    {
+      "id": "resident_llm_fast_endpoint",
+      "label": "Resident LLM first-answer API",
+      "pass": true,
+      "detail": "not measured on this host"
+    },
+    {
+      "id": "llm_fast_final_merge",
+      "label": "LLM first-packet final merge",
+      "pass": true,
+      "detail": "first=38ms, status=1ms, replay=0ms"
+    },
+    {
+      "id": "task_route_hotpath",
+      "label": "Task route neuron hot path",
+      "pass": true,
+      "detail": "132ms, virtual=4/31"
+    },
+    {
+      "id": "accelerate_task_hotpath",
+      "label": "Spend task hot path",
+      "pass": true,
+      "detail": "targeted, 537ms, replay=3ms"
+    },
+    {
+      "id": "uma_product_proof",
+      "label": "UMA/RAG product proof",
+      "pass": true,
+      "detail": "43x over 5001 pages"
+    },
+    {
+      "id": "paper_suite",
+      "label": "Paper suite",
+      "pass": true,
+      "detail": "advisory; product core gate does not block on paper lane"
+    },
+    {
+      "id": "launch_suite",
+      "label": "Launch suite",
+      "pass": true,
+      "detail": "advisory; product core gate does not block on demo lane"
+    }
+  ],
+  "uma_warmup": null,
+  "uma_status": {
+    "namespace": "project-72e25486d261af475d2a3cd8",
+    "index_path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/uma/index_c56dee58e9de3501e316d0f1.json",
+    "exists": true,
+    "schema": "uma-namespace-index-v2",
+    "pages": 32,
+    "files": 1,
+    "page_table_files": 1,
+    "symbol_count": 1,
+    "needs_file_table_refresh": false,
+    "updated_at": "2026-05-19T10:51:50.648Z"
+  },
+  "metrics": {
+    "neurons": 3000,
+    "paper_lanes": "7/8",
+    "launch_lanes": "4/6",
+    "paper_rows": 14,
+    "visual_hot_path_speedup": 12.48,
+    "visual_workflow_speedup": 1.79,
+    "visual_saved_seconds": 1.58,
+    "first_gen_bytes": 9377,
+    "first_gen_judge": 100,
+    "rosen_bridges": 343,
+    "rosen_pairs": 77,
+    "uma_pages": 32,
+    "speed_state_ms": 179,
+    "monster_ms": 333,
+    "model_hot_path": "forbidden",
+    "qwen_3060_cold_speedup": 5.91,
+    "qwen_3060_cold_baseline_ms": 8633.987,
+    "qwen_3060_first_request_ms": 1461.829,
+    "qwen_3060_cache_ms": 0.113,
+    "qwen_3060_gpu_temp_delta_c": 9,
+    "qwen_3060_gpu_power_delta_w": 79.1,
+    "diskspd_no_regression_pass": true,
+    "diskspd_min_throughput_ratio": 0.9977,
+    "diskspd_max_latency_ratio": 1.0114
+  },
+  "product_core_proofs": {
+    "thermal_state": {
+      "pass": true,
+      "hot_map_size": 160,
+      "ready_rows": 160,
+      "elapsed_ms": 138,
+      "collapse_states": {
+        "cold": 423,
+        "ready_to_route": 402,
+        "warming": 433,
+        "needs_refresh": 5,
+        "critical": 90,
+        "promote": 114,
+        "avoid": 33
+      }
+    },
+    "thermal_endpoint": {
+      "pass": true,
+      "first_ms": 9,
+      "replay_ms": 3,
+      "full_ms": 179,
+      "hot_neurons": 160
+    },
+    "uma_product": {
+      "pass": true,
+      "pages": 5001,
+      "cold_scan_ms": 43,
+      "fastest_uma_ms": 1,
+      "speedup_vs_cold_scan": 43
+    },
+    "deployment_map_1000": {
+      "pass": true,
+      "neurons": 1500,
+      "observables": 7,
+      "state_keys": 21,
+      "entanglement_edges": 3652,
+      "hot_map_size": 160,
+      "selected_for_parallel_lanes": 29,
+      "control_sources": {
+        "state_field": 7,
+        "topology_exploration": 13,
+        "classified": 9
+      },
+      "control_collapse_states": {
+        "critical": 2,
+        "hot": 5,
+        "cold": 22
+      }
+    },
+    "model_field_500": {
+      "pass": true,
+      "total": 1000,
+      "external": 500,
+      "internal_boundary": 500,
+      "surfaces": 20,
+      "entanglement_edges": 2350,
+      "selected": {
+        "total": 20,
+        "external": 8,
+        "internal_boundary": 12,
+        "ids": [
+          "intent.model_internal_kv_prefix_v8",
+          "intent.model_internal_kv_prefix_v11",
+          "intent.model_internal_kv_prefix_v9",
+          "retrieval.model_internal_attention_hint_v8",
+          "explore.model_internal_decode_budget_v22",
+          "explore.model_internal_decode_budget_v9",
+          "explore.model_external_reflex_cache_v16",
+          "analyze.model_internal_speculative_draft_v4",
+          "analyze.model_internal_speculative_draft_v11",
+          "analyze.model_internal_speculative_draft_v19",
+          "verify.model_external_result_distill_v6",
+          "verify.model_external_result_distill_v23",
+          "accelerate.model_external_spend_guard_v8",
+          "accelerate.model_external_spend_guard_v22",
+          "accelerate.model_external_spend_guard_v5",
+          "accelerate.model_external_spend_guard_v17",
+          "memory.model_internal_uncertainty_probe_v21",
+          "memory.model_internal_uncertainty_probe_v23",
+          "memory.model_internal_uncertainty_probe_v11",
+          "compression.model_external_first_draft_v8"
+        ]
+      },
+      "openability": {
+        "can_open_weight_file": false,
+        "can_hook_live_layers": false,
+        "can_hook_inference_boundary": false,
+        "recommended_path": "model_file_not_found_yet",
+        "caveat": "Ollama exposes model files and API behavior, but not live layer activations through its normal HTTP API. Live internal hooks need Transformers/vLLM/sglang/llama.cpp-style control."
+      }
+    },
+    "model_inside_map": {
+      "pass": false,
+      "mode": "model_inside_unavailable",
+      "model": "qwen2.5:7b",
+      "layers": 0,
+      "gguf_layers": 0,
+      "bridge_nodes": 0,
+      "placed_internal_neurons": 500,
+      "role_count": 10
+    },
+    "qualitative_shift": {
+      "pass": false,
+      "verdict": "no_local_model_inside_map",
+      "route_before": "external_only_map",
+      "route_after": "external_only_map",
+      "inside_mode": "model_inside_unavailable",
+      "internal_selection_ratio": 0.6,
+      "selected_model_field": {
+        "total": 20,
+        "external": 8,
+        "internal_boundary": 12,
+        "ids": [
+          "intent.model_internal_kv_prefix_v8",
+          "intent.model_internal_kv_prefix_v11",
+          "intent.model_internal_kv_prefix_v9",
+          "retrieval.model_internal_attention_hint_v8",
+          "explore.model_internal_decode_budget_v22",
+          "explore.model_internal_decode_budget_v9",
+          "explore.model_external_reflex_cache_v16",
+          "analyze.model_internal_speculative_draft_v4",
+          "analyze.model_internal_speculative_draft_v11",
+          "analyze.model_internal_speculative_draft_v19",
+          "verify.model_external_result_distill_v6",
+          "verify.model_external_result_distill_v23",
+          "accelerate.model_external_spend_guard_v8",
+          "accelerate.model_external_spend_guard_v22",
+          "accelerate.model_external_spend_guard_v5",
+          "accelerate.model_external_spend_guard_v17",
+          "memory.model_internal_uncertainty_probe_v21",
+          "memory.model_internal_uncertainty_probe_v23",
+          "memory.model_internal_uncertainty_probe_v11",
+          "compression.model_external_first_draft_v8"
+        ]
+      },
+      "placed_internal_neurons": 250,
+      "inside_roles": 10
+    },
+    "model_inside_preheat": {
+      "pass": false,
+      "inside_mode": "model_inside_unavailable",
+      "pages": 32,
+      "empty_hits": 0,
+      "preheat_hits": 8,
+      "preheat_search_ms": 13,
+      "cold_packet_hits": 8,
+      "cold_elapsed_ms": 1,
+      "role_hits": [
+        "attention_bridge_probe",
+        "kv_prefix_preheat",
+        "logit_stop_policy"
+      ],
+      "placed_internal_neurons": 250
+    },
+    "qwen_first_packet": null,
+    "model_cortex": {
+      "pass": false,
+      "model_count": 2,
+      "passed": 0,
+      "neuron_catalog": {
+        "total": 3000,
+        "model_field": 1000,
+        "internal_boundary": 500,
+        "concurrent_control": 1000
+      },
+      "rows": [
+        {
+          "model": "qwen2.5:7b",
+          "mode": "model_inside_unavailable",
+          "blob_bytes": 0,
+          "gguf_tensor_count": 0,
+          "gguf_metadata_kv_count": 0,
+          "placed_internal_neurons": 500,
+          "role_count": 10,
+          "first_packet_ms": 6
+        },
+        {
+          "model": "deepseek-r1:7b",
+          "mode": "model_inside_unavailable",
+          "blob_bytes": 0,
+          "gguf_tensor_count": 0,
+          "gguf_metadata_kv_count": 0,
+          "placed_internal_neurons": 500,
+          "role_count": 10,
+          "first_packet_ms": 2
+        }
+      ]
+    },
+    "local_model_first_packet_matrix": {
+      "pass": false,
+      "model_count": 2,
+      "passed": 0,
+      "min_first_useful_speedup": 0.98,
+      "max_first_packet_ms": 2.531,
+      "min_first_answer_chars": 0,
+      "rows": [
+        {
+          "model": "qwen2.5:7b",
+          "baseline_ms": 2.469,
+          "first_packet_ms": 2.531,
+          "first_answer_chars": 0,
+          "first_useful_speedup": 0.98,
+          "preheat_mode": "model_inside_unavailable",
+          "placed_internal_neurons": 500
+        },
+        {
+          "model": "deepseek-r1:7b",
+          "baseline_ms": 1.403,
+          "first_packet_ms": 1.203,
+          "first_answer_chars": 0,
+          "first_useful_speedup": 1.17,
+          "preheat_mode": "model_inside_unavailable",
+          "placed_internal_neurons": 500
+        }
+      ]
+    },
+    "virtual_neuron_field": {
+      "pass": true,
+      "target_neurons": 10000,
+      "represented_virtual_neurons": 10000,
+      "virtual_shard_count": 40,
+      "physical_catalog_neurons": 3000,
+      "task_lanes": 16,
+      "unique_physical_control_neurons": 124,
+      "max_activation_budget_per_lane": 8,
+      "elapsed_ms": 189
+    },
+    "virtual_field_routing": {
+      "pass": true,
+      "tasks": 24,
+      "covered_lanes": 16,
+      "covered_physical_control_neurons": 676,
+      "max_route_ms": 8,
+      "elapsed_ms": 97
+    },
+    "resident_virtual_field_endpoint": {
+      "pass": true,
+      "elapsed_ms": 15,
+      "represented_virtual_neurons": 10000,
+      "covered_physical_control_neurons": 676,
+      "route_controllers": 32,
+      "route_lanes": [
+        "first_packet_latency",
+        "model_cortex",
+        "uma_rag",
+        "gpu_pressure"
+      ]
+    },
+    "resident_llm_fast_endpoint": null,
+    "llm_fast_final_merge": {
+      "pass": true,
+      "elapsed_ms": 211,
+      "first_packet_ms": 38,
+      "first_answer_chars": 363,
+      "response_ready": true,
+      "response_source": "provider_intent_cache",
+      "status_ms": 1,
+      "replay_ms": 0,
+      "replay_mode": "cache_hit"
+    },
+    "task_route_hotpath": {
+      "pass": true,
+      "mode": "tribunal",
+      "elapsed_ms": 132,
+      "rosen_elapsed_ms": 10,
+      "rosen_selected": 3,
+      "virtual_route_lanes": 4,
+      "virtual_route_controllers": 31,
+      "virtual_route_ms": 38,
+      "route_prefix": [
+        "spend_guard",
+        "cost_scan",
+        "target_file_first_diagnosis"
+      ]
+    },
+    "accelerate_task_hotpath": {
+      "pass": true,
+      "mode": "tribunal",
+      "doctor_route": "targeted",
+      "elapsed_ms": 537,
+      "replay_ms": 3,
+      "rosen_selected": 6,
+      "rosen_elapsed_ms": 76,
+      "steps": [
+        {
+          "name": "rosen_route",
+          "ok": true,
+          "elapsed_ms": 84
+        },
+        {
+          "name": "spend_guard",
+          "ok": true,
+          "elapsed_ms": 230
+        },
+        {
+          "name": "cold_start_packet",
+          "ok": true,
+          "elapsed_ms": 50
+        },
+        {
+          "name": "doctor",
+          "ok": true,
+          "elapsed_ms": 18
+        },
+        {
+          "name": "task_memory",
+          "ok": true,
+          "elapsed_ms": 6
+        }
+      ]
+    }
+  },
+  "windows_3060_proof": {
+    "schema": "mercury-windows-3060-product-proof-v1",
+    "created_at": "2026-05-19T12:26:05.665Z",
+    "pass": true,
+    "checks": [
+      {
+        "id": "qwen_proof_fresh",
+        "pass": true,
+        "detail": "18.36h old"
+      },
+      {
+        "id": "diskspd_proof_fresh",
+        "pass": true,
+        "detail": "18.37h old"
+      },
+      {
+        "id": "qwen_cold_start",
+        "pass": true,
+        "detail": "5.91x first request"
+      },
+      {
+        "id": "qwen_hot_cache",
+        "pass": true,
+        "detail": "0.113ms cache"
+      },
+      {
+        "id": "diskspd_no_regression",
+        "pass": true,
+        "detail": "min throughput 99.8%, max latency 101.1%"
+      },
+      {
+        "id": "foreground_safe_policy",
+        "pass": true,
+        "detail": "low-impact"
+      }
+    ],
+    "metrics": {
+      "qwen_cold_baseline_ms": 8633.987,
+      "qwen_mercury_first_request_ms": 1461.829,
+      "qwen_first_request_speedup": 5.91,
+      "qwen_cache_ms": 0.113,
+      "diskspd_min_throughput_ratio": 0.9977,
+      "diskspd_max_latency_ratio": 1.0114,
+      "proof_max_age_hours": 48,
+      "qwen_proof_age_hours": 18.361,
+      "diskspd_proof_age_hours": 18.365,
+      "gpu_temperature_delta_c": 9,
+      "gpu_power_delta_w": 79.1
+    },
+    "artifacts": {
+      "qwen_cold": "var/bench/qwen-3060-cold-start.json",
+      "qwen_hot": "var/bench/qwen-3060-demo.json",
+      "diskspd": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/external-bench/diskspd-before-after-latest.json"
+    },
+    "refresh": {
+      "windows_command": "powershell -ExecutionPolicy Bypass -File scripts/windows-product-proof.ps1",
+      "wsl_command": "node src/mercury.js bench-qwen-3060-cold-start --model=qwen2.5:7b && node src/mercury.js bench-windows-3060-product-proof",
+      "stale_when_hours": 48,
+      "needed": false
+    }
+  },
+  "services": [
+    {
+      "name": "reflex",
+      "pid": 47515,
+      "running": true,
+      "log": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/resident/reflex.log"
+    },
+    {
+      "name": "slow-worker",
+      "pid": null,
+      "running": false,
+      "log": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/resident/slow-worker.log"
+    }
+  ],
+  "links": {
+    "investor": "http://127.0.0.1:18788/Neuron%20Mercury/docs/investor-brief.html",
+    "product": "http://127.0.0.1:18788/Neuron%20Mercury/docs/product-dashboard.html",
+    "boost": "http://127.0.0.1:18788/Neuron%20Mercury/docs/product-boost-latest.html",
+    "technical": "http://127.0.0.1:18788/Neuron%20Mercury/docs/code-proof.html"
+  }
+}

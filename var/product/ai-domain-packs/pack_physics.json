@@ -1,0 +1,40 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "physics",
+  "label": "Physics and quantitative reasoning",
+  "created_at": "2026-05-27T03:53:46.659Z",
+  "updated_at": "2026-05-27T07:58:40.445Z",
+  "tokens": [
+    "physics",
+    "force",
+    "energy",
+    "quantum",
+    "relativity",
+    "wave",
+    "electric",
+    "物理",
+    "力",
+    "能量",
+    "量子",
+    "相對論",
+    "波",
+    "電磁",
+    "公式"
+  ],
+  "intents": [
+    "formula mapping",
+    "mechanism explanation",
+    "problem solving scaffold"
+  ],
+  "frames": [
+    "先列已知量、未知量、假設與單位。",
+    "選擇守恆律、方程式、近似條件或模型邊界。",
+    "先給推導路線，數值細節可交給工具或 teacher 驗算。"
+  ],
+  "risk_gates": [
+    "不要跳過單位與適用條件。",
+    "複雜計算需要驗算。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

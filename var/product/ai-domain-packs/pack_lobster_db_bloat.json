@@ -1,0 +1,43 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "lobster_db_bloat",
+  "label": "Lobster database bloat and storage control",
+  "created_at": "2026-05-27T07:56:33.747Z",
+  "updated_at": "2026-05-27T07:58:40.449Z",
+  "tokens": [
+    "lobster",
+    "database",
+    "db",
+    "sqlite",
+    "postgres",
+    "storage",
+    "bloat",
+    "log",
+    "jsonl",
+    "conversation",
+    "summary",
+    "龍蝦",
+    "資料庫",
+    "膨脹",
+    "儲存",
+    "對話",
+    "摘要",
+    "日誌"
+  ],
+  "intents": [
+    "database bloat check",
+    "conversation storage policy",
+    "retention design"
+  ],
+  "frames": [
+    "先分清哪些資料要永久保存、哪些只保留摘要、哪些只保留指標與來源 pointer。",
+    "對模型輸出採用 final summary、diagnosis tags、risk score、source pointers、recipe id，不存 token 流水。",
+    "設定 retention：raw trace 短期、蒸餾結果長期、可重建資料只存引用。"
+  ],
+  "risk_gates": [
+    "不要把每秒碎片輸出寫進主資料庫。",
+    "涉及使用者資料時要先做隱私與刪除策略。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

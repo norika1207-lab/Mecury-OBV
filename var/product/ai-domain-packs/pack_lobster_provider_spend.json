@@ -1,0 +1,45 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "lobster_provider_spend",
+  "label": "Lobster paid-provider and cost leak guard",
+  "created_at": "2026-05-27T07:56:33.747Z",
+  "updated_at": "2026-05-27T07:58:40.450Z",
+  "tokens": [
+    "lobster",
+    "provider",
+    "openai",
+    "anthropic",
+    "claude",
+    "api key",
+    "api",
+    "key",
+    "billing",
+    "cost",
+    "spend",
+    "loop",
+    "龍蝦",
+    "付費",
+    "供應商",
+    "金鑰",
+    "帳單",
+    "成本",
+    "燒錢",
+    "循環"
+  ],
+  "intents": [
+    "provider leak scan",
+    "billing loop diagnosis",
+    "API cost guard"
+  ],
+  "frames": [
+    "先搜尋 provider 初始化、API key 使用、retry/loop、background job 與 fallback route。",
+    "把每個外部呼叫標記成 hot path、slow path、manual-only 或 forbidden。",
+    "需要模型判斷時先用本地 7B/14B，禁止在不明路徑自動打付費 provider。"
+  ],
+  "risk_gates": [
+    "不得輸出或保存 API key。",
+    "疑似付費循環時先停用自動重試再做診斷。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

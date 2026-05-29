@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury Rosen Proof Report</title>
+  <style>
+    :root { color-scheme: dark; --bg:#080b10; --panel:#111722; --line:#243142; --text:#f3f7fb; --muted:#93a4b8; --good:#45d483; --warn:#ffd166; --blue:#61a8ff; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--text); }
+    main { max-width:1120px; margin:0 auto; padding:42px 20px 64px; }
+    h1 { margin:0 0 8px; font-size:clamp(32px,5vw,58px); letter-spacing:0; }
+    p { color:var(--muted); line-height:1.6; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; margin:24px 0; }
+    .metric, .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px; }
+    .metric span, small { display:block; color:var(--muted); font-size:13px; }
+    .metric b { display:block; margin:8px 0 4px; font-size:28px; }
+    .panel h2 { margin:0 0 12px; font-size:20px; }
+    ul { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+    li { display:flex; justify-content:space-between; gap:16px; border:1px solid var(--line); border-radius:8px; padding:12px; background:#0d121b; }
+    li.pass b { color:var(--good); }
+    li.fail b { color:var(--warn); }
+    code { color:var(--blue); }
+    .footer { margin-top:26px; font-size:13px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Rosen Cortex Proof</h1>
+    <p>Verified output from Neuron Mercury. This report separates first-useful work from replay and checks whether Rosen bridges actually shorten routing, wake relevant neurons, and keep expensive model calls off the hot path.</p>
+    <div class="grid">
+      
+    <div class="metric">
+      <span>Rosen Bridges</span>
+      <b>343</b>
+      <small>6 selected latest route</small>
+    </div>
+      
+    <div class="metric">
+      <span>Rosen Route</span>
+      <b>39ms</b>
+      <small>16 candidates</small>
+    </div>
+      
+    <div class="metric">
+      <span>Cold Start Packet</span>
+      <b>29ms</b>
+      <small>hot_page_first, 8 hits</small>
+    </div>
+      
+    <div class="metric">
+      <span>First Draft</span>
+      <b>608ms</b>
+      <small>9747 bytes, judge 100</small>
+    </div>
+      
+    <div class="metric">
+      <span>Replay</span>
+      <b>1ms</b>
+      <small>distilled_first_generation_replay</small>
+    </div>
+      
+    <div class="metric">
+      <span>Accelerate Replay</span>
+      <b>6ms</b>
+      <small>accelerate_task_fast_replay</small>
+    </div>
+    </div>
+    <section class="panel">
+      <h2>Proof Checks</h2>
+      <ul>
+    <li class="pass"><b>Rosen route exists</b><span>343 bridges, 6 latest selected</span></li>
+    <li class="pass"><b>Cold-start evidence</b><span>29ms via hot_page_first</span></li>
+    <li class="pass"><b>First useful draft</b><span>9747 bytes, judge 100</span></li>
+    <li class="pass"><b>Replay acceleration</b><span>distilled_first_generation_replay 1ms</span></li>
+    <li class="pass"><b>Accelerate task bridge</b><span>6 bridges, steps rosen_route,spend_guard,cold_start_packet,doctor,task_memory</span></li>
+    <li class="pass"><b>Model hot path</b><span>policy forbidden</span></li></ul>
+    </section>
+    <p class="footer">Generated at 2026-05-19T10:51:53.069Z. JSON sibling: <code>rosen-proof-report.json</code>.</p>
+  </main>
+</body>
+</html>

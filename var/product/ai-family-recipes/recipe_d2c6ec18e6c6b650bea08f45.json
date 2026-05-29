@@ -1,0 +1,32 @@
+{
+  "schema": "mercury-ai-family-recipe-v1",
+  "id": "d2c6ec18e6c6b650bea08f45",
+  "created_at": "2026-05-27T03:10:20.318Z",
+  "updated_at": "2026-05-27T03:10:20.323Z",
+  "namespace": "project-31d7dedd66d42831a3ae2290",
+  "hot_model": "qwen2.5:7b",
+  "teacher_model": "qwen3:14b",
+  "source_intent": "ai3060.family.local.llm.speed",
+  "source_prompt_norm": "本地模型很慢，怎麼把 rtx 3060 上的回答加速",
+  "source_generate_ms": 0,
+  "risk_families": [],
+  "family_ids": [],
+  "tokens": [
+    "本地模型很慢",
+    "怎麼把",
+    "rtx",
+    "3060",
+    "上的回答加速",
+    "先分類問題",
+    "再套用已蒸餾的診斷步驟",
+    "最後只把不確定部分交給",
+    "teacher"
+  ],
+  "reusable_steps": [
+    "先分類問題，再套用已蒸餾的診斷步驟，最後只把不確定部分交給 teacher。"
+  ],
+  "bridges": [],
+  "answer_pattern": "先把問題分成熱路徑與慢路徑。熱路徑只做 cache/reflex/Rosen family route。慢路徑用 teacher 模型補完。把 teacher 的診斷步驟蒸餾成可重用 recipe，之後同類問題先套用 GPU、VRAM、context、batch、cache、背景 worker 的檢查順序。",
+  "boundary": "recipe accelerates a problem family; it is not exact prompt replay",
+  "seen_count": 1
+}

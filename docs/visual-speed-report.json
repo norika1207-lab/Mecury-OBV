@@ -1,0 +1,306 @@
+{
+  "schema": "mercury-visual-speed-report-v1",
+  "created_at": "2026-05-18T15:44:36.398Z",
+  "cwd": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury",
+  "namespace": "bench-visual-speed-92d44064efc7f2a74136c33e",
+  "repeat": 3,
+  "model_baseline_ms": 152,
+  "longform_baseline_ms": 120000,
+  "verified_lane_count": 4,
+  "replay_only_lanes": 2,
+  "overall_speedup": 12.48,
+  "fastest_lane_speedup": 302.88,
+  "passed_lanes": 5,
+  "verified_passed_lanes": 4,
+  "workflow_impact": {
+    "description": "A realistic work burst: 20 project diagnosis questions, 20 cold-start evidence packets, and 200 UMA/RAG lookups. Replay-only LLM cache lanes are excluded from this headline.",
+    "baseline_ms": 3580.72,
+    "mercury_ms": 2003.02,
+    "baseline_seconds": 3.58,
+    "mercury_seconds": 2,
+    "saved_seconds": 1.58,
+    "speedup": 1.79,
+    "baseline_feel": "visible waiting and context switching",
+    "mercury_feel": "short pause"
+  },
+  "speed_trends": {
+    "schema": "mercury-speed-trends-v1",
+    "created_at": "2026-05-18T15:44:36.398Z",
+    "cwd": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury",
+    "history_path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/bench/history.jsonl",
+    "window_rows": 22,
+    "suite_trends": [
+      {
+        "suite": "afu-uma-v0.1",
+        "rows": 3,
+        "first_ms": 11,
+        "latest_ms": 2,
+        "best_ms": 2,
+        "speedup_since_first": 5.5,
+        "latest_budget_ok": false,
+        "latest_high_evidence": 0,
+        "latest_precision": 0
+      },
+      {
+        "suite": "lobster-debug-v0.1",
+        "rows": 4,
+        "first_ms": 15,
+        "latest_ms": 4,
+        "best_ms": 2,
+        "speedup_since_first": 3.75,
+        "latest_budget_ok": false,
+        "latest_high_evidence": 0,
+        "latest_precision": 0
+      },
+      {
+        "suite": "visual-speed-v0.1",
+        "rows": 15,
+        "first_ms": 39.969,
+        "latest_ms": 16,
+        "best_ms": 4.396,
+        "speedup_since_first": 2.5,
+        "latest_budget_ok": true,
+        "latest_high_evidence": 5,
+        "latest_precision": 1
+      }
+    ],
+    "fastest_suites": [
+      {
+        "suite": "visual-speed-v0.1",
+        "rows": 15,
+        "first_ms": 39.969,
+        "latest_ms": 16,
+        "best_ms": 4.396,
+        "speedup_since_first": 2.5,
+        "latest_budget_ok": true,
+        "latest_high_evidence": 5,
+        "latest_precision": 1
+      }
+    ],
+    "needs_attention": [
+      {
+        "suite": "afu-uma-v0.1",
+        "rows": 3,
+        "first_ms": 11,
+        "latest_ms": 2,
+        "best_ms": 2,
+        "speedup_since_first": 5.5,
+        "latest_budget_ok": false,
+        "latest_high_evidence": 0,
+        "latest_precision": 0
+      },
+      {
+        "suite": "lobster-debug-v0.1",
+        "rows": 4,
+        "first_ms": 15,
+        "latest_ms": 4,
+        "best_ms": 2,
+        "speedup_since_first": 3.75,
+        "latest_budget_ok": false,
+        "latest_high_evidence": 0,
+        "latest_precision": 0
+      }
+    ],
+    "resident_caches": {
+      "task_route": {
+        "items": 0,
+        "limit": 512
+      },
+      "accelerate_task": {
+        "items": 0,
+        "limit": 256
+      },
+      "qwer_speed_plan": {
+        "active": true,
+        "age_ms": 146
+      },
+      "speed_state": {
+        "active": true,
+        "age_ms": 21618
+      }
+    },
+    "qwer_speed_plan": {
+      "provider": "reflex_queue_only",
+      "route": "no_model_call_use_reflex_queue",
+      "cache_mode": "qwer_speed_plan_cache_miss",
+      "qwer_pending": 1759,
+      "qwen_cache": 1693
+    },
+    "uma": {
+      "namespace": "project-72e25486d261af475d2a3cd8",
+      "pages": 547,
+      "files": 48,
+      "symbols": 97,
+      "hot_pages": 32,
+      "hot_events": 3792,
+      "refresh_needed": false
+    },
+    "uma_batch": {
+      "namespace_index_cache": 2,
+      "source_page_cache": 11,
+      "symbol_lookup_cache": 2,
+      "project_namespace_default": true,
+      "keep_warm_active": false,
+      "keep_warm_mode": null,
+      "resident_endpoint": "/uma/batch-search"
+    },
+    "neuron_lanes": {
+      "rows": 826,
+      "lanes": 11,
+      "promote": [
+        {
+          "lane": "risk_lane",
+          "runs": 7,
+          "executed": 7,
+          "selected": 7,
+          "utility": 21.4,
+          "elapsed": 3,
+          "high": 6,
+          "avg_utility": 3.057,
+          "avg_elapsed_ms": 0.429,
+          "execution_rate": 1,
+          "selected_rate": 1
+        },
+        {
+          "lane": "verification_lane",
+          "runs": 6,
+          "executed": 6,
+          "selected": 6,
+          "utility": 5.4,
+          "elapsed": 0,
+          "high": 0,
+          "avg_utility": 0.9,
+          "avg_elapsed_ms": 0,
+          "execution_rate": 1,
+          "selected_rate": 1
+        }
+      ],
+      "throttle": []
+    },
+    "memory_graph": {
+      "rows": 707,
+      "recent_rows": 48,
+      "by_type": {
+        "rosen_route": 14,
+        "rosen_pair_pulse": 14,
+        "task_workflow": 14,
+        "monster_doctor": 1,
+        "accelerate_task": 1,
+        "accelerate_task_fast_replay": 1,
+        "cold_start_accelerate": 2,
+        "first_gen_accelerate": 1
+      }
+    },
+    "reflex_cache": {
+      "files": 1965,
+      "qwen_files": 1693,
+      "indexed_models": {
+        "qwen2.5:7b": 1693,
+        "qwen2.5:3b": 0
+      }
+    },
+    "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/bench/speed-trends.json"
+  },
+  "first_generation": {
+    "mode": "parallel_first_generation_plan",
+    "sections": 8,
+    "workers": 4,
+    "waves": 2,
+    "immediate_draft_bytes": 9377,
+    "immediate_draft_kb": 9.2,
+    "judge_score": 100,
+    "pointer_coverage": 1,
+    "distilled_reflexes": 9,
+    "active_neurons": 8,
+    "serial_seconds": 120,
+    "parallel_seconds": 30,
+    "elapsed_ms": 414,
+    "description": "First-generation acceleration uses UMA evidence packets, section workers, judge scoring, and reflex distillation so the user gets a useful draft before slow model completion."
+  },
+  "scenarios": [
+    {
+      "category": "First-run generation benchmark",
+      "title": "5000-word first draft starts as parallel UMA section work",
+      "benchmark_type": "measured_hot_path_plus_slow_path_estimate",
+      "description": "This is the non-replay path: Mercury builds the evidence packet, divides the answer into section workers, creates an immediate evidence-bound draft, queues slow refinement, and distills the draft for later replay.",
+      "baseline_ms": 120000,
+      "mercury_ms": 414,
+      "speedup": 289.86,
+      "baseline_label": "120s serial",
+      "mercury_label": "414ms first draft",
+      "saved_label": "119.6s to first useful draft",
+      "proof": "Built 8 section drafts over 4 workers/2 waves, judge=100, pointer_coverage=1, immediate_draft_bytes=9377, distilled=9."
+    },
+    {
+      "category": "5000-word output benchmark",
+      "title": "Long-form replay: first run reference vs accelerated reuse",
+      "benchmark_type": "cache_hit_replay_not_cold_start",
+      "description": "This is intentionally labeled as replay. It shows how fast Mercury can return a previously generated/distilled 5000-word answer; it does not claim to speed up the first model generation.",
+      "baseline_ms": 120000,
+      "mercury_ms": 0.251,
+      "speedup": 478087.65,
+      "baseline_label": "120s",
+      "mercury_label": "0.251ms",
+      "saved_label": "120s",
+      "proof": "Retrieved 31932 characters from reflex memory with mode=cache_hit. Use --longform-ms=<ms> to attach a real Qwen/Claude/OpenAI first-generation measurement; this replay number is excluded from verified hot-path speedup."
+    }
+  ],
+  "lanes": [
+    {
+      "category": "CPU / Reflex Cache",
+      "title": "Math kernel cached instead of recomputed",
+      "benchmark_type": "measured_hot_path",
+      "include_in_verified_speedup": true,
+      "baseline_ms": 2.423,
+      "accelerated_ms": 0.008,
+      "speedup": 302.88,
+      "proof": "Prime kernel checksum 199091012; repeated deterministic work becomes a cache lookup.",
+      "pass": true
+    },
+    {
+      "category": "UMA / RAG",
+      "title": "Target-file-first RAG lookup",
+      "benchmark_type": "measured_hot_path",
+      "include_in_verified_speedup": true,
+      "baseline_ms": 0.636,
+      "accelerated_ms": 0.313,
+      "speedup": 2.03,
+      "proof": "Indexed 72 semantic pages; targeted route hit 1 pages with target_file_first=yes.",
+      "pass": true
+    },
+    {
+      "category": "Nested Neurons",
+      "title": "Project diagnosis with prewarmed UMA circuit",
+      "benchmark_type": "measured_hot_path",
+      "include_in_verified_speedup": true,
+      "baseline_ms": 86.02,
+      "accelerated_ms": 95.021,
+      "speedup": 0.91,
+      "proof": "Warm pages=72, precompiled circuits=4, plan cache hit=no, precompiled=yes.",
+      "pass": true
+    },
+    {
+      "category": "Cache-hit Replay",
+      "title": "Local LLM answer replayed without model call",
+      "benchmark_type": "cache_hit_replay_not_cold_start",
+      "include_in_verified_speedup": false,
+      "baseline_ms": 152,
+      "accelerated_ms": 0.024,
+      "speedup": 6333.33,
+      "proof": "Replay lane only: baseline is an external Qwen refresh reference (152ms); Mercury returned an already-distilled answer with mode=cache_hit, layer=result_memory. This is call avoidance, not faster cold-start generation.",
+      "pass": true
+    },
+    {
+      "category": "Cold-start Acceleration",
+      "title": "First useful answer before model generation",
+      "benchmark_type": "measured_cold_start_scaffold",
+      "include_in_verified_speedup": true,
+      "baseline_ms": 86.65599999999999,
+      "accelerated_ms": 2,
+      "speedup": 43.33,
+      "proof": "Built UMA evidence packet route=target_file_first hits=1, scaffold bytes=776, queued slow job=pending.",
+      "pass": true
+    }
+  ],
+  "note": "Math is only one lane. The formal target is UMA/RAG/project/LLM hot-path acceleration."
+}

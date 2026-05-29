@@ -1,0 +1,61 @@
+{
+  "schema": "mercury-local-model-first-packet-matrix-v1",
+  "created_at": "2026-05-19T07:31:07.655Z",
+  "pass": false,
+  "model_count": 2,
+  "passed": 0,
+  "prompt": "用繁體中文用兩句話說明本地模型第一次回覆時，Mercury 如何先給可用答案。",
+  "num_predict": 16,
+  "service": {
+    "ok": false,
+    "mode": "local_llm_start",
+    "platform": "darwin",
+    "provider": "local_ollama_http",
+    "running": false,
+    "bin": "ollama",
+    "models": [],
+    "best_model": "qwen2.5:7b",
+    "elapsed_ms": 29,
+    "output": "Command failed: curl -s http://127.0.0.1:11434/api/tags"
+  },
+  "rows": [
+    {
+      "model": "qwen2.5:7b",
+      "pass": false,
+      "baseline_ms": 2.469,
+      "first_packet_ms": 2.531,
+      "first_useful_speedup": 0.98,
+      "baseline_ok": false,
+      "preheat_ready": false,
+      "preheat_mode": "model_inside_unavailable",
+      "preheat_pages": 64,
+      "preheat_hits": 8,
+      "placed_internal_neurons": 500,
+      "packet_hits": 8,
+      "packet_search_ms": 1,
+      "baseline_error": "TypeError: fetch failed"
+    },
+    {
+      "model": "deepseek-r1:7b",
+      "pass": false,
+      "baseline_ms": 1.403,
+      "first_packet_ms": 1.203,
+      "first_useful_speedup": 1.17,
+      "baseline_ok": false,
+      "preheat_ready": false,
+      "preheat_mode": "model_inside_unavailable",
+      "preheat_pages": 64,
+      "preheat_hits": 8,
+      "placed_internal_neurons": 500,
+      "packet_hits": 8,
+      "packet_search_ms": 0,
+      "baseline_error": "TypeError: fetch failed"
+    }
+  ],
+  "result": {
+    "min_first_useful_speedup": 0.98,
+    "max_first_packet_ms": 2.531,
+    "claim": "Across local models, Mercury targets first useful answer latency rather than claiming full weight inference is free."
+  },
+  "elapsed_ms": 623.294
+}

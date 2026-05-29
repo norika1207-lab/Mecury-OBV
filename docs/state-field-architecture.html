@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Mercury State Field Architecture</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07090d;
+      --panel: #101722;
+      --panel-2: #0c121b;
+      --line: #243244;
+      --text: #f4f8fb;
+      --muted: #9caec2;
+      --green: #48d48c;
+      --blue: #6cb7ff;
+      --amber: #ffd166;
+      --red: #ff6b7a;
+      --violet: #b99cff;
+      --cyan: #76e4ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(108, 183, 255, 0.12), transparent 32%),
+        radial-gradient(circle at 90% 12%, rgba(72, 212, 140, 0.10), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+    main { max-width: 1260px; margin: 0 auto; padding: 34px 20px 72px; }
+    header { display: grid; gap: 14px; margin-bottom: 22px; }
+    h1 { margin: 0; font-size: clamp(34px, 5vw, 64px); line-height: 1.02; letter-spacing: 0; }
+    h2 { margin: 0 0 14px; font-size: 22px; letter-spacing: 0; }
+    h3 { margin: 0 0 10px; font-size: 16px; letter-spacing: 0; }
+    p { margin: 0; color: var(--muted); line-height: 1.62; }
+    code { color: var(--cyan); }
+    .tagline { max-width: 920px; font-size: 18px; color: #c5d2df; }
+    .status-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(16, 23, 34, 0.85);
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .pill.good { color: var(--green); border-color: rgba(72, 212, 140, 0.45); }
+    .pill.hot { color: var(--amber); border-color: rgba(255, 209, 102, 0.45); }
+    .grid { display: grid; gap: 14px; }
+    .metrics { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); margin: 22px 0; }
+    .metric, .panel, .node, .phase {
+      background: linear-gradient(180deg, rgba(16, 23, 34, 0.96), rgba(10, 16, 24, 0.96));
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .metric span { display: block; color: var(--muted); font-size: 13px; }
+    .metric b { display: block; margin: 6px 0 2px; font-size: 30px; line-height: 1; }
+    .metric small { display: block; color: var(--muted); font-size: 12px; }
+    section { margin-top: 16px; }
+    .architecture {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(130px, 1fr));
+      gap: 10px;
+      align-items: stretch;
+    }
+    .node { min-height: 128px; position: relative; overflow: hidden; }
+    .node::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-top: 3px solid var(--blue);
+      opacity: 0.85;
+    }
+    .node.green::before { border-color: var(--green); }
+    .node.amber::before { border-color: var(--amber); }
+    .node.violet::before { border-color: var(--violet); }
+    .node.cyan::before { border-color: var(--cyan); }
+    .node.red::before { border-color: var(--red); }
+    .node b { display: block; margin-bottom: 7px; font-size: 15px; }
+    .node p { font-size: 13px; }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 10px;
+    }
+    .flow .panel { min-height: 142px; }
+    .list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      border: 1px solid rgba(36, 50, 68, 0.75);
+      background: var(--panel-2);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #dce6ef;
+    }
+    .list li span { color: var(--muted); text-align: right; }
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+    }
+    .phase { border-top: 3px solid var(--blue); }
+    .phase.now { border-top-color: var(--green); }
+    .phase.next { border-top-color: var(--amber); }
+    .phase.deep { border-top-color: var(--violet); }
+    .phase.product { border-top-color: var(--cyan); }
+    .phase ul { margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.55; }
+    .proof {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 14px;
+    }
+    .callout {
+      border: 1px solid rgba(72, 212, 140, 0.38);
+      background: rgba(72, 212, 140, 0.08);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .callout b { color: var(--green); }
+    .footer { margin-top: 22px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 900px) {
+      .architecture { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .proof { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      main { padding: 24px 14px 56px; }
+      .architecture { grid-template-columns: 1fr; }
+      .list li { display: block; }
+      .list li span { display: block; margin-top: 4px; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="status-row">
+        <span class="pill good">State Field Engine</span>
+        <span class="pill good">Rosen Pair Runtime</span>
+        <span class="pill">UMA / RAG</span>
+        <span class="pill">500 neurons</span>
+        <span class="pill hot">Cold-start acceleration</span>
+      </div>
+      <h1>Neuron Mercury 架構總圖</h1>
+      <p class="tagline">核心不是同時控制一億個 Agent，而是維持一億個可感知的狀態節點。平常休眠，狀態改變才發出 pulse，然後由 Rosen bridge、UMA/RAG、Code Cortex、resident 與稀疏 neuron scheduler 把正確工作喚醒。</p>
+    </header>
+
+    <section class="grid metrics">
+      <div class="metric"><span>Neuron Catalog</span><b>500</b><small>稀疏啟動，不全量執行</small></div>
+      <div class="metric"><span>Rosen Pairs</span><b>19</b><small>local / remote state mirror</small></div>
+      <div class="metric"><span>Pulse Events</span><b>275+</b><small>pair_seed / replay / correction</small></div>
+      <div class="metric"><span>Resident Endpoint</span><b>14</b><small>含 /rosen-pairs</small></div>
+      <div class="metric"><span>Hot Path Policy</span><b>LLM off</b><small>model hot path forbidden</small></div>
+      <div class="metric"><span>Night Runner</span><b>Active</b><small>12h acceleration loop</small></div>
+    </section>
+
+    <section class="panel">
+      <h2>一行定義</h2>
+      <div class="callout">
+        <p><b>Neuron Mercury 是電腦的軟體神經系統。</b> 它把專案、檔案、模型、服務、工具與使用者意圖轉成狀態場；不是每次從零開始思考，而是先知道哪裡變了、哪條路最短、哪個 neuron 應該醒來。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>總架構</h2>
+      <div class="architecture">
+        <div class="node green">
+          <b>1. Sensory Layer</b>
+          <p>監聽 cwd、git root、檔案 digest、GPU/CPU/記憶體、provider spend、resident 狀態。</p>
+        </div>
+        <div class="node cyan">
+          <b>2. UMA / RAG Memory</b>
+          <p>每個專案獨立 namespace，檔案拆 semantic pages，建立 hot pages 與 symbol table。</p>
+        </div>
+        <div class="node violet">
+          <b>3. Rosen Bridge Map</b>
+          <p>把任務入口折疊到已知出口：工具、檔案、風險、成功路徑、驗證路徑。</p>
+        </div>
+        <div class="node amber">
+          <b>4. Rosen Pair Runtime</b>
+          <p>local mirror 與 remote sentinel 形成 paired state；不變 replay，變了 correction pulse。</p>
+        </div>
+        <div class="node blue">
+          <b>5. Sparse Neuron Scheduler</b>
+          <p>500 neurons 不全跑，依 route、score、budget、risk 喚醒少量 lanes。</p>
+        </div>
+        <div class="node red">
+          <b>6. Proof / Guard Layer</b>
+          <p>bench、coherence、spend guard、resident、monster proof 防止自爽加速。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof">
+      <div class="panel">
+        <h2>冷啟動如何被破解</h2>
+        <ul class="list">
+          <li><b>傳統冷啟動</b><span>任務來了才掃檔、找記憶、叫模型、派 Agent</span></li>
+          <li><b>Mercury 冷啟動</b><span>任務來之前，狀態 digest / bridge / hot pages 已常駐</span></li>
+          <li><b>沒有變化</b><span><code>state_replay</code>，直接用已知狀態</span></li>
+          <li><b>有變化</b><span><code>correction_pulse</code>，只處理 delta</span></li>
+          <li><b>沒有 pair</b><span><code>pair_seed</code>，建立新的局部神經連結</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>目前已驗證</h2>
+        <ul class="list">
+          <li><b>bench-rosen-pair-runtime</b><span>pass</span></li>
+          <li><b>bench-resident</b><span>pass</span></li>
+          <li><b>bench-rosen-proof-report</b><span>pass</span></li>
+          <li><b>bench-monster-proof-report</b><span>pass</span></li>
+          <li><b>bench-code-cortex-metadata</b><span>pass</span></li>
+          <li><b>night-runner</b><span>active</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Runtime 流程</h2>
+      <div class="flow">
+        <div class="panel">
+          <h3>A. 任務進來</h3>
+          <p>解析使用者意圖、目標檔案、風險家族、專案 namespace、目前硬體狀態。</p>
+        </div>
+        <div class="panel">
+          <h3>B. 狀態場查詢</h3>
+          <p>先讀 Rosen Pair digest。如果 unchanged，跳過探索；如果 changed，只喚醒 correction route。</p>
+        </div>
+        <div class="panel">
+          <h3>C. Bridge 折疊</h3>
+          <p>從任務入口選 top Rosen bridges，連到 UMA pages、Code Cortex symbols、spend guard、monster doctor。</p>
+        </div>
+        <div class="panel">
+          <h3>D. 稀疏神經元</h3>
+          <p>只啟動相關 lanes：retrieval、risk、accelerate、verify、judge、synthesis。</p>
+        </div>
+        <div class="panel">
+          <h3>E. 產出與寫回</h3>
+          <p>輸出 evidence packet、診斷、patch plan 或 cached response，並寫回 task memory / pair pulse / bench trend。</p>
+        </div>
+        <div class="panel">
+          <h3>F. 防自爽驗證</h3>
+          <p>所有 claims 必須經 bench、resident endpoint、coherence guard、night runner 持續驗證。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>明日 Launch 排程</h2>
+      <div class="schedule">
+        <div class="phase now">
+          <h3>0-3 小時：穩定核心證據</h3>
+          <ul>
+            <li>鎖定 500-neuron catalog，一次只喚醒少量 lanes。</li>
+            <li>修穩 Rosen Pair：不變走 state_replay，變了走 correction_pulse。</li>
+            <li>跑通 resident、Rosen proof、Monster proof、docs consistency。</li>
+            <li>把架構頁改成明日可展示版本。</li>
+          </ul>
+        </div>
+        <div class="phase next">
+          <h3>3-8 小時：做出可展示差異</h3>
+          <ul>
+            <li>新增 Launch Proof：不用 Mercury vs 使用 Mercury 的任務時間對照。</li>
+            <li>加入儀表板速度語言：省下多少掃描、多少模型呼叫、多少重複工作。</li>
+            <li>把 `/rosen-pairs`、`/speed-state`、`/monster-proof` 串成一頁。</li>
+            <li>保留誠實標籤：cache replay 與 first-useful work 分開顯示。</li>
+          </ul>
+        </div>
+        <div class="phase deep">
+          <h3>8-16 小時：實戰 Monster Demo</h3>
+          <ul>
+            <li>選一個大型 repo/任務做 diagnosis proof。</li>
+            <li>展示 target-file-first、Code Cortex、UMA/RAG、Rosen Pair 如何縮短路徑。</li>
+            <li>補上 spend guard / security guard，證明不只加速，也能防風險。</li>
+            <li>固定 demo script，避免現場臨時亂跑。</li>
+          </ul>
+        </div>
+        <div class="phase product">
+          <h3>16-24 小時：推出包裝</h3>
+          <ul>
+            <li>整理 README、架構頁、proof page、benchmark 截圖。</li>
+            <li>準備 30 秒 elevator pitch：電腦的軟體神經系統。</li>
+            <li>準備 3 分鐘 demo：狀態變更 pulse、熱路徑避開 LLM、診斷加速。</li>
+            <li>保留明確 roadmap：Windows/NVDA、Qwen、AFU/Lobster 下一步。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>下一個工程目標</h2>
+      <ul class="list">
+        <li><b>State Field Engine v1</b><span>把 pair 從 command 擴成常駐 watcher</span></li>
+        <li><b>Pair-aware UMA</b><span>semantic pages 變更時自動 pulse</span></li>
+        <li><b>Pair-aware Scheduler</b><span>correction pulse 直接影響 neuron lane selection</span></li>
+        <li><b>Visual Proof</b><span>加入冷啟動對照：fresh scan vs state-field delta</span></li>
+        <li><b>Real Monster Trial</b><span>拿 AFU/Lobster 做大型實戰診斷</span></li>
+      </ul>
+    </section>
+
+    <p class="footer">Generated for Neuron Mercury. Local runtime proof pages: <code>rosen-proof-report.html</code>, <code>monster-proof-report.html</code>, and this architecture page.</p>
+  </main>
+</body>
+</html>

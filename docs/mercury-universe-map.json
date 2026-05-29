@@ -1,0 +1,742 @@
+{
+  "schema": "mercury-universe-rosen-map-v1",
+  "created_at": "2026-05-19T03:38:39.975Z",
+  "elapsed_ms": 17113,
+  "ready": false,
+  "philosophy": "Do not control 100M neurons at once; sense state changes and wake only the bridge, memory, lane, and neuron family that matters.",
+  "namespace": "project-72e25486d261af475d2a3cd8",
+  "nodes": [
+    {
+      "id": "computer",
+      "label": "Computer State",
+      "group": "root",
+      "status": "observed",
+      "detail": "0 cpu cores, gpu=0"
+    },
+    {
+      "id": "runtime",
+      "label": "Runtime Detector",
+      "group": "hardware",
+      "status": "ready",
+      "detail": "0 providers"
+    },
+    {
+      "id": "resident",
+      "label": "Resident Control Plane",
+      "group": "service",
+      "status": "check",
+      "detail": "reflex:off, slow-worker:off"
+    },
+    {
+      "id": "qwer",
+      "label": "Qwer / Local LLM Slow Path",
+      "group": "model",
+      "status": "guarded",
+      "detail": "reflex_queue_only"
+    },
+    {
+      "id": "reflex",
+      "label": "Reflex Cache",
+      "group": "memory",
+      "status": "ready",
+      "detail": "13035 files"
+    },
+    {
+      "id": "uma",
+      "label": "UMA/RAG Project Memory",
+      "group": "memory",
+      "status": "ready",
+      "detail": "181 pages, 87 symbols"
+    },
+    {
+      "id": "code_cortex",
+      "label": "Code Cortex",
+      "group": "memory",
+      "status": "ready",
+      "detail": "6 file tables"
+    },
+    {
+      "id": "rosen",
+      "label": "Rosen Bridge Field",
+      "group": "rosen",
+      "status": "ready",
+      "detail": "344 bridges"
+    },
+    {
+      "id": "pairs",
+      "label": "Rosen Pair State Field",
+      "group": "rosen",
+      "status": "ready",
+      "detail": "73 pairs, 76 pulses"
+    },
+    {
+      "id": "neurons",
+      "label": "Neuron Catalog",
+      "group": "neuron",
+      "status": "ready",
+      "detail": "1000 physical neurons"
+    },
+    {
+      "id": "lanes",
+      "label": "Sparse Activation Lanes",
+      "group": "neuron",
+      "status": "ready",
+      "detail": "12 lanes"
+    },
+    {
+      "id": "product",
+      "label": "Product Gate",
+      "group": "product",
+      "status": "check",
+      "detail": "11/14 checks"
+    },
+    {
+      "id": "scale",
+      "label": "100M Virtual Neuron Plan",
+      "group": "future",
+      "status": "planned",
+      "detail": "24415 shards @ 4096"
+    }
+  ],
+  "edges": [
+    {
+      "from": "computer",
+      "to": "runtime",
+      "label": "detects"
+    },
+    {
+      "from": "runtime",
+      "to": "qwer",
+      "label": "routes slow path"
+    },
+    {
+      "from": "computer",
+      "to": "resident",
+      "label": "hosts"
+    },
+    {
+      "from": "resident",
+      "to": "reflex",
+      "label": "serves"
+    },
+    {
+      "from": "resident",
+      "to": "uma",
+      "label": "keeps warm"
+    },
+    {
+      "from": "uma",
+      "to": "code_cortex",
+      "label": "indexes symbols"
+    },
+    {
+      "from": "uma",
+      "to": "rosen",
+      "label": "promotes bridges"
+    },
+    {
+      "from": "rosen",
+      "to": "pairs",
+      "label": "tracks state"
+    },
+    {
+      "from": "rosen",
+      "to": "neurons",
+      "label": "boosts selection"
+    },
+    {
+      "from": "neurons",
+      "to": "lanes",
+      "label": "sparse activation"
+    },
+    {
+      "from": "lanes",
+      "to": "product",
+      "label": "accelerates"
+    },
+    {
+      "from": "pairs",
+      "to": "product",
+      "label": "pulses changes"
+    },
+    {
+      "from": "scale",
+      "to": "neurons",
+      "label": "virtualizes"
+    }
+  ],
+  "hardware_state": {
+    "host": {
+      "created_at": "2026-05-19T03:38:22.914Z",
+      "platform": "darwin",
+      "cwd": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury",
+      "cpu": {
+        "model": "Apple M1 Pro",
+        "logical": 8,
+        "loadavg": [
+          8.998046875,
+          10.09033203125,
+          11.6064453125
+        ]
+      },
+      "memory": {
+        "total": 17179869184,
+        "free": 1701789696,
+        "free_ratio": 0.099
+      },
+      "disks": [],
+      "gpus": [],
+      "processes": [],
+      "llm": {
+        "available": false,
+        "tags_ms": null,
+        "models": [],
+        "skipped": true
+      },
+      "fast": true,
+      "reflex_cache": {
+        "files": 13035,
+        "bytes": 0,
+        "intents": 13035
+      },
+      "elapsed_ms": 51,
+      "recommendations": [
+        "RAM pressure is high: keep Qwen on slow/reflex paths and avoid loading extra local models while gaming.",
+        "No NVIDIA GPU telemetry detected: treat local LLM as CPU/unknown and avoid hot-path model calls.",
+        "Local Ollama is unavailable: seeded reflexes and deterministic kernels still provide millisecond answers.",
+        "For game-time speed, keep Mercury in reflex/cache mode and avoid broad repo scans or model refreshes during play."
+      ],
+      "ollama_url": "http://127.0.0.1:11434"
+    },
+    "runtime": {
+      "acceleration_route": {
+        "schema": "mercury-acceleration-route-v1",
+        "hot_path": [
+          "reflex_exact_cache",
+          "semantic_cache_low_risk_only",
+          "project_uma_target_file_first",
+          "code_cortex_symbol_first",
+          "deterministic_tool_kernel"
+        ],
+        "slow_path": [
+          "no_model_call_use_reflex_queue"
+        ],
+        "gpu_policy": "No GPU route detected; keep model calls out of the hot path.",
+        "missing_for_extreme_speed": [
+          "install or expose vLLM/SGLang/TensorRT-LLM for batched local inference",
+          "expose Ollama/llama.cpp/ONNX/OpenVINO/MLX for slow-path distillation",
+          "install NVIDIA driver telemetry or CUDA-visible runtime"
+        ]
+      },
+      "provider_priority": [],
+      "gpu_count": 0,
+      "wsl": null,
+      "commands": {},
+      "modules": {}
+    },
+    "policy": {
+      "hot_path": "reflex_first",
+      "semantic_reflex": "enabled",
+      "runtime_mode": "low-impact",
+      "disk_write_guard": "strict",
+      "slow_worker": "defer",
+      "local_model_hot_path": "forbidden",
+      "provider_route": "no_model_call_use_reflex_queue",
+      "spend_guard": "risk",
+      "broad_scan": "defer",
+      "reason": [
+        "resident started in low-impact foreground-safe mode",
+        "2748 pending slow jobs",
+        "memory pressure",
+        "gpu unavailable",
+        "No GPU route detected; keep model calls out of the hot path."
+      ]
+    }
+  },
+  "memory_state": {
+    "reflex_cache": {
+      "files": 13035,
+      "bytes": 0,
+      "intents": 13035
+    },
+    "uma_project": {
+      "namespace": "project-72e25486d261af475d2a3cd8",
+      "exists": true,
+      "schema": "uma-namespace-index-v2",
+      "pages": 181,
+      "files": 6,
+      "page_table_files": 6,
+      "symbol_count": 87,
+      "needs_file_table_refresh": false,
+      "updated_at": "2026-05-19T03:38:19.894Z"
+    },
+    "uma_hot_cache": {
+      "namespace": "project-72e25486d261af475d2a3cd8",
+      "path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/uma/hot-pages/cache_287a26eecc1a511bbd46a6a9.json",
+      "pages": 26,
+      "events": 3850,
+      "updated_at": "2026-05-19T03:38:20.494Z",
+      "fresh_pages": 26,
+      "fresh_pages_verified": false
+    },
+    "workflow_replay": {
+      "schema": "mercury-workflow-replay-cache-summary-v1",
+      "namespace": "project-72e25486d261af475d2a3cd8",
+      "workflows": 1191,
+      "namespace_workflows": 40,
+      "accelerate_task_fast": 11529,
+      "accelerate_task_replay": 11532,
+      "latest_workflow_at": "2026-05-19T03:38:20.590Z",
+      "ready": true
+    },
+    "task_memory": {
+      "events": 370,
+      "success_paths": 12,
+      "first_gen_replay_paths": 0,
+      "rosen_routes": 105,
+      "risk_hotspots": 15,
+      "top_hotspots": [
+        {
+          "file": "README.md",
+          "hits": 32
+        },
+        {
+          "file": "scripts/night-runner.sh",
+          "hits": 32
+        },
+        {
+          "file": "src/mercury.js",
+          "hits": 32
+        },
+        {
+          "file": "src/neurons.json",
+          "hits": 25
+        },
+        {
+          "file": "docs/ROSEN_CORTEX_MODEL.md",
+          "hits": 17
+        }
+      ]
+    }
+  },
+  "rosen_state": {
+    "cortex": {
+      "schema": "mercury-rosen-cortex-summary-v1",
+      "namespace": "project-72e25486d261af475d2a3cd8",
+      "bridges": 344,
+      "by_type": {
+        "similar_to": 228,
+        "distilled_from": 112,
+        "accelerated_by": 2,
+        "blocked_by": 1,
+        "verified_by": 1
+      },
+      "by_source": {
+        "uma_batch": 56,
+        "memory_graph": 277,
+        "static_family": 3,
+        "bridge_store": 8
+      },
+      "latest_path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/rosen-cortex/latest-route.json",
+      "latest_task": "resident launch proof should replay provider spend and hot path diagnosis target files src/mercury.js src/neurons.json scripts/night-runner.sh README.md package.json",
+      "latest_selected": 8,
+      "latest_candidates": 144,
+      "latest_elapsed_ms": 50,
+      "latest_risk_families": [
+        "provider_spend"
+      ],
+      "pairs": 73,
+      "pair_latest_mode": "state_replay",
+      "pair_correction_pulse": 15,
+      "ready": true
+    },
+    "pairs": {
+      "schema": "mercury-rosen-pairs-summary-v1",
+      "namespace": "project-72e25486d261af475d2a3cd8",
+      "ready": true,
+      "pairs": 73,
+      "pair_seed": 6,
+      "correction_pulse": 15,
+      "state_replay": 52,
+      "pulse_events": 76,
+      "event_pair_seed": 0,
+      "event_correction_pulse": 0,
+      "event_state_replay": 76,
+      "latest_pair_id": "e35910b730b341d9ff7e69a8",
+      "latest_mode": "state_replay",
+      "latest_changed": false,
+      "latest_elapsed_ms": 2
+    }
+  },
+  "neuron_state": {
+    "catalog_total": 1000,
+    "by_type": {
+      "intent": 66,
+      "retrieval": 66,
+      "tool": 56,
+      "risk": 74,
+      "decompose": 68,
+      "explore": 69,
+      "analyze": 72,
+      "recompose": 68,
+      "verify": 68,
+      "accelerate": 68,
+      "memory": 68,
+      "critic": 65,
+      "safety": 64,
+      "compression": 64,
+      "synthesis": 64
+    },
+    "lane_health": {
+      "rows": 696,
+      "lanes": 12,
+      "promote": [
+        {
+          "lane": "risk_lane",
+          "runs": 8,
+          "executed": 8,
+          "selected": 8,
+          "utility": 117.10000000000001,
+          "elapsed": 2,
+          "high": 48,
+          "avg_utility": 14.638,
+          "avg_elapsed_ms": 0.25,
+          "execution_rate": 1,
+          "selected_rate": 1
+        },
+        {
+          "lane": "verification_lane",
+          "runs": 5,
+          "executed": 3,
+          "selected": 5,
+          "utility": 2.8,
+          "elapsed": 0,
+          "high": 0,
+          "avg_utility": 0.56,
+          "avg_elapsed_ms": 0,
+          "execution_rate": 0.6,
+          "selected_rate": 1
+        }
+      ],
+      "throttle": []
+    },
+    "virtual_scale_plan": {
+      "target_neurons": 100000000,
+      "physical_catalog_neurons": 1000,
+      "virtual_shard_size": 4096,
+      "virtual_shard_count": 24415,
+      "catalog_to_target_ratio": "1:100000",
+      "catalog_groups": {
+        "intent": 66,
+        "retrieval": 66,
+        "tool": 56,
+        "risk": 74,
+        "decompose": 68,
+        "explore": 69,
+        "analyze": 72,
+        "recompose": 68,
+        "verify": 68,
+        "accelerate": 68,
+        "memory": 68,
+        "critic": 65,
+        "safety": 64,
+        "compression": 64,
+        "synthesis": 64
+      },
+      "hardware_substrates": [
+        {
+          "id": "cpu.l1_hot_path",
+          "role": "tight loops, ranking, regex, hashing, tiny routing decisions",
+          "latency_class": "micro"
+        },
+        {
+          "id": "cpu.process_pool",
+          "role": "bounded parallel scans, syntax checks, smoke commands, local workers",
+          "latency_class": "low"
+        },
+        {
+          "id": "memory.cache",
+          "role": "fingerprints, scan bundles, plan results, neuron scores, hot evidence",
+          "latency_class": "low"
+        },
+        {
+          "id": "disk.append_log",
+          "role": "blackboard traces, bench history, durable lessons, audit records",
+          "latency_class": "medium"
+        },
+        {
+          "id": "network.remote_nodes",
+          "role": "future VPS or LAN shards for broad exploration and non-blocking jobs",
+          "latency_class": "variable"
+        },
+        {
+          "id": "gpu.vector_batch",
+          "role": "future embedding, similarity, dense scoring, and batched learned routing",
+          "latency_class": "batch"
+        },
+        {
+          "id": "llm.local_ollama",
+          "role": "local Qwen/Ollama inference for private synthesis, grading, and routing experiments",
+          "latency_class": "model"
+        }
+      ],
+      "shard_families": [
+        {
+          "id": "goal-shards",
+          "source": "decompose.*",
+          "purpose": "split a large user goal into measurable subgoals"
+        },
+        {
+          "id": "surface-shards",
+          "source": "explore.*",
+          "purpose": "map files, services, data artifacts, and boundaries"
+        },
+        {
+          "id": "risk-shards",
+          "source": "risk.* + analyze.*",
+          "purpose": "score failure modes and production bottlenecks"
+        },
+        {
+          "id": "patch-shards",
+          "source": "recompose.*",
+          "purpose": "merge evidence into minimal patch order and rollback shape"
+        },
+        {
+          "id": "verify-shards",
+          "source": "verify.*",
+          "purpose": "guard syntax, smoke, speed, and artifact integrity"
+        },
+        {
+          "id": "speed-shards",
+          "source": "accelerate.*",
+          "purpose": "choose cache, parallelism, pruning, and hardware placement"
+        },
+        {
+          "id": "memory-shards",
+          "source": "memory.*",
+          "purpose": "promote useful lessons into future routing weights"
+        }
+      ],
+      "hot_path_policy": [
+        "activate sparse circuits from the physical neuron catalog",
+        "materialize virtual neurons only as scored shards, not one process per neuron",
+        "keep explicit target-file plans on finding-producing risk neurons",
+        "batch file scans once per target and fan out slices to many neuron families",
+        "write every accepted speed lesson back into cache, trace, and benchmark history"
+      ],
+      "current_guardrail": "speed budgets must pass before broad neuron expansion is considered valid"
+    }
+  },
+  "product_state": {
+    "schema": "mercury-product-readiness-v1",
+    "created_at": "2026-05-19T03:38:39.975Z",
+    "ready": false,
+    "elapsed_ms": 16195,
+    "checks": [
+      {
+        "id": "node",
+        "label": "Node runtime",
+        "pass": true,
+        "detail": "v25.9.0"
+      },
+      {
+        "id": "resident_reflex",
+        "label": "Resident reflex service",
+        "pass": false,
+        "detail": 93207
+      },
+      {
+        "id": "resident_slow_worker",
+        "label": "Resident slow worker",
+        "pass": true,
+        "detail": "deferred by low-impact mode"
+      },
+      {
+        "id": "runtime_low_impact",
+        "label": "Runtime low-impact guard",
+        "pass": true,
+        "detail": "low-impact / disk=strict"
+      },
+      {
+        "id": "product_dashboard",
+        "label": "Product dashboard",
+        "pass": false,
+        "detail": "12/13"
+      },
+      {
+        "id": "qwer_plan",
+        "label": "Qwer speed plan",
+        "pass": true,
+        "detail": "reflex_queue_only"
+      },
+      {
+        "id": "uma_pages",
+        "label": "UMA project memory",
+        "pass": true,
+        "detail": "181 pages"
+      },
+      {
+        "id": "rosen_pairs",
+        "label": "Rosen state pairs",
+        "pass": true,
+        "detail": "73 pairs"
+      },
+      {
+        "id": "neuron_placement",
+        "label": "500-neuron placement",
+        "pass": true,
+        "detail": "1000 placed"
+      },
+      {
+        "id": "qwen_3060_cold_start",
+        "label": "3060 first impression",
+        "pass": true,
+        "detail": "5.91x cold"
+      },
+      {
+        "id": "qwen_3060_hot_cache",
+        "label": "3060 hot cache",
+        "pass": true,
+        "detail": "0.113ms"
+      },
+      {
+        "id": "windows_3060_product_proof",
+        "label": "3060 product proof",
+        "pass": true,
+        "detail": "5.91x cold, disk 99.8%+"
+      },
+      {
+        "id": "paper_suite",
+        "label": "Paper suite",
+        "pass": true,
+        "detail": "8/8"
+      },
+      {
+        "id": "launch_suite",
+        "label": "Launch suite",
+        "pass": false,
+        "detail": "5/6"
+      }
+    ],
+    "uma_warmup": null,
+    "uma_status": {
+      "namespace": "project-72e25486d261af475d2a3cd8",
+      "index_path": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/uma/index_c56dee58e9de3501e316d0f1.json",
+      "exists": true,
+      "schema": "uma-namespace-index-v2",
+      "pages": 181,
+      "files": 6,
+      "page_table_files": 6,
+      "symbol_count": 87,
+      "needs_file_table_refresh": false,
+      "updated_at": "2026-05-19T03:38:19.894Z"
+    },
+    "metrics": {
+      "neurons": 1000,
+      "paper_lanes": "8/8",
+      "launch_lanes": "5/6",
+      "paper_rows": 14,
+      "visual_hot_path_speedup": 12.48,
+      "visual_workflow_speedup": 1.79,
+      "visual_saved_seconds": 1.58,
+      "first_gen_bytes": 9377,
+      "first_gen_judge": 100,
+      "rosen_bridges": 344,
+      "rosen_pairs": 73,
+      "uma_pages": 181,
+      "speed_state_ms": 908,
+      "monster_ms": 137,
+      "model_hot_path": "forbidden",
+      "qwen_3060_cold_speedup": 5.91,
+      "qwen_3060_cold_baseline_ms": 8633.987,
+      "qwen_3060_first_request_ms": 1461.829,
+      "qwen_3060_cache_ms": 0.113,
+      "qwen_3060_gpu_temp_delta_c": 9,
+      "qwen_3060_gpu_power_delta_w": 79.1,
+      "diskspd_no_regression_pass": true,
+      "diskspd_min_throughput_ratio": 0.9977,
+      "diskspd_max_latency_ratio": 1.0114
+    },
+    "windows_3060_proof": {
+      "schema": "mercury-windows-3060-product-proof-v1",
+      "created_at": "2026-05-19T03:38:39.943Z",
+      "pass": true,
+      "checks": [
+        {
+          "id": "qwen_proof_fresh",
+          "pass": true,
+          "detail": "9.57h old"
+        },
+        {
+          "id": "diskspd_proof_fresh",
+          "pass": true,
+          "detail": "9.57h old"
+        },
+        {
+          "id": "qwen_cold_start",
+          "pass": true,
+          "detail": "5.91x first request"
+        },
+        {
+          "id": "qwen_hot_cache",
+          "pass": true,
+          "detail": "0.113ms cache"
+        },
+        {
+          "id": "diskspd_no_regression",
+          "pass": true,
+          "detail": "min throughput 99.8%, max latency 101.1%"
+        },
+        {
+          "id": "foreground_safe_policy",
+          "pass": true,
+          "detail": "low-impact"
+        }
+      ],
+      "metrics": {
+        "qwen_cold_baseline_ms": 8633.987,
+        "qwen_mercury_first_request_ms": 1461.829,
+        "qwen_first_request_speedup": 5.91,
+        "qwen_cache_ms": 0.113,
+        "diskspd_min_throughput_ratio": 0.9977,
+        "diskspd_max_latency_ratio": 1.0114,
+        "proof_max_age_hours": 48,
+        "qwen_proof_age_hours": 9.571,
+        "diskspd_proof_age_hours": 9.575,
+        "gpu_temperature_delta_c": 9,
+        "gpu_power_delta_w": 79.1
+      },
+      "artifacts": {
+        "qwen_cold": "var/bench/qwen-3060-cold-start.json",
+        "qwen_hot": "var/bench/qwen-3060-demo.json",
+        "diskspd": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/external-bench/diskspd-before-after-latest.json"
+      },
+      "refresh": {
+        "windows_command": "powershell -ExecutionPolicy Bypass -File scripts/windows-product-proof.ps1",
+        "wsl_command": "node src/mercury.js bench-qwen-3060-cold-start --model=qwen2.5:7b && node src/mercury.js bench-windows-3060-product-proof",
+        "stale_when_hours": 48,
+        "needed": false
+      }
+    },
+    "services": [
+      {
+        "name": "reflex",
+        "pid": 93207,
+        "running": false,
+        "log": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/resident/reflex.log"
+      },
+      {
+        "name": "slow-worker",
+        "pid": null,
+        "running": false,
+        "log": "/Users/norikaoda/Dropbox/Mac (2)/Documents/New project 2/Neuron Mercury/var/resident/slow-worker.log"
+      }
+    ],
+    "links": {
+      "investor": "http://127.0.0.1:18788/Neuron%20Mercury/docs/investor-brief.html",
+      "product": "http://127.0.0.1:18788/Neuron%20Mercury/docs/product-dashboard.html",
+      "boost": "http://127.0.0.1:18788/Neuron%20Mercury/docs/product-boost-latest.html",
+      "technical": "http://127.0.0.1:18788/Neuron%20Mercury/docs/code-proof.html"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "philosophy",
+  "label": "Philosophy and conceptual analysis",
+  "created_at": "2026-05-27T03:53:46.659Z",
+  "updated_at": "2026-05-27T07:58:40.447Z",
+  "tokens": [
+    "philosophy",
+    "ethics",
+    "logic",
+    "meaning",
+    "knowledge",
+    "consciousness",
+    "哲學",
+    "倫理",
+    "邏輯",
+    "意義",
+    "知識",
+    "意識",
+    "形上學"
+  ],
+  "intents": [
+    "concept clarification",
+    "argument map",
+    "ethical analysis"
+  ],
+  "frames": [
+    "先定義核心概念與立場。",
+    "拆出前提、推論、反例、價值衝突與可能結論。",
+    "用思想流派做索引，但把回答落回使用者問題。"
+  ],
+  "risk_gates": [
+    "不要把價值判斷偽裝成事實。",
+    "標記不同學派的分歧。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

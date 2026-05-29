@@ -1,0 +1,45 @@
+[fullgrid] load tokenizer /home/alice_gx10/tile-bake/weights/Qwen2.5-3B
+[fullgrid] load model /home/alice_gx10/tile-bake/weights/Qwen2.5-3B device=cpu dtype=bfloat16
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/434 [00:00<?, ?it/s]Loading weights:   5%|▌         | 22/434 [00:00<00:01, 218.17it/s]Loading weights:  11%|█▏        | 49/434 [00:00<00:01, 247.99it/s]Loading weights:  38%|███▊      | 166/434 [00:00<00:00, 643.08it/s]Loading weights:  53%|█████▎    | 229/434 [00:00<00:00, 434.61it/s]Loading weights: 100%|██████████| 434/434 [00:00<00:00, 734.21it/s]
+[fullgrid] modules=253 channels=1,184,128 Q=10 S=10 cells=118,412,800
+[fullgrid] pass1 calibration probes=166
+[fullgrid] calibration 5/166 elapsed=87s
+[fullgrid] calibration 10/166 elapsed=129s
+[fullgrid] calibration 15/166 elapsed=171s
+[fullgrid] calibration 20/166 elapsed=217s
+[fullgrid] calibration 25/166 elapsed=246s
+[fullgrid] calibration 30/166 elapsed=280s
+[fullgrid] calibration 35/166 elapsed=309s
+[fullgrid] calibration 40/166 elapsed=332s
+[fullgrid] calibration 45/166 elapsed=374s
+[fullgrid] calibration 50/166 elapsed=418s
+[fullgrid] calibration 55/166 elapsed=452s
+[fullgrid] calibration 60/166 elapsed=491s
+[fullgrid] calibration 65/166 elapsed=525s
+[fullgrid] calibration 70/166 elapsed=556s
+[fullgrid] calibration 75/166 elapsed=590s
+[fullgrid] calibration 80/166 elapsed=634s
+[fullgrid] calibration 85/166 elapsed=680s
+[fullgrid] calibration 90/166 elapsed=735s
+[fullgrid] calibration 95/166 elapsed=791s
+[fullgrid] calibration 100/166 elapsed=839s
+[fullgrid] calibration 105/166 elapsed=891s
+[fullgrid] calibration 110/166 elapsed=964s
+[fullgrid] calibration 115/166 elapsed=1028s
+[fullgrid] calibration 120/166 elapsed=1084s
+[fullgrid] calibration 125/166 elapsed=1152s
+[fullgrid] calibration 130/166 elapsed=1213s
+[fullgrid] calibration 135/166 elapsed=1269s
+[fullgrid] calibration 140/166 elapsed=1327s
+[fullgrid] calibration 145/166 elapsed=1387s
+[fullgrid] calibration 150/166 elapsed=1435s
+[fullgrid] calibration 155/166 elapsed=1475s
+[fullgrid] calibration 160/166 elapsed=1530s
+[fullgrid] calibration 165/166 elapsed=1567s
+[fullgrid] pass2 heat fill
+[fullgrid] heat 5/166 elapsed=2031s
+[fullgrid] heat 10/166 elapsed=2179s
+[fullgrid] heat 15/166 elapsed=2341s
+[fullgrid] heat 20/166 elapsed=2489s
+[fullgrid] heat 25/166 elapsed=2643s

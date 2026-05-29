@@ -1,0 +1,38 @@
+[fullgrid] load tokenizer /home/alice_gx10/hf-qwen7b
+[fullgrid] load model /home/alice_gx10/hf-qwen7b device=cpu dtype=bfloat16
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:  17%|█▋        | 58/339 [00:00<00:00, 572.83it/s]Loading weights:  50%|█████     | 170/339 [00:00<00:00, 870.89it/s]Loading weights:  76%|███████▌  | 257/339 [00:00<00:00, 753.56it/s]Loading weights: 100%|██████████| 339/339 [00:00<00:00, 939.06it/s]
+[fullgrid] modules=197 channels=1,542,656 Q=10 S=10 cells=154,265,600
+[fullgrid] pass1 calibration probes=166
+[fullgrid] calibration 5/166 elapsed=94s
+[fullgrid] calibration 10/166 elapsed=152s
+[fullgrid] calibration 15/166 elapsed=216s
+[fullgrid] calibration 20/166 elapsed=282s
+[fullgrid] calibration 25/166 elapsed=330s
+[fullgrid] calibration 30/166 elapsed=379s
+[fullgrid] calibration 35/166 elapsed=415s
+[fullgrid] calibration 40/166 elapsed=457s
+[fullgrid] calibration 45/166 elapsed=532s
+[fullgrid] calibration 50/166 elapsed=602s
+[fullgrid] calibration 55/166 elapsed=648s
+[fullgrid] calibration 60/166 elapsed=690s
+[fullgrid] calibration 65/166 elapsed=736s
+[fullgrid] calibration 70/166 elapsed=790s
+[fullgrid] calibration 75/166 elapsed=870s
+[fullgrid] calibration 80/166 elapsed=967s
+[fullgrid] calibration 85/166 elapsed=1074s
+[fullgrid] calibration 90/166 elapsed=1205s
+[fullgrid] calibration 95/166 elapsed=1362s
+[fullgrid] calibration 100/166 elapsed=1499s
+[fullgrid] calibration 105/166 elapsed=1641s
+[fullgrid] calibration 110/166 elapsed=1725s
+[fullgrid] calibration 115/166 elapsed=1783s
+[fullgrid] calibration 120/166 elapsed=1837s
+[fullgrid] calibration 125/166 elapsed=1902s
+[fullgrid] calibration 130/166 elapsed=1980s
+[fullgrid] calibration 135/166 elapsed=2100s
+[fullgrid] calibration 140/166 elapsed=2218s
+[fullgrid] calibration 145/166 elapsed=2344s
+[fullgrid] calibration 150/166 elapsed=2471s
+[fullgrid] calibration 155/166 elapsed=2572s
+[fullgrid] calibration 160/166 elapsed=2672s

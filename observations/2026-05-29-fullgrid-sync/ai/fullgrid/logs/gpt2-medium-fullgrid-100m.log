@@ -1,0 +1,23 @@
+[fullgrid] load tokenizer /home/ai/hf_models/gpt2-medium
+[fullgrid] load model /home/ai/hf_models/gpt2-medium device=cpu dtype=float32
+`torch_dtype` is deprecated! Use `dtype` instead!
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.Op.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+/home/ai/qaic-env/lib/python3.10/site-packages/onnxscript/converter.py:816: FutureWarning: 'onnxscript.values.OnnxFunction.param_schemas' is deprecated in version 0.1 and will be removed in the future. Please use '.op_signature' instead.
+  param_schemas = callee.param_schemas()
+[fullgrid] modules=146 channels=321,617 Q=18 S=18 cells=104,203,908
+[fullgrid] pass1 calibration probes=30
+[fullgrid] calibration 5/30 elapsed=2s
+[fullgrid] calibration 10/30 elapsed=2s
+[fullgrid] calibration 15/30 elapsed=3s
+[fullgrid] calibration 20/30 elapsed=3s
+[fullgrid] calibration 25/30 elapsed=4s
+[fullgrid] calibration 30/30 elapsed=4s
+[fullgrid] pass2 heat fill
+[fullgrid] heat 5/30 elapsed=11s
+[fullgrid] heat 10/30 elapsed=16s
+[fullgrid] heat 15/30 elapsed=20s
+[fullgrid] heat 20/30 elapsed=24s
+[fullgrid] heat 25/30 elapsed=29s
+[fullgrid] heat 30/30 elapsed=34s
+[fullgrid] DONE gpt2-medium-fullgrid-100m cells=104,203,908 nonzero=73,414,128 coverage=70.452375%

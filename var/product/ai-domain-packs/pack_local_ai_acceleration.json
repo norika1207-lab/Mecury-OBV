@@ -1,0 +1,44 @@
+{
+  "schema": "mercury-ai-domain-pack-v1",
+  "id": "local_ai_acceleration",
+  "label": "Local AI acceleration and Mercury hot path",
+  "created_at": "2026-05-27T03:53:46.659Z",
+  "updated_at": "2026-05-27T07:58:40.448Z",
+  "tokens": [
+    "local",
+    "llm",
+    "gpu",
+    "cuda",
+    "ollama",
+    "qwen",
+    "deepseek",
+    "cache",
+    "latency",
+    "3060",
+    "4060",
+    "本地",
+    "模型",
+    "顯卡",
+    "加速",
+    "快取",
+    "羅森",
+    "神經元",
+    "毫秒"
+  ],
+  "intents": [
+    "local model speed plan",
+    "hot path routing",
+    "teacher distillation"
+  ],
+  "frames": [
+    "先分 hot path、family recipe、domain pack、teacher slow path。",
+    "能毫秒化的是路由、索引、模板與已蒸餾答案，不是全新大模型推理。",
+    "把未知部分丟給 14B/teacher 背景補完，再回寫可重用路線。"
+  ],
+  "risk_gates": [
+    "不得宣稱 14B 全新生成能在 3060 上毫秒完成。",
+    "基準測試要分冷啟動、warm generation、family hit 與 exact replay。"
+  ],
+  "source_policy": "Use public-domain, open-access, licensed, or user-owned material. Store distilled maps, citations, and pointers; do not store copyrighted textbooks or papers verbatim.",
+  "hot_path_boundary": "domain pack accelerates routing and first framework; teacher/model generation still handles unknown facts and detailed synthesis"
+}

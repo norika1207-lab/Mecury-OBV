@@ -1,0 +1,124 @@
+/Users/john/fullgrid-venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[fullgrid] load tokenizer EleutherAI/pythia-6.9b
+[fullgrid] load model EleutherAI/pythia-6.9b device=cpu dtype=float32
+`torch_dtype` is deprecated! Use `dtype` instead!
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [16:53<16:53, 1013.88s/it]Fetching 2 files: 100%|██████████| 2/2 [16:53<00:00, 506.94s/it] 
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.80s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  8.62s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  8.80s/it]
+[fullgrid] modules=194 channels=1,496,320 Q=10 S=10 cells=149,632,000
+[fullgrid] pass1 calibration probes=256 heat_probes=1286
+[fullgrid] calibration 5/256 elapsed=1557s
+[fullgrid] calibration 10/256 elapsed=2015s
+[fullgrid] calibration 15/256 elapsed=2470s
+[fullgrid] calibration 20/256 elapsed=2926s
+[fullgrid] calibration 25/256 elapsed=3381s
+[fullgrid] calibration 30/256 elapsed=3836s
+[fullgrid] calibration 35/256 elapsed=4291s
+[fullgrid] calibration 40/256 elapsed=4749s
+[fullgrid] calibration 45/256 elapsed=5206s
+[fullgrid] calibration 50/256 elapsed=5665s
+[fullgrid] calibration 55/256 elapsed=6123s
+[fullgrid] calibration 60/256 elapsed=6580s
+[fullgrid] calibration 65/256 elapsed=7036s
+[fullgrid] calibration 70/256 elapsed=7493s
+[fullgrid] calibration 75/256 elapsed=7950s
+[fullgrid] calibration 80/256 elapsed=8409s
+[fullgrid] calibration 85/256 elapsed=8867s
+[fullgrid] calibration 90/256 elapsed=9321s
+[fullgrid] calibration 95/256 elapsed=9778s
+[fullgrid] calibration 100/256 elapsed=10237s
+[fullgrid] calibration 105/256 elapsed=10681s
+[fullgrid] calibration 110/256 elapsed=11125s
+[fullgrid] calibration 115/256 elapsed=11571s
+[fullgrid] calibration 120/256 elapsed=12020s
+[fullgrid] calibration 125/256 elapsed=12467s
+[fullgrid] calibration 130/256 elapsed=12915s
+[fullgrid] calibration 135/256 elapsed=13370s
+[fullgrid] calibration 140/256 elapsed=13813s
+[fullgrid] calibration 145/256 elapsed=14259s
+[fullgrid] calibration 150/256 elapsed=14712s
+[fullgrid] calibration 155/256 elapsed=15154s
+[fullgrid] calibration 160/256 elapsed=15603s
+[fullgrid] calibration 165/256 elapsed=16054s
+[fullgrid] calibration 170/256 elapsed=16508s
+[fullgrid] calibration 175/256 elapsed=16951s
+[fullgrid] calibration 180/256 elapsed=17408s
+[fullgrid] calibration 185/256 elapsed=17863s
+[fullgrid] calibration 190/256 elapsed=18305s
+[fullgrid] calibration 195/256 elapsed=18756s
+[fullgrid] calibration 200/256 elapsed=19200s
+[fullgrid] calibration 205/256 elapsed=19645s
+[fullgrid] calibration 210/256 elapsed=20092s
+[fullgrid] calibration 215/256 elapsed=20535s
+[fullgrid] calibration 220/256 elapsed=20996s
+[fullgrid] calibration 225/256 elapsed=21457s
+[fullgrid] calibration 230/256 elapsed=21921s
+[fullgrid] calibration 235/256 elapsed=22373s
+[fullgrid] calibration 240/256 elapsed=22823s
+[fullgrid] calibration 245/256 elapsed=23239s
+[fullgrid] calibration 250/256 elapsed=23687s
+[fullgrid] calibration 255/256 elapsed=24123s
+[fullgrid] pass2 heat fill
+[fullgrid] heat 5/1286 elapsed=24661s
+[fullgrid] heat 10/1286 elapsed=25124s
+[fullgrid] heat 15/1286 elapsed=25577s
+[fullgrid] heat 20/1286 elapsed=26028s
+[fullgrid] heat 25/1286 elapsed=26490s
+[fullgrid] heat 30/1286 elapsed=26935s
+[fullgrid] heat 35/1286 elapsed=27395s
+[fullgrid] heat 40/1286 elapsed=27857s
+[fullgrid] heat 45/1286 elapsed=28321s
+[fullgrid] heat 50/1286 elapsed=28786s
+[fullgrid] heat 55/1286 elapsed=29250s
+[fullgrid] heat 60/1286 elapsed=29713s
+[fullgrid] heat 65/1286 elapsed=30180s
+[fullgrid] heat 70/1286 elapsed=30647s
+[fullgrid] heat 75/1286 elapsed=31111s
+[fullgrid] heat 80/1286 elapsed=31574s
+[fullgrid] heat 85/1286 elapsed=32028s
+[fullgrid] heat 90/1286 elapsed=32466s
+[fullgrid] heat 95/1286 elapsed=32931s
+[fullgrid] heat 100/1286 elapsed=33373s
+[fullgrid] heat 105/1286 elapsed=33797s
+[fullgrid] heat 110/1286 elapsed=34189s
+[fullgrid] heat 115/1286 elapsed=34588s
+[fullgrid] heat 120/1286 elapsed=35050s
+[fullgrid] heat 125/1286 elapsed=35460s
+[fullgrid] heat 130/1286 elapsed=35924s
+[fullgrid] heat 135/1286 elapsed=36346s
+[fullgrid] heat 140/1286 elapsed=36740s
+[fullgrid] heat 145/1286 elapsed=37128s
+[fullgrid] heat 150/1286 elapsed=37481s
+[fullgrid] heat 155/1286 elapsed=37931s
+[fullgrid] heat 160/1286 elapsed=38377s
+[fullgrid] heat 165/1286 elapsed=38845s
+[fullgrid] heat 170/1286 elapsed=39186s
+[fullgrid] heat 175/1286 elapsed=39605s
+[fullgrid] heat 180/1286 elapsed=40073s
+[fullgrid] heat 185/1286 elapsed=40535s
+[fullgrid] heat 190/1286 elapsed=40992s
+[fullgrid] heat 195/1286 elapsed=41455s
+[fullgrid] heat 200/1286 elapsed=41918s
+[fullgrid] heat 205/1286 elapsed=42373s
+[fullgrid] heat 210/1286 elapsed=42827s
+[fullgrid] heat 215/1286 elapsed=43295s
+[fullgrid] heat 220/1286 elapsed=43747s
+[fullgrid] heat 225/1286 elapsed=44212s
+[fullgrid] heat 230/1286 elapsed=44681s
+[fullgrid] heat 235/1286 elapsed=45148s
+[fullgrid] heat 240/1286 elapsed=45614s
+[fullgrid] heat 245/1286 elapsed=46061s
+[fullgrid] heat 250/1286 elapsed=46473s
+[fullgrid] heat 255/1286 elapsed=46924s
+[fullgrid] heat 260/1286 elapsed=47385s
+[fullgrid] heat 265/1286 elapsed=47851s
+[fullgrid] heat 270/1286 elapsed=48315s
+[fullgrid] heat 275/1286 elapsed=48777s
+[fullgrid] heat 280/1286 elapsed=49245s
+[fullgrid] heat 285/1286 elapsed=49664s
+[fullgrid] heat 290/1286 elapsed=50127s
+[fullgrid] heat 295/1286 elapsed=50589s
+[fullgrid] heat 300/1286 elapsed=51055s
+[fullgrid] heat 305/1286 elapsed=51507s
+[fullgrid] heat 310/1286 elapsed=51967s
+[fullgrid] heat 315/1286 elapsed=52422s

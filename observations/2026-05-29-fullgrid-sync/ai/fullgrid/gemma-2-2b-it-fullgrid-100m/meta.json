@@ -1,0 +1,2218 @@
+{
+  "observer": "mercury_fullgrid_observe.py",
+  "model_name": "gemma-2-2b-it-fullgrid-100m",
+  "model_path": "/home/ai/hf_models/gemma-2-2b-it",
+  "target_cells": 100000000,
+  "actual_cells": 105768960,
+  "nonzero_cells": 81298394,
+  "coverage_pct": 76.864133,
+  "Q": 10,
+  "S": 11,
+  "max_length": 192,
+  "probe_count": 30,
+  "include_norms": true,
+  "total_channels": 961536,
+  "module_count": 183,
+  "modules": {
+    "model.layers.0.self_attn.q_proj": {
+      "key": "model.layers.0.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.0.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.0.self_attn.k_proj": {
+      "key": "model.layers.0.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.0.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.0.self_attn.v_proj": {
+      "key": "model.layers.0.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.0.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.0.self_attn.o_proj": {
+      "key": "model.layers.0.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.0.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.0.mlp.gate_proj": {
+      "key": "model.layers.0.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.0.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.0.mlp.up_proj": {
+      "key": "model.layers.0.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.0.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.0.mlp.down_proj": {
+      "key": "model.layers.0.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.0.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.1.self_attn.q_proj": {
+      "key": "model.layers.1.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.1.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.1.self_attn.k_proj": {
+      "key": "model.layers.1.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.1.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.1.self_attn.v_proj": {
+      "key": "model.layers.1.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.1.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.1.self_attn.o_proj": {
+      "key": "model.layers.1.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.1.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.1.mlp.gate_proj": {
+      "key": "model.layers.1.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.1.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.1.mlp.up_proj": {
+      "key": "model.layers.1.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.1.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.1.mlp.down_proj": {
+      "key": "model.layers.1.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.1.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.2.self_attn.q_proj": {
+      "key": "model.layers.2.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.2.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.2.self_attn.k_proj": {
+      "key": "model.layers.2.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.2.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.2.self_attn.v_proj": {
+      "key": "model.layers.2.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.2.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.2.self_attn.o_proj": {
+      "key": "model.layers.2.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.2.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.2.mlp.gate_proj": {
+      "key": "model.layers.2.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.2.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.2.mlp.up_proj": {
+      "key": "model.layers.2.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.2.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.2.mlp.down_proj": {
+      "key": "model.layers.2.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.2.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.3.self_attn.q_proj": {
+      "key": "model.layers.3.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.3.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.3.self_attn.k_proj": {
+      "key": "model.layers.3.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.3.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.3.self_attn.v_proj": {
+      "key": "model.layers.3.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.3.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.3.self_attn.o_proj": {
+      "key": "model.layers.3.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.3.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.3.mlp.gate_proj": {
+      "key": "model.layers.3.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.3.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.3.mlp.up_proj": {
+      "key": "model.layers.3.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.3.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.3.mlp.down_proj": {
+      "key": "model.layers.3.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.3.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.4.self_attn.q_proj": {
+      "key": "model.layers.4.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.4.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.4.self_attn.k_proj": {
+      "key": "model.layers.4.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.4.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.4.self_attn.v_proj": {
+      "key": "model.layers.4.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.4.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.4.self_attn.o_proj": {
+      "key": "model.layers.4.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.4.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.4.mlp.gate_proj": {
+      "key": "model.layers.4.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.4.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.4.mlp.up_proj": {
+      "key": "model.layers.4.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.4.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.4.mlp.down_proj": {
+      "key": "model.layers.4.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.4.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.5.self_attn.q_proj": {
+      "key": "model.layers.5.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.5.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.5.self_attn.k_proj": {
+      "key": "model.layers.5.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.5.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.5.self_attn.v_proj": {
+      "key": "model.layers.5.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.5.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.5.self_attn.o_proj": {
+      "key": "model.layers.5.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.5.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.5.mlp.gate_proj": {
+      "key": "model.layers.5.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.5.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.5.mlp.up_proj": {
+      "key": "model.layers.5.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.5.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.5.mlp.down_proj": {
+      "key": "model.layers.5.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.5.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.6.self_attn.q_proj": {
+      "key": "model.layers.6.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.6.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.6.self_attn.k_proj": {
+      "key": "model.layers.6.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.6.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.6.self_attn.v_proj": {
+      "key": "model.layers.6.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.6.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.6.self_attn.o_proj": {
+      "key": "model.layers.6.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.6.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.6.mlp.gate_proj": {
+      "key": "model.layers.6.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.6.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.6.mlp.up_proj": {
+      "key": "model.layers.6.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.6.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.6.mlp.down_proj": {
+      "key": "model.layers.6.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.6.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.7.self_attn.q_proj": {
+      "key": "model.layers.7.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.7.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.7.self_attn.k_proj": {
+      "key": "model.layers.7.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.7.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.7.self_attn.v_proj": {
+      "key": "model.layers.7.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.7.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.7.self_attn.o_proj": {
+      "key": "model.layers.7.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.7.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.7.mlp.gate_proj": {
+      "key": "model.layers.7.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.7.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.7.mlp.up_proj": {
+      "key": "model.layers.7.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.7.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.7.mlp.down_proj": {
+      "key": "model.layers.7.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.7.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.8.self_attn.q_proj": {
+      "key": "model.layers.8.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.8.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.8.self_attn.k_proj": {
+      "key": "model.layers.8.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.8.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.8.self_attn.v_proj": {
+      "key": "model.layers.8.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.8.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.8.self_attn.o_proj": {
+      "key": "model.layers.8.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.8.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.8.mlp.gate_proj": {
+      "key": "model.layers.8.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.8.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.8.mlp.up_proj": {
+      "key": "model.layers.8.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.8.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.8.mlp.down_proj": {
+      "key": "model.layers.8.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.8.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.9.self_attn.q_proj": {
+      "key": "model.layers.9.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.9.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.9.self_attn.k_proj": {
+      "key": "model.layers.9.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.9.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.9.self_attn.v_proj": {
+      "key": "model.layers.9.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.9.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.9.self_attn.o_proj": {
+      "key": "model.layers.9.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.9.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.9.mlp.gate_proj": {
+      "key": "model.layers.9.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.9.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.9.mlp.up_proj": {
+      "key": "model.layers.9.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.9.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.9.mlp.down_proj": {
+      "key": "model.layers.9.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.9.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.10.self_attn.q_proj": {
+      "key": "model.layers.10.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.10.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.10.self_attn.k_proj": {
+      "key": "model.layers.10.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.10.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.10.self_attn.v_proj": {
+      "key": "model.layers.10.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.10.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.10.self_attn.o_proj": {
+      "key": "model.layers.10.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.10.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.10.mlp.gate_proj": {
+      "key": "model.layers.10.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.10.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.10.mlp.up_proj": {
+      "key": "model.layers.10.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.10.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.10.mlp.down_proj": {
+      "key": "model.layers.10.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.10.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.11.self_attn.q_proj": {
+      "key": "model.layers.11.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.11.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.11.self_attn.k_proj": {
+      "key": "model.layers.11.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.11.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.11.self_attn.v_proj": {
+      "key": "model.layers.11.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.11.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.11.self_attn.o_proj": {
+      "key": "model.layers.11.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.11.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.11.mlp.gate_proj": {
+      "key": "model.layers.11.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.11.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.11.mlp.up_proj": {
+      "key": "model.layers.11.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.11.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.11.mlp.down_proj": {
+      "key": "model.layers.11.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.11.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.12.self_attn.q_proj": {
+      "key": "model.layers.12.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.12.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.12.self_attn.k_proj": {
+      "key": "model.layers.12.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.12.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.12.self_attn.v_proj": {
+      "key": "model.layers.12.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.12.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.12.self_attn.o_proj": {
+      "key": "model.layers.12.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.12.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.12.mlp.gate_proj": {
+      "key": "model.layers.12.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.12.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.12.mlp.up_proj": {
+      "key": "model.layers.12.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.12.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.12.mlp.down_proj": {
+      "key": "model.layers.12.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.12.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.13.self_attn.q_proj": {
+      "key": "model.layers.13.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.13.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.13.self_attn.k_proj": {
+      "key": "model.layers.13.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.13.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.13.self_attn.v_proj": {
+      "key": "model.layers.13.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.13.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.13.self_attn.o_proj": {
+      "key": "model.layers.13.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.13.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.13.mlp.gate_proj": {
+      "key": "model.layers.13.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.13.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.13.mlp.up_proj": {
+      "key": "model.layers.13.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.13.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.13.mlp.down_proj": {
+      "key": "model.layers.13.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.13.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.14.self_attn.q_proj": {
+      "key": "model.layers.14.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.14.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.14.self_attn.k_proj": {
+      "key": "model.layers.14.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.14.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.14.self_attn.v_proj": {
+      "key": "model.layers.14.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.14.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.14.self_attn.o_proj": {
+      "key": "model.layers.14.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.14.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.14.mlp.gate_proj": {
+      "key": "model.layers.14.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.14.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.14.mlp.up_proj": {
+      "key": "model.layers.14.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.14.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.14.mlp.down_proj": {
+      "key": "model.layers.14.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.14.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.15.self_attn.q_proj": {
+      "key": "model.layers.15.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.15.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.15.self_attn.k_proj": {
+      "key": "model.layers.15.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.15.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.15.self_attn.v_proj": {
+      "key": "model.layers.15.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.15.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.15.self_attn.o_proj": {
+      "key": "model.layers.15.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.15.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.15.mlp.gate_proj": {
+      "key": "model.layers.15.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.15.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.15.mlp.up_proj": {
+      "key": "model.layers.15.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.15.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.15.mlp.down_proj": {
+      "key": "model.layers.15.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.15.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.16.self_attn.q_proj": {
+      "key": "model.layers.16.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.16.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.16.self_attn.k_proj": {
+      "key": "model.layers.16.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.16.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.16.self_attn.v_proj": {
+      "key": "model.layers.16.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.16.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.16.self_attn.o_proj": {
+      "key": "model.layers.16.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.16.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.16.mlp.gate_proj": {
+      "key": "model.layers.16.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.16.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.16.mlp.up_proj": {
+      "key": "model.layers.16.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.16.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.16.mlp.down_proj": {
+      "key": "model.layers.16.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.16.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.17.self_attn.q_proj": {
+      "key": "model.layers.17.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.17.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.17.self_attn.k_proj": {
+      "key": "model.layers.17.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.17.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.17.self_attn.v_proj": {
+      "key": "model.layers.17.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.17.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.17.self_attn.o_proj": {
+      "key": "model.layers.17.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.17.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.17.mlp.gate_proj": {
+      "key": "model.layers.17.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.17.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.17.mlp.up_proj": {
+      "key": "model.layers.17.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.17.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.17.mlp.down_proj": {
+      "key": "model.layers.17.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.17.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.18.self_attn.q_proj": {
+      "key": "model.layers.18.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.18.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.18.self_attn.k_proj": {
+      "key": "model.layers.18.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.18.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.18.self_attn.v_proj": {
+      "key": "model.layers.18.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.18.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.18.self_attn.o_proj": {
+      "key": "model.layers.18.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.18.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.18.mlp.gate_proj": {
+      "key": "model.layers.18.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.18.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.18.mlp.up_proj": {
+      "key": "model.layers.18.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.18.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.18.mlp.down_proj": {
+      "key": "model.layers.18.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.18.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.19.self_attn.q_proj": {
+      "key": "model.layers.19.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.19.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.19.self_attn.k_proj": {
+      "key": "model.layers.19.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.19.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.19.self_attn.v_proj": {
+      "key": "model.layers.19.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.19.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.19.self_attn.o_proj": {
+      "key": "model.layers.19.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.19.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.19.mlp.gate_proj": {
+      "key": "model.layers.19.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.19.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.19.mlp.up_proj": {
+      "key": "model.layers.19.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.19.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.19.mlp.down_proj": {
+      "key": "model.layers.19.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.19.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.20.self_attn.q_proj": {
+      "key": "model.layers.20.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.20.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.20.self_attn.k_proj": {
+      "key": "model.layers.20.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.20.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.20.self_attn.v_proj": {
+      "key": "model.layers.20.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.20.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.20.self_attn.o_proj": {
+      "key": "model.layers.20.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.20.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.20.mlp.gate_proj": {
+      "key": "model.layers.20.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.20.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.20.mlp.up_proj": {
+      "key": "model.layers.20.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.20.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.20.mlp.down_proj": {
+      "key": "model.layers.20.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.20.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.21.self_attn.q_proj": {
+      "key": "model.layers.21.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.21.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.21.self_attn.k_proj": {
+      "key": "model.layers.21.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.21.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.21.self_attn.v_proj": {
+      "key": "model.layers.21.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.21.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.21.self_attn.o_proj": {
+      "key": "model.layers.21.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.21.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.21.mlp.gate_proj": {
+      "key": "model.layers.21.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.21.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.21.mlp.up_proj": {
+      "key": "model.layers.21.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.21.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.21.mlp.down_proj": {
+      "key": "model.layers.21.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.21.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.22.self_attn.q_proj": {
+      "key": "model.layers.22.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.22.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.22.self_attn.k_proj": {
+      "key": "model.layers.22.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.22.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.22.self_attn.v_proj": {
+      "key": "model.layers.22.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.22.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.22.self_attn.o_proj": {
+      "key": "model.layers.22.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.22.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.22.mlp.gate_proj": {
+      "key": "model.layers.22.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.22.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.22.mlp.up_proj": {
+      "key": "model.layers.22.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.22.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.22.mlp.down_proj": {
+      "key": "model.layers.22.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.22.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.23.self_attn.q_proj": {
+      "key": "model.layers.23.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.23.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.23.self_attn.k_proj": {
+      "key": "model.layers.23.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.23.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.23.self_attn.v_proj": {
+      "key": "model.layers.23.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.23.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.23.self_attn.o_proj": {
+      "key": "model.layers.23.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.23.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.23.mlp.gate_proj": {
+      "key": "model.layers.23.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.23.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.23.mlp.up_proj": {
+      "key": "model.layers.23.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.23.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.23.mlp.down_proj": {
+      "key": "model.layers.23.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.23.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.24.self_attn.q_proj": {
+      "key": "model.layers.24.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.24.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.24.self_attn.k_proj": {
+      "key": "model.layers.24.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.24.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.24.self_attn.v_proj": {
+      "key": "model.layers.24.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.24.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.24.self_attn.o_proj": {
+      "key": "model.layers.24.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.24.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.24.mlp.gate_proj": {
+      "key": "model.layers.24.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.24.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.24.mlp.up_proj": {
+      "key": "model.layers.24.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.24.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.24.mlp.down_proj": {
+      "key": "model.layers.24.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.24.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.25.self_attn.q_proj": {
+      "key": "model.layers.25.self_attn.q_proj",
+      "kind": "linear",
+      "dim": 2048,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.25.self_attn.q_proj.npy",
+      "shape": [
+        2048,
+        10,
+        11
+      ]
+    },
+    "model.layers.25.self_attn.k_proj": {
+      "key": "model.layers.25.self_attn.k_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.25.self_attn.k_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.25.self_attn.v_proj": {
+      "key": "model.layers.25.self_attn.v_proj",
+      "kind": "linear",
+      "dim": 1024,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.25.self_attn.v_proj.npy",
+      "shape": [
+        1024,
+        10,
+        11
+      ]
+    },
+    "model.layers.25.self_attn.o_proj": {
+      "key": "model.layers.25.self_attn.o_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.25.self_attn.o_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "model.layers.25.mlp.gate_proj": {
+      "key": "model.layers.25.mlp.gate_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.25.mlp.gate_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.25.mlp.up_proj": {
+      "key": "model.layers.25.mlp.up_proj",
+      "kind": "linear",
+      "dim": 9216,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.25.mlp.up_proj.npy",
+      "shape": [
+        9216,
+        10,
+        11
+      ]
+    },
+    "model.layers.25.mlp.down_proj": {
+      "key": "model.layers.25.mlp.down_proj",
+      "kind": "linear",
+      "dim": 2304,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/model.layers.25.mlp.down_proj.npy",
+      "shape": [
+        2304,
+        10,
+        11
+      ]
+    },
+    "lm_head": {
+      "key": "lm_head",
+      "kind": "linear",
+      "dim": 256000,
+      "heat_file": "/home/ai/mercury_observations/fullgrid/gemma-2-2b-it-fullgrid-100m/heat/lm_head.npy",
+      "shape": [
+        256000,
+        10,
+        11
+      ]
+    }
+  },
+  "module_nonzero_cells": {
+    "model.layers.0.self_attn.q_proj": 162053,
+    "model.layers.0.self_attn.k_proj": 80546,
+    "model.layers.0.self_attn.v_proj": 92191,
+    "model.layers.0.self_attn.o_proj": 198513,
+    "model.layers.0.mlp.gate_proj": 751464,
+    "model.layers.0.mlp.up_proj": 847677,
+    "model.layers.0.mlp.down_proj": 213566,
+    "model.layers.1.self_attn.q_proj": 170495,
+    "model.layers.1.self_attn.k_proj": 84751,
+    "model.layers.1.self_attn.v_proj": 93383,
+    "model.layers.1.self_attn.o_proj": 206655,
+    "model.layers.1.mlp.gate_proj": 792864,
+    "model.layers.1.mlp.up_proj": 857722,
+    "model.layers.1.mlp.down_proj": 215885,
+    "model.layers.2.self_attn.q_proj": 176517,
+    "model.layers.2.self_attn.k_proj": 84675,
+    "model.layers.2.self_attn.v_proj": 93846,
+    "model.layers.2.self_attn.o_proj": 215139,
+    "model.layers.2.mlp.gate_proj": 801866,
+    "model.layers.2.mlp.up_proj": 855831,
+    "model.layers.2.mlp.down_proj": 214485,
+    "model.layers.3.self_attn.q_proj": 170067,
+    "model.layers.3.self_attn.k_proj": 83087,
+    "model.layers.3.self_attn.v_proj": 93554,
+    "model.layers.3.self_attn.o_proj": 208956,
+    "model.layers.3.mlp.gate_proj": 805914,
+    "model.layers.3.mlp.up_proj": 855939,
+    "model.layers.3.mlp.down_proj": 215640,
+    "model.layers.4.self_attn.q_proj": 171384,
+    "model.layers.4.self_attn.k_proj": 84011,
+    "model.layers.4.self_attn.v_proj": 94809,
+    "model.layers.4.self_attn.o_proj": 212737,
+    "model.layers.4.mlp.gate_proj": 768470,
+    "model.layers.4.mlp.up_proj": 846163,
+    "model.layers.4.mlp.down_proj": 212312,
+    "model.layers.5.self_attn.q_proj": 156028,
+    "model.layers.5.self_attn.k_proj": 79077,
+    "model.layers.5.self_attn.v_proj": 93507,
+    "model.layers.5.self_attn.o_proj": 204985,
+    "model.layers.5.mlp.gate_proj": 764973,
+    "model.layers.5.mlp.up_proj": 832934,
+    "model.layers.5.mlp.down_proj": 209185,
+    "model.layers.6.self_attn.q_proj": 157035,
+    "model.layers.6.self_attn.k_proj": 77441,
+    "model.layers.6.self_attn.v_proj": 90119,
+    "model.layers.6.self_attn.o_proj": 201441,
+    "model.layers.6.mlp.gate_proj": 776626,
+    "model.layers.6.mlp.up_proj": 838476,
+    "model.layers.6.mlp.down_proj": 211739,
+    "model.layers.7.self_attn.q_proj": 157731,
+    "model.layers.7.self_attn.k_proj": 77174,
+    "model.layers.7.self_attn.v_proj": 93422,
+    "model.layers.7.self_attn.o_proj": 203705,
+    "model.layers.7.mlp.gate_proj": 715950,
+    "model.layers.7.mlp.up_proj": 831126,
+    "model.layers.7.mlp.down_proj": 208247,
+    "model.layers.8.self_attn.q_proj": 158401,
+    "model.layers.8.self_attn.k_proj": 79481,
+    "model.layers.8.self_attn.v_proj": 90447,
+    "model.layers.8.self_attn.o_proj": 201081,
+    "model.layers.8.mlp.gate_proj": 729343,
+    "model.layers.8.mlp.up_proj": 827536,
+    "model.layers.8.mlp.down_proj": 207765,
+    "model.layers.9.self_attn.q_proj": 165035,
+    "model.layers.9.self_attn.k_proj": 81417,
+    "model.layers.9.self_attn.v_proj": 91213,
+    "model.layers.9.self_attn.o_proj": 192292,
+    "model.layers.9.mlp.gate_proj": 752179,
+    "model.layers.9.mlp.up_proj": 822745,
+    "model.layers.9.mlp.down_proj": 204382,
+    "model.layers.10.self_attn.q_proj": 152326,
+    "model.layers.10.self_attn.k_proj": 74653,
+    "model.layers.10.self_attn.v_proj": 88176,
+    "model.layers.10.self_attn.o_proj": 187858,
+    "model.layers.10.mlp.gate_proj": 736830,
+    "model.layers.10.mlp.up_proj": 799744,
+    "model.layers.10.mlp.down_proj": 199487,
+    "model.layers.11.self_attn.q_proj": 154574,
+    "model.layers.11.self_attn.k_proj": 74342,
+    "model.layers.11.self_attn.v_proj": 87503,
+    "model.layers.11.self_attn.o_proj": 191253,
+    "model.layers.11.mlp.gate_proj": 716259,
+    "model.layers.11.mlp.up_proj": 785347,
+    "model.layers.11.mlp.down_proj": 196739,
+    "model.layers.12.self_attn.q_proj": 143684,
+    "model.layers.12.self_attn.k_proj": 73255,
+    "model.layers.12.self_attn.v_proj": 84626,
+    "model.layers.12.self_attn.o_proj": 181311,
+    "model.layers.12.mlp.gate_proj": 726741,
+    "model.layers.12.mlp.up_proj": 784605,
+    "model.layers.12.mlp.down_proj": 197053,
+    "model.layers.13.self_attn.q_proj": 148026,
+    "model.layers.13.self_attn.k_proj": 71779,
+    "model.layers.13.self_attn.v_proj": 86792,
+    "model.layers.13.self_attn.o_proj": 192382,
+    "model.layers.13.mlp.gate_proj": 707126,
+    "model.layers.13.mlp.up_proj": 775861,
+    "model.layers.13.mlp.down_proj": 193446,
+    "model.layers.14.self_attn.q_proj": 150154,
+    "model.layers.14.self_attn.k_proj": 75118,
+    "model.layers.14.self_attn.v_proj": 87351,
+    "model.layers.14.self_attn.o_proj": 189033,
+    "model.layers.14.mlp.gate_proj": 722016,
+    "model.layers.14.mlp.up_proj": 788539,
+    "model.layers.14.mlp.down_proj": 191757,
+    "model.layers.15.self_attn.q_proj": 143481,
+    "model.layers.15.self_attn.k_proj": 72393,
+    "model.layers.15.self_attn.v_proj": 88116,
+    "model.layers.15.self_attn.o_proj": 193091,
+    "model.layers.15.mlp.gate_proj": 712655,
+    "model.layers.15.mlp.up_proj": 788041,
+    "model.layers.15.mlp.down_proj": 193574,
+    "model.layers.16.self_attn.q_proj": 155148,
+    "model.layers.16.self_attn.k_proj": 76484,
+    "model.layers.16.self_attn.v_proj": 87495,
+    "model.layers.16.self_attn.o_proj": 196423,
+    "model.layers.16.mlp.gate_proj": 728481,
+    "model.layers.16.mlp.up_proj": 792019,
+    "model.layers.16.mlp.down_proj": 192385,
+    "model.layers.17.self_attn.q_proj": 149429,
+    "model.layers.17.self_attn.k_proj": 74785,
+    "model.layers.17.self_attn.v_proj": 87553,
+    "model.layers.17.self_attn.o_proj": 193693,
+    "model.layers.17.mlp.gate_proj": 723601,
+    "model.layers.17.mlp.up_proj": 799076,
+    "model.layers.17.mlp.down_proj": 195318,
+    "model.layers.18.self_attn.q_proj": 158907,
+    "model.layers.18.self_attn.k_proj": 78235,
+    "model.layers.18.self_attn.v_proj": 89676,
+    "model.layers.18.self_attn.o_proj": 199927,
+    "model.layers.18.mlp.gate_proj": 724590,
+    "model.layers.18.mlp.up_proj": 799238,
+    "model.layers.18.mlp.down_proj": 196397,
+    "model.layers.19.self_attn.q_proj": 150580,
+    "model.layers.19.self_attn.k_proj": 75668,
+    "model.layers.19.self_attn.v_proj": 90401,
+    "model.layers.19.self_attn.o_proj": 182928,
+    "model.layers.19.mlp.gate_proj": 743715,
+    "model.layers.19.mlp.up_proj": 804025,
+    "model.layers.19.mlp.down_proj": 197960,
+    "model.layers.20.self_attn.q_proj": 156986,
+    "model.layers.20.self_attn.k_proj": 79931,
+    "model.layers.20.self_attn.v_proj": 90468,
+    "model.layers.20.self_attn.o_proj": 196623,
+    "model.layers.20.mlp.gate_proj": 764589,
+    "model.layers.20.mlp.up_proj": 808922,
+    "model.layers.20.mlp.down_proj": 198634,
+    "model.layers.21.self_attn.q_proj": 156967,
+    "model.layers.21.self_attn.k_proj": 78708,
+    "model.layers.21.self_attn.v_proj": 88989,
+    "model.layers.21.self_attn.o_proj": 194596,
+    "model.layers.21.mlp.gate_proj": 781638,
+    "model.layers.21.mlp.up_proj": 813940,
+    "model.layers.21.mlp.down_proj": 199007,
+    "model.layers.22.self_attn.q_proj": 150580,
+    "model.layers.22.self_attn.k_proj": 74813,
+    "model.layers.22.self_attn.v_proj": 90833,
+    "model.layers.22.self_attn.o_proj": 170912,
+    "model.layers.22.mlp.gate_proj": 790144,
+    "model.layers.22.mlp.up_proj": 814104,
+    "model.layers.22.mlp.down_proj": 200011,
+    "model.layers.23.self_attn.q_proj": 151772,
+    "model.layers.23.self_attn.k_proj": 76754,
+    "model.layers.23.self_attn.v_proj": 91202,
+    "model.layers.23.self_attn.o_proj": 196578,
+    "model.layers.23.mlp.gate_proj": 787203,
+    "model.layers.23.mlp.up_proj": 811307,
+    "model.layers.23.mlp.down_proj": 200950,
+    "model.layers.24.self_attn.q_proj": 145704,
+    "model.layers.24.self_attn.k_proj": 76769,
+    "model.layers.24.self_attn.v_proj": 91187,
+    "model.layers.24.self_attn.o_proj": 198010,
+    "model.layers.24.mlp.gate_proj": 773604,
+    "model.layers.24.mlp.up_proj": 803388,
+    "model.layers.24.mlp.down_proj": 199126,
+    "model.layers.25.self_attn.q_proj": 146170,
+    "model.layers.25.self_attn.k_proj": 76404,
+    "model.layers.25.self_attn.v_proj": 90626,
+    "model.layers.25.self_attn.o_proj": 199827,
+    "model.layers.25.mlp.gate_proj": 767481,
+    "model.layers.25.mlp.up_proj": 792018,
+    "model.layers.25.mlp.down_proj": 203036,
+    "lm_head": 21749244
+  },
+  "wall_seconds": 689.6,
+  "timestamp": 1779936326
+}

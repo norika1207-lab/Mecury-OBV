@@ -1,0 +1,23 @@
+{
+  "schema": "mercury-rosen-bridge-v1",
+  "id": "a796496d0d51952fb6aeb071",
+  "created_at": "2026-05-27T03:11:23.433Z",
+  "updated_at": "2026-05-27T03:11:23.433Z",
+  "namespace": "project-31d7dedd66d42831a3ae2290",
+  "from": "entry:local_llm_speed",
+  "to": "guard:model-hot-path-forbidden",
+  "type": "unsafe_if",
+  "risk_family": "local_llm_speed",
+  "confidence": 0.58,
+  "latency_ms": 1,
+  "cost": "low",
+  "risk": "high",
+  "freshness": "fresh",
+  "evidence": "Keep local LLM generation out of user-facing hot path unless benchmark-proven.",
+  "tokens": {},
+  "source": "static_family",
+  "score": 0.95,
+  "hit_count": 1,
+  "miss_count": 0,
+  "activation_rule": "latency_hot_path+local_llm_speed"
+}

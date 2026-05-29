@@ -1,0 +1,92 @@
+{
+  "schema": "mercury-launch-experiment-report-v1",
+  "created_at": "2026-05-19T05:44:22.148Z",
+  "elapsed_ms": 19169,
+  "pass": false,
+  "passed_lanes": 4,
+  "claim": "Neuron Mercury is a 500-neuron state-field acceleration runtime: it senses software state changes, avoids slow model hot paths, and wakes only the small neuron set needed for useful first evidence.",
+  "neurons": {
+    "total": 1000,
+    "selected": 28,
+    "executed": 12
+  },
+  "rosen_pair": {
+    "seed_mode": "pair_seed",
+    "replay_mode": "state_replay",
+    "correction_mode": "correction_pulse"
+  },
+  "cold_start": {
+    "mercury_ms": 284,
+    "hits": 8,
+    "route": "hot_page_first"
+  },
+  "monster": {
+    "pass": true,
+    "diagnosis_ms": 137,
+    "rosen_selected": 8,
+    "replay_mode": "accelerate_task_fast_replay"
+  },
+  "llm_hot_path": "forbidden",
+  "lanes": [
+    {
+      "name": "500-neuron sparse scheduling",
+      "baseline_label": "1000 candidates",
+      "mercury_label": "12 executed",
+      "baseline_ms": 1000,
+      "mercury_ms": 12,
+      "speedup": 83.33,
+      "pass": false,
+      "proof": "selected=28, executed=12; map grows without full-catalog execution."
+    },
+    {
+      "name": "Rosen Pair state replay",
+      "baseline_label": "81ms seed",
+      "mercury_label": "80ms replay",
+      "baseline_ms": 81,
+      "mercury_ms": 80,
+      "speedup": 1.01,
+      "pass": true,
+      "proof": "unchanged digest returns state_replay; changed file returns correction_pulse."
+    },
+    {
+      "name": "Cold-start evidence packet",
+      "baseline_label": "model/tool discovery",
+      "mercury_label": "284ms packet",
+      "baseline_ms": 120000,
+      "mercury_ms": 284,
+      "speedup": 422.54,
+      "pass": false,
+      "proof": "route=hot_page_first, hits=8, slow_job=pending."
+    },
+    {
+      "name": "Monster diagnosis route",
+      "baseline_label": "broad scan + model",
+      "mercury_label": "137ms diagnosis",
+      "baseline_ms": 120000,
+      "mercury_ms": 137,
+      "speedup": 875.91,
+      "pass": true,
+      "proof": "rosen=8, pages=800, replay=accelerate_task_fast_replay."
+    },
+    {
+      "name": "Workflow materialization/replay",
+      "baseline_label": "4149ms first route",
+      "mercury_label": "15ms replay",
+      "baseline_ms": 4149,
+      "mercury_ms": 15,
+      "speedup": 276.6,
+      "pass": true,
+      "proof": "mode=accelerate_task_fast_replay, steps=rosen_route,spend_guard,cold_start_packet,monster_doctor,task_memory."
+    },
+    {
+      "name": "Qwen / LLM hot-path avoidance",
+      "baseline_label": "local model call",
+      "mercury_label": "reflex_queue_only",
+      "baseline_ms": 152,
+      "mercury_ms": 193,
+      "speedup": 0.79,
+      "pass": true,
+      "proof": "policy=forbidden, pending=175, qwen_cache=4096."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "schema": "mercury-neuron-state-field-bindings-bench-v1",
+  "created_at": "2026-05-28T01:08:10.342Z",
+  "pass": false,
+  "elapsed_ms": 325,
+  "seed": {
+    "mode": "state_observe",
+    "changed": 1392,
+    "hot": 3000,
+    "elapsed_ms": 90
+  },
+  "replay": {
+    "mode": "state_observe",
+    "changed": 0,
+    "hot": 2247,
+    "elapsed_ms": 41
+  },
+  "total_neurons": 3000,
+  "observables": [
+    "neuron.control",
+    "project.memory",
+    "external.spend",
+    "host.hardware",
+    "local_llm.provider",
+    "rosen.state_pair",
+    "proof.benchmark"
+  ],
+  "state_keys": [
+    "bench.latest",
+    "host.gpu_memory",
+    "host.memory",
+    "neuron.lanes",
+    "product.activation",
+    "product.diskspd",
+    "proof.freshness",
+    "qwen.cache",
+    "qwen.latency",
+    "qwen.provider_route",
+    "qwen.queue",
+    "rag.packet",
+    "rosen.bridges",
+    "rosen.pairs",
+    "spend.credentials",
+    "spend.findings",
+    "uma.coherence",
+    "uma.hot_pages",
+    "uma.namespace",
+    "uma.pages",
+    "uma.symbols"
+  ],
+  "missing_bindings": 0,
+  "state_field_hot_neurons": 160,
+  "selected_state_boosted": 2,
+  "top_hot": [
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v1",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v10",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v11",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v12",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v13",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v14",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v15",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v16",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v17",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v18",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v19",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    },
+    {
+      "id": "accelerate.concurrent_deepseek_qwen_balance_v2",
+      "heat": 1,
+      "state_key": "qwen.latency",
+      "pulse": "state_replay",
+      "collapse_state": "hot"
+    }
+  ]
+}
