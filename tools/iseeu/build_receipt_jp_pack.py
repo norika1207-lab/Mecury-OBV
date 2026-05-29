@@ -14,6 +14,7 @@ from pathlib import Path
 DEFAULT_FILES = [
     "tools/iseeu/receipt_jp_engine.py",
     "tools/iseeu/eval_receipt_jp.py",
+    "tools/iseeu/validate_receipt_jp_schema.py",
     "tools/iseeu/make_layout_ghost.py",
     "var/product/iseeu-llm/receipt-jp-schema.json",
     "var/product/iseeu-llm/layout-ghost-schema.json",

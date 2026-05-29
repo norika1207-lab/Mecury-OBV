@@ -45,6 +45,7 @@ def main() -> int:
         "tools/iseeu/build_receipt_jp_pack.py",
         "tools/iseeu/check_pack_gate.py",
         "tools/iseeu/make_layout_ghost.py",
+        "tools/iseeu/validate_receipt_jp_schema.py",
     ]])
 
     eval_report = load_json(run([sys.executable, "tools/iseeu/eval_receipt_jp.py"]))
@@ -93,6 +94,8 @@ def main() -> int:
             "field_checks": eval_report["field_checks"],
             "iseeu_passed": eval_report["passed"],
             "iseeu_accuracy": eval_report["field_accuracy"],
+            "schema_valid_samples": eval_report["schema_valid_samples"],
+            "schema_accuracy": eval_report["schema_accuracy"],
             "baseline_passed": compare_report["baseline_passed"],
             "baseline_accuracy": compare_report["baseline_accuracy"],
             "beats_ocr_plus_regex": compare_report["beats_ocr_plus_regex"],
