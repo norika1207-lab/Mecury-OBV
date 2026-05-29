@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T20:26:13+08:00",
+  "updated_at": "2026-05-29T20:27:05+08:00",
   "product": "Iseeu Receipt JP",
   "target": "50MB local Japanese receipt/document intelligence pack",
   "pricing_strategy": {
@@ -9,7 +9,7 @@
   },
   "artifact": {
     "path": "dist/iseeu/iseeu-receipt-jp-pack-0.1.0.zip",
-    "size_mb": 0.020521163940429688,
+    "size_mb": 0.020522117614746094,
     "target_mb": 50,
     "alpha_ceiling_mb": 100
   },
@@ -44,7 +44,7 @@
       {
         "name": "artifact_under_public_ceiling",
         "pass": true,
-        "detail": 0.020521163940429688
+        "detail": 0.020522117614746094
       },
       {
         "name": "thousand_document_trial",
