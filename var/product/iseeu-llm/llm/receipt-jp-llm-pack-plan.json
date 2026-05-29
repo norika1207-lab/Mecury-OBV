@@ -1,0 +1,34 @@
+{
+  "product": "Iseeu Receipt JP LLM",
+  "goal": "50MB local Japanese receipt/document understanding model pack",
+  "not_the_product": [
+    "rule-only parser",
+    "OCR transcript formatter",
+    "demo dashboard"
+  ],
+  "first_model_target": {
+    "task": "ocr_text_and_layout_ghost_to_receipt_json",
+    "target_pack_mb": 50,
+    "alpha_ceiling_mb": 100,
+    "runtime_targets": [
+      "ONNX",
+      "CoreML",
+      "GGUF-or-equivalent"
+    ]
+  },
+  "training_strategy": {
+    "teacher_data": "receipt-jp-teacher.jsonl",
+    "input": "OCR text plus privacy-safe layout ghost features",
+    "output": "strict Iseeu receipt JSON",
+    "initial_teacher": "parser MVP plus expected regression labels",
+    "next_teacher": "larger local LLM or human-corrected labels for failures"
+  },
+  "release_gate": {
+    "teacher_examples_minimum": 1000,
+    "model_artifact_required": true,
+    "model_pack_under_100mb": true,
+    "target_pack_under_50mb": true,
+    "must_beat_parser_on_unknown_layouts": true,
+    "must_beat_naive_ocr_regex": true
+  }
+}

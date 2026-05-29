@@ -46,6 +46,8 @@ def main() -> int:
         "tools/iseeu/check_pack_gate.py",
         "tools/iseeu/make_layout_ghost.py",
         "tools/iseeu/validate_receipt_jp_schema.py",
+        "tools/iseeu/build_llm_teacher_dataset.py",
+        "tools/iseeu/check_llm_pack_gate.py",
     ]])
 
     eval_report = load_json(run([sys.executable, "tools/iseeu/eval_receipt_jp.py"]))
@@ -73,6 +75,8 @@ def main() -> int:
             allow_fail=True,
         )
     )
+    teacher_report = load_json(run([sys.executable, "tools/iseeu/build_llm_teacher_dataset.py"]))
+    llm_gate_report = load_json(run([sys.executable, "tools/iseeu/check_llm_pack_gate.py"], allow_fail=True))
 
     status = {
         "updated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -108,11 +112,15 @@ def main() -> int:
             "public_release": gate_report["release_gate"],
             "checks": gate_report["checks"],
         },
+        "llm_target": {
+            "teacher_dataset": teacher_report,
+            "llm_pack_gate": llm_gate_report,
+        },
         "next_work": [
-            "Grow hostile sample trial toward 1000 documents.",
+            "Grow teacher dataset toward 1000 privacy-safe examples.",
+            "Train/export first tiny receipt JSON extractor under the 100MB alpha ceiling.",
+            "Compare model against parser on unknown layouts, not just known samples.",
             "Add image OCR adapter boundary without forcing a cloud model.",
-            "Add app/API wrapper for photo-to-json integration.",
-            "Track unsupported layouts as product-learning targets.",
         ],
     }
     STATUS.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

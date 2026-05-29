@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T20:27:05+08:00",
+  "updated_at": "2026-05-29T20:31:01+08:00",
   "product": "Iseeu Receipt JP",
   "target": "50MB local Japanese receipt/document intelligence pack",
   "pricing_strategy": {
@@ -9,7 +9,7 @@
   },
   "artifact": {
     "path": "dist/iseeu/iseeu-receipt-jp-pack-0.1.0.zip",
-    "size_mb": 0.020522117614746094,
+    "size_mb": 0.020521163940429688,
     "target_mb": 50,
     "alpha_ceiling_mb": 100
   },
@@ -44,7 +44,7 @@
       {
         "name": "artifact_under_public_ceiling",
         "pass": true,
-        "detail": 0.020522117614746094
+        "detail": 0.020521163940429688
       },
       {
         "name": "thousand_document_trial",
@@ -58,10 +58,72 @@
       }
     ]
   },
+  "llm_target": {
+    "teacher_dataset": {
+      "dataset": "iseeu_receipt_jp_teacher_v0",
+      "path": "var/product/iseeu-llm/llm/receipt-jp-teacher.jsonl",
+      "examples": 14,
+      "task": "receipt_jp_ocr_to_json",
+      "schema": "iseeu_receipt_jp_v1",
+      "privacy": {
+        "raw_private_documents_allowed": false,
+        "layout_ghosts_only": true,
+        "human_review_required_before_public_training": true
+      },
+      "size_targets": {
+        "model_pack_target_mb": 50,
+        "model_pack_alpha_ceiling_mb": 100
+      },
+      "stats": {
+        "avg_input_chars": 156.5,
+        "avg_output_json_chars": 303.29
+      }
+    },
+    "llm_pack_gate": {
+      "product": "Iseeu Receipt JP LLM",
+      "llm_pack_gate": false,
+      "checks": [
+        {
+          "name": "teacher_dataset_exists",
+          "pass": true,
+          "detail": "var/product/iseeu-llm/llm/receipt-jp-teacher-manifest.json"
+        },
+        {
+          "name": "teacher_examples_minimum",
+          "pass": false,
+          "detail": 14
+        },
+        {
+          "name": "privacy_raw_documents_disallowed",
+          "pass": true,
+          "detail": {
+            "raw_private_documents_allowed": false,
+            "layout_ghosts_only": true,
+            "human_review_required_before_public_training": true
+          }
+        },
+        {
+          "name": "model_artifact_exists",
+          "pass": false,
+          "detail": null
+        },
+        {
+          "name": "model_under_alpha_ceiling",
+          "pass": false,
+          "detail": null
+        },
+        {
+          "name": "model_under_target",
+          "pass": false,
+          "detail": null
+        }
+      ]
+    }
+  },
   "next_work": [
-    "Grow hostile sample trial toward 1000 documents.",
-    "Add image OCR adapter boundary without forcing a cloud model.",
-    "Add app/API wrapper for photo-to-json integration.",
-    "Track unsupported layouts as product-learning targets."
+    "Grow teacher dataset toward 1000 privacy-safe examples.",
+    "Train/export first tiny receipt JSON extractor under the 100MB alpha ceiling.",
+    "Compare model against parser on unknown layouts, not just known samples.",
+    "Add image OCR adapter boundary without forcing a cloud model."
   ]
 }
