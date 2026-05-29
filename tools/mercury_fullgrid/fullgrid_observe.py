@@ -125,6 +125,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--calibration-only", action="store_true")
     p.add_argument("--heat-shard-index", type=int, default=0)
     p.add_argument("--heat-shard-count", type=int, default=1)
+    p.add_argument("--heat-start-index", type=int, default=0)
+    p.add_argument("--heat-end-index", type=int, default=0, help="Exclusive; 0 means all probes.")
     p.add_argument("--include-norms", action="store_true")
     p.add_argument("--trust-remote-code", action="store_true")
     return p.parse_args()
@@ -136,6 +138,10 @@ def main() -> None:
         raise ValueError("--heat-shard-count must be >= 1")
     if args.heat_shard_index < 0 or args.heat_shard_index >= args.heat_shard_count:
         raise ValueError("--heat-shard-index must be in [0, heat-shard-count)")
+    if args.heat_start_index < 0:
+        raise ValueError("--heat-start-index must be >= 0")
+    if args.heat_end_index and args.heat_end_index <= args.heat_start_index:
+        raise ValueError("--heat-end-index must be greater than --heat-start-index")
     t0 = time.time()
     out_dir = Path(args.out_root) / args.model_name
     heat_dir = out_dir / "heat"
@@ -347,10 +353,16 @@ def main() -> None:
     for name in observed:
         handles.append(name_to_module[name].register_forward_hook(fill_hook(name)))
 
-    heat_jobs = [(i, p) for i, p in enumerate(probes) if i % args.heat_shard_count == args.heat_shard_index]
+    heat_end = args.heat_end_index or len(probes)
+    heat_end = min(heat_end, len(probes))
+    heat_jobs = [
+        (i, p)
+        for i, p in enumerate(probes)
+        if args.heat_start_index <= i < heat_end and i % args.heat_shard_count == args.heat_shard_index
+    ]
     print(
         f"[fullgrid] pass2 heat fill shard={args.heat_shard_index}/{args.heat_shard_count} "
-        f"probes={len(heat_jobs)}/{len(probes)}",
+        f"range=[{args.heat_start_index},{heat_end}) probes={len(heat_jobs)}/{len(probes)}",
         flush=True,
     )
     with torch.no_grad():
@@ -389,6 +401,8 @@ def main() -> None:
         "max_length": args.max_length,
         "probe_count": len(probes),
         "heat_probe_count": len(heat_jobs),
+        "heat_start_index": args.heat_start_index,
+        "heat_end_index": heat_end,
         "heat_shard_index": args.heat_shard_index,
         "heat_shard_count": args.heat_shard_count,
         "calibration_probe_count": len(calib_probes),
