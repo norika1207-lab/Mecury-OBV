@@ -1,0 +1,11 @@
+{
+  "merchant_name": "合成ファミリーマート 神田北口店",
+  "invoice_registration_number": "T2000000388031",
+  "date": "2026-02-23",
+  "total": 552,
+  "tax_8_percent": 23,
+  "tax_10_percent": 22,
+  "tax_total": 45,
+  "payment_method": "credit_card",
+  "unsupported_reason": null
+}

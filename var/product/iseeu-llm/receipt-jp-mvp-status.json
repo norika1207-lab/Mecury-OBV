@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T20:37:24+08:00",
+  "updated_at": "2026-05-29T20:53:22+08:00",
   "product": "Iseeu Receipt JP",
   "target": "50MB local Japanese receipt/document intelligence pack",
   "pricing_strategy": {
@@ -9,23 +9,23 @@
   },
   "artifact": {
     "path": "dist/iseeu/iseeu-receipt-jp-pack-0.1.0.zip",
-    "size_mb": 0.020521163940429688,
+    "size_mb": 0.05375480651855469,
     "target_mb": 50,
     "alpha_ceiling_mb": 100
   },
   "evaluation": {
-    "samples": 14,
-    "field_checks": 99,
-    "iseeu_passed": 99,
+    "samples": 64,
+    "field_checks": 549,
+    "iseeu_passed": 549,
     "iseeu_accuracy": 1.0,
-    "schema_valid_samples": 14,
+    "schema_valid_samples": 64,
     "schema_accuracy": 1.0,
-    "baseline_passed": 20,
-    "baseline_accuracy": 0.20202020202020202,
+    "baseline_passed": 121,
+    "baseline_accuracy": 0.2204007285974499,
     "beats_ocr_plus_regex": true
   },
   "privacy_safe_layout_ghosts": {
-    "count": 14,
+    "count": 64,
     "path": "var/product/iseeu-llm/layout-ghosts"
   },
   "release_gate": {
@@ -44,12 +44,12 @@
       {
         "name": "artifact_under_public_ceiling",
         "pass": true,
-        "detail": 0.020521163940429688
+        "detail": 0.05375480651855469
       },
       {
         "name": "thousand_document_trial",
         "pass": false,
-        "detail": 14
+        "detail": 64
       },
       {
         "name": "beats_ocr_plus_regex",
@@ -62,7 +62,7 @@
     "teacher_dataset": {
       "dataset": "iseeu_receipt_jp_teacher_v0",
       "path": "var/product/iseeu-llm/llm/receipt-jp-teacher.jsonl",
-      "examples": 14,
+      "examples": 64,
       "task": "receipt_jp_ocr_to_json",
       "schema": "iseeu_receipt_jp_v1",
       "privacy": {
@@ -75,18 +75,18 @@
         "model_pack_alpha_ceiling_mb": 100
       },
       "stats": {
-        "avg_input_chars": 156.5,
-        "avg_output_json_chars": 303.29
+        "avg_input_chars": 141.42,
+        "avg_output_json_chars": 306.73
       }
     },
     "tiny_baseline": {
       "train": {
         "artifact": "var/product/iseeu-llm/llm/artifacts/receipt-jp-tiny-baseline.json",
-        "examples": 14,
-        "size_mb": 0.08771419525146484
+        "examples": 64,
+        "size_mb": 0.4413108825683594
       },
       "eval": {
-        "examples": 14,
+        "examples": 64,
         "exact_match_accuracy": 1.0,
         "field_accuracy": 1.0,
         "is_final_llm": false
@@ -104,7 +104,7 @@
         {
           "name": "teacher_examples_minimum",
           "pass": false,
-          "detail": 14
+          "detail": 64
         },
         {
           "name": "privacy_raw_documents_disallowed",
@@ -123,12 +123,12 @@
         {
           "name": "model_under_alpha_ceiling",
           "pass": true,
-          "detail": 0.08771419525146484
+          "detail": 0.4413108825683594
         },
         {
           "name": "model_under_target",
           "pass": true,
-          "detail": 0.08771419525146484
+          "detail": 0.4413108825683594
         },
         {
           "name": "model_not_baseline_placeholder",

@@ -1,0 +1,11 @@
+{
+  "merchant_name": "合成ローソン 日本橋店",
+  "invoice_registration_number": "T2000000190056",
+  "date": "2026-01-25",
+  "total": 1552,
+  "tax_8_percent": 44,
+  "tax_10_percent": 88,
+  "tax_total": 132,
+  "payment_method": "cash",
+  "unsupported_reason": null
+}

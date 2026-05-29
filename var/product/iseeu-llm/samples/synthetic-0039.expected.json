@@ -1,0 +1,11 @@
+{
+  "merchant_name": "合成キッチン 大阪本町店",
+  "invoice_registration_number": "T2000000308841",
+  "date": "2026-04-13",
+  "total": 2272,
+  "tax_8_percent": 62,
+  "tax_10_percent": 130,
+  "tax_total": 192,
+  "payment_method": "electronic_money",
+  "unsupported_reason": null
+}

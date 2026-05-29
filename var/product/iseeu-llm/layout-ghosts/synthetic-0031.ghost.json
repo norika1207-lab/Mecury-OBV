@@ -1,0 +1,99 @@
+{
+  "ghost_id": "ghost_280a8e5624e6",
+  "timestamp": "2026-05-29T12:53:19.457961+00:00",
+  "pack": "Iseeu Receipt JP",
+  "locale": "ja-JP",
+  "document_type": "receipt",
+  "image_geometry": {},
+  "blocks": [
+    {
+      "block_id": "line_0000",
+      "kind": "ocr_line",
+      "order": 0,
+      "bbox": null,
+      "text_signature": "shape:010adf930aaec1bc:AAAAAA AAAAA"
+    },
+    {
+      "block_id": "line_0001",
+      "kind": "ocr_line",
+      "order": 1,
+      "bbox": null,
+      "text_signature": "shape:63c1dd951ffedf6f:AAAA"
+    },
+    {
+      "block_id": "line_0002",
+      "kind": "ocr_line",
+      "order": 2,
+      "bbox": null,
+      "text_signature": "shape:d97d6e2109c9b9ad:AA0A0A0A"
+    },
+    {
+      "block_id": "line_0003",
+      "kind": "ocr_line",
+      "order": 3,
+      "bbox": null,
+      "text_signature": "shape:b797106173817469:AAAA A 0000 0000 00000"
+    },
+    {
+      "block_id": "line_0004",
+      "kind": "ocr_line",
+      "order": 4,
+      "bbox": null,
+      "text_signature": "shape:aeca746353cb47b3:AAA 0% 000"
+    },
+    {
+      "block_id": "line_0005",
+      "kind": "ocr_line",
+      "order": 5,
+      "bbox": null,
+      "text_signature": "shape:fc5fc6452cc473b2:AAAA 00% ¥0,000"
+    },
+    {
+      "block_id": "line_0006",
+      "kind": "ocr_line",
+      "order": 6,
+      "bbox": null,
+      "text_signature": "shape:3f2c855ba5e91e0b:AA0% 000A"
+    },
+    {
+      "block_id": "line_0007",
+      "kind": "ocr_line",
+      "order": 7,
+      "bbox": null,
+      "text_signature": "shape:353c063862848793:AAAA0% 00"
+    },
+    {
+      "block_id": "line_0008",
+      "kind": "ocr_line",
+      "order": 8,
+      "bbox": null,
+      "text_signature": "shape:97c7bf1ad58ed360:AA00% 0,000A"
+    },
+    {
+      "block_id": "line_0009",
+      "kind": "ocr_line",
+      "order": 9,
+      "bbox": null,
+      "text_signature": "shape:9d112dea780abc41:AA00% ¥000"
+    },
+    {
+      "block_id": "line_0010",
+      "kind": "ocr_line",
+      "order": 10,
+      "bbox": null,
+      "text_signature": "shape:88105e71425fef94:AAAA 0,000A"
+    },
+    {
+      "block_id": "line_0011",
+      "kind": "ocr_line",
+      "order": 11,
+      "bbox": null,
+      "text_signature": "shape:63c1dd951ffedf6f:AAAA"
+    }
+  ],
+  "relations": [],
+  "failure": {
+    "type": "none"
+  },
+  "user_fix_summary": {}
+}

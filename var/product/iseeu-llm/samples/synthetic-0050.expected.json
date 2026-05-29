@@ -1,0 +1,11 @@
+{
+  "merchant_name": "合成セブン-イレブン 銀座三丁目店",
+  "invoice_registration_number": "T2000000395950",
+  "date": "2026-03-24",
+  "total": 600,
+  "tax_8_percent": 24,
+  "tax_10_percent": 25,
+  "tax_total": 49,
+  "payment_method": "credit_card",
+  "unsupported_reason": null
+}

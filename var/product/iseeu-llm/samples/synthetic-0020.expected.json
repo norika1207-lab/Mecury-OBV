@@ -1,0 +1,11 @@
+{
+  "merchant_name": "合成文具堂 渋谷店",
+  "invoice_registration_number": "T2000000158380",
+  "date": "2026-09-21",
+  "total": 1360,
+  "tax_8_percent": 39,
+  "tax_10_percent": 76,
+  "tax_total": 115,
+  "payment_method": "credit_card",
+  "unsupported_reason": null
+}

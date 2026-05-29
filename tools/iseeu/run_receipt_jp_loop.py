@@ -51,6 +51,7 @@ def main() -> int:
         "tools/iseeu/check_llm_pack_gate.py",
         "tools/iseeu/train_tiny_receipt_extractor.py",
         "tools/iseeu/eval_tiny_receipt_extractor.py",
+        "tools/iseeu/generate_synthetic_receipt_samples.py",
     ]])
 
     eval_report = load_json(run([sys.executable, "tools/iseeu/eval_receipt_jp.py"]))

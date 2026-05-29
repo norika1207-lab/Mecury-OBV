@@ -1,0 +1,11 @@
+{
+  "merchant_name": "合成電器サービス 横浜店",
+  "invoice_registration_number": "T2000000237570",
+  "date": "2026-07-04",
+  "total": 1840,
+  "tax_8_percent": 51,
+  "tax_10_percent": 105,
+  "tax_total": 156,
+  "payment_method": "cash",
+  "unsupported_reason": null
+}

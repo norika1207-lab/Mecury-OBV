@@ -1,7 +1,7 @@
 {
   "dataset": "iseeu_receipt_jp_teacher_v0",
   "path": "var/product/iseeu-llm/llm/receipt-jp-teacher.jsonl",
-  "examples": 14,
+  "examples": 64,
   "task": "receipt_jp_ocr_to_json",
   "schema": "iseeu_receipt_jp_v1",
   "privacy": {
@@ -14,7 +14,7 @@
     "model_pack_alpha_ceiling_mb": 100
   },
   "stats": {
-    "avg_input_chars": 156.5,
-    "avg_output_json_chars": 303.29
+    "avg_input_chars": 141.42,
+    "avg_output_json_chars": 306.73
   }
 }

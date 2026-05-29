@@ -1,0 +1,11 @@
+{
+  "merchant_name": "合成カフェ 札幌駅前店",
+  "invoice_registration_number": "T2000000102947",
+  "date": "2026-02-14",
+  "total": 1024,
+  "tax_8_percent": 30,
+  "tax_10_percent": 57,
+  "tax_total": 87,
+  "payment_method": "credit_card",
+  "unsupported_reason": null
+}

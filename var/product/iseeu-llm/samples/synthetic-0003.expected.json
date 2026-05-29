@@ -1,0 +1,11 @@
+{
+  "merchant_name": "合成ドラッグ青葉 新宿店",
+  "invoice_registration_number": "T2000000023757",
+  "date": "2026-04-04",
+  "total": 544,
+  "tax_8_percent": 17,
+  "tax_10_percent": 28,
+  "tax_total": 45,
+  "payment_method": "electronic_money",
+  "unsupported_reason": null
+}
