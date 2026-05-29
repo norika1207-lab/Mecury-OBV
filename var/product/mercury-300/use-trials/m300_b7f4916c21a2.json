@@ -1,0 +1,23 @@
+{
+  "trial_id": "m300_b7f4916c21a2",
+  "timestamp": "2026-05-29T11:38:50.288618+00:00",
+  "intent": "turn a rough product belief into launch copy",
+  "domain": "product_copy",
+  "base_model": "Qwen/Qwen2.5-7B-Instruct",
+  "pack": "Mercury 300 Writer Pack alpha",
+  "teacher_model": null,
+  "prompt": "300MB 的小東西，讓普通電腦也能寫出更好的企劃、簡報、提案；不用訂閱、不用雲端。請寫成第一版首頁文案。",
+  "outputs": {
+    "raw_7b": null,
+    "mercury_300": null,
+    "teacher": null
+  },
+  "judgment": {
+    "would_use": null,
+    "closest_to_bigger_model": null,
+    "saved_time": null,
+    "felt_like_upgrade": null,
+    "failure_mode": null,
+    "notes": null
+  }
+}

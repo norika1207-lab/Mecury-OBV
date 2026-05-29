@@ -1,0 +1,42 @@
+{
+  "ghost_id": "ghost_129c1558cd5f",
+  "timestamp": "2026-05-29T12:12:21.339947+00:00",
+  "pack": "Iseeu Receipt JP",
+  "locale": "ja-JP",
+  "document_type": "receipt",
+  "image_geometry": {
+    "width": 1200,
+    "height": 800,
+    "rotation_degrees": 0,
+    "capture_quality": "medium"
+  },
+  "blocks": [
+    {
+      "block_id": "b1",
+      "bbox_norm": [
+        0.1,
+        0.1,
+        0.3,
+        0.05
+      ],
+      "role": "merchant",
+      "text_signature": "shape:c34ab6abb7b2bb59:AAAAAAAA"
+    },
+    {
+      "block_id": "b2",
+      "bbox_norm": [
+        0.7,
+        0.8,
+        0.2,
+        0.05
+      ],
+      "role": "total",
+      "text_signature": "shape:a53a854d064165d7:¥00,000"
+    }
+  ],
+  "relations": [],
+  "failure": {
+    "type": "wrong_total"
+  },
+  "user_fix_summary": {}
+}

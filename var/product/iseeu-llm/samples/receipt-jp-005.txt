@@ -1,0 +1,9 @@
+RECEIPT
+Cafe 北浜
+www.example-cafe.jp
+2026-5-29
+ラテ ¥520
+ケーキ ¥460
+消費税 ¥89
+TOTAL ¥980
+VISA

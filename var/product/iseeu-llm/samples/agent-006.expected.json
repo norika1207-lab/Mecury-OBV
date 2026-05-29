@@ -1,0 +1,9 @@
+{
+  "merchant_name": "ビックカメラ 有楽町店",
+  "invoice_registration_number": "T6789012345678",
+  "date": "2026-05-29",
+  "total": 4000,
+  "tax_total": 363,
+  "payment_method": "credit_card",
+  "unsupported_reason": null
+}

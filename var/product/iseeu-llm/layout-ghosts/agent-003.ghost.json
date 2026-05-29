@@ -1,0 +1,134 @@
+{
+  "ghost_id": "ghost_8a46066d21e4",
+  "timestamp": "2026-05-29T12:23:17.837758+00:00",
+  "pack": "Iseeu Receipt JP",
+  "locale": "ja-JP",
+  "document_type": "receipt",
+  "image_geometry": {},
+  "blocks": [
+    {
+      "block_id": "line_0000",
+      "kind": "ocr_line",
+      "order": 0,
+      "bbox": null,
+      "text_signature": "shape:e4cfe1abfc0bcc1e:AAAAAAA AAAAA"
+    },
+    {
+      "block_id": "line_0001",
+      "kind": "ocr_line",
+      "order": 1,
+      "bbox": null,
+      "text_signature": "shape:63c1dd951ffedf6f:AAAA"
+    },
+    {
+      "block_id": "line_0002",
+      "kind": "ocr_line",
+      "order": 2,
+      "bbox": null,
+      "text_signature": "shape:2f18f38bb4dde063:0000/00/00(A) 00:00"
+    },
+    {
+      "block_id": "line_0003",
+      "kind": "ocr_line",
+      "order": 3,
+      "bbox": null,
+      "text_signature": "shape:c473cc47decda2f0:A0000000000000"
+    },
+    {
+      "block_id": "line_0005",
+      "kind": "ocr_line",
+      "order": 5,
+      "bbox": null,
+      "text_signature": "shape:63c1dd951ffedf6f:AAAA"
+    },
+    {
+      "block_id": "line_0006",
+      "kind": "ocr_line",
+      "order": 6,
+      "bbox": null,
+      "text_signature": "shape:569a7e0353b333b9:0A        0,000"
+    },
+    {
+      "block_id": "line_0007",
+      "kind": "ocr_line",
+      "order": 7,
+      "bbox": null,
+      "text_signature": "shape:d9ca6273d2bdaa59:AAA AAAAA"
+    },
+    {
+      "block_id": "line_0008",
+      "kind": "ocr_line",
+      "order": 8,
+      "bbox": null,
+      "text_signature": "shape:fe706af112c5a080:0A          000"
+    },
+    {
+      "block_id": "line_0009",
+      "kind": "ocr_line",
+      "order": 9,
+      "bbox": null,
+      "text_signature": "shape:69dc6c3210e25e62:AAAAAA"
+    },
+    {
+      "block_id": "line_0010",
+      "kind": "ocr_line",
+      "order": 10,
+      "bbox": null,
+      "text_signature": "shape:fe706af112c5a080:0A          000"
+    },
+    {
+      "block_id": "line_0012",
+      "kind": "ocr_line",
+      "order": 12,
+      "bbox": null,
+      "text_signature": "shape:1db9bad7f16539c8:AA        0,000"
+    },
+    {
+      "block_id": "line_0013",
+      "kind": "ocr_line",
+      "order": 13,
+      "bbox": null,
+      "text_signature": "shape:58a37882e44c5885:AA          -00"
+    },
+    {
+      "block_id": "line_0014",
+      "kind": "ocr_line",
+      "order": 14,
+      "bbox": null,
+      "text_signature": "shape:11770b3ea657fe68:AAAAA"
+    },
+    {
+      "block_id": "line_0015",
+      "kind": "ocr_line",
+      "order": 15,
+      "bbox": null,
+      "text_signature": "shape:a039515082aa76a2:AAAA    0,000"
+    },
+    {
+      "block_id": "line_0016",
+      "kind": "ocr_line",
+      "order": 16,
+      "bbox": null,
+      "text_signature": "shape:eb9c2c432e8849ba:AAAA      000"
+    },
+    {
+      "block_id": "line_0018",
+      "kind": "ocr_line",
+      "order": 18,
+      "bbox": null,
+      "text_signature": "shape:2780a29e31f8554c:AAAAA    0,000"
+    },
+    {
+      "block_id": "line_0019",
+      "kind": "ocr_line",
+      "order": 19,
+      "bbox": null,
+      "text_signature": "shape:6100f9c3e16b688a:AAAA ********0000"
+    }
+  ],
+  "relations": [],
+  "failure": {
+    "type": "none"
+  },
+  "user_fix_summary": {}
+}

@@ -1,0 +1,120 @@
+{
+  "ghost_id": "ghost_4c575979e792",
+  "timestamp": "2026-05-29T12:23:17.648989+00:00",
+  "pack": "Iseeu Receipt JP",
+  "locale": "ja-JP",
+  "document_type": "receipt",
+  "image_geometry": {},
+  "blocks": [
+    {
+      "block_id": "line_0000",
+      "kind": "ocr_line",
+      "order": 0,
+      "bbox": null,
+      "text_signature": "shape:1680cf573296c02c:AAAA AAAAAAA"
+    },
+    {
+      "block_id": "line_0001",
+      "kind": "ocr_line",
+      "order": 1,
+      "bbox": null,
+      "text_signature": "shape:cb1ad2119d8fafb6:AAA"
+    },
+    {
+      "block_id": "line_0002",
+      "kind": "ocr_line",
+      "order": 2,
+      "bbox": null,
+      "text_signature": "shape:b3cfa05437608f9c:0000A00A00A 00:00"
+    },
+    {
+      "block_id": "line_0003",
+      "kind": "ocr_line",
+      "order": 3,
+      "bbox": null,
+      "text_signature": "shape:78272fca5adee56b:AAAA A0000000000000"
+    },
+    {
+      "block_id": "line_0005",
+      "kind": "ocr_line",
+      "order": 5,
+      "bbox": null,
+      "text_signature": "shape:bd71ed340e4498fb:AAAAA              000A  ※"
+    },
+    {
+      "block_id": "line_0006",
+      "kind": "ocr_line",
+      "order": 6,
+      "bbox": null,
+      "text_signature": "shape:2be007d42e07f6ac:AA 000AA              000A  ※"
+    },
+    {
+      "block_id": "line_0007",
+      "kind": "ocr_line",
+      "order": 7,
+      "bbox": null,
+      "text_signature": "shape:29fb94f1ac7d045a:AAAA0                000A"
+    },
+    {
+      "block_id": "line_0008",
+      "kind": "ocr_line",
+      "order": 8,
+      "bbox": null,
+      "text_signature": "shape:ce54900e74704d96:AAAAA              000A"
+    },
+    {
+      "block_id": "line_0010",
+      "kind": "ocr_line",
+      "order": 10,
+      "bbox": null,
+      "text_signature": "shape:53d901cfdf74c275:AA                    000A"
+    },
+    {
+      "block_id": "line_0011",
+      "kind": "ocr_line",
+      "order": 11,
+      "bbox": null,
+      "text_signature": "shape:d23e028c69f40378:AA 0%                 000A"
+    },
+    {
+      "block_id": "line_0012",
+      "kind": "ocr_line",
+      "order": 12,
+      "bbox": null,
+      "text_signature": "shape:3c979b3885fd753b:AAAA 0%              00A"
+    },
+    {
+      "block_id": "line_0013",
+      "kind": "ocr_line",
+      "order": 13,
+      "bbox": null,
+      "text_signature": "shape:0ee99538eb9300a4:AA 00%                000A"
+    },
+    {
+      "block_id": "line_0014",
+      "kind": "ocr_line",
+      "order": 14,
+      "bbox": null,
+      "text_signature": "shape:f78f3110221e5429:AAAA 00%             00A"
+    },
+    {
+      "block_id": "line_0015",
+      "kind": "ocr_line",
+      "order": 15,
+      "bbox": null,
+      "text_signature": "shape:53d901cfdf74c275:AA                    000A"
+    },
+    {
+      "block_id": "line_0016",
+      "kind": "ocr_line",
+      "order": 16,
+      "bbox": null,
+      "text_signature": "shape:46d159e115782b74:AAAAA                000A"
+    }
+  ],
+  "relations": [],
+  "failure": {
+    "type": "none"
+  },
+  "user_fix_summary": {}
+}

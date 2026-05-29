@@ -1,0 +1,59 @@
+{
+  "document_type": "receipt",
+  "merchant_name": "株式会社サンプルストア",
+  "invoice_registration_number": "T1234567890123",
+  "date": "2026-05-29",
+  "currency": "JPY",
+  "subtotal": 1300,
+  "tax_8_percent": null,
+  "tax_10_percent": 130,
+  "tax_total": 130,
+  "total": 1430,
+  "payment_method": "credit_card",
+  "line_items": [
+    {
+      "name": "年5月29日",
+      "quantity": null,
+      "unit_price": null,
+      "tax_rate": null,
+      "amount": 2026
+    },
+    {
+      "name": "登録番号 T",
+      "quantity": null,
+      "unit_price": null,
+      "tax_rate": null,
+      "amount": 1234567890123
+    },
+    {
+      "name": "コ-ヒ-",
+      "quantity": null,
+      "unit_price": null,
+      "tax_rate": null,
+      "amount": 500
+    },
+    {
+      "name": "軽食",
+      "quantity": null,
+      "unit_price": null,
+      "tax_rate": null,
+      "amount": 800
+    }
+  ],
+  "confidence": {
+    "merchant_name": 0.72,
+    "date": 0.92,
+    "invoice_registration_number": 0.98,
+    "total": 0.88,
+    "tax": 0.72,
+    "line_items": 0.62
+  },
+  "unsupported_reason": null,
+  "engine": {
+    "name": "iseeu_receipt_jp",
+    "version": "0.1.0",
+    "mode": "post_ocr_structuring",
+    "notes": [],
+    "block_count": 0
+  }
+}

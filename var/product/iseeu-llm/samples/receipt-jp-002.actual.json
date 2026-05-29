@@ -1,0 +1,45 @@
+{
+  "document_type": "receipt",
+  "merchant_name": "山田文具店",
+  "invoice_registration_number": null,
+  "date": "2026-05-29",
+  "currency": "JPY",
+  "subtotal": 330,
+  "tax_8_percent": null,
+  "tax_10_percent": null,
+  "tax_total": 30,
+  "total": 360,
+  "payment_method": "cash",
+  "line_items": [
+    {
+      "name": "ノ-ト",
+      "quantity": null,
+      "unit_price": null,
+      "tax_rate": null,
+      "amount": 220
+    },
+    {
+      "name": "ペン",
+      "quantity": null,
+      "unit_price": null,
+      "tax_rate": null,
+      "amount": 110
+    }
+  ],
+  "confidence": {
+    "merchant_name": 0.72,
+    "date": 0.92,
+    "invoice_registration_number": 0.0,
+    "total": 0.88,
+    "tax": 0.72,
+    "line_items": 0.62
+  },
+  "unsupported_reason": null,
+  "engine": {
+    "name": "iseeu_receipt_jp",
+    "version": "0.1.0",
+    "mode": "post_ocr_structuring",
+    "notes": [],
+    "block_count": 0
+  }
+}

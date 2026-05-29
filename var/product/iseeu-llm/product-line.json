@@ -1,0 +1,71 @@
+{
+  "product": "Iseeu LLM",
+  "category": "tiny_local_document_intelligence_packs",
+  "core_claim": "Stop downloading giant models to read tiny documents.",
+  "pack_size_target_mb": 50,
+  "pack_size_alpha_ceiling_mb": 100,
+  "pricing": {
+    "consumer_entry_monthly_jpy": 599,
+    "consumer_plus_monthly_jpy": 999,
+    "business": "annual_license_embedded_sdk_or_device_oem"
+  },
+  "first_packs": [
+    {
+      "name": "Iseeu Receipt JP",
+      "document_types": [
+        "receipt",
+        "invoice",
+        "payment_slip"
+      ],
+      "market": "Japan",
+      "output": [
+        "json",
+        "csv",
+        "accounting_export"
+      ],
+      "field_reliability_target": 0.99999
+    },
+    {
+      "name": "Iseeu Card",
+      "document_types": [
+        "business_card"
+      ],
+      "market": "global",
+      "output": [
+        "json",
+        "vcard",
+        "crm_export"
+      ],
+      "field_reliability_target": 0.99999
+    },
+    {
+      "name": "Iseeu Quote",
+      "document_types": [
+        "quotation",
+        "estimate"
+      ],
+      "market": "Japan_and_global",
+      "output": [
+        "json",
+        "csv",
+        "approval_workflow_payload"
+      ],
+      "field_reliability_target": 0.99999
+    }
+  ],
+  "pack_memory": {
+    "layout_vectors": "hundreds_of_thousands",
+    "field_vectors": true,
+    "document_rules": true,
+    "confidence_policy": true,
+    "unsupported_layout_detection": true
+  },
+  "release_gate": {
+    "max_public_pack_mb": 100,
+    "target_public_pack_mb": 50,
+    "local_runtime": true,
+    "clean_json_output": true,
+    "beats_ocr_plus_regex": true,
+    "trial_documents_required": 1000
+  }
+}

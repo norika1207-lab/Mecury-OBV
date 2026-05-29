@@ -1,0 +1,2 @@
+document_type,merchant_name,invoice_registration_number,date,currency,subtotal,tax_8_percent,tax_10_percent,tax_total,total,payment_method,unsupported_reason
+receipt,株式会社サンプルストア,T1234567890123,2026-05-29,JPY,1300,,130,130,1430,credit_card,

@@ -1,0 +1,11 @@
+{
+  "merchant_name": "セブン-イレブン 渋谷南口店",
+  "invoice_registration_number": "T567890123456",
+  "date": "2026-05-29",
+  "total": 768,
+  "tax_8_percent": 36,
+  "tax_10_percent": 14,
+  "tax_total": 50,
+  "payment_method": "electronic_money",
+  "unsupported_reason": null
+}

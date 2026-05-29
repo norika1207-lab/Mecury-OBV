@@ -1,0 +1,9 @@
+{
+  "merchant_name": "株式会社北町サービス",
+  "invoice_registration_number": "T7890123456789",
+  "date": null,
+  "total": 9900,
+  "tax_total": 900,
+  "payment_method": "cash",
+  "unsupported_reason": "missing_date"
+}

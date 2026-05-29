@@ -1,0 +1,11 @@
+{
+  "merchant_name": "ローソン 千代田一丁目店",
+  "invoice_registration_number": "T1234567890123",
+  "date": "2026-05-29",
+  "total": 676,
+  "tax_8_percent": 26,
+  "tax_10_percent": 30,
+  "tax_total": 56,
+  "payment_method": "electronic_money",
+  "unsupported_reason": null
+}

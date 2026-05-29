@@ -1,0 +1,9 @@
+{
+  "merchant_name": "ファミリーマート 神田駅前店",
+  "invoice_registration_number": "T8901234567890",
+  "date": "2026-05-29",
+  "tax_8_percent": 21,
+  "tax_total": 21,
+  "payment_method": "electronic_money",
+  "unsupported_reason": "missing_total"
+}

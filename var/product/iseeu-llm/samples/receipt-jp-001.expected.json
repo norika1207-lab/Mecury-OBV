@@ -1,0 +1,8 @@
+{
+  "merchant_name": "株式会社サンプルストア",
+  "invoice_registration_number": "T1234567890123",
+  "date": "2026-05-29",
+  "total": 1430,
+  "tax_total": 130,
+  "payment_method": "credit_card"
+}

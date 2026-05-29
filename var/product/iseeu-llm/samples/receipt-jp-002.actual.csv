@@ -1,0 +1,2 @@
+document_type,merchant_name,invoice_registration_number,date,currency,subtotal,tax_8_percent,tax_10_percent,tax_total,total,payment_method,unsupported_reason
+receipt,山田文具店,,2026-05-29,JPY,330,,,30,360,cash,

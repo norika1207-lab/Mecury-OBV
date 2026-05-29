@@ -1,0 +1,61 @@
+{
+  "schema": "iseeu_layout_ghost_v1",
+  "purpose": "Capture reusable document structure without private content.",
+  "forbidden": [
+    "raw_image",
+    "raw_ocr_transcript",
+    "personal_name",
+    "phone_number",
+    "email",
+    "address",
+    "full_merchant_text",
+    "full_line_item_text"
+  ],
+  "fields": {
+    "ghost_id": "stable random id",
+    "timestamp": "ISO-8601 timestamp",
+    "pack": "Iseeu Receipt JP | Iseeu Card | Iseeu Quote",
+    "locale": "ja-JP | zh-TW | en-US | ...",
+    "document_type": "receipt | invoice | business_card | quote | unknown",
+    "image_geometry": {
+      "width": "number",
+      "height": "number",
+      "rotation_degrees": "number",
+      "capture_quality": "low | medium | high"
+    },
+    "blocks": [
+      {
+        "block_id": "string",
+        "bbox_norm": [
+          "x",
+          "y",
+          "w",
+          "h"
+        ],
+        "role": "merchant | date | registration_number | total | tax | line_item | address | contact | unknown",
+        "text_signature": "content hash or shape signature, not raw text",
+        "script": "ja | latin | numeric | mixed | unknown",
+        "confidence_before": "0..1",
+        "confidence_after_user_fix": "0..1|null"
+      }
+    ],
+    "relations": [
+      {
+        "from": "block_id",
+        "to": "block_id",
+        "kind": "same_line | label_value | table_row | tax_total_relation | contact_group"
+      }
+    ],
+    "failure": {
+      "type": "none | wrong_role | split_field | merged_fields | wrong_total | wrong_tax | unsupported_layout | other",
+      "expected_role": "string|null",
+      "observed_role": "string|null"
+    },
+    "user_fix_summary": {
+      "changed_roles": "number",
+      "changed_values": "number",
+      "accepted_after_fix": "boolean"
+    }
+  }
+}
+

@@ -1,0 +1,9 @@
+{
+  "merchant_name": "山下商店",
+  "invoice_registration_number": "T234567890123",
+  "date": "2026-05-29",
+  "total": 1980,
+  "tax_total": 180,
+  "payment_method": "cash",
+  "unsupported_reason": null
+}

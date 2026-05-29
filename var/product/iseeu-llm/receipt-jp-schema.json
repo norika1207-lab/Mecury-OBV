@@ -1,0 +1,34 @@
+{
+  "schema": "iseeu_receipt_jp_v1",
+  "fields": {
+    "document_type": "receipt | invoice | payment_slip | unknown",
+    "merchant_name": "string",
+    "invoice_registration_number": "Japanese qualified invoice issuer number, T plus 13 digits",
+    "date": "YYYY-MM-DD",
+    "currency": "JPY",
+    "subtotal": "number",
+    "tax_8_percent": "number",
+    "tax_10_percent": "number",
+    "tax_total": "number",
+    "total": "number",
+    "payment_method": "cash | credit_card | electronic_money | bank_transfer | unknown",
+    "line_items": [
+      {
+        "name": "string",
+        "quantity": "number|null",
+        "unit_price": "number|null",
+        "tax_rate": "0.08 | 0.10 | null",
+        "amount": "number"
+      }
+    ],
+    "confidence": {
+      "merchant_name": "0..1",
+      "date": "0..1",
+      "invoice_registration_number": "0..1",
+      "total": "0..1",
+      "tax": "0..1",
+      "line_items": "0..1"
+    },
+    "unsupported_reason": "string|null"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "ghost_id": "ghost_5da0c4440b2c",
+  "timestamp": "2026-05-29T12:23:17.928632+00:00",
+  "pack": "Iseeu Receipt JP",
+  "locale": "ja-JP",
+  "document_type": "receipt",
+  "image_geometry": {},
+  "blocks": [
+    {
+      "block_id": "line_0000",
+      "kind": "ocr_line",
+      "order": 0,
+      "bbox": null,
+      "text_signature": "shape:80d2243c88073392:AAAA AAAAA"
+    },
+    {
+      "block_id": "line_0001",
+      "kind": "ocr_line",
+      "order": 1,
+      "bbox": null,
+      "text_signature": "shape:cb1ad2119d8fafb6:AAA"
+    },
+    {
+      "block_id": "line_0002",
+      "kind": "ocr_line",
+      "order": 2,
+      "bbox": null,
+      "text_signature": "shape:a4c2cbd5aa85ff70:AA0A00A00A"
+    },
+    {
+      "block_id": "line_0004",
+      "kind": "ocr_line",
+      "order": 4,
+      "bbox": null,
+      "text_signature": "shape:14f99c4b0a6493e3:AAAAAAAAAAAAAA"
+    },
+    {
+      "block_id": "line_0005",
+      "kind": "ocr_line",
+      "order": 5,
+      "bbox": null,
+      "text_signature": "shape:d6c42b084f60b8a3:A-0000-0000-0000"
+    },
+    {
+      "block_id": "line_0007",
+      "kind": "ocr_line",
+      "order": 7,
+      "bbox": null,
+      "text_signature": "shape:46aa2263d0842cd9:AAAAAA        0,000A"
+    },
+    {
+      "block_id": "line_0008",
+      "kind": "ocr_line",
+      "order": 8,
+      "bbox": null,
+      "text_signature": "shape:2d2327550a9e6579:AAAAAAAA      000A"
+    },
+    {
+      "block_id": "line_0010",
+      "kind": "ocr_line",
+      "order": 10,
+      "bbox": null,
+      "text_signature": "shape:0577d3b84203602f:0%AA              000A"
+    },
+    {
+      "block_id": "line_0011",
+      "kind": "ocr_line",
+      "order": 11,
+      "bbox": null,
+      "text_signature": "shape:64225bcea08c1136:AAA0%             00A"
+    },
+    {
+      "block_id": "line_0012",
+      "kind": "ocr_line",
+      "order": 12,
+      "bbox": null,
+      "text_signature": "shape:ef1c9fe70d93a7bb:00%AA           0,000A"
+    },
+    {
+      "block_id": "line_0013",
+      "kind": "ocr_line",
+      "order": 13,
+      "bbox": null,
+      "text_signature": "shape:e7b28ac67094086b:AAA00%           000A"
+    },
+    {
+      "block_id": "line_0014",
+      "kind": "ocr_line",
+      "order": 14,
+      "bbox": null,
+      "text_signature": "shape:e3564be8bd61242c:AAAA           0,000A"
+    },
+    {
+      "block_id": "line_0016",
+      "kind": "ocr_line",
+      "order": 16,
+      "bbox": null,
+      "text_signature": "shape:6764854e9df24e93:AAAAAA AAA"
+    }
+  ],
+  "relations": [],
+  "failure": {
+    "type": "none"
+  },
+  "user_fix_summary": {}
+}

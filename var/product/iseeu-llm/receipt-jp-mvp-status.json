@@ -1,0 +1,65 @@
+{
+  "updated_at": "2026-05-29T20:23:18+08:00",
+  "product": "Iseeu Receipt JP",
+  "target": "50MB local Japanese receipt/document intelligence pack",
+  "pricing_strategy": {
+    "entry_monthly_jpy": 599,
+    "plus_monthly_jpy": 999,
+    "business_path": "embedded SDK, annual license, scanner/printer/copier/POS OEM"
+  },
+  "artifact": {
+    "path": "dist/iseeu/iseeu-receipt-jp-pack-0.1.0.zip",
+    "size_mb": 0.018652915954589844,
+    "target_mb": 50,
+    "alpha_ceiling_mb": 100
+  },
+  "evaluation": {
+    "samples": 14,
+    "field_checks": 99,
+    "iseeu_passed": 99,
+    "iseeu_accuracy": 1.0,
+    "baseline_passed": 20,
+    "baseline_accuracy": 0.20202020202020202,
+    "beats_ocr_plus_regex": true
+  },
+  "privacy_safe_layout_ghosts": {
+    "count": 14,
+    "path": "var/product/iseeu-llm/layout-ghosts"
+  },
+  "release_gate": {
+    "public_release": false,
+    "checks": [
+      {
+        "name": "target_is_50mb",
+        "pass": true,
+        "detail": 50
+      },
+      {
+        "name": "alpha_ceiling_is_100mb",
+        "pass": true,
+        "detail": 100
+      },
+      {
+        "name": "artifact_under_public_ceiling",
+        "pass": true,
+        "detail": 0.018652915954589844
+      },
+      {
+        "name": "thousand_document_trial",
+        "pass": false,
+        "detail": 14
+      },
+      {
+        "name": "beats_ocr_plus_regex",
+        "pass": true,
+        "detail": true
+      }
+    ]
+  },
+  "next_work": [
+    "Grow hostile sample trial toward 1000 documents.",
+    "Add image OCR adapter boundary without forcing a cloud model.",
+    "Add app/API wrapper for photo-to-json integration.",
+    "Track unsupported layouts as product-learning targets."
+  ]
+}

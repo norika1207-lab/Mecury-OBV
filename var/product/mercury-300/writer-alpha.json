@@ -1,0 +1,55 @@
+{
+  "product": "Mercury 300 Writer Pack",
+  "status": "alpha_spec",
+  "core_claim": "300MB creative power pack for a local 7B model.",
+  "base_model": "Qwen/Qwen2.5-7B-Instruct",
+  "teacher_candidates": [
+    "Qwen/Qwen3-30B-A3B",
+    "Qwen/Qwen3-14B",
+    "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"
+  ],
+  "pack_size_target_mb": 300,
+  "pack_size_alpha_ceiling_mb": 500,
+  "first_pack": "writer",
+  "excluded_alpha_domains": [
+    "math",
+    "coding",
+    "legal_advice",
+    "medical_advice",
+    "agent_tool_use",
+    "long_context_rag"
+  ],
+  "demo": {
+    "mode": "blind_three_way",
+    "columns": [
+      "raw_7b",
+      "mercury_300",
+      "teacher_30b"
+    ],
+    "questions": [
+      "Which answer would you use?",
+      "Which answer sounds like the larger model?",
+      "Which answer would you send to a boss, investor, or reader?"
+    ]
+  },
+  "success_criteria": {
+    "max_alpha_size_mb": 500,
+    "target_size_mb": 300,
+    "beats_raw_7b_visible_margin": true,
+    "min_teacher_closeness_win_rate": 0.3,
+    "normal_user_can_explain": "It makes my local 7B write better without a subscription."
+  },
+  "prompt_domains": [
+    "startup_pitch_rewrite",
+    "product_positioning",
+    "proposal_structure",
+    "slide_narrative",
+    "executive_summary",
+    "founder_manifesto",
+    "brand_voice",
+    "long_form_argument",
+    "plain_language_explanation",
+    "emotional_disciplined_copy"
+  ]
+}
+

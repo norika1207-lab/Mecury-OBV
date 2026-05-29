@@ -1,0 +1,38 @@
+{
+  "schema": "mercury_300_use_trial_v1",
+  "required": [
+    "trial_id",
+    "timestamp",
+    "intent",
+    "domain",
+    "base_model",
+    "pack",
+    "prompt",
+    "outputs",
+    "judgment"
+  ],
+  "fields": {
+    "trial_id": "Stable trial id.",
+    "timestamp": "ISO-8601 timestamp.",
+    "intent": "The real writing need, not a benchmark label.",
+    "domain": "proposal | slide | founder_note | product_copy | argument | rewrite | other",
+    "base_model": "The local model used without the pack.",
+    "pack": "Mercury pack name and version.",
+    "teacher_model": "Optional larger teacher used for comparison.",
+    "prompt": "User prompt.",
+    "outputs": {
+      "raw_7b": "Base model output.",
+      "mercury_300": "Base model plus pack output.",
+      "teacher": "Optional teacher output."
+    },
+    "judgment": {
+      "would_use": "raw_7b | mercury_300 | teacher | none",
+      "closest_to_bigger_model": "raw_7b | mercury_300 | teacher | unknown",
+      "saved_time": "yes | no | unsure",
+      "felt_like_upgrade": "yes | no | unsure",
+      "failure_mode": "none | too_generic | wrong_tone | weak_structure | hallucination | verbose | other",
+      "notes": "Human notes."
+    }
+  }
+}
+

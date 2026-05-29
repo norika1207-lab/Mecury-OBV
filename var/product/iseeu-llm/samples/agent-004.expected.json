@@ -1,0 +1,11 @@
+{
+  "merchant_name": "株式会社 青空カフェ",
+  "invoice_registration_number": "T456789012345",
+  "date": "2026-05-29",
+  "total": 1532,
+  "tax_8_percent": 32,
+  "tax_10_percent": 100,
+  "tax_total": 132,
+  "payment_method": "electronic_money",
+  "unsupported_reason": null
+}

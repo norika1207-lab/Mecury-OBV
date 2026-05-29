@@ -1,0 +1,11 @@
+{"id":"writer_001","domain":"startup_pitch_rewrite","language":"zh-TW","prompt":"我有一個想法：做一個 300MB 的小東西，讓本地 7B 寫起來像 30B。請把它改寫成一段能讓早期使用者想下載試看的產品宣言。"}
+{"id":"writer_002","domain":"proposal_structure","language":"zh-TW","prompt":"請把以下粗糙想法整理成一頁提案架構：小公司不想付訂閱費，也買不起高級電腦，但仍然想用 AI 寫企劃、簡報、提案。"}
+{"id":"writer_003","domain":"slide_narrative","language":"zh-TW","prompt":"幫我設計一份 5 頁簡報的大綱，主題是：300MB 的創作增幅器，讓普通電腦也能寫出更好的文字。每頁要有標題與一句關鍵文案。"}
+{"id":"writer_004","domain":"executive_summary","language":"zh-TW","prompt":"請把這段話改成給投資人看的 executive summary：我們不是做更大的模型，而是做更小的魔法，讓本地小模型有接近大模型的寫作質感。"}
+{"id":"writer_005","domain":"brand_voice","language":"zh-TW","prompt":"請為 Mercury 300 寫三種品牌語氣：冷靜專業、叛逆挑釁、溫柔創作者。每種語氣都要有一句首頁 hero 文案。"}
+{"id":"writer_006","domain":"long_form_argument","language":"zh-TW","prompt":"請寫一段有說服力的論述，主張創作力不應該被雲端訂閱、昂貴硬體和巨大模型檔案鎖住。"}
+{"id":"writer_007","domain":"plain_language_explanation","language":"zh-TW","prompt":"用普通人聽得懂的方式解釋：Mercury 300 不是一個完整大模型，而是一個裝在本地 7B 上的創作增強包。不要使用太多技術術語。"}
+{"id":"writer_008","domain":"founder_manifesto","language":"zh-TW","prompt":"請寫一段創辦人宣言，語氣要像車庫創業，不向市場妥協，目標是做出一個大家以為不可能但下載後會改觀的小東西。"}
+{"id":"writer_009","domain":"product_positioning","language":"en","prompt":"Write a sharp positioning statement for a 300MB writing pack that makes a local 7B model feel closer to a 30B model for everyday proposals, slides, and creative drafts."}
+{"id":"writer_010","domain":"skeptic_challenge","language":"en","prompt":"Write launch copy for skeptics: 'Think it is fake? Try the blind test.' The copy should invite people to prove us wrong by downloading the alpha."}
+

@@ -1,0 +1,9 @@
+{
+  "merchant_name": "マツモトキヨシ 新宿東口店",
+  "invoice_registration_number": "T3456789012345",
+  "date": "2026-05-29",
+  "total": 2600,
+  "tax_total": 236,
+  "payment_method": "credit_card",
+  "unsupported_reason": null
+}

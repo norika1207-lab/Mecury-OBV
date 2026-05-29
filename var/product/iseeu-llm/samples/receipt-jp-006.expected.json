@@ -1,0 +1,8 @@
+{
+  "merchant_name": "有限会社東町印刷",
+  "date": null,
+  "total": 6600,
+  "tax_total": 600,
+  "payment_method": "cash",
+  "unsupported_reason": "missing_date"
+}

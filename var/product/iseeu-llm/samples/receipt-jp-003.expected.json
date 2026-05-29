@@ -1,0 +1,10 @@
+{
+  "merchant_name": "株式会社青葉キッチン",
+  "invoice_registration_number": "T9876543210987",
+  "date": "2026-05-29",
+  "total": 1414,
+  "tax_8_percent": 64,
+  "tax_10_percent": 50,
+  "tax_total": 114,
+  "payment_method": "electronic_money"
+}
