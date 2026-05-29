@@ -28,6 +28,7 @@
     "model_artifact_required": true,
     "model_pack_under_100mb": true,
     "target_pack_under_50mb": true,
+    "baseline_placeholder_is_not_enough": true,
     "must_beat_parser_on_unknown_layouts": true,
     "must_beat_naive_ocr_regex": true
   }

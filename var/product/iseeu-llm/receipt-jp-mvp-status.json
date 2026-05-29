@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T20:31:01+08:00",
+  "updated_at": "2026-05-29T20:37:24+08:00",
   "product": "Iseeu Receipt JP",
   "target": "50MB local Japanese receipt/document intelligence pack",
   "pricing_strategy": {
@@ -79,6 +79,19 @@
         "avg_output_json_chars": 303.29
       }
     },
+    "tiny_baseline": {
+      "train": {
+        "artifact": "var/product/iseeu-llm/llm/artifacts/receipt-jp-tiny-baseline.json",
+        "examples": 14,
+        "size_mb": 0.08771419525146484
+      },
+      "eval": {
+        "examples": 14,
+        "exact_match_accuracy": 1.0,
+        "field_accuracy": 1.0,
+        "is_final_llm": false
+      }
+    },
     "llm_pack_gate": {
       "product": "Iseeu Receipt JP LLM",
       "llm_pack_gate": false,
@@ -104,18 +117,26 @@
         },
         {
           "name": "model_artifact_exists",
-          "pass": false,
-          "detail": null
+          "pass": true,
+          "detail": "/Users/norikaoda/Dropbox/Mac (2)/Documents/Neuron Mecury/var/product/iseeu-llm/llm/artifacts/receipt-jp-tiny-baseline.json"
         },
         {
           "name": "model_under_alpha_ceiling",
-          "pass": false,
-          "detail": null
+          "pass": true,
+          "detail": 0.08771419525146484
         },
         {
           "name": "model_under_target",
+          "pass": true,
+          "detail": 0.08771419525146484
+        },
+        {
+          "name": "model_not_baseline_placeholder",
           "pass": false,
-          "detail": null
+          "detail": {
+            "artifact_type": "tiny_extractor_baseline",
+            "is_final_llm": false
+          }
         }
       ]
     }

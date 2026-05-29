@@ -20,7 +20,13 @@ def main() -> int:
     manifest_path = Path(args.teacher_manifest)
     manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
     model_artifact = Path(args.model_artifact) if args.model_artifact else None
-    model_size_mb = model_artifact.stat().st_size / 1024 / 1024 if model_artifact and model_artifact.exists() else None
+    model_payload = {}
+    if model_artifact and model_artifact.exists():
+        model_size_mb = model_artifact.stat().st_size / 1024 / 1024
+        if model_artifact.suffix.lower() == ".json":
+            model_payload = json.loads(model_artifact.read_text(encoding="utf-8"))
+    else:
+        model_size_mb = None
 
     checks = [
         {
@@ -52,6 +58,14 @@ def main() -> int:
             "name": "model_under_target",
             "pass": model_size_mb is not None and model_size_mb <= args.target_mb,
             "detail": model_size_mb,
+        },
+        {
+            "name": "model_not_baseline_placeholder",
+            "pass": model_payload.get("is_final_llm") is True,
+            "detail": {
+                "artifact_type": model_payload.get("artifact_type"),
+                "is_final_llm": model_payload.get("is_final_llm"),
+            },
         },
     ]
     report = {

@@ -15,6 +15,7 @@ SAMPLES = ROOT / "var/product/iseeu-llm/samples"
 GHOSTS = ROOT / "var/product/iseeu-llm/layout-ghosts"
 STATUS = ROOT / "var/product/iseeu-llm/receipt-jp-mvp-status.json"
 ARTIFACT = ROOT / "dist/iseeu/iseeu-receipt-jp-pack-0.1.0.zip"
+TINY_MODEL = ROOT / "var/product/iseeu-llm/llm/artifacts/receipt-jp-tiny-baseline.json"
 
 
 def run(args: list[str], allow_fail: bool = False) -> subprocess.CompletedProcess[str]:
@@ -48,6 +49,8 @@ def main() -> int:
         "tools/iseeu/validate_receipt_jp_schema.py",
         "tools/iseeu/build_llm_teacher_dataset.py",
         "tools/iseeu/check_llm_pack_gate.py",
+        "tools/iseeu/train_tiny_receipt_extractor.py",
+        "tools/iseeu/eval_tiny_receipt_extractor.py",
     ]])
 
     eval_report = load_json(run([sys.executable, "tools/iseeu/eval_receipt_jp.py"]))
@@ -76,7 +79,19 @@ def main() -> int:
         )
     )
     teacher_report = load_json(run([sys.executable, "tools/iseeu/build_llm_teacher_dataset.py"]))
-    llm_gate_report = load_json(run([sys.executable, "tools/iseeu/check_llm_pack_gate.py"], allow_fail=True))
+    tiny_train_report = load_json(run([sys.executable, "tools/iseeu/train_tiny_receipt_extractor.py"]))
+    tiny_eval_report = load_json(run([sys.executable, "tools/iseeu/eval_tiny_receipt_extractor.py"]))
+    llm_gate_report = load_json(
+        run(
+            [
+                sys.executable,
+                "tools/iseeu/check_llm_pack_gate.py",
+                "--model-artifact",
+                str(TINY_MODEL),
+            ],
+            allow_fail=True,
+        )
+    )
 
     status = {
         "updated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -114,6 +129,15 @@ def main() -> int:
         },
         "llm_target": {
             "teacher_dataset": teacher_report,
+            "tiny_baseline": {
+                "train": tiny_train_report,
+                "eval": {
+                    "examples": tiny_eval_report["examples"],
+                    "exact_match_accuracy": tiny_eval_report["exact_match_accuracy"],
+                    "field_accuracy": tiny_eval_report["field_accuracy"],
+                    "is_final_llm": tiny_eval_report["is_final_llm"],
+                },
+            },
             "llm_pack_gate": llm_gate_report,
         },
         "next_work": [
