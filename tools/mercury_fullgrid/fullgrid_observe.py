@@ -123,6 +123,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--calibration-rows-per-module", type=int, default=512)
     p.add_argument("--per-channel-quantiles", action="store_true")
     p.add_argument("--calibration-only", action="store_true")
+    p.add_argument("--heat-shard-index", type=int, default=0)
+    p.add_argument("--heat-shard-count", type=int, default=1)
     p.add_argument("--include-norms", action="store_true")
     p.add_argument("--trust-remote-code", action="store_true")
     return p.parse_args()
@@ -130,6 +132,10 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if args.heat_shard_count < 1:
+        raise ValueError("--heat-shard-count must be >= 1")
+    if args.heat_shard_index < 0 or args.heat_shard_index >= args.heat_shard_count:
+        raise ValueError("--heat-shard-index must be in [0, heat-shard-count)")
     t0 = time.time()
     out_dir = Path(args.out_root) / args.model_name
     heat_dir = out_dir / "heat"
@@ -341,15 +347,24 @@ def main() -> None:
     for name in observed:
         handles.append(name_to_module[name].register_forward_hook(fill_hook(name)))
 
-    print("[fullgrid] pass2 heat fill", flush=True)
+    heat_jobs = [(i, p) for i, p in enumerate(probes) if i % args.heat_shard_count == args.heat_shard_index]
+    print(
+        f"[fullgrid] pass2 heat fill shard={args.heat_shard_index}/{args.heat_shard_count} "
+        f"probes={len(heat_jobs)}/{len(probes)}",
+        flush=True,
+    )
     with torch.no_grad():
-        for i, prompt in enumerate(probes):
+        for j, (i, prompt) in enumerate(heat_jobs):
             ids = tok(prompt, return_tensors="pt", truncation=True, max_length=args.max_length).input_ids
             if args.device != "cpu":
                 ids = ids.to(args.device)
             _ = model(ids)
-            if (i + 1) % 5 == 0:
-                print(f"[fullgrid] heat {i+1}/{len(probes)} elapsed={time.time()-t0:.0f}s", flush=True)
+            if (j + 1) % 5 == 0:
+                print(
+                    f"[fullgrid] heat shard_progress={j+1}/{len(heat_jobs)} "
+                    f"global_probe={i+1}/{len(probes)} elapsed={time.time()-t0:.0f}s",
+                    flush=True,
+                )
     for h in handles:
         h.remove()
 
@@ -373,6 +388,9 @@ def main() -> None:
         "S": s_count,
         "max_length": args.max_length,
         "probe_count": len(probes),
+        "heat_probe_count": len(heat_jobs),
+        "heat_shard_index": args.heat_shard_index,
+        "heat_shard_count": args.heat_shard_count,
         "calibration_probe_count": len(calib_probes),
         "edges_from": args.edges_from,
         "calibration_values_per_module": int(args.calibration_values_per_module),
